@@ -1,0 +1,105 @@
+================================================================================
+WORKFLOW CONFIGURATION PAGE ANALYSIS
+================================================================================
+
+Found 64 workflow configuration page entries
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total unique assemblies with workflow visits: 38
+Total unique workflows: 12
+Total visitors to workflow pages: 103
+Total pageviews: 134
+Average time on page: 3m 20s
+Median time on page: 52s
+
+
+PER-WORKFLOW BREAKDOWN
+--------------------------------------------------------------------------------
+Workflow                            Visitors   Pageviews  Assemblies   Avg Time     Median Time 
+--------------------------------------------------------------------------------
+haploid-variant-calling-wgs-pe      42         67         16           2m 53s       1m 3s       
+rnaseq-pe                           21         25         13           5m 4s        5m 55s      
+lncRNAs-annotation                  10         10         5            3s           3s          
+cutandrun                           7          7          2            N/A          N/A         
+fastq-to-matrix-10x-scrna-seq-...   6          6          4            38s          24s         
+generic-non-segmented-viral-va...   5          7          1            17m 59s      17m 59s     
+consensus-peaks-consensus-peak...   3          3          1            8s           8s          
+fastq-to-matrix-10x-scrna-seq-...   3          3          1            N/A          N/A         
+chipseq-sr                          2          2          1            7s           7s          
+atacseq                             2          2          1            N/A          N/A         
+chipseq-pe                          1          1          1            N/A          N/A         
+amr-gene-detection                  1          1          1            8m 49s       8m 49s      
+
+
+WORKFLOW-ORGANISM INTERSECTIONS (Top 20)
+--------------------------------------------------------------------------------
+Workflow                       Organism                       Visitors   Pageviews 
+--------------------------------------------------------------------------------
+haploid-variant-calling-w...   [Emmonsia] crescens            10         19        
+cutandrun                      Giardia muris                  6          6         
+rnaseq-pe                      Toxoplasma gondii ME49         5          7         
+generic-non-segmented-vir...   Measles morbillivirus          5          7         
+haploid-variant-calling-w...   Plasmodium falciparum 3D7      4          8         
+fastq-to-matrix-10x-scrna...   Acanthamoeba astronyxis        3          3         
+haploid-variant-calling-w...   Alternaria alternata           3          9         
+haploid-variant-calling-w...   malaria parasite P. vivax      3          6         
+haploid-variant-calling-w...   Amauroascus verrucosus         3          4         
+consensus-peaks-consensus...   Aspergillus niger              3          3         
+lncRNAs-annotation             Theileria annulata             3          3         
+haploid-variant-calling-w...   Amauroascus niger              3          3         
+fastq-to-matrix-10x-scrna...   Acanthamoeba astronyxis        3          3         
+chipseq-sr                     Toxoplasma gondii ME49         2          2         
+rnaseq-pe                      zebra finch                    2          2         
+haploid-variant-calling-w...   Mycobacterium tuberculosi...   2          2         
+haploid-variant-calling-w...   Allomyces macrogynus ATCC...   2          3         
+haploid-variant-calling-w...   Abiotrophia defectiva          2          3         
+lncRNAs-annotation             Acanthamoeba astronyxis        2          2         
+haploid-variant-calling-w...   Apophysomyces variabilis       2          2         
+
+
+PER-ASSEMBLY BREAKDOWN
+--------------------------------------------------------------------------------
+Assembly ID          Organism                       Visitors   Pageviews  Avg Time     Median Time 
+--------------------------------------------------------------------------------
+GCA_001008285_1      [Emmonsia] crescens            10         19         6m 10s       6m 10s       *
+GCA_006247105_1      Giardia muris                  9          9          N/A          N/A           
+GCA_000826245_1      Acanthamoeba astronyxis        9          9          58s          58s          *
+GCF_000006565_2      Toxoplasma gondii ME49         7          9          3m 52s       3m 52s        
+GCF_000854845_1      Measles morbillivirus          5          7          17m 59s      17m 59s       
+GCF_000002765_6      Plasmodium falciparum 3D7      5          9          2m 27s       2m 27s        
+GCF_000002415_2      malaria parasite P. vivax      4          7          6m 12s       6m 12s        
+GCF_001642055_1      Alternaria alternata           3          9          11m 10s      11m 10s       
+GCA_001430935_1      Amauroascus verrucosus         3          4          1m 7s        1m 7s         
+GCA_900248155_1      Aspergillus niger              3          3          8s           8s            
+GCA_000003225_1      Theileria annulata             3          3          N/A          N/A           
+GCA_001430945_1      Amauroascus niger              3          3          1m 3s        1m 3s         
+GCF_964026465_1      Rickettsia endosymbiont o...   3          3          N/A          N/A           
+GCA_048771995_1      zebra finch                    2          2          15m 27s      15m 27s       
+GCF_000195955_2      Mycobacterium tuberculosi...   2          2          9s           9s            
+GCA_000151295_1      Allomyces macrogynus ATCC...   2          3          1m 31s       1m 31s        
+GCF_013267415_1      Abiotrophia defectiva          2          3          52s          52s           
+GCA_002749535_1      Apophysomyces variabilis       2          2          N/A          N/A           
+GCF_900002335_3      Plasmodium chabaudi chabaudi   2          2          21s          21s           
+GCF_003013715_1      Candidozyma auris              2          2          7m 37s       7m 37s        
+GCA_000256705_2      Toxoplasma gondii CAST         2          2          N/A          N/A           
+GCF_000002655_1      Aspergillus fumigatus Af293    2          2          N/A          N/A           
+GCF_001890905_1      Aspergillus aculeatus ATC...   2          2          3s           3s            
+GCA_027944975_1      Acanthamoeba sp. SK_2022c      2          2          8m 13s       8m 13s        
+GCA_000002825_3      Trichomonas vaginalis G3       1          1          4m 12s       4m 12s        
+GCA_963514095_1      grey gurnard                   1          1          12s          12s           
+GCF_000313135_1      Acanthamoeba castellanii ...   1          1          8s           8s            
+GCA_021653915_1      yellow fever mosquito          1          1          48s          48s           
+GCA_016904835_1      rifleman                       1          1          36s          36s           
+GCA_000143045_1      Globisporangium ultimum D...   1          1          3s           3s            
+GCA_003957565_4      zebra finch                    1          2          4m 14s       4m 14s        
+GCF_004008975_1      Bordetella pertussis           1          1          8m 49s       8m 49s        
+GCF_000008445_1      Bacillus anthracis str. '...   1          1          28s          28s           
+GCA_000006275_3      Aspergillus flavus NRRL3357    1          1          N/A          N/A           
+GCF_000149335_2      Coccidioides immitis RS        1          1          6s           6s            
+GCA_000826345_1      Acanthamoeba polyphaga         1          1          N/A          N/A           
+GCF_900002375_2      Plasmodium berghei ANKA        1          1          13s          13s           
+GCF_014805625_2      Glossina fuscipes              1          2          N/A          N/A           
+
+* = May have first-in-list bias (appears early in assembly listings)
+
