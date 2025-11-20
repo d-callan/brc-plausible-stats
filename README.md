@@ -69,6 +69,10 @@ The script handles:
 - Missing or inconsistent tab separators
 - Various formatting edge cases
 
+## Data Source
+
+- For the example input files in `data/`, the data was obtained by manually copying the "Top pages" section from Plausible for BRC Analytics and saving as a `.tab` file. The cleaning utility converts this raw copy-paste into a consistent TSV format for analysis.
+
 ## Input Format
 
 The scripts expect tab-separated files with the following columns:

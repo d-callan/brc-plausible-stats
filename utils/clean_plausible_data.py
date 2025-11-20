@@ -138,14 +138,14 @@ def main():
     
     try:
         result_file = clean_plausible_data(input_file, output_file)
-        print(f"Successfully cleaned data!")
+        print("Successfully cleaned data!")
         print(f"Input:  {input_file}")
         print(f"Output: {result_file}")
         
         # Show statistics
         with open(result_file, 'r') as f:
             lines = f.readlines()
-            data_lines = len([l for l in lines if l.strip() and not l.startswith('Page url')])
+            data_lines = len([line for line in lines if line.strip() and not line.startswith('Page url')])
             print(f"\nProcessed {data_lines} data rows")
     
     except Exception as e:
