@@ -11,8 +11,7 @@ brc-plausible-stats/
 │   ├── analyze_workflows.py   # Analyze workflow configuration pages
 │   └── run_analysis.py        # Run both analyses at once
 ├── utils/            # Data cleaning utilities
-│   ├── fix_format.py          # Fix tab file formatting
-│   └── fix_spaces.py          # Replace spaces with tabs
+│   └── clean_plausible_data.py  # Clean Plausible export data
 ├── data/             # Input .tab files from Plausible
 ├── output/           # Analysis results
 └── README.md
@@ -53,17 +52,22 @@ python3 scripts/analyze_organisms.py data/your-file.tab output/results.txt
 python3 scripts/analyze_workflows.py data/your-file.tab output/results.txt
 ```
 
-### Data Cleaning Utilities
+### Data Cleaning
 
-If your exported data has formatting issues, use the utilities:
+Plausible Analytics exports data with URLs and metrics on separate lines. Use the cleaning utility to convert this to proper tab-separated format:
 
 ```bash
-# Fix spacing issues (spaces between URLs and numbers)
-python3 utils/fix_spaces.py data/your-file.tab
+# Clean Plausible export data
+python3 utils/clean_plausible_data.py data/your-file.tab
 
-# Fix general tab formatting
-python3 utils/fix_format.py data/input.tab data/output.tab
+# Or specify output file
+python3 utils/clean_plausible_data.py data/your-file.tab data/your-file-cleaned.tab
 ```
+
+The script handles:
+- URLs and data on separate lines (standard Plausible format)
+- Missing or inconsistent tab separators
+- Various formatting edge cases
 
 ## Input Format
 
@@ -99,7 +103,3 @@ Example:
 - Rate limiting is built in (3 requests per second)
 - Analysis can take several minutes for large datasets
 - Assembly IDs like `GCA_001008285_1` may show bias indicators if they appear early in listings
-
-## License
-
-MIT

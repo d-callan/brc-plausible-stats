@@ -1,0 +1,233 @@
+================================================================================
+ORGANISM AND PATHOGEN PAGE ANALYSIS
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Organism pages (all): 98 unique, 161 visitors, 193 pageviews
+Organism pages (no assembly): 34 unique, 37 visitors, 39 pageviews
+Priority pathogen pages: 5 unique, 12 visitors, 13 pageviews
+Assembly pages (all): 103 unique, 228 visitors, 309 pageviews
+Assembly pages (no workflow): 62 unique, 74 visitors, 80 pageviews
+
+
+HIGH-LEVEL NAVIGATION PAGES
+--------------------------------------------------------------------------------
+Page                                     Visitors   Pageviews  Bounce Rate  Avg Time    
+--------------------------------------------------------------------------------
+/                                        467        641        72%          2m 56s      
+/data/organisms                          124        194        63%          40s         
+/data/assemblies                         109        204        53%          1m 0s       
+/about                                   46         61         75%          1m 12s      
+/data/priority-pathogens                 35         44         79%          28s         
+/roadmap                                 27         31         87%          56s         
+
+
+PRIORITY PATHOGEN PAGES
+--------------------------------------------------------------------------------
+Pathogen                                 Visitors   Pageviews  Avg Time     Median Time 
+--------------------------------------------------------------------------------
+Filoviridae                              4          4          7s           7s          
+Candidozyma Candida Auris                3          3          11s          11s         
+Plasmodium Falciparum                    3          3          10s          10s         
+Sars Cov 2                               1          1          5s           5s          
+Paramyxoviridae                          1          2          37s          37s         
+
+
+ORGANISM PAGES (All - Regardless of Assembly Status)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+5833            Plasmodium falciparum               14         14         36s         
+73230           [Emmonsia] crescens                 11         13         26s         
+45524           [Candida] blankii                   9          12         3s          
+498019          Candidozyma auris                   7          9          2m 40s      
+3052345         Morbillivirus hominis               6          14         6s          
+45573           [Candida] oleophila                 4          4          2m 54s      
+337050          Alphapapillomavirus 6               3          3          N/A         
+2955291         Alphainfluenzavirus influenzae      3          3          2m 31s      
+7160            forest day mosquito                 3          3          N/A         
+5755            Acanthamoeba castellanii            3          3          30s         
+46125           Abiotrophia defectiva               3          3          4s          
+65659           Acanthamoeba comandoni              2          2          N/A         
+28583           Allomyces macrogynus                2          2          1s          
+196912          Acanthamoeba mauritaniensis         2          2          4s          
+723287          Anncaliia algerae                   2          3          2m 58s      
+730             [Haemophilus] ducreyi               2          2          9m 34s      
+287             Pseudomonas aeruginosa              2          4          30s         
+1773            Mycobacterium tuberculosis          2          2          40s         
+511             Alcaligenes faecalis                2          2          16s         
+44386           Haemaphysalis longicornis           1          1          N/A         
+28015           Acanthamoeba palestinensis          1          1          N/A         
+85698           Achromobacter xylosoxidans          1          1          N/A         
+186751          Anopheles moucheti                  1          1          N/A         
+6313            Angiostrongylus cantonensis         1          1          2s          
+202919          Acanthamoeba divionensis            1          1          N/A         
+5811            Toxoplasma gondii                   1          2          6s          
+43142           Acanthamoeba culbertsoni            1          1          N/A         
+2761625         Allodiplogaster sudhausi            1          1          N/A         
+1866961         Amphiamblys sp. WSBS2006            1          1          N/A         
+2919603         Acanthamoeba sp. SK_2022c           1          1          N/A         
+2919605         Acanthamoeba sp. SK_2022a           1          1          N/A         
+337048          Alphapapillomavirus 1               1          1          N/A         
+2950023         Leptospira limi                     1          1          N/A         
+65658           Acanthamoeba astronyxis             1          1          2s          
+5476            Candida albicans                    1          1          6s          
+208452          Plasmodium coatneyi                 1          1          N/A         
+1314            Streptococcus pyogenes              1          1          4s          
+5037            Histoplasma capsulatum              1          1          4s          
+5053            Aspergillus aculeatus               1          1          1m 40s      
+3048448         Orthoflavivirus nilense             1          4          8s          
+5757            Acanthamoeba polyphaga              1          1          N/A         
+333766          Alphapapillomavirus 13              1          1          N/A         
+3052462         Orthoebolavirus zairense            1          1          2s          
+337049          Alphapapillomavirus 11              1          1          N/A         
+32600           Acanthamoeba royreba                1          1          N/A         
+470             Acinetobacter baumannii             1          1          N/A         
+65661           Acanthamoeba healyi                 1          1          N/A         
+5599            Alternaria alternata                1          3          3s          
+337044          Alphapapillomavirus 5               1          1          N/A         
+520             Bordetella pertussis                1          1          1s          
+3052462         Orthoebolavirus zairense            1          1          2s          
+333766          Alphapapillomavirus 13              1          1          N/A         
+5757            Acanthamoeba polyphaga              1          1          N/A         
+5053            Aspergillus aculeatus               1          1          1m 40s      
+5037            Histoplasma capsulatum              1          1          4s          
+1314            Streptococcus pyogenes              1          1          4s          
+5476            Candida albicans                    1          1          6s          
+65658           Acanthamoeba astronyxis             1          1          2s          
+2919603         Acanthamoeba sp. SK_2022c           1          1          N/A         
+1866961         Amphiamblys sp. WSBS2006            1          1          N/A         
+2761625         Allodiplogaster sudhausi            1          1          N/A         
+43142           Acanthamoeba culbertsoni            1          1          N/A         
+5811            Toxoplasma gondii                   1          2          6s          
+6313            Angiostrongylus cantonensis         1          1          2s          
+186751          Anopheles moucheti                  1          1          N/A         
+5297            wheat stem rust                     1          1          5s          
+202919          Acanthamoeba divionensis            1          1          N/A         
+2919605         Acanthamoeba sp. SK_2022a           1          1          N/A         
+337048          Alphapapillomavirus 1               1          1          N/A         
+2950023         Leptospira limi                     1          1          N/A         
+208452          Plasmodium coatneyi                 1          1          N/A         
+3048448         Orthoflavivirus nilense             1          4          8s          
+470             Acinetobacter baumannii             1          1          N/A         
+65661           Acanthamoeba healyi                 1          1          N/A         
+5599            Alternaria alternata                1          3          3s          
+3049954         Orthopneumovirus hominis            1          1          12s         
+65662           Acanthamoeba pearcei                1          1          N/A         
+3431196         Norovirus norwalkense               1          1          N/A         
+32595           Babesia divergens                   1          3          10s         
+6277            Acanthocheilonema viteae            1          1          N/A         
+290746          Acrobeloides nanus                  1          1          N/A         
+337044          Alphapapillomavirus 5               1          1          N/A         
+520             Bordetella pertussis                1          1          1s          
+32599           Acanthamoeba rhysodes               1          1          N/A         
+337042          Alphapapillomavirus 7               1          1          N/A         
+28015           Acanthamoeba palestinensis          1          1          N/A         
+44386           Haemaphysalis longicornis           1          1          N/A         
+3418604         Betacoronavirus pandemicum          1          1          N/A         
+337043          Alphapapillomavirus 4               1          1          N/A         
+337039          Alphapapillomavirus 2               1          1          N/A         
+67680           Anncaliia algerae                   1          1          4s          
+5868            Babesia microti                     1          1          N/A         
+931244          Alphapapillomavirus 14              1          1          N/A         
+211522          Acanthamoeba quina                  1          1          N/A         
+28901           Salmonella enterica                 1          1          32s         
+3431487         Orthopoxvirus variola               1          1          1s          
+85698           Achromobacter xylosoxidans          1          1          N/A         
+1891728         Alphapolyomavirus terdecihominis    1          1          N/A         
+
+
+ORGANISM PAGES (Filtered to Those Without Assembly Pages)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+196912          Acanthamoeba mauritaniensis         2          2          4s          
+287             Pseudomonas aeruginosa              2          4          30s         
+1773            Mycobacterium tuberculosis          2          2          40s         
+44386           Haemaphysalis longicornis           1          1          N/A         
+186751          Anopheles moucheti                  1          1          N/A         
+6313            Angiostrongylus cantonensis         1          1          2s          
+1866961         Amphiamblys sp. WSBS2006            1          1          N/A         
+2919603         Acanthamoeba sp. SK_2022c           1          1          N/A         
+2950023         Leptospira limi                     1          1          N/A         
+5476            Candida albicans                    1          1          6s          
+208452          Plasmodium coatneyi                 1          1          N/A         
+1314            Streptococcus pyogenes              1          1          4s          
+5053            Aspergillus aculeatus               1          1          1m 40s      
+333766          Alphapapillomavirus 13              1          1          N/A         
+3052462         Orthoebolavirus zairense            1          1          2s          
+32600           Acanthamoeba royreba                1          1          N/A         
+470             Acinetobacter baumannii             1          1          N/A         
+337044          Alphapapillomavirus 5               1          1          N/A         
+3052462         Orthoebolavirus zairense            1          1          2s          
+333766          Alphapapillomavirus 13              1          1          N/A         
+5053            Aspergillus aculeatus               1          1          1m 40s      
+1314            Streptococcus pyogenes              1          1          4s          
+5476            Candida albicans                    1          1          6s          
+2919603         Acanthamoeba sp. SK_2022c           1          1          N/A         
+1866961         Amphiamblys sp. WSBS2006            1          1          N/A         
+6313            Angiostrongylus cantonensis         1          1          2s          
+186751          Anopheles moucheti                  1          1          N/A         
+2950023         Leptospira limi                     1          1          N/A         
+208452          Plasmodium coatneyi                 1          1          N/A         
+470             Acinetobacter baumannii             1          1          N/A         
+3431196         Norovirus norwalkense               1          1          N/A         
+337044          Alphapapillomavirus 5               1          1          N/A         
+44386           Haemaphysalis longicornis           1          1          N/A         
+5868            Babesia microti                     1          1          N/A         
+
+
+ASSEMBLY PAGES (All - Regardless of Workflow Status)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCA_030573285_1           [Candida] blankii                   21         38         1m 11s        
+GCA_001008285_1           [Emmonsia] crescens                 17         26         17s          *
+GCF_045689255_1           Pseudomonas aeruginosa PA14         13         14         16s           
+GCA_030563865_1           [Candida] oleophila                 11         17         2m 22s        
+GCF_013267415_1           Abiotrophia defectiva               7          10         7s            
+GCF_001647695_1           [Haemophilus] ducreyi               6          7          2m 2s         
+GCF_000864925_1           human papillomavirus 32             5          5          N/A           
+GCF_000006565_2           Toxoplasma gondii ME49              5          9          1m 53s        
+GCF_000854845_1           Measles morbillivirus               5          10         22s           
+GCA_002759435_3           Candidozyma auris                   5          8          1m 1s         
+GCF_000851145_1           Influenza A virus (A/Hong Kong...   5          5          5s            
+GCF_000313135_1           Acanthamoeba castellanii str. ...   4          4          3s            
+GCF_000865725_1           Influenza A virus (A/Puerto Ri...   3          3          N/A           
+GCF_003013715_1           Candidozyma auris                   3          4          19s           
+GCA_000826485_1           Acanthamoeba castellanii            3          3          N/A           
+GCF_000865085_1           Influenza A virus (A/New York/...   3          3          N/A           
+GCA_001444175_2           Asian tiger mosquito                3          3          N/A           
+GCA_001598995_1           Apiotrichum montevideense           3          3          5m 20s        
+GCF_000864945_1           Alphapapillomavirus 4               3          3          N/A           
+GCF_000002765_6           Plasmodium falciparum 3D7           2          2          2m 12s        
+
+
+ASSEMBLY PAGES (Filtered to Those Without Workflow Configurations)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCA_000826485_1           Acanthamoeba castellanii            3          3          N/A           
+GCA_001444175_2           Asian tiger mosquito                3          3          N/A           
+GCF_000002765_6           Plasmodium falciparum 3D7           2          2          2m 12s        
+GCF_000865665_1           human papillomavirus 18             2          2          N/A           
+GCF_000853505_1           Human coronavirus 229E              2          2          N/A           
+GCF_000866645_1           Influenza A virus (A/Korea/426...   2          2          N/A           
+GCF_000922675_1           New Jersey polyomavirus-2013        2          2          N/A           
+GCF_000006945_2           Salmonella enterica subsp. ent...   2          2          10s           
+GCF_000864905_1           human papillomavirus 10             2          2          N/A           
+GCA_000826245_1           Acanthamoeba astronyxis             2          3          14s          *
+GCA_000826325_1           Acanthamoeba palestinensis          1          1          N/A           
+GCA_001430935_1           Amauroascus verrucosus              1          1          3s            
+GCA_000826285_1           Acanthamoeba lenticulata            1          1          N/A           
+GCF_002987345_1           human papillomavirus 30             1          1          N/A           
+GCF_016728825_1           Achromobacter xylosoxidans          1          1          N/A           
+GCA_001077455_2           Babesia divergens                   1          1          12s           
+GCA_000826445_1           Acanthamoeba quina                  1          1          N/A           
+GCF_002826825_1           human papillomavirus 71             1          1          N/A           
+GCA_002216205_1           Cryptococcus deneoformans XL280     1          1          N/A           
+GCA_000826325_1           Acanthamoeba palestinensis          1          1          N/A           
+
+* = May have first-in-list bias (appears early in assembly listings)
+
