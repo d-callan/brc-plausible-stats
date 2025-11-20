@@ -88,8 +88,8 @@ Example:
 - Overall statistics for organism, pathogen, and assembly pages
 - High-level navigation page metrics
 - Priority pathogen page breakdown
-- Organism pages (all and filtered by assembly status)
-- Assembly pages (all and filtered by workflow status)
+- Organism pages (all and filtered to show where available assembly pages were not visited)
+- Assembly pages (all and filtered to show where available workflow pages were not visited)
 
 ### Workflow Analysis
 - Overall workflow statistics
@@ -103,3 +103,4 @@ Example:
 - Rate limiting is built in (3 requests per second)
 - Analysis can take several minutes for large datasets
 - Assembly IDs like `GCA_001008285_1` may show bias indicators if they appear early in listings
+- **"Without assembly/workflow" sections** show pages where the site offers these features but users didn't visit them during the reporting period

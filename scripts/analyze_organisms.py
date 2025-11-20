@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
 Analyze organism and priority pathogen page visits from web usage data.
+
+Note: "Without assembly/workflow" sections identify pages where the site offers
+these features but they were not visited during the reporting period.
 """
 
 import re
@@ -296,10 +299,10 @@ def write_output(output_file, organism_pages, organism_pages_no_assembly, priori
         f.write("OVERALL STATISTICS\n")
         f.write("-" * 80 + "\n")
         f.write(f"Organism pages (all): {len(organism_pages)} unique, {total_organism_visitors} visitors, {total_organism_pageviews} pageviews\n")
-        f.write(f"Organism pages (no assembly): {len(organism_pages_no_assembly)} unique, {total_organism_no_asm_visitors} visitors, {total_organism_no_asm_pageviews} pageviews\n")
+        f.write(f"Organism pages (with no assembly page visits): {len(organism_pages_no_assembly)} unique, {total_organism_no_asm_visitors} visitors, {total_organism_no_asm_pageviews} pageviews\n")
         f.write(f"Priority pathogen pages: {len(priority_pathogen_pages)} unique, {total_pathogen_visitors} visitors, {total_pathogen_pageviews} pageviews\n")
         f.write(f"Assembly pages (all): {len(assembly_pages_all)} unique, {total_assembly_visitors} visitors, {total_assembly_pageviews} pageviews\n")
-        f.write(f"Assembly pages (no workflow): {len(assembly_pages_no_workflow)} unique, {total_assembly_no_wf_visitors} visitors, {total_assembly_no_wf_pageviews} pageviews\n")
+        f.write(f"Assembly pages (with no workflow page visits): {len(assembly_pages_no_workflow)} unique, {total_assembly_no_wf_visitors} visitors, {total_assembly_no_wf_pageviews} pageviews\n")
         f.write("\n\n")
         
         # Landing/Navigation pages
@@ -386,8 +389,8 @@ def write_output(output_file, organism_pages, organism_pages_no_assembly, priori
         
         f.write("\n\n")
         
-        # Organism pages breakdown - NO ASSEMBLY
-        f.write("ORGANISM PAGES (Filtered to Those Without Assembly Pages)\n")
+        # Organism pages breakdown - NO ASSEMBLY VISITS
+        f.write("ORGANISM PAGES (Where Available Assembly Pages Were Not Visited)\n")
         f.write("-" * 80 + "\n")
         f.write(f"{'Tax ID':<15} {'Organism':<35} {'Visitors':<10} {'Pageviews':<10} {'Avg Time':<12}\n")
         f.write("-" * 80 + "\n")
@@ -446,8 +449,8 @@ def write_output(output_file, organism_pages, organism_pages_no_assembly, priori
         
         f.write("\n\n")
         
-        # Assembly pages breakdown - NO WORKFLOW
-        f.write("ASSEMBLY PAGES (Filtered to Those Without Workflow Configurations)\n")
+        # Assembly pages breakdown - NO WORKFLOW VISITS
+        f.write("ASSEMBLY PAGES (Where Available Workflow Pages Were Not Visited)\n")
         f.write("-" * 80 + "\n")
         f.write(f"{'Assembly ID':<25} {'Organism':<35} {'Visitors':<10} {'Pageviews':<10} {'Avg Time':<12}\n")
         f.write("-" * 80 + "\n")
@@ -535,10 +538,10 @@ def main():
     print(f"Analysis complete! Results written to: {output_file}")
     print("\nSummary:")
     print(f"  - {len(organism_pages)} organism pages (all)")
-    print(f"  - {len(organism_pages_no_assembly)} organism pages (without assembly)")
+    print(f"  - {len(organism_pages_no_assembly)} organism pages (with no assembly page visits)")
     print(f"  - {len(priority_pathogen_pages)} priority pathogen pages")
     print(f"  - {len(assembly_pages_all)} assembly pages (all)")
-    print(f"  - {len(assembly_pages_no_workflow)} assembly pages (without workflow)")
+    print(f"  - {len(assembly_pages_no_workflow)} assembly pages (with no workflow page visits)")
 
 
 if __name__ == '__main__':
