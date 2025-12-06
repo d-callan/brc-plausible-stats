@@ -1,0 +1,219 @@
+Page url	Visitors	Pageviews	Bounce rate	Time on Page
+/  	431	738	47%	3m 20s
+/data/organisms	138	292	42%	31s
+/),	94	109	2%	7s
+/data/assemblies	84	189	58%	1m 34s
+/data/priority-pathogens	59	82	39%	26s
+/roadmap	54	62	60%	1m 04s
+/about	52	77	89%	1m 05s
+/data/assemblies/GCA_001008285_1	20	31	40%	2m 30s
+/calendar	19	21	40%	1m 07s
+/data/organisms/5833	13	21	50%	2m 23s
+/data/organisms/73230	11	14	0%	9s
+/data/assemblies/GCA_001008285_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	10	19	100%	6m 10s
+/data/organisms/43142	8	9	33%	32s
+/data/priority-pathogens/aspergillus	7	7	0%	35s
+/data/assemblies/GCA_000826245_1	7	9	-	10s
+/data/assemblies/GCF_000002445_2	6	6	0%	1m 28s
+/data/assemblies/GCA_006247105_1/workflow-github-com-iwc-workflows-cutandrun-main-versions-v0-14	6	6	100%	-
+/data/assemblies/GCF_000854845_1	6	8	-	6s
+/data/assemblies/GCF_000002765_6	6	14	-	2m 24s
+/data/priority-pathogens/tuberculosis	6	6	-	1s
+/data/organisms/3052345	6	10	0%	3m 35s
+/data/assemblies/GCF_000006565_2/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	5	7	100%	7m 38s
+/data/assemblies/GCF_000854845_1/workflow-github-com-iwc-workflows-generic-non-segmented-viral-variant-calling-main-versions-v0-1	5	7	-	17m 59s
+/data/organisms/2074759	5	6	-	2s
+/data/assemblies/GCF_000149245_1	5	8	-	41s
+/data/organisms/65658	5	9	-	4s
+/data/assemblies/GCF_000006565_2	5	9	-	8s
+/data/organisms/1866961	4	4	100%	2s
+/data/organisms/5207	4	8	-	12s
+/data/assemblies/GCF_000002765_6/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	4	8	-	4m 18s
+/data/assemblies/GCA_001875675_1	4	5	100%	4s
+/data/organisms/5755	4	7	-	4s
+/data/organisms/498019	4	6	-	1m 01s
+/data/assemblies/GCA_000826245_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-3	3	3	100%	1m 39s
+/data/assemblies/GCF_001642055_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	3	9	100%	11m 10s
+/data/organisms/38527	3	3	-	3s
+/data/priority-pathogens/sars-cov-2	3	3	-	1s
+/data/organisms/59729	3	8	-	2m 03s
+/data/assemblies/GCF_001642055_1	3	5	-	44s
+/data/priority-pathogens/plasmodium-falciparum	3	3	-	6s
+/data/assemblies/GCF_000002415_2/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	3	6	-	12m 18s
+/data/assemblies/GCA_001430935_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	3	4	-	1m 07s
+/data/organisms/9606	3	5	-	14s
+/data/assemblies/GCA_000826265_1	3	4	-	1m 38s
+/data/assemblies/GCF_000195955_2	3	3	-	20s
+/data/assemblies/GCF_000313135_1	3	4	-	1m 06s
+/index.html	3	3	100%	-
+/data/assemblies/GCA_006247105_1	3	3	100%	-
+/data/organisms/61605	3	3	-	-
+/data/assemblies/GCA_001430935_1	3	4	-	24s
+/data/assemblies/GCF_000001405_40	3	3	-	22s
+/data/organisms/196912	3	3	0%	-
+/data/assemblies/GCF_000006565_2/workflow-github-com-iwc-workflows-chipseq-sr-main-versions-v0-15	2	2	-	7s
+/data/assemblies/GCA_048771995_1	2	3	-	7s
+/data/assemblies/GCA_000826345_1	2	2	-	12s
+/data/assemblies/GCF_964026465_1	2	2	100%	-
+/data/assemblies/GCA_048771995_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	2	2	-	15m 27s
+/data/assemblies/GCF_000195955_2/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	2	-	9s
+/data/priority-pathogens/candidozyma-candida-auris	2	2	-	-
+/data/priority-pathogens/flaviviridae	2	2	0%	-
+/data/assemblies/GCA_963993115_1	2	2	-	10s
+/data/priority-pathogens/naegleria-fowleri	2	2	-	16s
+/data/assemblies/GCA_000003225_1	2	2	-	8s
+/data/assemblies/GCF_003013715_1	2	4	-	45s
+/data/assemblies/GCA_000151295_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	3	100%	1m 31s
+/data/assemblies/GCA_021653915_1	2	3	-	7s
+/data/assemblies/GCA_900248155_1	2	4	50%	-
+/data/assemblies/GCF_013267415_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	3	-	52s
+/data/assemblies/GCF_000851145_1	2	2	-	3s
+/data/assemblies/GCA_000385855_2	2	2	-	2s
+/data/organisms/3066251	2	2	100%	-
+/data/assemblies/GCA_000826245_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	2	2	-	-
+/data/priority-pathogens/filoviridae	2	3	-	15s
+/data/organisms/5599	2	3	-	2s
+/data/organisms/7165	2	2	100%	49s
+/data/organisms/3066252	2	2	100%	-
+/data/assemblies/GCF_013267415_1	2	5	-	7s
+/data/organisms/2955291	2	3	-	3s
+/data/assemblies/GCF_000002415_2	2	5	-	22s
+/data/organisms/5757	2	3	-	1s
+/data/organisms/5742	2	2	100%	-
+/data/organisms/730	2	2	-	14s
+/data/organisms/199306	2	2	-	45s
+/data/organisms/10090	2	4	-	1m 24s
+/data/assemblies/GCA_002749535_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCF_900002335_3/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	21s
+/data/assemblies/GCF_003013715_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	7m 37s
+/data/assemblies/GCA_000256705_2/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	-
+/data/assemblies/GCF_903995435_1	1	1	-	6s
+/data/assemblies/GCA_900248155_1/workflow-github-com-iwc-workflows-consensus-peaks-consensus-peaks-atac-cutandrun-versions-v1-3	1	1	0%	8s
+/data/priority-pathogens/mpox	1	5	-	1m 02s
+/data/assemblies/GCA_027944975_1	1	2	-	55s
+/data/assemblies/GCA_000002825_3/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	4m 12s
+/data/assemblies/GCA_001430945_1	1	1	-	27s
+/data/assemblies/GCA_000003225_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCA_900184105_1	1	1	-	-
+/data/assemblies/GCA_001430945_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	1m 03s
+/data/assemblies/GCF_000002655_1	1	1	-	21s
+/data/assemblies/GCA_000826245_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-v3-versions-v0-6-2	1	1	100%	-
+/data/assemblies/GCF_000863945_3	1	1	-	19s
+/data/assemblies/GCF_000002655_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCA_963514095_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	12s
+/data/assemblies/GCA_000826245_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	17s
+/data/assemblies/GCF_002224265_1	1	1	100%	-
+/data/assemblies/GCF_000313135_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-3	1	1	-	8s
+/data/assemblies/GCA_000143045_1	1	1	-	7s
+/data/assemblies/GCA_001430925_1	1	1	100%	-
+/data/assemblies/GCF_013758885_1	1	1	-	3s
+/data/assemblies/GCA_027944975_1	1	2	-	55s
+/data/assemblies/GCF_000002415_2/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	6s
+/data/organisms/187106	1	2	-	2s
+/data/assemblies/GCF_900002335_3	1	2	-	8m 14s
+/data/assemblies/GCF_003013715_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	7m 37s
+/data/assemblies/GCF_000149335_2	1	2	-	52s
+/data/organisms/2268382	1	1	-	-
+/data/assemblies/GCA_027943245_1	1	1	-	1s
+/data/assemblies/GCF_900002335_3/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	21s
+/data/organisms/5860	1	1	-	2s
+/data/organisms/59479	1	1	-	9s
+/data/assemblies/GCA_900248155_1/workflow-github-com-iwc-workflows-consensus-peaks-consensus-peaks-atac-cutandrun-versions-v1-3	1	1	0%	8s
+/data/assemblies/GCF_964026465_1/workflow-github-com-iwc-workflows-cutandrun-main-versions-v0-14	1	1	100%	-
+/data/assemblies/GCA_006247105_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCF_001890905_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	-	3s
+/data/assemblies/GCF_964026465_1/workflow-github-com-iwc-workflows-atacseq-main-versions-v1-0	1	1	100%	-
+/data/organisms/520	1	1	-	1s
+/data/assemblies/GCF_000008445_1	1	1	-	12s
+/data/assemblies/GCF_002252535_1	1	1	100%	-
+/data/assemblies/GCA_021653915_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	48s
+/data/assemblies/GCA_016904835_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	36s
+/data/assemblies/GCA_000003225_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCF_903995435_1	1	1	-	6s
+/data/assemblies/GCA_000826245_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-v3-versions-v0-6-2	1	1	100%	-
+/data/assemblies/GCA_001430945_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	1m 03s
+/data/assemblies/GCF_904848185_1	1	1	-	5s
+/data/assemblies/GCA_000256705_2/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	-
+/data/assemblies/GCF_001963095_1	1	1	-	-
+/data/assemblies/GCA_001430945_1	1	1	-	27s
+/data/organisms/5811	1	2	-	6s
+/data/assemblies/GCA_027944975_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	8m 13s
+/data/organisms/319629	1	1	-	40s
+/data/priority-pathogens/mpox	1	5	-	1m 02s
+/data/assemblies/GCA_900184105_1	1	1	-	-
+/data/assemblies/GCA_000143045_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	-	3s
+/data/assemblies/GCA_000256705_2	1	1	-	3s
+/data/organisms/5059	1	1	-	4m 32s
+/data/organisms/5722	1	1	-	2s
+/data/organisms/46125	1	3	-	5s
+/data/organisms/2761623	1	1	100%	-
+/data/organisms/760013	1	1	-	8s
+/data/organisms/5478	1	1	-	1m 42s
+/data/organisms/746128	1	1	-	3s
+/data/organisms/5827	1	3	-	2s
+/data/organisms/36330	1	1	-	3s
+/data/organisms/7159	1	1	-	-
+/data/organisms/100269	1	1	0%	3s
+/data/organisms/9031	1	3	0%	4s
+/data/organisms/3418650	1	1	-	-
+/data/organisms/4952	1	1	-	1m 06s
+/data/organisms/5476	1	1	100%	-
+/data/organisms/36911	1	1	-	-
+/data/organisms/5053	1	1	-	2s
+/data/organisms/5858	1	1	-	2s
+/data/organisms/646526	1	1	100%	-
+/data/assemblies/GCA_006247105_1/workflow-github-com-iwc-workflows-chipseq-pe-main-versions-v0-15	1	1	100%	-
+/data/organisms/5501	1	2	-	4s
+/data/organisms/426098	1	1	-	6s
+/data/organisms/60746	1	2	-	2s
+/data/organisms/1773	1	1	-	14s
+/data/assemblies/GCA_003957565_4/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	2	-	4m 14s
+/data/assemblies/GCA_963514095_1	1	2	-	6s
+/data/assemblies/GCA_009761425_1	1	1	-	-
+/data/assemblies/GCF_014805625_2	1	1	-	4s
+/data/priority-pathogens/paramyxoviridae	1	1	-	2s
+/data/organisms/5850	1	2	-	2s
+/data/assemblies/GCA_002749535_1	1	1	-	2s
+/data/assemblies/GCF_004008975_1/workflow-github-com-iwc-workflows-amr-gene-detection-main-versions-v1-1-5	1	1	-	8m 49s
+/data/assemblies/GCA_900231805_1	1	1	100%	-
+/data/organisms/5821	1	5	-	27s
+/data/assemblies/GCA_000826385_1	1	1	-	2s
+/data/assemblies/GCA_000826505_1	1	1	-	38s
+/data/assemblies/GCF_004008975_1	1	1	-	6s
+/data/organisms/GCA_001189475_1	1	1	-	14s
+/data/organisms/669	1	1	100%	-
+/data/organisms/65661	1	1	-	4s
+/data/assemblies/GCF_000008445_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	28s
+/data/assemblies/GCF_026262505_1	1	1	-	4m 03s
+/data/organisms/5855	1	1	-	5s
+/data/assemblies/GCA_000006275_3/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCA_002915635_3	1	1	-	-
+/data/assemblies/GCF_000002765_6/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	37s
+/data/assemblies/GCA_003957565_4	1	5	-	6s
+/data/organisms/5824	1	1	-	11s
+/data/assemblies/GCF_000149335_2/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	6s
+/data/organisms/66851	1	1	-	21s
+/data/assemblies/GCA_000826345_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	-
+/data/assemblies/GCF_000863945_3	1	1	-	19s
+/data/assemblies/GCF_900002375_2/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	13s
+/data/assemblies/GCF_000002655_1	1	1	-	21s
+/data/assemblies/GCA_002749535_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCF_014805625_2/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	2	-	-
+/data/organisms/5860	1	1	-	2s
+/data/organisms/5059	1	1	-	4m 32s
+/data/assemblies/GCA_900248155_1/workflow-github-com-iwc-workflows-consensus-peaks-consensus-peaks-atac-cutandrun-versions-v1-3	1	1	0%	8s
+/data/assemblies/GCA_006247105_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCF_001890905_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	-	3s
+/data/assemblies/GCF_964026465_1/workflow-github-com-iwc-workflows-atacseq-main-versions-v1-0	1	1	100%	-
+/data/assemblies/GCF_000008445_1	1	1	-	12s
+/data/organisms/59479	1	1	-	9s
+/data/assemblies/GCA_000003225_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCA_000826245_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-v3-versions-v0-6-2	1	1	100%	-
+/data/assemblies/GCA_001430945_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	1m 03s
+/data/organisms/746128	1	1	-	3s
+/data/organisms/5478	1	1	-	1m 42s
+/data/assemblies/GCF_001963095_1	1	1	-	-
+/data/assemblies/GCA_027944975_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	8m 13s
+/data/assemblies/GCF_000002655_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCF_904848185_1	1	1	-	5s
+/data/organisms/5858	1	1	-	2s

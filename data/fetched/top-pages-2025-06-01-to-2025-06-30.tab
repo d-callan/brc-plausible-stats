@@ -1,0 +1,138 @@
+Page url	Visitors	Pageviews	Bounce rate	Time on Page
+/	244	398	54%	2m 06s
+/data/organisms	116	185	33%	5m 00s
+/data/assemblies	69	128	46%	2m 09s
+/about	24	29	67%	11m 53s
+/roadmap	19	25	-	-
+/data/assemblies/GCA_000826245_1	19	30	75%	4m 47s
+/data/priority-pathogens	13	51	8%	3m 43s
+/data/organisms/65658	12	15	0%	1m 06s
+/data/assemblies/GCA_021020595_1	10	17	78%	22s
+/data/organisms/746128	8	10	67%	-
+/data/organisms/5855	7	9	-	-
+/data/organisms/5691	7	8	0%	40s
+/data/organisms/5833	7	10	-	-
+/data/assemblies/GCF_000002445_2	6	6	0%	12m 00s
+/data/organisms/5755	6	8	-	-
+/data/assemblies/GCA_900093555_2	6	7	-	-
+/data/assemblies/GCA_000826485_1	6	6	-	-
+/data/priority-pathogens/aspergillosis-aspergillus	5	9	100%	-
+/data/assemblies/GCA_000150145_1	5	6	-	-
+/data/organisms/5807	5	9	0%	1m 24s
+/data/organisms/43142	4	5	-	-
+/data/priority-pathogens/candidozyma-candida-auris	4	5	-	-
+/data/assemblies/GCF_000165345_1	4	13	0%	23m 43s
+/data/assemblies/GCA_900093555_2/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	4	4	-	-
+/data/assemblies/GCF_000857045_1	3	3	-	-
+/data/priority-pathogens/sars-cov-2	3	3	-	-
+/data/assemblies/GCA_000826265_1	3	3	-	-
+/data/assemblies/GCF_000165345_1/workflow-github-com-iwc-workflows-rnaseq-sr-main-versions-v1-2	2	5	-	-
+/data/assemblies/GCA_009761425_1	2	2	-	-
+/data/organisms/273372	2	2	0%	-
+/data/priority-pathogens/paramyxoviridae-prototype-pathogen-viral-family	2	2	-	-
+/data/priority-pathogens/filoviridae-prototype-pathogen-viral-family	2	3	-	-
+/data/organisms/5811	2	4	0%	4m 19s
+/data/organisms/28901	2	6	-	-
+/data/organisms/5480	2	2	-	-
+/data/assemblies/GCF_000195955_2	2	2	-	-
+/data/organisms/5660	2	2	-	-
+/data/organisms/11158	2	2	-	-
+/data/assemblies/GCF_000002845_2	2	2	-	-
+/data/assemblies/GCA_000151295_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	3	-	-
+/data/assemblies/GCF_000002415_2	2	2	-	-
+/data/assemblies/GCF_000002415_2/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	2	-	-
+/data/organisms/10244	2	2	-	-
+/data/organisms/5476	2	3	-	-
+/data/assemblies/GCA_000151295_1	2	5	-	-
+/data/assemblies/GCF_000002765_6	2	4	-	-
+/data/assemblies/GCA_009761515_1	2	3	-	-
+/data/organisms/42374	2	2	0%	-
+/data/priority-pathogens/malaria-plasmodium-falciparum	2	3	100%	-
+/data/assemblies/GCF_000149385_1	2	2	100%	-
+/data/organisms/1773	2	5	-	-
+/data/priority-pathogens/visceral-leishmaniasis-leishmania-donovani-complex	2	2	-	-
+/data/assemblies/GCA_009761515_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	2	-	-
+/data/assemblies/GCF_000002765_6/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	3	-	-
+/data/assemblies/GCA_900631975_1	2	2	0%	2s
+/data/assemblies/GCF_000006945_2	2	3	0%	59s
+/data/organisms/5207	1	2	-	-
+/data/assemblies/GCF_001502175_1	1	1	-	-
+/data/assemblies/GCA_900632005_1	1	2	-	-
+/data/assemblies/GCF_001343785_1	1	1	0%	6m 38s
+/data/organisms/28583	1	1	-	-
+/data/assemblies/GCF_004770765_1	1	1	100%	-
+/data/priority-pathogens/arenaviridae-prototype-pathogen-viral-family	1	7	-	-
+/data/assemblies/GCA_021020605_1	1	1	-	-
+/data/assemblies/GCA_902459845_2	1	1	-	-
+/data/assemblies/GCF_000001635_27	1	2	-	-
+/data/assemblies/GCA_003014415_1	1	1	-	-
+/data/organisms/3052303	1	1	-	-
+/data/organisms/1068590	1	2	-	-
+/data/assemblies/GCF_016918735_1	1	1	-	-
+/data/assemblies/GCF_000964685_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	-
+/data/assemblies/GCA_000151295_1&workflow=true	1	1	-	-
+/data/assemblies/GCF_000964685_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	2	-	-
+/data/organisms/562	1	1	-	-
+/data/assemblies/GCF_000315645_1	1	1	100%	-
+/data/assemblies/GCF_963525475_1	1	2	100%	-
+/data/assemblies/GCF_004008975_1	1	2	-	-
+/data/assemblies/GCF_000964685_1	1	5	-	-
+/data/organisms/65661	1	2	-	-
+/data/organisms/7165	1	1	-	-
+/data/assemblies/GCF_000002445_2/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	-
+/data/assemblies/GCA_009761515_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	-
+/data/assemblies/GCF_000006925_2	1	1	-	-
+/data/assemblies/GCF_000828125_2/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	-
+/data/assemblies/GCA_900497135_1	1	1	-	-
+/data/organisms/173	1	1	-	-
+/data/assemblies/GCA_031580275_1	1	2	-	-
+/data/organisms/5693	1	1	-	-
+/data/assemblies/GCF_000277735_2	1	1	-	-
+/data/assemblies/GCF_000165345_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	-
+/data/organisms/11978	1	1	-	-
+/data/organisms/1392	1	1	-	-
+/data/organisms/623	1	2	-	-
+/data/assemblies/GCF_004008975_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	2	-	-
+/data/assemblies/GCA_021020605_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	-
+/data/assemblies/GCA_021020595_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	-
+/data/organisms/1463230	1	1	100%	-
+/data/organisms/2810036	1	2	-	-
+/data/organisms/6526	1	1	-	-
+/data/organisms/5053	1	1	-	-
+/data/assemblies/GCF_000002445_2/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-v3-versions-v0-6-2	1	1	-	-
+/data/priority-pathogens/cryptococcosis-cryptococcus-neoformans	1	2	-	-
+/data/priority-pathogens/tuberculosis	1	1	-	-
+/data/organisms/498019	1	2	-	-
+/data/assemblies/GCF_003184535_1	1	1	100%	-
+/data/assemblies/GCA_021020595_1/workflow-github-com-iwc-workflows-atacseq-main-versions-v1-0	1	1	-	-
+/data/assemblies/GCF_000002845_2/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	-
+/data/assemblies/GCA_900632015_1	1	1	-	-
+/data/organisms/1340029	1	1	-	-
+/data/assemblies/GCA_000826305_1	1	1	-	-
+/data/assemblies/GCA_000826245_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	-
+/data/organisms/29507	1	1	-	-
+/data/assemblies/GCF_000209065_1	1	1	-	-
+/data/assemblies/GCF_000648675_2	1	1	-	-
+/data/organisms/659015	1	1	-	-
+/data/assemblies/GCF_002073495_2	1	1	-	-
+/data/priority-pathogens/avian-influenza	1	2	-	-
+/data/assemblies/GCA_001444175_2	1	1	-	-
+/data/organisms/3052345	1	1	-	-
+/data/organisms/7160	1	1	-	-
+/data/assemblies/GCF_004936735_1	1	1	0%	5s
+/data/organisms/1280935	1	1	-	-
+/data/assemblies/GCF_000149245_1	1	1	-	-
+/data/assemblies/GCA_000224905_2	1	1	100%	-
+/data/assemblies/GCA_008275145_1	1	1	-	-
+/data/priority-pathogens/cryptosporidiosis-cryptosporidium-parvum	1	1	-	-
+/data/organisms/10090	1	3	-	-
+/data/organisms/5741	1	1	-	-
+/data/organisms/79782	1	1	-	-
+/data/assemblies/GCA_000150015_2	1	1	-	-
+/data/organisms/1220188	1	1	100%	-
+/data/assemblies/GCA_000149445_2	1	1	-	-
+/data/priority-pathogens/phenuiviridae-prototype-pathogen-viral-family	1	1	-	-
+/data/organisms/2023186	1	1	-	-
+/data/assemblies/GCA_900497135_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-v3-versions-v0-6-2	1	1	-	-
+/data/assemblies/GCF_000964685_1/workflow-github-com-iwc-workflows-chipseq-sr-main-versions-v0-14	1	1	-	-
+/data/assemblies/GCF_000828125_2	1	2	-	-

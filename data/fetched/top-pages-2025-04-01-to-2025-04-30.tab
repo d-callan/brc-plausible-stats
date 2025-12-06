@@ -1,0 +1,91 @@
+Page url	Visitors	Pageviews	Bounce rate	Time on Page
+/	284	455	55%	2m 40s
+/data/organisms	140	236	43%	1m 49s
+/data/assemblies	70	114	75%	-
+/roadmap	26	30	60%	-
+/about	23	30	100%	-
+/data/assemblies/GCA_000826245_1	17	25	67%	15m 33s
+/data/organisms/5833	11	14	0%	12s
+/data/assemblies/GCA_000826485_1	10	22	25%	34s
+/data/organisms/65658	10	15	-	-
+/data/organisms/5855	9	10	-	-
+/data/organisms/5755	7	13	-	-
+/data/assemblies/GCA_900093555_2	5	6	-	-
+/data/organisms/43142	5	6	0%	-
+/data/organisms/5811	5	7	-	-
+/data/assemblies/GCA_021020595_1	4	6	-	-
+/data/assemblies/GCA_000151295_1	4	8	-	-
+/data/organisms/196912	4	5	0%	4s
+/data/organisms/28583	4	6	-	-
+/data/assemblies/GCA_000826245_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	4	7	-	-
+/data/assemblies/GCF_000002655_1	4	5	67%	5m 26s
+/data/assemblies/GCF_000001405_40	3	3	50%	1m 50s
+/data/organisms/10244	3	5	100%	-
+/data/organisms/746128	3	3	-	-
+/data/assemblies/GCF_000002415_2	3	3	100%	-
+/data/assemblies/GCF_000002765_6	3	3	-	-
+/data/organisms/61605	3	3	-	-
+/data/assemblies/GCF_000313135_1	3	10	0%	8m 38s
+/data/assemblies/GCA_000826485_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	2	2	-	-
+/data/assemblies/GCA_900093555_2/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	2	0%	2m 06s
+/data/organisms/1773	2	2	-	-
+/data/assemblies/GCA_009761425_1	2	2	-	-
+/data/organisms/7159	2	3	-	-
+/data/assemblies/GCA_021020605_1	2	2	-	-
+/data/assemblies/GCF_000006565_2	2	2	-	-
+/data/assemblies/GCA_000151295_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	3	-	-
+/data/assemblies/GCF_943734665_1	2	2	100%	-
+/data/assemblies/GCA_000826485_1/workflow-github-com-iwc-workflows-atacseq-main-versions-v1-0	2	2	100%	-
+/data/assemblies/GCA_000826265_1	2	2	-	-
+/data/organisms/5037	1	1	-	-
+/)	1	1	-	-
+/data/organisms/42458	1	1	-	-
+/data/organisms/498019	1	1	-	-
+/data/organisms/5506	1	1	-	-
+/data/organisms/5476	1	2	-	-
+/data/organisms/5820	1	1	-	-
+/data/organisms/5207	1	1	-	-
+/data/organisms/1185359	1	1	-	-
+/data/organisms/58291	1	1	-	-
+/data/organisms/5693	1	1	-	-
+/data/organisms/1812179	1	1	-	-
+/data/organisms/688394	1	1	-	-
+/data/organisms/5763	1	1	0%	48m 38s
+/data/assemblies/GCF_000857045_1	1	1	-	-
+/data/organisms/5480	1	2	-	-
+/data/assemblies/GCA_000826445_1	1	1	-	-
+/data/assemblies/GCF_000182765_1	1	1	-	-
+/data/organisms/199306	1	1	-	-
+/data/organisms/5201	1	1	-	-
+/data/assemblies/GCA_900631975_1	1	1	-	-
+/data/organisms/5599	1	1	-	-
+/data/assemblies/GCA_021653915_1	1	1	-	-
+/data/organisms/65662	1	1	-	-
+/data/assemblies/GCA_000224805_2	1	1	-	-
+/data/assemblies/GCF_000313135_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	4	-	-
+/data/organisms/9606	1	1	-	-
+/data/organisms/157538	1	1	-	-
+/data/assemblies/GCA_021020605_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	1	-	-
+/data/assemblies/GCA_021020595_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-2	1	2	-	-
+/data/organisms/199890	1	2	-	-
+/data/organisms/5807	1	1	-	-
+/data/organisms/138948	1	1	-	-
+/data/organisms/43151	1	1	-	-
+/data/assemblies/GCA_000826465_1	1	1	-	-
+/data/assemblies/GCF_002204515_2	1	1	-	-
+/data/organisms/211522	1	1	-	-
+/data/assemblies/GCA_000826305_1	1	1	-	-
+/data/assemblies/GCF_001642055_1	1	1	-	-
+/data/organisms/5661	1	1	-	-
+/data/organisms/5059	1	1	-	-
+/data/assemblies/GCF_943734745_1	1	1	100%	-
+/data/assemblies/GCF_009858895_2	1	1	-	-
+/data/organisms/48703	1	1	-	-
+/data/organisms/936053	1	1	-	-
+/data/assemblies/GCA_000349105_1	1	1	-	-
+/data/assemblies/GCA_914969965_1	1	1	-	-
+/data/assemblies/GCF_000195955_2	1	1	-	-
+/data/assemblies/GCA_000149445_2	1	1	-	-
+/data/organisms/10255	1	1	-	-
+/data/organisms/5671	1	1	-	-
+/data/organisms/723287	1	1	-	-
