@@ -1,0 +1,142 @@
+================================================================================
+ORGANISM AND PATHOGEN PAGE ANALYSIS
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Organism pages (all): 36 unique, 138 visitors, 194 pageviews
+Organism pages (with no assembly page visits): 11 unique, 22 visitors, 22 pageviews
+Priority pathogen pages: 0 unique, 0 visitors, 0 pageviews
+Assembly pages (all): 45 unique, 149 visitors, 198 pageviews
+Assembly pages (with no workflow page visits): 42 unique, 104 visitors, 130 pageviews
+
+
+HIGH-LEVEL NAVIGATION PAGES
+--------------------------------------------------------------------------------
+Page                                     Visitors   Pageviews  Bounce Rate  Avg Time    
+--------------------------------------------------------------------------------
+/                                        386        594        64%          2m 15s      
+/data/organisms                          186        319        58%          3m 22s      
+/data/assemblies                         100        182        54%          1m 51s      
+/about                                   49         66         74%          3m 17s      
+/roadmap                                 38         49         77%          4m 23s      
+
+
+PRIORITY PATHOGEN PAGES
+--------------------------------------------------------------------------------
+Pathogen                                 Visitors   Pageviews  Avg Time     Median Time 
+--------------------------------------------------------------------------------
+
+
+ORGANISM PAGES (All - Regardless of Assembly Status)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+65658           Acanthamoeba astronyxis             23         33         N/A         
+498019          Candidozyma auris                   17         36         47s         
+5755            Acanthamoeba castellanii            12         21         N/A         
+43142           Acanthamoeba culbertsoni            8          8          N/A         
+65661           Acanthamoeba healyi                 7          8          N/A         
+694009          Severe acute respiratory syndr...   7          7          1m 44s      
+5833            Plasmodium falciparum               6          11         N/A         
+61605           Acanthamoeba lugdunensis            6          6          N/A         
+196912          Acanthamoeba mauritaniensis         6          8          N/A         
+5855            Plasmodium vivax                    4          4          N/A         
+5476            Candida albicans                    4          5          N/A         
+7165            Anopheles gambiae                   3          4          N/A         
+5207            Cryptococcus neoformans seroty...   3          3          N/A         
+746128          Aspergillus fumigatus               3          3          N/A         
+5691            Trypanosoma brucei                  3          6          N/A         
+5722            Trichomonas vaginalis               3          3          4m 51s      
+10244           Monkeypox virus                     3          4          1m 17s      
+5693            Trypanosoma cruzi                   2          2          N/A         
+42839           Anopheles aquasalis                 1          1          N/A         
+723287          Anncaliia algerae                   1          2          N/A         
+5660            Leishmania braziliensis             1          2          N/A         
+5665            Leishmania mexicana                 1          1          N/A         
+5811            Toxoplasma gondii                   1          1          N/A         
+7159            Aedes aegypti                       1          1          N/A         
+5827            Plasmodium cynomolgi                1          1          N/A         
+68878           Anopheles cruzii                    1          2          N/A         
+5599            Alternaria alternata                1          1          N/A         
+1955775         Emergomyces africanus               1          2          N/A         
+5807            Cryptosporidium parvum              1          1          N/A         
+30066           Anopheles merus                     1          1          N/A         
+35231           Vairimorpha apis                    1          1          N/A         
+28015           Acanthamoeba palestinensis          1          1          N/A         
+29196           Acanthamoeba lenticulata            1          1          N/A         
+121225          body lice                           1          1          N/A         
+5741            Giardia duodenalis                  1          1          N/A         
+688394          Lichtheimia ramosa                  1          1          N/A         
+
+
+ORGANISM PAGES (Where Available Assembly Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+694009          Severe acute respiratory syndr...   7          7          1m 44s      
+5207            Cryptococcus neoformans seroty...   3          3          N/A         
+5722            Trichomonas vaginalis               3          3          4m 51s      
+5693            Trypanosoma cruzi                   2          2          N/A         
+5665            Leishmania mexicana                 1          1          N/A         
+5827            Plasmodium cynomolgi                1          1          N/A         
+5599            Alternaria alternata                1          1          N/A         
+28015           Acanthamoeba palestinensis          1          1          N/A         
+121225          body lice                           1          1          N/A         
+5741            Giardia duodenalis                  1          1          N/A         
+688394          Lichtheimia ramosa                  1          1          N/A         
+
+
+ASSEMBLY PAGES (All - Regardless of Workflow Status)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCA_000826245_1           Acanthamoeba astronyxis             31         50         2m 32s       *
+GCA_002759435_3           Candidozyma auris                   20         36         N/A           
+GCA_000826485_1           Acanthamoeba castellanii            13         15         N/A           
+GCA_021020595_1           Acanthamoeba castellanii            7          9          18s           
+GCA_000826305_1           Acanthamoeba healyi                 7          9          N/A           
+GCF_009858895_2           Severe acute respiratory syndr...   6          7          2m 44s        
+GCF_003013715_1           Candidozyma auris                   5          8          1m 12s        
+GCA_000826265_1           Acanthamoeba culbertsoni            5          5          N/A           
+GCA_021020605_1           Acanthamoeba castellanii            4          4          N/A           
+GCF_000005575_2           Anopheles gambiae str. PEST         4          4          25s           
+GCF_000002415_2           malaria parasite P. vivax           3          3          N/A           
+GCF_000857045_1           Monkeypox virus                     3          3          N/A           
+GCA_003011985_1           Cryptococcus neoformans             2          2          N/A           
+GCA_000826465_1           Acanthamoeba mauritaniensis         2          3          N/A           
+GCA_000826425_1           Acanthamoeba lugdunensis            2          2          N/A           
+GCA_903995115_1           Angomonas deanei                    2          2          N/A           
+GCF_000002445_2           Trypanosoma brucei brucei TREU927   2          2          N/A           
+GCA_000149445_2           Candida albicans WO-1               2          2          N/A           
+GCA_001660665_1           Emergomyces africanus               2          3          N/A           
+GCA_009761425_1           malaria parasite P. falciparum      2          3          N/A           
+
+
+ASSEMBLY PAGES (Where Available Workflow Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCA_002759435_3           Candidozyma auris                   20         36         N/A           
+GCA_000826485_1           Acanthamoeba castellanii            13         15         N/A           
+GCF_009858895_2           Severe acute respiratory syndr...   6          7          2m 44s        
+GCF_003013715_1           Candidozyma auris                   5          8          1m 12s        
+GCA_000826265_1           Acanthamoeba culbertsoni            5          5          N/A           
+GCA_021020605_1           Acanthamoeba castellanii            4          4          N/A           
+GCF_000005575_2           Anopheles gambiae str. PEST         4          4          25s           
+GCF_000002415_2           malaria parasite P. vivax           3          3          N/A           
+GCF_000857045_1           Monkeypox virus                     3          3          N/A           
+GCA_003011985_1           Cryptococcus neoformans             2          2          N/A           
+GCA_000826465_1           Acanthamoeba mauritaniensis         2          3          N/A           
+GCA_000826425_1           Acanthamoeba lugdunensis            2          2          N/A           
+GCA_903995115_1           Angomonas deanei                    2          2          N/A           
+GCF_000002445_2           Trypanosoma brucei brucei TREU927   2          2          N/A           
+GCA_000149445_2           Candida albicans WO-1               2          2          N/A           
+GCA_001660665_1           Emergomyces africanus               2          3          N/A           
+GCA_009761425_1           malaria parasite P. falciparum      2          3          N/A           
+GCA_000313815_1           Anncaliia algerae                   1          1          N/A           
+GCF_002849105_1           Aspergillus steynii IBT 23096       1          1          N/A           
+GCA_900497135_1           Trypanosoma brucei brucei           1          2          N/A           
+
+* = May have first-in-list bias (appears early in assembly listings)
+

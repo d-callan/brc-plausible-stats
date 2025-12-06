@@ -1,0 +1,76 @@
+================================================================================
+WORKFLOW CONFIGURATION PAGE ANALYSIS
+================================================================================
+
+Found 24 workflow configuration page entries
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total unique assemblies with workflow visits: 14
+Total unique workflows: 7
+Total visitors to workflow pages: 43
+Total pageviews: 53
+Average time on page: N/A
+Median time on page: N/A
+
+
+PER-WORKFLOW BREAKDOWN
+--------------------------------------------------------------------------------
+Workflow                            Visitors   Pageviews  Assemblies   Avg Time     Median Time 
+--------------------------------------------------------------------------------
+haploid-variant-calling-wgs-pe      22         25         7            N/A          N/A         
+fastq-to-matrix-10x-scrna-seq-...   8          12         6            N/A          N/A         
+rnaseq-pe                           6          7          5            N/A          N/A         
+rnaseq-sr                           4          5          3            N/A          N/A         
+sars-cov-2-pe-illumina-wgs-var...   1          1          1            N/A          N/A         
+sars-cov-2-pe-illumina-artic-v...   1          1          1            N/A          N/A         
+sars-cov-2-se-illumina-wgs-var...   1          2          1            N/A          N/A         
+
+
+WORKFLOW-ORGANISM INTERSECTIONS (Top 20)
+--------------------------------------------------------------------------------
+Workflow                       Organism                       Visitors   Pageviews 
+--------------------------------------------------------------------------------
+haploid-variant-calling-w...   Measles morbillivirus          8          10        
+haploid-variant-calling-w...   [Emmonsia] crescens            7          7         
+haploid-variant-calling-w...   SARS coronavirus Tor2          2          2         
+haploid-variant-calling-w...   malaria parasite P. vivax      2          3         
+rnaseq-sr                      [Emmonsia] crescens            2          2         
+fastq-to-matrix-10x-scrna...   Acanthamoeba castellanii       2          4         
+rnaseq-pe                      malaria parasite P. vivax      2          3         
+fastq-to-matrix-10x-scrna...   human                          2          4         
+sars-cov-2-pe-illumina-wg...   SARS coronavirus Tor2          1          1         
+rnaseq-sr                      human                          1          2         
+rnaseq-sr                      Henipavirus hendraense         1          1         
+fastq-to-matrix-10x-scrna...   [Emmonsia] crescens            1          1         
+sars-cov-2-pe-illumina-ar...   SARS coronavirus Tor2          1          1         
+haploid-variant-calling-w...   malaria parasite P. vivax      1          1         
+fastq-to-matrix-10x-scrna...   Acanthamoeba astronyxis        1          1         
+rnaseq-pe                      Acanthamoeba castellanii       1          1         
+fastq-to-matrix-10x-scrna...   SARS coronavirus Tor2          1          1         
+haploid-variant-calling-w...   Human orthorubulavirus 2       1          1         
+haploid-variant-calling-w...   Henipavirus hendraense         1          1         
+rnaseq-pe                      Coccidioides posadasii RM...   1          1         
+
+
+PER-ASSEMBLY BREAKDOWN
+--------------------------------------------------------------------------------
+Assembly ID          Organism                       Visitors   Pageviews  Avg Time     Median Time 
+--------------------------------------------------------------------------------
+GCA_001008285_1      [Emmonsia] crescens            10         10         N/A          N/A          *
+GCF_000854845_1      Measles morbillivirus          8          10         N/A          N/A           
+GCF_000864885_1      SARS coronavirus Tor2          6          7          N/A          N/A           
+GCF_000001405_40     human                          4          7          N/A          N/A           
+GCF_000002415_2      malaria parasite P. vivax      3          4          N/A          N/A           
+GCA_900093555_2      malaria parasite P. vivax      2          3          N/A          N/A           
+GCA_021020595_1      Acanthamoeba castellanii       2          4          N/A          N/A           
+GCF_000852685_1      Henipavirus hendraense         2          2          N/A          N/A           
+GCA_000826245_1      Acanthamoeba astronyxis        1          1          N/A          N/A          *
+GCA_000826485_1      Acanthamoeba castellanii       1          1          N/A          N/A           
+GCF_000863525_1      Human orthorubulavirus 2       1          1          N/A          N/A           
+GCA_000150055_1      Coccidioides posadasii RM...   1          1          N/A          N/A           
+GCF_018416015_1      Coccidioides posadasii st...   1          1          N/A          N/A           
+GCF_000524495_1      Plasmodium inui San Anton...   1          1          N/A          N/A           
+
+* = May have first-in-list bias (appears early in assembly listings)
+

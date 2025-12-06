@@ -1,0 +1,173 @@
+================================================================================
+ORGANISM AND PATHOGEN PAGE ANALYSIS
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Organism pages (all): 46 unique, 104 visitors, 140 pageviews
+Organism pages (with no assembly page visits): 18 unique, 29 visitors, 31 pageviews
+Priority pathogen pages: 13 unique, 26 visitors, 41 pageviews
+Assembly pages (all): 51 unique, 114 visitors, 160 pageviews
+Assembly pages (with no workflow page visits): 36 unique, 54 visitors, 60 pageviews
+
+
+HIGH-LEVEL NAVIGATION PAGES
+--------------------------------------------------------------------------------
+Page                                     Visitors   Pageviews  Bounce Rate  Avg Time    
+--------------------------------------------------------------------------------
+/                                        244        398        61%          2m 6s       
+/data/organisms                          116        185        62%          5m 0s       
+/data/assemblies                         69         128        53%          2m 9s       
+/about                                   24         29         82%          11m 53s     
+/roadmap                                 19         25         76%          N/A         
+/data/priority-pathogens                 13         51         25%          3m 43s      
+
+
+PRIORITY PATHOGEN PAGES
+--------------------------------------------------------------------------------
+Pathogen                                 Visitors   Pageviews  Avg Time     Median Time 
+--------------------------------------------------------------------------------
+Aspergillosis Aspergillus                5          9          N/A          N/A         
+Candidozyma Candida Auris                4          5          N/A          N/A         
+Sars Cov 2                               3          3          N/A          N/A         
+Paramyxoviridae Prototype Pathogen Viral Family 2          2          N/A          N/A         
+Filoviridae Prototype Pathogen Viral Family 2          3          N/A          N/A         
+Malaria Plasmodium Falciparum            2          3          N/A          N/A         
+Visceral Leishmaniasis Leishmania Donovani Complex 2          2          N/A          N/A         
+Arenaviridae Prototype Pathogen Viral Family 1          7          N/A          N/A         
+Cryptococcosis Cryptococcus Neoformans   1          2          N/A          N/A         
+Tuberculosis                             1          1          N/A          N/A         
+Avian Influenza                          1          2          N/A          N/A         
+Cryptosporidiosis Cryptosporidium Parvum 1          1          N/A          N/A         
+Phenuiviridae Prototype Pathogen Viral Family 1          1          N/A          N/A         
+
+
+ORGANISM PAGES (All - Regardless of Assembly Status)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+65658           Acanthamoeba astronyxis             12         15         1m 6s       
+746128          Aspergillus fumigatus               8          10         N/A         
+5855            Plasmodium vivax                    7          9          N/A         
+5691            Trypanosoma brucei                  7          8          40s         
+5833            Plasmodium falciparum               7          10         N/A         
+5755            Acanthamoeba castellanii            6          8          N/A         
+5807            Cryptosporidium parvum              5          9          1m 24s      
+43142           Acanthamoeba culbertsoni            4          5          N/A         
+273372          Candida metapsilosis                2          2          N/A         
+5811            Toxoplasma gondii                   2          4          4m 19s      
+28901           Salmonella enterica                 2          6          N/A         
+5480            Candida parapsilosis                2          2          N/A         
+5660            Leishmania braziliensis             2          2          N/A         
+11158           Paramyxoviridae                     2          2          N/A         
+10244           Monkeypox virus                     2          2          N/A         
+5476            Candida albicans                    2          3          N/A         
+42374           Candida dubliniensis                2          2          N/A         
+1773            Mycobacterium tuberculosis          2          5          N/A         
+5207            Cryptococcus neoformans seroty...   1          2          N/A         
+28583           Allomyces macrogynus                1          1          N/A         
+3052303         Mammarenavirus choriomeningitidis   1          1          N/A         
+1068590         Rickettsia asembonensis             1          2          N/A         
+562             E. coli                             1          1          N/A         
+65661           Acanthamoeba healyi                 1          2          N/A         
+7165            Anopheles gambiae                   1          1          N/A         
+173             Leptospira interrogans              1          1          N/A         
+5693            Trypanosoma cruzi                   1          1          N/A         
+11978           Feline calicivirus                  1          1          N/A         
+1392            Bacillus anthracis                  1          1          N/A         
+623             Shigella flexneri                   1          2          N/A         
+1463230         Blechomonas ayalai                  1          1          N/A         
+2810036         Leptospira abararensis              1          2          N/A         
+6526            bloodfluke planorb                  1          1          N/A         
+5053            Aspergillus aculeatus               1          1          N/A         
+498019          Candidozyma auris                   1          2          N/A         
+1340029         Aspergillus eucalypticola           1          1          N/A         
+29507           Leptospira kirschneri               1          1          N/A         
+659015          Brucella daejeonensis               1          1          N/A         
+3052345         Morbillivirus hominis               1          1          N/A         
+7160            forest day mosquito                 1          1          N/A         
+1280935         Cryptosporidium sp. chipmunk g...   1          1          N/A         
+10090           mouse                               1          3          N/A         
+5741            Giardia duodenalis                  1          1          N/A         
+79782           Cimex lectularius                   1          1          N/A         
+1220188         Aspergillus tanneri                 1          1          N/A         
+2023186         Leptospira adleri                   1          1          N/A         
+
+
+ORGANISM PAGES (Where Available Assembly Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+746128          Aspergillus fumigatus               8          10         N/A         
+273372          Candida metapsilosis                2          2          N/A         
+5480            Candida parapsilosis                2          2          N/A         
+11158           Paramyxoviridae                     2          2          N/A         
+42374           Candida dubliniensis                2          2          N/A         
+562             E. coli                             1          1          N/A         
+7165            Anopheles gambiae                   1          1          N/A         
+11978           Feline calicivirus                  1          1          N/A         
+1392            Bacillus anthracis                  1          1          N/A         
+1463230         Blechomonas ayalai                  1          1          N/A         
+6526            bloodfluke planorb                  1          1          N/A         
+5053            Aspergillus aculeatus               1          1          N/A         
+29507           Leptospira kirschneri               1          1          N/A         
+659015          Brucella daejeonensis               1          1          N/A         
+3052345         Morbillivirus hominis               1          1          N/A         
+5741            Giardia duodenalis                  1          1          N/A         
+1220188         Aspergillus tanneri                 1          1          N/A         
+2023186         Leptospira adleri                   1          1          N/A         
+
+
+ASSEMBLY PAGES (All - Regardless of Workflow Status)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCA_000826245_1           Acanthamoeba astronyxis             19         30         4m 47s       *
+GCA_021020595_1           Acanthamoeba castellanii            10         17         22s           
+GCF_000002445_2           Trypanosoma brucei brucei TREU927   6          6          12m 0s        
+GCA_900093555_2           malaria parasite P. vivax           6          7          N/A           
+GCA_000826485_1           Acanthamoeba castellanii            6          6          N/A           
+GCA_000150145_1           Aspergillus fumigatus A1163         5          6          N/A           
+GCF_000165345_1           Cryptosporidium parvum Iowa II      4          13         23m 43s       
+GCF_000857045_1           Monkeypox virus                     3          3          N/A           
+GCA_000826265_1           Acanthamoeba culbertsoni            3          3          N/A           
+GCA_009761425_1           malaria parasite P. falciparum      2          2          N/A           
+GCF_000195955_2           Mycobacterium tuberculosis H37Rv    2          2          N/A           
+GCF_000002845_2           Leishmania braziliensis MHOM/B...   2          2          N/A           
+GCF_000002415_2           malaria parasite P. vivax           2          2          N/A           
+GCA_000151295_1           Allomyces macrogynus ATCC 38327     2          5          N/A           
+GCF_000002765_6           Plasmodium falciparum 3D7           2          4          N/A           
+GCA_009761515_1           malaria parasite P. falciparum      2          3          N/A           
+GCF_000149385_1           Cryptococcus deneoformans B-3501A   2          2          N/A           
+GCA_900631975_1           malaria parasite P. falciparum      2          2          2s            
+GCF_000006945_2           Salmonella enterica subsp. ent...   2          3          59s           
+GCF_001502175_1           Tupaia hepatovirus A                1          1          N/A           
+
+
+ASSEMBLY PAGES (Where Available Workflow Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCA_000826485_1           Acanthamoeba castellanii            6          6          N/A           
+GCA_000150145_1           Aspergillus fumigatus A1163         5          6          N/A           
+GCF_000857045_1           Monkeypox virus                     3          3          N/A           
+GCA_000826265_1           Acanthamoeba culbertsoni            3          3          N/A           
+GCA_009761425_1           malaria parasite P. falciparum      2          2          N/A           
+GCF_000195955_2           Mycobacterium tuberculosis H37Rv    2          2          N/A           
+GCF_000149385_1           Cryptococcus deneoformans B-3501A   2          2          N/A           
+GCA_900631975_1           malaria parasite P. falciparum      2          2          2s            
+GCF_000006945_2           Salmonella enterica subsp. ent...   2          3          59s           
+GCF_001502175_1           Tupaia hepatovirus A                1          1          N/A           
+GCA_900632005_1           malaria parasite P. falciparum      1          2          N/A           
+GCF_001343785_1           Influenza A virus (A/Californi...   1          1          6m 38s        
+GCF_004770765_1           Leptospira noumeaensis              1          1          N/A           
+GCA_902459845_2           Hepatocystis sp. ex Piliocolob...   1          1          N/A           
+GCF_000001635_27          house mouse                         1          2          N/A           
+GCA_003014415_1           Candidozyma auris                   1          1          N/A           
+GCF_016918735_1           Leptospira abararensis              1          1          N/A           
+GCA_000151295_1&workflow=true Allomyces macrogynus ATCC 38327     1          1          N/A           
+GCF_000315645_1           Penicillium digitatum Pd1           1          1          N/A           
+GCF_963525475_1           Mycobacterium tuberculosis          1          2          N/A           
+
+* = May have first-in-list bias (appears early in assembly listings)
+

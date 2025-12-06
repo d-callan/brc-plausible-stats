@@ -1,0 +1,54 @@
+================================================================================
+ORGANISM AND PATHOGEN PAGE ANALYSIS
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Organism pages (all): 0 unique, 0 visitors, 0 pageviews
+Organism pages (with no assembly page visits): 0 unique, 0 visitors, 0 pageviews
+Priority pathogen pages: 0 unique, 0 visitors, 0 pageviews
+Assembly pages (all): 0 unique, 0 visitors, 0 pageviews
+Assembly pages (with no workflow page visits): 0 unique, 0 visitors, 0 pageviews
+
+
+HIGH-LEVEL NAVIGATION PAGES
+--------------------------------------------------------------------------------
+Page                                     Visitors   Pageviews  Bounce Rate  Avg Time    
+--------------------------------------------------------------------------------
+/                                        211        308        68%          3m 23s      
+/data/organisms                          88         220        40%          3m 40s      
+/roadmap                                 22         23         95%          9s          
+/about                                   14         17         82%          N/A         
+
+
+PRIORITY PATHOGEN PAGES
+--------------------------------------------------------------------------------
+Pathogen                                 Visitors   Pageviews  Avg Time     Median Time 
+--------------------------------------------------------------------------------
+
+
+ORGANISM PAGES (All - Regardless of Assembly Status)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+
+
+ORGANISM PAGES (Where Available Assembly Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+
+
+ASSEMBLY PAGES (All - Regardless of Workflow Status)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+
+
+ASSEMBLY PAGES (Where Available Workflow Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+
+* = May have first-in-list bias (appears early in assembly listings)
+

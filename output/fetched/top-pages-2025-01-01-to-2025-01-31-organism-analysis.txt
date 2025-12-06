@@ -1,0 +1,113 @@
+================================================================================
+ORGANISM AND PATHOGEN PAGE ANALYSIS
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Organism pages (all): 18 unique, 74 visitors, 147 pageviews
+Organism pages (with no assembly page visits): 4 unique, 5 visitors, 5 pageviews
+Priority pathogen pages: 0 unique, 0 visitors, 0 pageviews
+Assembly pages (all): 18 unique, 71 visitors, 117 pageviews
+Assembly pages (with no workflow page visits): 18 unique, 71 visitors, 117 pageviews
+
+
+HIGH-LEVEL NAVIGATION PAGES
+--------------------------------------------------------------------------------
+Page                                     Visitors   Pageviews  Bounce Rate  Avg Time    
+--------------------------------------------------------------------------------
+/                                        290        510        56%          3m 53s      
+/data/organisms                          154        402        38%          4m 47s      
+/about                                   43         52         82%          6s          
+/data/assemblies                         41         117        35%          47s         
+/roadmap                                 38         44         86%          10s         
+
+
+PRIORITY PATHOGEN PAGES
+--------------------------------------------------------------------------------
+Pathogen                                 Visitors   Pageviews  Avg Time     Median Time 
+--------------------------------------------------------------------------------
+
+
+ORGANISM PAGES (All - Regardless of Assembly Status)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+7165            Anopheles gambiae                   23         59         N/A         
+746128          Aspergillus fumigatus               16         34         N/A         
+199306          Coccidioides posadasii              7          12         N/A         
+10244           Monkeypox virus                     4          6          N/A         
+5476            Candida albicans                    4          4          13m 32s     
+5207            Cryptococcus neoformans seroty...   3          7          N/A         
+5833            Plasmodium falciparum               3          4          N/A         
+694009          Severe acute respiratory syndr...   2          2          N/A         
+5501            Coccidioides immitis                2          3          N/A         
+1773            Mycobacterium tuberculosis          2          2          N/A         
+5855            Plasmodium vivax                    1          3          N/A         
+42434           Culex pipiens pallens               1          1          N/A         
+5693            Trypanosoma cruzi                   1          1          N/A         
+5691            Trypanosoma brucei                  1          1          N/A         
+2697049         Severe acute respiratory syndr...   1          4          N/A         
+5661            Leishmania donovani                 1          1          N/A         
+7176            Culex quinquefasciatus              1          1          N/A         
+7175            common house mosquito               1          2          N/A         
+
+
+ORGANISM PAGES (Where Available Assembly Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+694009          Severe acute respiratory syndr...   2          2          N/A         
+5691            Trypanosoma brucei                  1          1          N/A         
+5661            Leishmania donovani                 1          1          N/A         
+7176            Culex quinquefasciatus              1          1          N/A         
+
+
+ASSEMBLY PAGES (All - Regardless of Workflow Status)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCF_000005575_2           Anopheles gambiae str. PEST         30         65         1s            
+GCF_000002655_1           Aspergillus fumigatus Af293         14         22         15m 2s        
+GCF_018416015_2           Coccidioides posadasii str. Si...   5          5          N/A           
+GCF_000182965_3           Candida albicans SC5314             3          3          N/A           
+GCA_000170175_2           Coccidioides posadasii str. Si...   3          4          N/A           
+GCF_000002415_2           malaria parasite P. vivax           2          2          N/A           
+GCF_000857045_1           Monkeypox virus                     2          2          N/A           
+GCF_943734735_2           African malaria mosquito            2          2          N/A           
+GCF_000149335_2           Coccidioides immitis RS             1          1          N/A           
+GCF_000002765_6           Plasmodium falciparum 3D7           1          1          N/A           
+GCA_900093555_2           malaria parasite P. vivax           1          1          N/A           
+GCA_000149245_3           Cryptococcus neoformans H99         1          1          N/A           
+GCF_009858895_2           Severe acute respiratory syndr...   1          2          N/A           
+GCF_000209065_1           Trypanosoma cruzi                   1          1          N/A           
+GCF_016801865_2           northern house mosquito             1          1          N/A           
+GCF_000006565_2           Toxoplasma gondii ME49              1          1          N/A           
+GCF_000002845_2           Leishmania braziliensis MHOM/B...   1          2          N/A           
+GCF_000195955_2           Mycobacterium tuberculosis H37Rv    1          1          N/A           
+
+
+ASSEMBLY PAGES (Where Available Workflow Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCF_000005575_2           Anopheles gambiae str. PEST         30         65         1s            
+GCF_000002655_1           Aspergillus fumigatus Af293         14         22         15m 2s        
+GCF_018416015_2           Coccidioides posadasii str. Si...   5          5          N/A           
+GCF_000182965_3           Candida albicans SC5314             3          3          N/A           
+GCA_000170175_2           Coccidioides posadasii str. Si...   3          4          N/A           
+GCF_000002415_2           malaria parasite P. vivax           2          2          N/A           
+GCF_000857045_1           Monkeypox virus                     2          2          N/A           
+GCF_943734735_2           African malaria mosquito            2          2          N/A           
+GCF_000149335_2           Coccidioides immitis RS             1          1          N/A           
+GCF_000002765_6           Plasmodium falciparum 3D7           1          1          N/A           
+GCA_900093555_2           malaria parasite P. vivax           1          1          N/A           
+GCA_000149245_3           Cryptococcus neoformans H99         1          1          N/A           
+GCF_009858895_2           Severe acute respiratory syndr...   1          2          N/A           
+GCF_000209065_1           Trypanosoma cruzi                   1          1          N/A           
+GCF_016801865_2           northern house mosquito             1          1          N/A           
+GCF_000006565_2           Toxoplasma gondii ME49              1          1          N/A           
+GCF_000002845_2           Leishmania braziliensis MHOM/B...   1          2          N/A           
+GCF_000195955_2           Mycobacterium tuberculosis H37Rv    1          1          N/A           
+
+* = May have first-in-list bias (appears early in assembly listings)
+

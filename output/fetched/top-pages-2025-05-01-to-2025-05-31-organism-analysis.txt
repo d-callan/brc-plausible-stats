@@ -1,0 +1,173 @@
+================================================================================
+ORGANISM AND PATHOGEN PAGE ANALYSIS
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Organism pages (all): 48 unique, 114 visitors, 143 pageviews
+Organism pages (with no assembly page visits): 30 unique, 49 visitors, 57 pageviews
+Priority pathogen pages: 0 unique, 0 visitors, 0 pageviews
+Assembly pages (all): 41 unique, 93 visitors, 141 pageviews
+Assembly pages (with no workflow page visits): 31 unique, 46 visitors, 57 pageviews
+
+
+HIGH-LEVEL NAVIGATION PAGES
+--------------------------------------------------------------------------------
+Page                                     Visitors   Pageviews  Bounce Rate  Avg Time    
+--------------------------------------------------------------------------------
+/                                        266        525        50%          2m 41s      
+/data/organisms                          135        285        47%          2m 5s       
+/data/assemblies                         88         325        27%          2m 45s      
+/about                                   38         56         67%          2m 49s      
+/roadmap                                 20         33         60%          1m 52s      
+
+
+PRIORITY PATHOGEN PAGES
+--------------------------------------------------------------------------------
+Pathogen                                 Visitors   Pageviews  Avg Time     Median Time 
+--------------------------------------------------------------------------------
+
+
+ORGANISM PAGES (All - Regardless of Assembly Status)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+65658           Acanthamoeba astronyxis             21         29         N/A         
+5833            Plasmodium falciparum               11         12         N/A         
+498019          Candidozyma auris                   7          12         N/A         
+5755            Acanthamoeba castellanii            6          7          25s         
+43142           Acanthamoeba culbertsoni            5          5          N/A         
+5855            Plasmodium vivax                    4          4          N/A         
+61605           Acanthamoeba lugdunensis            3          3          N/A         
+5476            Candida albicans                    3          3          N/A         
+196912          Acanthamoeba mauritaniensis         3          3          N/A         
+65661           Acanthamoeba healyi                 3          4          N/A         
+5059            Aspergillus flavus                  2          2          N/A         
+5599            Alternaria alternata                2          2          N/A         
+7165            Anopheles gambiae                   2          2          N/A         
+89421           Amauroascus niger                   2          2          N/A         
+65662           Acanthamoeba pearcei                2          2          N/A         
+7159            Aedes aegypti                       2          2          N/A         
+5501            Coccidioides immitis                2          6          54s         
+10244           Monkeypox virus                     2          6          N/A         
+2955291         Alphainfluenzavirus influenzae      2          2          N/A         
+746128          Aspergillus fumigatus               2          5          9m 13s      
+5868            Babesia microti                     1          2          N/A         
+1518534         Anopheles coluzzii                  1          1          N/A         
+42458           Lichtheimia corymbifera             1          1          N/A         
+5661            Leishmania donovani                 1          1          N/A         
+936053          Rhizopus delemar                    1          1          N/A         
+59799           Angomonas deanei                    1          1          N/A         
+11320           Influenza A virus                   1          1          N/A         
+58291           Rhizopus microsporus                1          1          N/A         
+5757            Acanthamoeba polyphaga              1          1          N/A         
+5551            Trichophyton rubrum                 1          1          1m 59s      
+330879          Aspergillus fumigatus Af293         1          1          N/A         
+10255           smallpox virus                      1          1          N/A         
+688394          Lichtheimia ramosa                  1          1          50s         
+5671            Leishmania infantum                 1          1          N/A         
+7173            Anopheles arabiensis                1          1          N/A         
+36651           Penicillium digitatum               1          1          N/A         
+82521           Apiotrichum montevideense           1          1          N/A         
+7160            forest day mosquito                 1          1          N/A         
+323732          Babesia duncani                     1          1          N/A         
+5052            Aspergillus                         1          1          N/A         
+41047           Aspergillus thermomutatus           1          1          N/A         
+28583           Allomyces macrogynus                1          1          N/A         
+32595           Babesia divergens                   1          1          N/A         
+5866            Babesia bigemina                    1          1          N/A         
+29196           Acanthamoeba lenticulata            1          1          N/A         
+2592485         Blastocrithidia nonstop             1          2          13s         
+7167            Anopheles albimanus                 1          1          N/A         
+723287          Anncaliia algerae                   1          1          N/A         
+
+
+ORGANISM PAGES (Where Available Assembly Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Tax ID          Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+498019          Candidozyma auris                   7          12         N/A         
+61605           Acanthamoeba lugdunensis            3          3          N/A         
+5476            Candida albicans                    3          3          N/A         
+196912          Acanthamoeba mauritaniensis         3          3          N/A         
+5059            Aspergillus flavus                  2          2          N/A         
+7165            Anopheles gambiae                   2          2          N/A         
+89421           Amauroascus niger                   2          2          N/A         
+65662           Acanthamoeba pearcei                2          2          N/A         
+7159            Aedes aegypti                       2          2          N/A         
+2955291         Alphainfluenzavirus influenzae      2          2          N/A         
+746128          Aspergillus fumigatus               2          5          9m 13s      
+42458           Lichtheimia corymbifera             1          1          N/A         
+5661            Leishmania donovani                 1          1          N/A         
+936053          Rhizopus delemar                    1          1          N/A         
+59799           Angomonas deanei                    1          1          N/A         
+11320           Influenza A virus                   1          1          N/A         
+58291           Rhizopus microsporus                1          1          N/A         
+5757            Acanthamoeba polyphaga              1          1          N/A         
+5551            Trichophyton rubrum                 1          1          1m 59s      
+330879          Aspergillus fumigatus Af293         1          1          N/A         
+688394          Lichtheimia ramosa                  1          1          50s         
+7173            Anopheles arabiensis                1          1          N/A         
+82521           Apiotrichum montevideense           1          1          N/A         
+7160            forest day mosquito                 1          1          N/A         
+323732          Babesia duncani                     1          1          N/A         
+5052            Aspergillus                         1          1          N/A         
+32595           Babesia divergens                   1          1          N/A         
+5866            Babesia bigemina                    1          1          N/A         
+7167            Anopheles albimanus                 1          1          N/A         
+723287          Anncaliia algerae                   1          1          N/A         
+
+
+ASSEMBLY PAGES (All - Regardless of Workflow Status)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCA_000826245_1           Acanthamoeba astronyxis             27         50         6s           *
+GCA_000826485_1           Acanthamoeba castellanii            7          9          N/A           
+GCA_000151295_1           Allomyces macrogynus ATCC 38327     5          10         8m 41s        
+GCF_000002765_6           Plasmodium falciparum 3D7           4          4          N/A           
+GCF_000001215_4           fruit fly                           4          7          37s           
+GCA_002759435_3           Candidozyma auris                   3          6          N/A           
+GCA_000826305_1           Acanthamoeba healyi                 3          4          N/A           
+GCA_021020595_1           Acanthamoeba castellanii            3          6          N/A           
+GCA_000149815_1           Coccidioides immitis H538.4         2          4          N/A           
+GCA_900093555_2           malaria parasite P. vivax           2          3          N/A           
+GCF_000001405_40          human                               2          2          N/A           
+GCA_000826285_1           Acanthamoeba lenticulata            2          3          N/A           
+746128                    Unknown                             1          1          N/A           
+GCF_000857045_1           Monkeypox virus                     1          1          N/A           
+GCA_028554745_1           Blastocrithidia nonstop             1          1          N/A           
+GCF_943734685_1           Anopheles coluzzii                  1          1          N/A           
+GCF_001343785_1           Influenza A virus (A/Californi...   1          1          N/A           
+GCF_002252445_1           Brucella thiophenivorans            1          4          N/A           
+GCA_021020605_1           Acanthamoeba castellanii            1          1          N/A           
+GCF_000859885_1           Variola virus                       1          1          N/A           
+
+
+ASSEMBLY PAGES (Where Available Workflow Pages Were Not Visited)
+--------------------------------------------------------------------------------
+Assembly ID               Organism                            Visitors   Pageviews  Avg Time    
+--------------------------------------------------------------------------------
+GCA_000826485_1           Acanthamoeba castellanii            7          9          N/A           
+GCF_000001215_4           fruit fly                           4          7          37s           
+GCA_000826305_1           Acanthamoeba healyi                 3          4          N/A           
+GCA_021020595_1           Acanthamoeba castellanii            3          6          N/A           
+GCF_000001405_40          human                               2          2          N/A           
+GCA_000826285_1           Acanthamoeba lenticulata            2          3          N/A           
+746128                    Unknown                             1          1          N/A           
+GCF_000857045_1           Monkeypox virus                     1          1          N/A           
+GCA_028554745_1           Blastocrithidia nonstop             1          1          N/A           
+GCF_943734685_1           Anopheles coluzzii                  1          1          N/A           
+GCF_001343785_1           Influenza A virus (A/Californi...   1          1          N/A           
+GCA_021020605_1           Acanthamoeba castellanii            1          1          N/A           
+GCF_000859885_1           Variola virus                       1          1          N/A           
+GCA_002911725_1           Phytophthora palmivora              1          1          N/A           
+GCF_000315645_1           Penicillium digitatum Pd1           1          1          N/A           
+GCF_014621545_1           Monkeypox virus                     1          1          N/A           
+GCF_000004695_1           Dictyostelium discoideum AX4        1          2          2m 45s        
+GCA_006247105_1           Giardia muris                       1          1          N/A           
+GCF_002237265_1           Aspergillus thermomutatus           1          1          N/A           
+GCF_000002945_2           fission yeast                       1          1          N/A           
+
+* = May have first-in-list bias (appears early in assembly listings)
+

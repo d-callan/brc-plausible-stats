@@ -1,0 +1,113 @@
+================================================================================
+WORKFLOW CONFIGURATION PAGE ANALYSIS
+================================================================================
+
+Found 117 workflow configuration page entries
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total unique assemblies with workflow visits: 46
+Total unique workflows: 12
+Total visitors to workflow pages: 142
+Total pageviews: 163
+Average time on page: 5m 57s
+Median time on page: 1m 44s
+
+
+PER-WORKFLOW BREAKDOWN
+--------------------------------------------------------------------------------
+Workflow                            Visitors   Pageviews  Assemblies   Avg Time     Median Time 
+--------------------------------------------------------------------------------
+haploid-variant-calling-wgs-pe      40         50         26           21s          21s         
+rnaseq-pe                           21         23         17           2m 53s       2m 53s      
+fastq-to-matrix-10x-scrna-seq-...   15         20         12           20m 2s       20m 2s      
+cutandrun                           13         13         12           35s          35s         
+fastq-to-matrix-10x-scrna-seq-...   10         10         9            N/A          N/A         
+chipseq-sr                          9          9          8            N/A          N/A         
+consensus-peaks-consensus-peak...   8          8          8            N/A          N/A         
+rnaseq-sr                           7          7          7            N/A          N/A         
+atacseq                             7          7          7            N/A          N/A         
+chipseq-pe                          7          7          7            N/A          N/A         
+lncRNAs-annotation                  3          3          3            N/A          N/A         
+generic-non-segmented-viral-va...   2          6          1            N/A          N/A         
+
+
+WORKFLOW-ORGANISM INTERSECTIONS (Top 20)
+--------------------------------------------------------------------------------
+Workflow                       Organism                       Visitors   Pageviews 
+--------------------------------------------------------------------------------
+haploid-variant-calling-w...   [Candida] blankii              7          11        
+haploid-variant-calling-w...   [Candida] oleophila            5          7         
+haploid-variant-calling-w...   [Emmonsia] crescens            3          3         
+rnaseq-pe                      [Candida] blankii              3          3         
+rnaseq-pe                      Toxoplasma gondii ME49         2          2         
+rnaseq-pe                      Candidozyma auris              2          2         
+haploid-variant-calling-w...   Plasmodium falciparum 3D7      2          3         
+fastq-to-matrix-10x-scrna...   Human papillomavirus type 53   2          2         
+fastq-to-matrix-10x-scrna...   Influenza A virus (A/Puer...   2          2         
+cutandrun                      Leishmania braziliensis M...   2          2         
+haploid-variant-calling-w...   Abiotrophia defectiva          2          2         
+chipseq-sr                     SARS coronavirus Tor2          2          2         
+generic-non-segmented-vir...   Measles morbillivirus          2          6         
+fastq-to-matrix-10x-scrna...   dog                            2          6         
+fastq-to-matrix-10x-scrna...   Acanthamoeba castellanii ...   2          3         
+fastq-to-matrix-10x-scrna...   Alphapapillomavirus 4          1          1         
+chipseq-sr                     Human papillomavirus type 53   1          1         
+chipseq-sr                     Alphapapillomavirus 4          1          1         
+rnaseq-pe                      Trichodysplasia spinulosa...   1          1         
+rnaseq-pe                      Caenorhabditis elegans         1          1         
+
+
+PER-ASSEMBLY BREAKDOWN
+--------------------------------------------------------------------------------
+Assembly ID          Organism                       Visitors   Pageviews  Avg Time     Median Time 
+--------------------------------------------------------------------------------
+GCA_030573285_1      [Candida] blankii              12         16         N/A          N/A           
+GCF_000865685_1      Human papillomavirus type 53   11         11         N/A          N/A           
+GCF_000865725_1      Influenza A virus (A/Puer...   10         10         N/A          N/A           
+GCF_000864945_1      Alphapapillomavirus 4          10         10         N/A          N/A           
+GCF_000865085_1      Influenza A virus (A/New ...   10         10         N/A          N/A           
+GCA_030563865_1      [Candida] oleophila            8          10         N/A          N/A           
+GCF_000864105_1      Influenza A virus (A/goos...   8          8          N/A          N/A           
+GCF_000864925_1      human papillomavirus 32        8          8          N/A          N/A           
+GCA_000193105_1      Acanthamoeba castellanii       5          5          N/A          N/A           
+GCA_001008285_1      [Emmonsia] crescens            4          5          2m 53s       2m 53s       *
+GCF_013267415_1      Abiotrophia defectiva          4          4          N/A          N/A           
+GCA_000313135_1      Acanthamoeba castellanii ...   3          4          N/A          N/A           
+GCA_002025285_2      Acanthamoeba comandoni         3          3          N/A          N/A           
+GCA_000826405_1      Acanthamoeba divionensis       3          3          N/A          N/A           
+GCF_000006565_2      Toxoplasma gondii ME49         2          2          N/A          N/A           
+GCA_002759435_3      Candidozyma auris              2          2          N/A          N/A           
+GCF_000002765_6      Plasmodium falciparum 3D7      2          3          N/A          N/A           
+GCA_000340355_2      Leishmania braziliensis M...   2          2          35s          35s           
+GCF_000864885_1      SARS coronavirus Tor2          2          2          N/A          N/A           
+GCF_000854845_1      Measles morbillivirus          2          6          N/A          N/A           
+GCF_014441545_1      dog                            2          6          20m 2s       20m 2s        
+GCF_000887495_1      Trichodysplasia spinulosa...   2          2          N/A          N/A           
+GCA_000002985_3      Caenorhabditis elegans         2          2          N/A          N/A           
+GCF_000967305_2      Alcaligenes faecalis           2          2          N/A          N/A           
+GCF_000874865_1      Merkel cell polyomavirus       2          2          N/A          N/A           
+GCF_000499385_1      Eimeria necatrix               1          1          N/A          N/A           
+GCF_000006945_2      Salmonella enterica subsp...   1          1          N/A          N/A           
+GCF_001042655_1      Gardnerella vaginalis ATC...   1          1          N/A          N/A           
+GCF_001647695_1      [Haemophilus] ducreyi          1          1          N/A          N/A           
+GCF_900445655_1      Bergeyella zoohelcum           1          1          N/A          N/A           
+GCF_003013715_1      Candidozyma auris              1          1          21s          21s           
+GCA_902459845_2      Hepatocystis sp. ex Pilio...   1          1          N/A          N/A           
+GCA_000300775_2      Asian malaria mosquito         1          1          N/A          N/A           
+GCF_030253495_1      Actinomyces israelii           1          1          N/A          N/A           
+GCF_045689255_1      Pseudomonas aeruginosa PA14    1          2          N/A          N/A           
+GCF_000001635_27     house mouse                    1          1          N/A          N/A           
+GCA_001430935_1      Amauroascus verrucosus         1          1          N/A          N/A           
+GCA_001598995_1      Apiotrichum montevideense      1          2          N/A          N/A           
+GCF_000855545_1      human respiratory syncyti...   1          1          N/A          N/A           
+GCF_004008975_1      Bordetella pertussis           1          1          N/A          N/A           
+GCF_004936735_1      Cryptosporidium sp. chipm...   1          1          N/A          N/A           
+GCF_003290485_1      Malassezia restricta           1          1          N/A          N/A           
+GCF_001558255_2      Grimontia hollisae             1          1          N/A          N/A           
+GCA_017310585_1      Histoplasma capsulatum         1          3          N/A          N/A           
+GCA_027943295_1      Acanthamoeba sp. SK_2022a      1          1          N/A          N/A           
+GCF_000863965_1      Human papillomavirus type 34   1          1          N/A          N/A           
+
+* = May have first-in-list bias (appears early in assembly listings)
+
