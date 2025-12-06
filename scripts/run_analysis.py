@@ -17,9 +17,19 @@ def main():
     base_name = os.path.basename(input_file)
     name_without_ext = os.path.splitext(base_name)[0]
     
-    # Get script directory
+    # Get script directory and determine output subdirectory based on input path
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(os.path.dirname(script_dir), 'output')
+    base_output_dir = os.path.join(os.path.dirname(script_dir), 'output')
+    
+    # If input is from data/fetched, output to output/fetched
+    # If input is from data/manual, output to output/manual
+    input_abs = os.path.abspath(input_file)
+    if '/data/fetched/' in input_abs or '\\data\\fetched\\' in input_abs:
+        output_dir = os.path.join(base_output_dir, 'fetched')
+    elif '/data/manual/' in input_abs or '\\data\\manual\\' in input_abs:
+        output_dir = os.path.join(base_output_dir, 'manual')
+    else:
+        output_dir = base_output_dir
     
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
