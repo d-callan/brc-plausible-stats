@@ -6,14 +6,23 @@ Python scripts for analyzing web usage data exported from Plausible Analytics. T
 
 ```
 brc-plausible-stats/
-├── scripts/          # Main analysis scripts
-│   ├── analyze_organisms.py   # Analyze organism/pathogen/assembly pages
-│   ├── analyze_workflows.py   # Analyze workflow configuration pages
-│   └── run_analysis.py        # Run both analyses at once
-├── utils/            # Data cleaning utilities
-│   └── clean_plausible_data.py  # Clean Plausible export data
-├── data/             # Input .tab files from Plausible
-├── output/           # Analysis results
+├── scripts/
+│   ├── fetch_top_pages.py         # Fetch top pages from Plausible API
+│   ├── fetch_monthly_reports.py   # Fetch & analyze monthly reports in batch
+│   ├── generate_monthly_summary.py      # Generate text summary by community
+│   ├── generate_monthly_summary_html.py # Generate HTML report with charts
+│   ├── analyze_organisms.py       # Analyze organism/pathogen/assembly pages
+│   ├── analyze_workflows.py       # Analyze workflow configuration pages
+│   └── run_analysis.py            # Run both analyses at once
+├── utils/
+│   └── clean_plausible_data.py  # Clean manually exported Plausible data
+├── data/
+│   ├── fetched/      # Data fetched via API (auto-generated)
+│   └── manual/       # Manually exported data files
+├── output/
+│   ├── fetched/      # Analysis results for API-fetched data
+│   └── manual/       # Analysis results for manually exported data
+├── .env.example      # Template for API configuration
 └── README.md
 ```
 
@@ -22,25 +31,141 @@ brc-plausible-stats/
 - Python 3.6+
 - `curl` command-line tool (for NCBI API calls)
 - Standard library only (no pip dependencies)
+- Plausible Analytics Stats API key (for automatic data fetching)
+
+## Setup
+
+### API Key Configuration
+
+To automatically fetch data from Plausible Analytics, you need to configure your API key:
+
+1. Log in to your [Plausible Analytics](https://plausible.io) account
+2. Click your account name in the top-right menu and go to **Settings**
+3. Go to **API Keys** in the left sidebar
+4. Click **New API Key**, choose **Stats API**, and save the key (it will only be shown once)
+5. Copy the example environment file and add your credentials:
+
+```bash
+cp .env.example .env
+```
+
+6. Edit `.env` and fill in your values:
+
+```
+PLAUSIBLE_API_KEY=your-actual-api-key
+PLAUSIBLE_SITE_ID=your-site-domain.com
+```
 
 ## Usage
 
-### Quick Start
+### Quick Start (Automatic Data Fetching)
+
+1. Configure your API key (see Setup above)
+2. Fetch top pages data from Plausible:
+
+```bash
+# Fetch last 30 days
+python3 scripts/fetch_top_pages.py --period 30d
+
+# Or fetch a specific date range
+python3 scripts/fetch_top_pages.py --start 2024-01-01 --end 2024-01-31
+```
+
+3. Run the analysis on the fetched data:
+
+```bash
+python3 scripts/run_analysis.py data/fetched/top-pages-2024-01-01-to-2024-01-31.tab
+```
+
+This will generate two output files in `output/fetched/`:
+- `*-organism-analysis.txt`
+- `*-workflow-analysis.txt`
+
+### Batch Monthly Reports
+
+To fetch and analyze data for multiple months at once:
+
+```bash
+# Fetch all months from Oct 2024 to present and run analysis
+python3 scripts/fetch_monthly_reports.py
+
+# Specify custom date range
+python3 scripts/fetch_monthly_reports.py --start-month 2024-10 --end-month 2025-06
+
+# Only fetch data, skip analysis
+python3 scripts/fetch_monthly_reports.py --skip-analysis
+```
+
+This saves data to `data/fetched/` and analysis output to `output/fetched/`.
+
+### Monthly Summary Report
+
+Generate a comprehensive summary across all months with breakdowns by community:
+
+```bash
+python3 scripts/generate_monthly_summary.py --output output/monthly_summary.txt
+```
+
+This produces a report with:
+- **High-level pages**: Home, Organisms Index, Assemblies Index, Roadmap, About, etc.
+- **Content page totals**: Organism, Assembly, and Workflow page counts/visitors/pageviews
+- **Community breakdowns**: Pages categorized by Viruses, Bacteria, Fungi, Protists, Vectors, Hosts, Helminths
+- **Learn pages**: Featured analyses traffic
+
+The script caches taxonomy lookups in `.taxonomy_cache.json` to speed up subsequent runs.
+
+#### HTML Report with Charts
+
+Generate an interactive HTML report with line charts:
+
+```bash
+python3 scripts/generate_monthly_summary_html.py --output output/monthly_summary.html
+```
+
+This produces an HTML file with Chart.js visualizations showing trends over time:
+- Line charts for visitors and pageviews
+- Separate charts for high-level pages, content pages, and community breakdowns
+- Interactive tooltips and legends
+
+### Quick Start (Manual Export)
+
+Alternatively, you can manually export data from Plausible:
 
 1. Export page data from Plausible Analytics as a tab-separated file
-2. Place the file in the `data/` directory
+2. Place the file in the `data/manual/` directory
 3. Run the analysis:
 
 ```bash
-cd scripts
-python3 run_analysis.py ../data/your-data-file.tab
+python3 scripts/run_analysis.py data/manual/your-data-file.tab
 ```
 
-This will generate two output files in the `output/` directory:
-- `your-data-file-organism-analysis.txt`
-- `your-data-file-workflow-analysis.txt`
+Output will be saved to `output/manual/`.
 
-### Individual Scripts
+### Fetching Data from Plausible API
+
+The `fetch_top_pages.py` script queries the Plausible Stats API v1 to retrieve top pages:
+
+```bash
+# Fetch using preset time periods
+python3 scripts/fetch_top_pages.py --period 7d      # Last 7 days
+python3 scripts/fetch_top_pages.py --period 30d     # Last 30 days
+python3 scripts/fetch_top_pages.py --period 6mo     # Last 6 months
+python3 scripts/fetch_top_pages.py --period year    # Last year
+python3 scripts/fetch_top_pages.py --period all     # All time
+
+# Fetch specific date range
+python3 scripts/fetch_top_pages.py --start 2024-01-01 --end 2024-06-30
+
+# Specify custom output file
+python3 scripts/fetch_top_pages.py --period 30d --output data/my-report.tab
+
+# Limit number of pages (default: 10000)
+python3 scripts/fetch_top_pages.py --period 30d --limit 500
+```
+
+Available period presets: `day`, `7d`, `28d`, `30d`, `91d`, `month`, `6mo`, `12mo`, `year`, `all`
+
+### Individual Analysis Scripts
 
 **Analyze organism/pathogen/assembly pages:**
 ```bash
@@ -71,7 +196,11 @@ The script handles:
 
 ## Data Source
 
-- For the example input files in `data/`, the data was obtained by manually copying the "Top pages" section from Plausible for BRC Analytics and saving as a `.tab` file. The cleaning utility converts this raw copy-paste into a consistent TSV format for analysis.
+Data can be obtained in two ways:
+
+1. **Automatic (Recommended)**: Use `fetch_top_pages.py` to pull data directly from the Plausible Stats API. This produces clean, properly formatted TSV files.
+
+2. **Manual**: Export the "Top pages" section from Plausible for BRC Analytics and save as a `.tab` file. Use the cleaning utility to convert raw copy-paste into a consistent TSV format for analysis.
 
 ## Input Format
 
