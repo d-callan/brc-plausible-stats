@@ -1,0 +1,165 @@
+#!/usr/bin/env python3
+"""
+Fetch monthly top pages reports from Plausible and run analysis on each.
+
+This script fetches top pages data for each month in a specified range,
+saves the data to data/fetched/, and runs organism and workflow analysis
+on each month's data.
+
+Usage:
+    python3 fetch_monthly_reports.py
+    python3 fetch_monthly_reports.py --start-month 2024-10 --end-month 2025-11
+"""
+
+import argparse
+import subprocess
+from datetime import datetime
+from pathlib import Path
+import calendar
+
+
+def get_month_range(year, month):
+    """Get the first and last day of a month as YYYY-MM-DD strings."""
+    first_day = f"{year:04d}-{month:02d}-01"
+    last_day_num = calendar.monthrange(year, month)[1]
+    last_day = f"{year:04d}-{month:02d}-{last_day_num:02d}"
+    return first_day, last_day
+
+
+def parse_month(month_str):
+    """Parse a YYYY-MM string into (year, month) tuple."""
+    parts = month_str.split("-")
+    return int(parts[0]), int(parts[1])
+
+
+def month_iterator(start_year, start_month, end_year, end_month):
+    """Iterate over months from start to end (inclusive)."""
+    year, month = start_year, start_month
+    while (year, month) <= (end_year, end_month):
+        yield year, month
+        month += 1
+        if month > 12:
+            month = 1
+            year += 1
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Fetch monthly top pages reports and run analysis"
+    )
+    parser.add_argument(
+        "--start-month",
+        default="2024-10",
+        help="Start month in YYYY-MM format (default: 2024-10)"
+    )
+    parser.add_argument(
+        "--end-month",
+        default=None,
+        help="End month in YYYY-MM format (default: previous month)"
+    )
+    parser.add_argument(
+        "--skip-analysis",
+        action="store_true",
+        help="Only fetch data, don't run analysis"
+    )
+    
+    args = parser.parse_args()
+    
+    # Parse start month
+    start_year, start_month = parse_month(args.start_month)
+    
+    # Default end month to previous month (current month may be incomplete)
+    if args.end_month:
+        end_year, end_month = parse_month(args.end_month)
+    else:
+        today = datetime.now()
+        # Use previous month to ensure complete data
+        if today.month == 1:
+            end_year, end_month = today.year - 1, 12
+        else:
+            end_year, end_month = today.year, today.month - 1
+    
+    script_dir = Path(__file__).parent
+    fetch_script = script_dir / "fetch_top_pages.py"
+    analysis_script = script_dir / "run_analysis.py"
+    data_dir = script_dir.parent / "data" / "fetched"
+    
+    print(f"Fetching monthly reports from {start_year}-{start_month:02d} to {end_year}-{end_month:02d}")
+    print("=" * 60)
+    
+    fetched_files = []
+    
+    for year, month in month_iterator(start_year, start_month, end_year, end_month):
+        first_day, last_day = get_month_range(year, month)
+        month_name = datetime(year, month, 1).strftime("%B %Y")
+        
+        print(f"\n--- {month_name} ---")
+        
+        # Check if file already exists
+        expected_file = data_dir / f"top-pages-{first_day}-to-{last_day}.tab"
+        if expected_file.exists():
+            print(f"  Data file already exists: {expected_file.name}")
+            fetched_files.append(expected_file)
+            continue
+        
+        # Fetch data
+        print(f"  Fetching {first_day} to {last_day}...")
+        result = subprocess.run(
+            ["python3", str(fetch_script), "--start", first_day, "--end", last_day],
+            capture_output=True,
+            text=True
+        )
+        
+        if result.returncode != 0:
+            print("  ERROR: Failed to fetch data")
+            print(f"  {result.stderr}")
+            continue
+        
+        # Extract page count from output
+        for line in result.stdout.split("\n"):
+            if "Retrieved" in line:
+                print(f"  {line.strip()}")
+            if "Saved to:" in line:
+                print(f"  {line.strip()}")
+        
+        fetched_files.append(expected_file)
+    
+    if args.skip_analysis:
+        print("\n" + "=" * 60)
+        print("Skipping analysis (--skip-analysis flag set)")
+        print(f"Fetched {len(fetched_files)} monthly data files")
+        return
+    
+    print("\n" + "=" * 60)
+    print("Running analysis on fetched data...")
+    print("=" * 60)
+    
+    for data_file in fetched_files:
+        if not data_file.exists():
+            print(f"\nSkipping {data_file.name} (file not found)")
+            continue
+            
+        print(f"\n--- Analyzing {data_file.name} ---")
+        result = subprocess.run(
+            ["python3", str(analysis_script), str(data_file)],
+            capture_output=True,
+            text=True
+        )
+        
+        if result.returncode != 0:
+            print("  ERROR: Analysis failed")
+            print(f"  {result.stderr}")
+        else:
+            # Show summary lines
+            for line in result.stdout.split("\n"):
+                if "Summary:" in line or line.strip().startswith("-"):
+                    print(f"  {line}")
+    
+    print("\n" + "=" * 60)
+    print("All done!")
+    print("  Data files: data/fetched/")
+    print("  Analysis output: output/fetched/")
+
+
+if __name__ == "__main__":
+    main()
