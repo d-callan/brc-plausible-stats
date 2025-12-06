@@ -62,6 +62,11 @@ def main():
         action="store_true",
         help="Only fetch data, don't run analysis"
     )
+    parser.add_argument(
+        "--include-all-time",
+        action="store_true",
+        help="Also fetch all-time data (period=all)"
+    )
     
     args = parser.parse_args()
     
@@ -123,6 +128,38 @@ def main():
                 print(f"  {line.strip()}")
         
         fetched_files.append(expected_file)
+    
+    # Fetch all-time data if requested
+    if args.include_all_time:
+        print("\n--- All Time ---")
+        all_time_file = data_dir / "top-pages-all-time.tab"
+        
+        if all_time_file.exists():
+            print(f"  Data file already exists: {all_time_file.name}")
+            print("  (Delete the file to re-fetch)")
+        else:
+            # Use custom date range from site launch (Oct 2024) to today
+            # v1 API doesn't support "all" period
+            today = datetime.now()
+            all_time_start = "2024-10-01"
+            all_time_end = today.strftime("%Y-%m-%d")
+            
+            print(f"  Fetching all-time data ({all_time_start} to {all_time_end})...")
+            result = subprocess.run(
+                ["python3", str(fetch_script), 
+                 "--start", all_time_start, "--end", all_time_end,
+                 "--output", str(all_time_file)],
+                capture_output=True,
+                text=True
+            )
+            
+            if result.returncode != 0:
+                print("  ERROR: Failed to fetch all-time data")
+                print(f"  {result.stderr}")
+            else:
+                for line in result.stdout.split("\n"):
+                    if "Retrieved" in line or "Saved to:" in line:
+                        print(f"  {line.strip()}")
     
     if args.skip_analysis:
         print("\n" + "=" * 60)

@@ -11,6 +11,7 @@ brc-plausible-stats/
 │   ├── fetch_monthly_reports.py   # Fetch & analyze monthly reports in batch
 │   ├── generate_monthly_summary.py      # Generate text summary by community
 │   ├── generate_monthly_summary_html.py # Generate HTML report with charts
+│   ├── generate_analysis_html.py        # Generate HTML from analysis text files
 │   ├── analyze_organisms.py       # Analyze organism/pathogen/assembly pages
 │   ├── analyze_workflows.py       # Analyze workflow configuration pages
 │   └── run_analysis.py            # Run both analyses at once
@@ -125,7 +126,30 @@ python3 scripts/generate_monthly_summary_html.py --output output/monthly_summary
 This produces an HTML file with Chart.js visualizations showing trends over time:
 - Line charts for visitors and pageviews
 - Separate charts for high-level pages, content pages, and community breakdowns
+- Bar charts for community comparison (uses all-time data if available)
 - Interactive tooltips and legends
+
+For accurate all-time bar charts, first fetch all-time data:
+```bash
+python3 scripts/fetch_monthly_reports.py --include-all-time --skip-analysis
+```
+
+#### Individual Analysis HTML Reports
+
+Convert monthly text analysis files to interactive HTML:
+
+```bash
+# Convert a single file
+python3 scripts/generate_analysis_html.py output/fetched/top-pages-2025-05-01-to-2025-05-31-organism-analysis.txt
+
+# Convert all analysis files in a directory
+python3 scripts/generate_analysis_html.py output/fetched/
+```
+
+This generates HTML reports with:
+- Summary statistics cards
+- Bar charts comparing page types
+- Sortable tables with links to NCBI
 
 ### Quick Start (Manual Export)
 

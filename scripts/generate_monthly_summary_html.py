@@ -322,8 +322,55 @@ def generate_chart_js(chart_id, title, labels, datasets, y_label):
     return json.dumps(chart_data)
 
 
-def generate_html_report(monthly_data, output_path):
-    """Generate the HTML report with charts."""
+def generate_bar_chart_js(chart_id, title, labels, datasets, y_label):
+    """Generate Chart.js configuration for a grouped bar chart."""
+    chart_data = {
+        'type': 'bar',
+        'data': {
+            'labels': labels,
+            'datasets': datasets
+        },
+        'options': {
+            'responsive': True,
+            'maintainAspectRatio': False,
+            'plugins': {
+                'title': {
+                    'display': True,
+                    'text': title,
+                    'font': {'size': 16, 'weight': 'bold'}
+                },
+                'legend': {
+                    'position': 'bottom'
+                }
+            },
+            'scales': {
+                'y': {
+                    'beginAtZero': True,
+                    'title': {
+                        'display': True,
+                        'text': y_label
+                    }
+                },
+                'x': {
+                    'title': {
+                        'display': True,
+                        'text': 'Community'
+                    }
+                }
+            }
+        }
+    }
+    return json.dumps(chart_data)
+
+
+def generate_html_report(monthly_data, output_path, all_time_data=None):
+    """Generate the HTML report with charts.
+    
+    Args:
+        monthly_data: List of monthly data dicts
+        output_path: Path to write HTML file
+        all_time_data: Optional dict with all-time community stats (from dedicated fetch)
+    """
     
     months = [d['month'] for d in monthly_data]
     communities = ['Viruses', 'Bacteria', 'Fungi', 'Protists', 'Vectors', 'Hosts', 'Helminths', 'Other']
@@ -520,6 +567,73 @@ def generate_html_report(monthly_data, output_path):
     ]
     charts.append(('learn_pages', 'Learn / Featured Analyses Pages', datasets, 'Count'))
     
+    # Per-community bar charts showing organism/assembly/workflow relationships
+    # Use all_time_data if available (more accurate), otherwise aggregate from monthly
+    if all_time_data:
+        community_totals = all_time_data
+        bar_chart_note = "(from dedicated all-time fetch)"
+    else:
+        # Fallback: aggregate from monthly data (may overcount unique visitors)
+        community_totals = {}
+        for comm in communities:
+            community_totals[comm] = {
+                'organism_pages': sum(d['organism_by_community'].get(comm, {}).get('count', 0) for d in monthly_data),
+                'organism_visitors': sum(d['organism_by_community'].get(comm, {}).get('visitors', 0) for d in monthly_data),
+                'assembly_pages': sum(d['assembly_by_community'].get(comm, {}).get('count', 0) for d in monthly_data),
+                'assembly_visitors': sum(d['assembly_by_community'].get(comm, {}).get('visitors', 0) for d in monthly_data),
+                'workflow_pages': sum(d['workflow_by_community'].get(comm, {}).get('count', 0) for d in monthly_data),
+                'workflow_visitors': sum(d['workflow_by_community'].get(comm, {}).get('visitors', 0) for d in monthly_data),
+            }
+        bar_chart_note = "(aggregated from monthly - may overcount)"
+    
+    # Bar chart colors for page types
+    bar_colors = {
+        'Organism Pages': '#2563eb',
+        'Assembly Pages': '#7c3aed', 
+        'Workflow Pages': '#db2777',
+    }
+    
+    # Community comparison - Unique Pages (all time totals)
+    bar_charts = []
+    datasets = [
+        {
+            'label': 'Organism Pages',
+            'data': [community_totals[c]['organism_pages'] for c in communities],
+            'backgroundColor': bar_colors['Organism Pages'],
+        },
+        {
+            'label': 'Assembly Pages',
+            'data': [community_totals[c]['assembly_pages'] for c in communities],
+            'backgroundColor': bar_colors['Assembly Pages'],
+        },
+        {
+            'label': 'Workflow Pages',
+            'data': [community_totals[c]['workflow_pages'] for c in communities],
+            'backgroundColor': bar_colors['Workflow Pages'],
+        },
+    ]
+    bar_charts.append(('community_pages_bar', f'Page Types by Community - Unique Pages {bar_chart_note}', communities, datasets, 'Unique Pages'))
+    
+    # Community comparison - Visitors (all time totals)
+    datasets = [
+        {
+            'label': 'Organism Pages',
+            'data': [community_totals[c]['organism_visitors'] for c in communities],
+            'backgroundColor': bar_colors['Organism Pages'],
+        },
+        {
+            'label': 'Assembly Pages',
+            'data': [community_totals[c]['assembly_visitors'] for c in communities],
+            'backgroundColor': bar_colors['Assembly Pages'],
+        },
+        {
+            'label': 'Workflow Pages',
+            'data': [community_totals[c]['workflow_visitors'] for c in communities],
+            'backgroundColor': bar_colors['Workflow Pages'],
+        },
+    ]
+    bar_charts.append(('community_visitors_bar', f'Page Types by Community - Visitors {bar_chart_note}', communities, datasets, 'Visitors'))
+    
     # Generate HTML
     chart_containers = []
     chart_scripts = []
@@ -532,6 +646,20 @@ def generate_html_report(monthly_data, output_path):
         ''')
         
         chart_config = generate_chart_js(chart_id, title, months, datasets, y_label)
+        chart_scripts.append(f'''
+        new Chart(document.getElementById('{chart_id}'), {chart_config});
+        ''')
+    
+    # Generate bar chart containers and scripts
+    bar_chart_containers = []
+    for chart_id, title, labels, datasets, y_label in bar_charts:
+        bar_chart_containers.append(f'''
+        <div class="chart-container">
+            <canvas id="{chart_id}"></canvas>
+        </div>
+        ''')
+        
+        chart_config = generate_bar_chart_js(chart_id, title, labels, datasets, y_label)
         chart_scripts.append(f'''
         new Chart(document.getElementById('{chart_id}'), {chart_config});
         ''')
@@ -664,6 +792,12 @@ def generate_html_report(monthly_data, output_path):
     <h2 class="section-title">Learn / Featured Analyses</h2>
     <div class="charts-grid">
         {chart_containers[11]}
+    </div>
+    
+    <h2 class="section-title">Community Comparison - Page Type Breakdown</h2>
+    <div class="charts-grid">
+        {bar_chart_containers[0]}
+        {bar_chart_containers[1]}
     </div>
     
     <div class="notes">
@@ -827,9 +961,48 @@ def main():
             'learn': stats['learn_pages'],
         })
     
+    # Check for all-time data file and process it
+    all_time_file = data_dir / 'top-pages-all-time.tab'
+    all_time_data = None
+    
+    if all_time_file.exists():
+        print("Processing all-time data for bar charts...", file=sys.stderr)
+        all_time_stats = parse_data_file(all_time_file)
+        
+        communities = ['Viruses', 'Bacteria', 'Fungi', 'Protists', 'Vectors', 'Hosts', 'Helminths', 'Other']
+        all_time_data = {comm: {
+            'organism_pages': 0, 'organism_visitors': 0,
+            'assembly_pages': 0, 'assembly_visitors': 0,
+            'workflow_pages': 0, 'workflow_visitors': 0,
+        } for comm in communities}
+        
+        # Process organism pages
+        for tax_id, visitors, pageviews in all_time_stats['organism_pages']:
+            name, lineage = _taxonomy_cache.get(tax_id, ('Unknown', 'Unknown'))
+            community = classify_community(lineage)
+            all_time_data[community]['organism_pages'] += 1
+            all_time_data[community]['organism_visitors'] += visitors
+        
+        # Process assembly pages
+        for assembly_id, visitors, pageviews in all_time_stats['assembly_pages']:
+            _, name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
+            community = classify_community(lineage)
+            all_time_data[community]['assembly_pages'] += 1
+            all_time_data[community]['assembly_visitors'] += visitors
+        
+        # Process workflow pages
+        for assembly_id, workflow, visitors, pageviews in all_time_stats['workflow_pages']:
+            _, name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
+            community = classify_community(lineage)
+            all_time_data[community]['workflow_pages'] += 1
+            all_time_data[community]['workflow_visitors'] += visitors
+    else:
+        print("No all-time data file found, bar charts will use aggregated monthly data", file=sys.stderr)
+        print("  (Run: python3 scripts/fetch_monthly_reports.py --include-all-time)", file=sys.stderr)
+    
     # Generate HTML report
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    generate_html_report(monthly_data, output_path)
+    generate_html_report(monthly_data, output_path, all_time_data)
     
     print(f"\nHTML report saved to: {output_path}", file=sys.stderr)
 
