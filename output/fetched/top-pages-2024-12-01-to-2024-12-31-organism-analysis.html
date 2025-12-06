@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organism Analysis - 2024-12-01 to 2024-12-31</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        h1 { margin: 0 0 10px 0; color: #0f172a; }
+        .subtitle { color: #64748b; font-size: 14px; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-value { font-size: 32px; font-weight: bold; color: #2563eb; }
+        .stat-label { color: #64748b; font-size: 14px; margin-top: 5px; }
+        .section { margin-bottom: 30px; }
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .charts-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            height: 300px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th { background: #f8fafc; font-weight: 600; color: #475569; }
+        tr:hover { background: #f8fafc; }
+        .num { text-align: right; font-variant-numeric: tabular-nums; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Organism & Pathogen Page Analysis</h1>
+        <div class="subtitle">2024-12-01 to 2024-12-31</div>
+    </div>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Organism Pages</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Organism Visitors</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Assembly Pages</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Assembly Visitors</div>
+        </div>
+    </div>
+    
+    <div class="charts-row">
+        <div class="chart-container">
+            <canvas id="visitorsChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="pageviewsChart"></canvas>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">High-Level Navigation Pages</h2>
+        <table>
+            <thead>
+                <tr><th>Page</th><th class="num">Visitors</th><th class="num">Pageviews</th><th>Bounce Rate</th><th>Avg Time</th></tr>
+            </thead>
+            <tbody><tr>
+            <td>/</td>
+            <td class="num">211</td>
+            <td class="num">308</td>
+            <td>68%</td>
+            <td>3m 23s</td>
+        </tr>
+<tr>
+            <td>/data/organisms</td>
+            <td class="num">88</td>
+            <td class="num">220</td>
+            <td>40%</td>
+            <td>3m 40s</td>
+        </tr>
+<tr>
+            <td>/roadmap</td>
+            <td class="num">22</td>
+            <td class="num">23</td>
+            <td>95%</td>
+            <td>9s</td>
+        </tr>
+<tr>
+            <td>/about</td>
+            <td class="num">14</td>
+            <td class="num">17</td>
+            <td>82%</td>
+            <td>N/A</td>
+        </tr></tbody>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Top Organism Pages</h2>
+        <table>
+            <thead>
+                <tr><th>Tax ID</th><th>Organism</th><th class="num">Visitors</th><th class="num">Pageviews</th><th>Avg Time</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Top Assembly Pages</h2>
+        <table>
+            <thead>
+                <tr><th>Assembly ID</th><th>Organism</th><th class="num">Visitors</th><th class="num">Pageviews</th><th>Avg Time</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    
+    <script>
+        new Chart(document.getElementById('visitorsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Organism Pages', 'Assembly Pages'],
+                datasets: [{
+                    label: 'Visitors',
+                    data: [0, 0],
+                    backgroundColor: ['#2563eb', '#7c3aed']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { title: { display: true, text: 'Visitors by Page Type' } }
+            }
+        });
+        
+        new Chart(document.getElementById('pageviewsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Organism Pages', 'Assembly Pages'],
+                datasets: [{
+                    label: 'Pageviews',
+                    data: [0, 0],
+                    backgroundColor: ['#2563eb', '#7c3aed']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { title: { display: true, text: 'Pageviews by Page Type' } }
+            }
+        });
+    </script>
+</body>
+</html>

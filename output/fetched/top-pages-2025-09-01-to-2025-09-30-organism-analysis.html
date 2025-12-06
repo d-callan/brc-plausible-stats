@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organism Analysis - 2025-09-01 to 2025-09-30</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        h1 { margin: 0 0 10px 0; color: #0f172a; }
+        .subtitle { color: #64748b; font-size: 14px; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-value { font-size: 32px; font-weight: bold; color: #2563eb; }
+        .stat-label { color: #64748b; font-size: 14px; margin-top: 5px; }
+        .section { margin-bottom: 30px; }
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .charts-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            height: 300px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th { background: #f8fafc; font-weight: 600; color: #475569; }
+        tr:hover { background: #f8fafc; }
+        .num { text-align: right; font-variant-numeric: tabular-nums; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Organism & Pathogen Page Analysis</h1>
+        <div class="subtitle">2025-09-01 to 2025-09-30</div>
+    </div>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value">68</div>
+            <div class="stat-label">Organism Pages</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">144</div>
+            <div class="stat-label">Organism Visitors</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">75</div>
+            <div class="stat-label">Assembly Pages</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">159</div>
+            <div class="stat-label">Assembly Visitors</div>
+        </div>
+    </div>
+    
+    <div class="charts-row">
+        <div class="chart-container">
+            <canvas id="visitorsChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="pageviewsChart"></canvas>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">High-Level Navigation Pages</h2>
+        <table>
+            <thead>
+                <tr><th>Page</th><th class="num">Visitors</th><th class="num">Pageviews</th><th>Bounce Rate</th><th>Avg Time</th></tr>
+            </thead>
+            <tbody><tr>
+            <td>/</td>
+            <td class="num">440</td>
+            <td class="num">773</td>
+            <td>56%</td>
+            <td>3m 27s</td>
+        </tr>
+<tr>
+            <td>/data/organisms</td>
+            <td class="num">139</td>
+            <td class="num">300</td>
+            <td>46%</td>
+            <td>4m 39s</td>
+        </tr>
+<tr>
+            <td>/data/assemblies</td>
+            <td class="num">87</td>
+            <td class="num">194</td>
+            <td>44%</td>
+            <td>2m 26s</td>
+        </tr>
+<tr>
+            <td>/data/priority-pathogens</td>
+            <td class="num">58</td>
+            <td class="num">81</td>
+            <td>71%</td>
+            <td>2m 15s</td>
+        </tr>
+<tr>
+            <td>/roadmap</td>
+            <td class="num">53</td>
+            <td class="num">61</td>
+            <td>86%</td>
+            <td>10s</td>
+        </tr>
+<tr>
+            <td>/about</td>
+            <td class="num">53</td>
+            <td class="num">80</td>
+            <td>66%</td>
+            <td>N/A</td>
+        </tr></tbody>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Top Organism Pages</h2>
+        <table>
+            <thead>
+                <tr><th>Tax ID</th><th>Organism</th><th class="num">Visitors</th><th class="num">Pageviews</th><th>Avg Time</th></tr>
+            </thead>
+            <tbody><tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5833" target="_blank">5833</a></td>
+            <td>Plasmodium falciparum</td>
+            <td class="num">13</td>
+            <td class="num">21</td>
+            <td>14m 36s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=73230" target="_blank">73230</a></td>
+            <td>[Emmonsia] crescens</td>
+            <td class="num">11</td>
+            <td class="num">14</td>
+            <td>4s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=43142" target="_blank">43142</a></td>
+            <td>Acanthamoeba culbertsoni</td>
+            <td class="num">7</td>
+            <td class="num">7</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3052345" target="_blank">3052345</a></td>
+            <td>Morbillivirus hominis</td>
+            <td class="num">6</td>
+            <td class="num">10</td>
+            <td>20m 49s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2074759" target="_blank">2074759</a></td>
+            <td>Amauroascus verrucosus</td>
+            <td class="num">5</td>
+            <td class="num">6</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=65658" target="_blank">65658</a></td>
+            <td>Acanthamoeba astronyxis</td>
+            <td class="num">5</td>
+            <td class="num">8</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1866961" target="_blank">1866961</a></td>
+            <td>Amphiamblys sp. WSBS2006</td>
+            <td class="num">4</td>
+            <td class="num">4</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=59729" target="_blank">59729</a></td>
+            <td>Taeniopygia guttata</td>
+            <td class="num">4</td>
+            <td class="num">9</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=498019" target="_blank">498019</a></td>
+            <td>Candidozyma auris</td>
+            <td class="num">4</td>
+            <td class="num">6</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5207" target="_blank">5207</a></td>
+            <td>Cryptococcus neoformans seroty...</td>
+            <td class="num">4</td>
+            <td class="num">8</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=38527" target="_blank">38527</a></td>
+            <td>bream</td>
+            <td class="num">4</td>
+            <td class="num">5</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606" target="_blank">9606</a></td>
+            <td>Homo sapiens</td>
+            <td class="num">3</td>
+            <td class="num">5</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=196912" target="_blank">196912</a></td>
+            <td>Acanthamoeba mauritaniensis</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5755" target="_blank">5755</a></td>
+            <td>Acanthamoeba castellanii</td>
+            <td class="num">3</td>
+            <td class="num">6</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=61605" target="_blank">61605</a></td>
+            <td>Acanthamoeba lugdunensis</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3066251" target="_blank">3066251</a></td>
+            <td>Rickettsia endosymbiont of Pol...</td>
+            <td class="num">2</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=72011" target="_blank">72011</a></td>
+            <td>black sea bream</td>
+            <td class="num">2</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2955291" target="_blank">2955291</a></td>
+            <td>Alphainfluenzavirus influenzae</td>
+            <td class="num">2</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090" target="_blank">10090</a></td>
+            <td>mouse</td>
+            <td class="num">2</td>
+            <td class="num">4</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=730" target="_blank">730</a></td>
+            <td>[Haemophilus] ducreyi</td>
+            <td class="num">2</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr></tbody>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Top Assembly Pages</h2>
+        <table>
+            <thead>
+                <tr><th>Assembly ID</th><th>Organism</th><th class="num">Visitors</th><th class="num">Pageviews</th><th>Avg Time</th></tr>
+            </thead>
+            <tbody><tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.001008285.1" target="_blank">GCA_001008285_1</a></td>
+            <td>[Emmonsia] crescens</td>
+            <td class="num">21</td>
+            <td class="num">32</td>
+            <td>3m 37s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.000826245.1" target="_blank">GCA_000826245_1</a></td>
+            <td>Acanthamoeba astronyxis</td>
+            <td class="num">7</td>
+            <td class="num">11</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000002445.2" target="_blank">GCF_000002445_2</a></td>
+            <td>Trypanosoma brucei brucei TREU927</td>
+            <td class="num">6</td>
+            <td class="num">6</td>
+            <td>1m 35s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000854845.1" target="_blank">GCF_000854845_1</a></td>
+            <td>Measles morbillivirus</td>
+            <td class="num">6</td>
+            <td class="num">8</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000002765.6" target="_blank">GCF_000002765_6</a></td>
+            <td>Plasmodium falciparum 3D7</td>
+            <td class="num">6</td>
+            <td class="num">14</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000006565.2" target="_blank">GCF_000006565_2</a></td>
+            <td>Toxoplasma gondii ME49</td>
+            <td class="num">5</td>
+            <td class="num">9</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000149245.1" target="_blank">GCF_000149245_1</a></td>
+            <td>Cryptococcus neoformans H99</td>
+            <td class="num">5</td>
+            <td class="num">8</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.963993115.1" target="_blank">GCA_963993115_1</a></td>
+            <td>common bream</td>
+            <td class="num">4</td>
+            <td class="num">5</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.048771995.1" target="_blank">GCA_048771995_1</a></td>
+            <td>zebra finch</td>
+            <td class="num">4</td>
+            <td class="num">6</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.001875675.1" target="_blank">GCA_001875675_1</a></td>
+            <td>Amphiamblys sp. WSBS2006</td>
+            <td class="num">4</td>
+            <td class="num">5</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.001642055.1" target="_blank">GCF_001642055_1</a></td>
+            <td>Alternaria alternata</td>
+            <td class="num">3</td>
+            <td class="num">5</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000313135.1" target="_blank">GCF_000313135_1</a></td>
+            <td>Acanthamoeba castellanii str. ...</td>
+            <td class="num">3</td>
+            <td class="num">4</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.006247105.1" target="_blank">GCA_006247105_1</a></td>
+            <td>Giardia muris</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000001405.40" target="_blank">GCF_000001405_40</a></td>
+            <td>human</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.001430935.1" target="_blank">GCA_001430935_1</a></td>
+            <td>Amauroascus verrucosus</td>
+            <td class="num">3</td>
+            <td class="num">4</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000195955.2" target="_blank">GCF_000195955_2</a></td>
+            <td>Mycobacterium tuberculosis H37Rv</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.016904835.1" target="_blank">GCA_016904835_1</a></td>
+            <td>rifleman</td>
+            <td class="num">2</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.013267415.1" target="_blank">GCF_013267415_1</a></td>
+            <td>Abiotrophia defectiva</td>
+            <td class="num">2</td>
+            <td class="num">5</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000002415.2" target="_blank">GCF_000002415_2</a></td>
+            <td>malaria parasite P. vivax</td>
+            <td class="num">2</td>
+            <td class="num">5</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.003013715.1" target="_blank">GCF_003013715_1</a></td>
+            <td>Candidozyma auris</td>
+            <td class="num">2</td>
+            <td class="num">4</td>
+            <td>N/A</td>
+        </tr></tbody>
+        </table>
+    </div>
+    
+    <script>
+        new Chart(document.getElementById('visitorsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Organism Pages', 'Assembly Pages'],
+                datasets: [{
+                    label: 'Visitors',
+                    data: [144, 159],
+                    backgroundColor: ['#2563eb', '#7c3aed']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { title: { display: true, text: 'Visitors by Page Type' } }
+            }
+        });
+        
+        new Chart(document.getElementById('pageviewsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Organism Pages', 'Assembly Pages'],
+                datasets: [{
+                    label: 'Pageviews',
+                    data: [201, 226],
+                    backgroundColor: ['#2563eb', '#7c3aed']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { title: { display: true, text: 'Pageviews by Page Type' } }
+            }
+        });
+    </script>
+</body>
+</html>

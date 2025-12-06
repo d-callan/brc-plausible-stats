@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organism Analysis - 2025-04-01 to 2025-04-30</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        h1 { margin: 0 0 10px 0; color: #0f172a; }
+        .subtitle { color: #64748b; font-size: 14px; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-value { font-size: 32px; font-weight: bold; color: #2563eb; }
+        .stat-label { color: #64748b; font-size: 14px; margin-top: 5px; }
+        .section { margin-bottom: 30px; }
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .charts-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            height: 300px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th { background: #f8fafc; font-weight: 600; color: #475569; }
+        tr:hover { background: #f8fafc; }
+        .num { text-align: right; font-variant-numeric: tabular-nums; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Organism & Pathogen Page Analysis</h1>
+        <div class="subtitle">2025-04-01 to 2025-04-30</div>
+    </div>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value">45</div>
+            <div class="stat-label">Organism Pages</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">100</div>
+            <div class="stat-label">Organism Visitors</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">31</div>
+            <div class="stat-label">Assembly Pages</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">82</div>
+            <div class="stat-label">Assembly Visitors</div>
+        </div>
+    </div>
+    
+    <div class="charts-row">
+        <div class="chart-container">
+            <canvas id="visitorsChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="pageviewsChart"></canvas>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">High-Level Navigation Pages</h2>
+        <table>
+            <thead>
+                <tr><th>Page</th><th class="num">Visitors</th><th class="num">Pageviews</th><th>Bounce Rate</th><th>Avg Time</th></tr>
+            </thead>
+            <tbody><tr>
+            <td>/</td>
+            <td class="num">284</td>
+            <td class="num">455</td>
+            <td>62%</td>
+            <td>2m 40s</td>
+        </tr>
+<tr>
+            <td>/data/organisms</td>
+            <td class="num">140</td>
+            <td class="num">236</td>
+            <td>59%</td>
+            <td>1m 49s</td>
+        </tr>
+<tr>
+            <td>/data/assemblies</td>
+            <td class="num">70</td>
+            <td class="num">114</td>
+            <td>61%</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td>/roadmap</td>
+            <td class="num">26</td>
+            <td class="num">30</td>
+            <td>86%</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td>/about</td>
+            <td class="num">23</td>
+            <td class="num">30</td>
+            <td>76%</td>
+            <td>N/A</td>
+        </tr></tbody>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Top Organism Pages</h2>
+        <table>
+            <thead>
+                <tr><th>Tax ID</th><th>Organism</th><th class="num">Visitors</th><th class="num">Pageviews</th><th>Avg Time</th></tr>
+            </thead>
+            <tbody><tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5833" target="_blank">5833</a></td>
+            <td>Plasmodium falciparum</td>
+            <td class="num">11</td>
+            <td class="num">14</td>
+            <td>12s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=65658" target="_blank">65658</a></td>
+            <td>Acanthamoeba astronyxis</td>
+            <td class="num">10</td>
+            <td class="num">15</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5855" target="_blank">5855</a></td>
+            <td>Plasmodium vivax</td>
+            <td class="num">9</td>
+            <td class="num">10</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5755" target="_blank">5755</a></td>
+            <td>Acanthamoeba castellanii</td>
+            <td class="num">7</td>
+            <td class="num">13</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=43142" target="_blank">43142</a></td>
+            <td>Acanthamoeba culbertsoni</td>
+            <td class="num">5</td>
+            <td class="num">6</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5811" target="_blank">5811</a></td>
+            <td>Toxoplasma gondii</td>
+            <td class="num">5</td>
+            <td class="num">7</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=196912" target="_blank">196912</a></td>
+            <td>Acanthamoeba mauritaniensis</td>
+            <td class="num">4</td>
+            <td class="num">5</td>
+            <td>4s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28583" target="_blank">28583</a></td>
+            <td>Allomyces macrogynus</td>
+            <td class="num">4</td>
+            <td class="num">6</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10244" target="_blank">10244</a></td>
+            <td>Monkeypox virus</td>
+            <td class="num">3</td>
+            <td class="num">5</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=746128" target="_blank">746128</a></td>
+            <td>Aspergillus fumigatus</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=61605" target="_blank">61605</a></td>
+            <td>Acanthamoeba lugdunensis</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1773" target="_blank">1773</a></td>
+            <td>Mycobacterium tuberculosis</td>
+            <td class="num">2</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7159" target="_blank">7159</a></td>
+            <td>Aedes aegypti</td>
+            <td class="num">2</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5037" target="_blank">5037</a></td>
+            <td>Histoplasma capsulatum</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=42458" target="_blank">42458</a></td>
+            <td>Lichtheimia corymbifera</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=498019" target="_blank">498019</a></td>
+            <td>Candidozyma auris</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5506" target="_blank">5506</a></td>
+            <td>Fusarium</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5476" target="_blank">5476</a></td>
+            <td>Candida albicans</td>
+            <td class="num">1</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5820" target="_blank">5820</a></td>
+            <td>Plasmodium</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5207" target="_blank">5207</a></td>
+            <td>Cryptococcus neoformans seroty...</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr></tbody>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Top Assembly Pages</h2>
+        <table>
+            <thead>
+                <tr><th>Assembly ID</th><th>Organism</th><th class="num">Visitors</th><th class="num">Pageviews</th><th>Avg Time</th></tr>
+            </thead>
+            <tbody><tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.000826245.1" target="_blank">GCA_000826245_1</a></td>
+            <td>Acanthamoeba astronyxis</td>
+            <td class="num">17</td>
+            <td class="num">25</td>
+            <td>15m 33s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.000826485.1" target="_blank">GCA_000826485_1</a></td>
+            <td>Acanthamoeba castellanii</td>
+            <td class="num">10</td>
+            <td class="num">22</td>
+            <td>34s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.900093555.2" target="_blank">GCA_900093555_2</a></td>
+            <td>malaria parasite P. vivax</td>
+            <td class="num">5</td>
+            <td class="num">6</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.021020595.1" target="_blank">GCA_021020595_1</a></td>
+            <td>Acanthamoeba castellanii</td>
+            <td class="num">4</td>
+            <td class="num">6</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.000151295.1" target="_blank">GCA_000151295_1</a></td>
+            <td>Allomyces macrogynus ATCC</td>
+            <td class="num">38327</td>
+            <td class="num">4</td>
+            <td>8          N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000002655.1" target="_blank">GCF_000002655_1</a></td>
+            <td>Aspergillus fumigatus Af293</td>
+            <td class="num">4</td>
+            <td class="num">5</td>
+            <td>5m 26s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000001405.40" target="_blank">GCF_000001405_40</a></td>
+            <td>human</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>1m 50s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000002415.2" target="_blank">GCF_000002415_2</a></td>
+            <td>malaria parasite P. vivax</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000002765.6" target="_blank">GCF_000002765_6</a></td>
+            <td>Plasmodium falciparum 3D7</td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000313135.1" target="_blank">GCF_000313135_1</a></td>
+            <td>Acanthamoeba castellanii str. ...</td>
+            <td class="num">3</td>
+            <td class="num">10</td>
+            <td>8m 38s</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.009761425.1" target="_blank">GCA_009761425_1</a></td>
+            <td>malaria parasite P. falciparum</td>
+            <td class="num">2</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.021020605.1" target="_blank">GCA_021020605_1</a></td>
+            <td>Acanthamoeba castellanii</td>
+            <td class="num">2</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000006565.2" target="_blank">GCF_000006565_2</a></td>
+            <td>Toxoplasma gondii ME49</td>
+            <td class="num">2</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.943734665.1" target="_blank">GCF_943734665_1</a></td>
+            <td>Anopheles aquasalis</td>
+            <td class="num">2</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.000826265.1" target="_blank">GCA_000826265_1</a></td>
+            <td>Acanthamoeba culbertsoni</td>
+            <td class="num">2</td>
+            <td class="num">2</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000857045.1" target="_blank">GCF_000857045_1</a></td>
+            <td>Monkeypox virus</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.000826445.1" target="_blank">GCA_000826445_1</a></td>
+            <td>Acanthamoeba quina</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF.000182765.1" target="_blank">GCF_000182765_1</a></td>
+            <td>Candida parapsilosis</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.900631975.1" target="_blank">GCA_900631975_1</a></td>
+            <td>malaria parasite P. falciparum</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr>
+<tr>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA.021653915.1" target="_blank">GCA_021653915_1</a></td>
+            <td>yellow fever mosquito</td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td>N/A</td>
+        </tr></tbody>
+        </table>
+    </div>
+    
+    <script>
+        new Chart(document.getElementById('visitorsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Organism Pages', 'Assembly Pages'],
+                datasets: [{
+                    label: 'Visitors',
+                    data: [100, 82],
+                    backgroundColor: ['#2563eb', '#7c3aed']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { title: { display: true, text: 'Visitors by Page Type' } }
+            }
+        });
+        
+        new Chart(document.getElementById('pageviewsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Organism Pages', 'Assembly Pages'],
+                datasets: [{
+                    label: 'Pageviews',
+                    data: [127, 117],
+                    backgroundColor: ['#2563eb', '#7c3aed']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { title: { display: true, text: 'Pageviews by Page Type' } }
+            }
+        });
+    </script>
+</body>
+</html>
