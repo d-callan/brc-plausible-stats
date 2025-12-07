@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workflow Analysis - 2025-10-01 to 2025-10-31</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -24,6 +25,7 @@
         }
         h1 { margin: 0 0 10px 0; color: #0f172a; }
         .subtitle { color: #64748b; font-size: 14px; }
+        .legend { margin-top: 15px; font-size: 13px; color: #475569; }
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -44,9 +46,10 @@
             border-radius: 12px;
             padding: 20px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            height: 350px;
             margin-bottom: 30px;
         }
+        .chart-container.bar { height: 350px; }
+        .chart-container.network { height: 600px; position: relative; }
         .section { margin-bottom: 30px; }
         .section-title {
             font-size: 18px;
@@ -55,22 +58,14 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #e2e8f0;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        th, td {
-            padding: 12px 16px;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        th { background: #f8fafc; font-weight: 600; color: #475569; }
-        tr:hover { background: #f8fafc; }
-        .num { text-align: right; font-variant-numeric: tabular-nums; }
+        #networkSvg { width: 100%; height: 100%; }
+        .node-workflow { fill: #db2777; }
+        .node-organism { fill: #2563eb; }
+        .node-label { font-size: 10px; fill: #1e293b; pointer-events: none; }
+        .link { stroke: #94a3b8; stroke-opacity: 0.6; }
+        .network-legend { position: absolute; top: 10px; right: 10px; font-size: 12px; }
+        .network-legend span { display: inline-flex; align-items: center; margin-left: 12px; }
+        .network-legend .dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }
     </style>
 </head>
 <body>
@@ -81,55 +76,233 @@
     
     <div class="stats-grid">
         <div class="stat-card">
-            <div class="stat-value">0</div>
-            <div class="stat-label">Unique Workflow Pages</div>
+            <div class="stat-value">57</div>
+            <div class="stat-label">Assemblies with Workflow Visits</div>
         </div>
         <div class="stat-card">
-            <div class="stat-value">0</div>
+            <div class="stat-value">12</div>
+            <div class="stat-label">Unique Workflows</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">137</div>
             <div class="stat-label">Total Visitors</div>
         </div>
         <div class="stat-card">
-            <div class="stat-value">0</div>
+            <div class="stat-value">182</div>
             <div class="stat-label">Total Pageviews</div>
         </div>
-        <div class="stat-card">
-            <div class="stat-value">0</div>
-            <div class="stat-label">Workflow Types</div>
-        </div>
-    </div>
-    
-    <div class="chart-container">
-        <canvas id="workflowChart"></canvas>
     </div>
     
     <div class="section">
-        <h2 class="section-title">Workflow Pages</h2>
-        <table>
-            <thead>
-                <tr><th>Assembly ID</th><th>Workflow</th><th>Organism</th><th class="num">Visitors</th><th class="num">Pageviews</th></tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+        <h2 class="section-title">Visitors & Pageviews by Workflow Type</h2>
+        <div class="chart-container bar">
+            <canvas id="workflowChart"></canvas>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Workflow-Organism Network</h2>
+        <div class="chart-container network">
+            <div class="network-legend">
+                <span><span class="dot" style="background:#db2777;"></span>Workflow</span>
+                <span><span class="dot" style="background:#2563eb;"></span>Organism</span>
+                <span style="margin-left:20px;color:#64748b;font-style:italic;">Node size = total visitors | Edge width = visitors for connection</span>
+            </div>
+            <svg id="networkSvg"></svg>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Workflow Page Visitors by Assembly (grouped by community)</h2>
+        <div class="legend" style="margin-bottom:15px;"><span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#dc2626;border-radius:2px;margin-right:4px;"></span>Viruses</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#2563eb;border-radius:2px;margin-right:4px;"></span>Bacteria</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#65a30d;border-radius:2px;margin-right:4px;"></span>Fungi</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#7c3aed;border-radius:2px;margin-right:4px;"></span>Protists</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#ea580c;border-radius:2px;margin-right:4px;"></span>Vectors</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#0891b2;border-radius:2px;margin-right:4px;"></span>Hosts</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#6b7280;border-radius:2px;margin-right:4px;"></span>Other</span></div>
+        <div class="chart-container bar">
+            <canvas id="assemblyChart"></canvas>
+        </div>
     </div>
     
     <script>
+        // Workflow bar chart
         new Chart(document.getElementById('workflowChart'), {
             type: 'bar',
             data: {
-                labels: [],
-                datasets: [{
-                    label: 'Visitors',
-                    data: [],
-                    backgroundColor: '#db2777'
-                }]
+                labels: ["fastq-to-matrix-10x-scrna-seq-", "generic-non-segmented-viral-va", "cutandrun", "atacseq", "consensus-peaks-consensus-peak", "lncRNAs-annotation", "amr-gene-detection", "rnaseq-sr", "chipseq-sr", "fastq-to-matrix-10x-scrna-seq-"],
+                datasets: [
+                    {
+                        label: 'Visitors',
+                        data: [24, 9, 5, 3, 3, 3, 2, 2, 2, 1],
+                        backgroundColor: '#db2777'
+                    },
+                    {
+                        label: 'Pageviews',
+                        data: [25, 13, 6, 3, 3, 4, 2, 2, 2, 1],
+                        backgroundColor: '#7c3aed'
+                    }
+                ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
                 indexAxis: 'y',
-                plugins: { title: { display: true, text: 'Visitors by Workflow Type' } }
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
             }
         });
+        
+        // Assembly bar chart by community
+        new Chart(document.getElementById('assemblyChart'), {
+            type: 'bar',
+            data: {
+                labels: ["Measles morbilliviru...", "Human papillomavirus...", "Eastern equine encep...", "Abiotrophia defectiv...", "[Haemophilus] ducrey...", "Shigella sonnei", "[Emmonsia] crescens", "Allomyces macrogynus...", "Amauroascus niger", "Toxoplasma gondii ME...", "Acanthamoeba astrony...", "Acanthamoeba castell...", "Anopheles farauti", "Asian tiger mosquito", "zebra finch 2 2", "Phytopythium vexans ..."],
+                datasets: [{
+                    label: 'Visitors',
+                    data: [8, 2, 1, 9, 0, 2, 17, 10, 5, 5, 4, 2, 1, 1, 0, 1],
+                    backgroundColor: ["#dc2626", "#dc2626", "#dc2626", "#2563eb", "#2563eb", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#ea580c", "#ea580c", "#0891b2", "#6b7280"]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true },
+                    x: { ticks: { maxRotation: 45, minRotation: 45 } }
+                }
+            }
+        });
+        
+        // Network diagram using D3.js
+        const networkData = {"workflows": [{"id": "haploid-variant-calling-w", "visitors": 48}, {"id": "generic-non-segmented-vir", "visitors": 8}, {"id": "fastq-to-matrix-10x-scrna", "visitors": 12}, {"id": "rnaseq-pe", "visitors": 9}], "organisms": [{"id": "[Emmonsia] crescens", "visitors": 16}, {"id": "Measles morbillivirus", "visitors": 8}, {"id": "[Haemophilus] ducreyi", "visitors": 7}, {"id": "Allomyces macrogynus ATCC", "visitors": 7}, {"id": "Amauroascus niger", "visitors": 5}, {"id": "Candidozyma auris", "visitors": 4}, {"id": "Toxoplasma gondii ME49", "visitors": 3}, {"id": "Abiotrophia defectiva", "visitors": 3}, {"id": "Aspergillus carbonarius I", "visitors": 3}, {"id": "Alternaria alternata", "visitors": 5}, {"id": "Aspergillus aculeatus ATC", "visitors": 2}, {"id": "zebra finch", "visitors": 2}, {"id": "Human papillomavirus type", "visitors": 2}, {"id": "Acanthamoeba astronyxis", "visitors": 4}, {"id": "Acanthamoeba castellanii", "visitors": 2}, {"id": "Acanthamoeba castellanii ", "visitors": 2}, {"id": "malaria parasite P. vivax", "visitors": 2}], "edges": [{"source": "haploid-variant-calling-w", "target": "[Emmonsia] crescens", "visitors": 12}, {"source": "generic-non-segmented-vir", "target": "Measles morbillivirus", "visitors": 8}, {"source": "haploid-variant-calling-w", "target": "[Haemophilus] ducreyi", "visitors": 7}, {"source": "haploid-variant-calling-w", "target": "Allomyces macrogynus ATCC", "visitors": 7}, {"source": "haploid-variant-calling-w", "target": "Amauroascus niger", "visitors": 5}, {"source": "haploid-variant-calling-w", "target": "Candidozyma auris", "visitors": 4}, {"source": "fastq-to-matrix-10x-scrna", "target": "[Emmonsia] crescens", "visitors": 4}, {"source": "rnaseq-pe", "target": "Toxoplasma gondii ME49", "visitors": 3}, {"source": "haploid-variant-calling-w", "target": "Abiotrophia defectiva", "visitors": 3}, {"source": "haploid-variant-calling-w", "target": "Aspergillus carbonarius I", "visitors": 3}, {"source": "haploid-variant-calling-w", "target": "Alternaria alternata", "visitors": 3}, {"source": "haploid-variant-calling-w", "target": "Aspergillus aculeatus ATC", "visitors": 2}, {"source": "rnaseq-pe", "target": "zebra finch", "visitors": 2}, {"source": "haploid-variant-calling-w", "target": "Human papillomavirus type", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba astronyxis", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Alternaria alternata", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba castellanii", "visitors": 2}, {"source": "rnaseq-pe", "target": "Acanthamoeba astronyxis", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba castellanii ", "visitors": 2}, {"source": "rnaseq-pe", "target": "malaria parasite P. vivax", "visitors": 2}]};
+        
+        if (networkData.workflows.length > 0 && networkData.organisms.length > 0) {
+            const svg = d3.select('#networkSvg');
+            const container = document.querySelector('.chart-container.network');
+            const width = container.clientWidth - 40;
+            const height = container.clientHeight - 60;
+            
+            svg.attr('width', width).attr('height', height);
+            
+            // Create a group for zoom/pan
+            const g = svg.append('g');
+            
+            // Add zoom behavior
+            const zoom = d3.zoom()
+                .scaleExtent([0.2, 3])
+                .on('zoom', (event) => g.attr('transform', event.transform));
+            svg.call(zoom);
+            
+            // Create nodes array
+            const nodes = [
+                ...networkData.workflows.map(w => ({ id: w.id, type: 'workflow', visitors: w.visitors })),
+                ...networkData.organisms.map(o => ({ id: o.id, type: 'organism', visitors: o.visitors }))
+            ];
+            
+            // Create links array
+            const links = networkData.edges.map(e => ({
+                source: e.source,
+                target: e.target,
+                visitors: e.visitors
+            }));
+            
+            // Scale for node sizes - smaller nodes
+            const maxVisitors = Math.max(...nodes.map(n => n.visitors));
+            const nodeScale = d3.scaleSqrt().domain([1, maxVisitors]).range([5, 15]);
+            
+            // Scale for edge widths
+            const maxEdgeVisitors = Math.max(...links.map(l => l.visitors));
+            const edgeScale = d3.scaleLinear().domain([1, maxEdgeVisitors]).range([1, 5]);
+            
+            // Create simulation with tighter forces to keep graph compact
+            const simulation = d3.forceSimulation(nodes)
+                .force('link', d3.forceLink(links).id(d => d.id).distance(60))
+                .force('charge', d3.forceManyBody().strength(-80))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide().radius(d => nodeScale(d.visitors) + 3))
+                .force('x', d3.forceX(width / 2).strength(0.05))
+                .force('y', d3.forceY(height / 2).strength(0.05));
+            
+            // Draw links
+            const link = g.append('g')
+                .selectAll('line')
+                .data(links)
+                .join('line')
+                .attr('class', 'link')
+                .attr('stroke-width', d => edgeScale(d.visitors));
+            
+            // Draw nodes
+            const node = g.append('g')
+                .selectAll('circle')
+                .data(nodes)
+                .join('circle')
+                .attr('r', d => nodeScale(d.visitors))
+                .attr('class', d => d.type === 'workflow' ? 'node-workflow' : 'node-organism')
+                .call(d3.drag()
+                    .on('start', dragstarted)
+                    .on('drag', dragged)
+                    .on('end', dragended));
+            
+            // Add labels - smaller font
+            const label = g.append('g')
+                .selectAll('text')
+                .data(nodes)
+                .join('text')
+                .attr('class', 'node-label')
+                .attr('dy', d => nodeScale(d.visitors) + 10)
+                .attr('text-anchor', 'middle')
+                .text(d => d.id.length > 15 ? d.id.slice(0, 15) + '...' : d.id);
+            
+            // Add tooltips
+            node.append('title')
+                .text(d => `${d.id}\n${d.visitors} visitors`);
+            
+            simulation.on('tick', () => {
+                link
+                    .attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y);
+                
+                node
+                    .attr('cx', d => d.x)
+                    .attr('cy', d => d.y);
+                
+                label
+                    .attr('x', d => d.x)
+                    .attr('y', d => d.y);
+            });
+            
+            // After simulation settles, fit the graph to view
+            simulation.on('end', () => {
+                const bounds = g.node().getBBox();
+                const fullWidth = width;
+                const fullHeight = height;
+                const bWidth = bounds.width;
+                const bHeight = bounds.height;
+                const scale = 0.85 / Math.max(bWidth / fullWidth, bHeight / fullHeight);
+                const tx = (fullWidth - scale * (bounds.x * 2 + bWidth)) / 2;
+                const ty = (fullHeight - scale * (bounds.y * 2 + bHeight)) / 2;
+                svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale));
+            });
+            
+            function dragstarted(event) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                event.subject.fx = event.subject.x;
+                event.subject.fy = event.subject.y;
+            }
+            
+            function dragged(event) {
+                event.subject.fx = event.x;
+                event.subject.fy = event.y;
+            }
+            
+            function dragended(event) {
+                if (!event.active) simulation.alphaTarget(0);
+                event.subject.fx = null;
+                event.subject.fy = null;
+            }
+        }
     </script>
 </body>
 </html>
