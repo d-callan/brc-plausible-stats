@@ -40,6 +40,18 @@ COMMUNITY_PATTERNS = {
                   'Trichuris', 'Ancylostoma', 'Necator', 'Fasciola', 'Taenia'],
 }
 
+# Workflow category patterns for classification
+WORKFLOW_CATEGORIES = {
+    'Variant Calling': ['variant-calling', 'haploid-variant'],
+    'Transcription': ['rnaseq', 'lncRNAs', 'transcriptome'],
+    'Single Cell': ['scrna-seq', '10x-', 'cellplex', 'single-cell'],
+    'Epigenomics': ['chipseq', 'atacseq', 'cutandrun', 'consensus-peaks'],
+    'AMR': ['amr-gene', 'antimicrobial'],
+    'Viral': ['viral', 'sars-cov', 'covid'],
+}
+
+WORKFLOW_CATEGORIES_ORDER = ['Variant Calling', 'Transcription', 'Single Cell', 'Epigenomics', 'AMR', 'Viral', 'Other']
+
 # Color palette for charts
 COLORS = {
     'Home': '#2563eb',
@@ -62,6 +74,13 @@ COLORS = {
     'Hosts': '#0891b2',
     'Helminths': '#db2777',
     'Other': '#6b7280',
+    # Workflow categories
+    'Variant Calling': '#dc2626',
+    'Transcription': '#2563eb',
+    'Single Cell': '#7c3aed',
+    'Epigenomics': '#65a30d',
+    'AMR': '#ea580c',
+    'Viral': '#0891b2',
 }
 
 _taxonomy_cache = {}
@@ -159,6 +178,21 @@ def classify_community(lineage):
         for pattern in patterns:
             if pattern.lower() in lineage_lower:
                 return community
+    
+    return 'Other'
+
+
+def classify_workflow_category(workflow_name):
+    """Classify a workflow into a category based on its name."""
+    if not workflow_name:
+        return 'Other'
+    
+    workflow_lower = workflow_name.lower()
+    
+    for category, patterns in WORKFLOW_CATEGORIES.items():
+        for pattern in patterns:
+            if pattern.lower() in workflow_lower:
+                return category
     
     return 'Other'
 
@@ -546,7 +580,35 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         })
     charts.append(('workflow_community_visitors', 'Workflow Pages by Community - Visitors', datasets, 'Visitors'))
     
-    # 12. Learn pages
+    # 12. Workflow pages by category - Unique pages
+    datasets = []
+    for cat in WORKFLOW_CATEGORIES_ORDER:
+        data = [d['workflow_by_category'].get(cat, {}).get('count', 0) for d in monthly_data]
+        datasets.append({
+            'label': cat,
+            'data': data,
+            'borderColor': COLORS.get(cat, '#6b7280'),
+            'backgroundColor': COLORS.get(cat, '#6b7280') + '20',
+            'tension': 0.3,
+            'fill': False
+        })
+    charts.append(('workflow_category_pages', 'Workflow Pages by Category - Unique Pages', datasets, 'Unique Pages'))
+    
+    # 13. Workflow pages by category - Visitors
+    datasets = []
+    for cat in WORKFLOW_CATEGORIES_ORDER:
+        data = [d['workflow_by_category'].get(cat, {}).get('visitors', 0) for d in monthly_data]
+        datasets.append({
+            'label': cat,
+            'data': data,
+            'borderColor': COLORS.get(cat, '#6b7280'),
+            'backgroundColor': COLORS.get(cat, '#6b7280') + '20',
+            'tension': 0.3,
+            'fill': False
+        })
+    charts.append(('workflow_category_visitors', 'Workflow Pages by Category - Visitors', datasets, 'Visitors'))
+    
+    # 14. Learn pages
     datasets = [
         {
             'label': 'Visitors',
@@ -664,6 +726,140 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         new Chart(document.getElementById('{chart_id}'), {chart_config});
         ''')
     
+    # Generate network section if all_time_data has network info
+    network_section = ''
+    if all_time_data and '_network' in all_time_data:
+        network_data = all_time_data['_network']
+        network_json = json.dumps(network_data)
+        network_section = f'''
+    <h2 class="section-title">Workflow Categories by Organism Community (All-Time)</h2>
+    <div class="network-container">
+        <div class="network-legend">
+            <span><span class="dot" style="background:#db2777;"></span>Workflow Category</span>
+            <span><span class="dot" style="background:#2563eb;"></span>Organism Community</span>
+            <span style="margin-left:20px;color:#64748b;font-style:italic;">Node size = visitors | Edge width = visitor connections</span>
+        </div>
+        <svg id="networkSvg"></svg>
+    </div>
+    <script>
+        (function() {{
+            const networkData = {network_json};
+            
+            if (networkData.workflows.length > 0 && networkData.communities.length > 0) {{
+                const svg = d3.select('#networkSvg');
+                const container = document.querySelector('.network-container');
+                const width = container.clientWidth - 40;
+                const height = container.clientHeight - 60;
+                
+                svg.attr('width', width).attr('height', height);
+                
+                const g = svg.append('g');
+                
+                const zoom = d3.zoom()
+                    .scaleExtent([0.2, 3])
+                    .on('zoom', (event) => g.attr('transform', event.transform));
+                svg.call(zoom);
+                
+                const nodes = [
+                    ...networkData.workflows.map(w => ({{ id: w.id, type: 'workflow', visitors: w.visitors }})),
+                    ...networkData.communities.map(c => ({{ id: c.id, type: 'community', visitors: c.visitors }}))
+                ];
+                
+                const links = networkData.edges.map(e => ({{
+                    source: e.source,
+                    target: e.target,
+                    visitors: e.visitors
+                }}));
+                
+                const maxVisitors = Math.max(...nodes.map(n => n.visitors));
+                const nodeScale = d3.scaleSqrt().domain([1, maxVisitors]).range([6, 20]);
+                
+                const maxEdgeVisitors = Math.max(...links.map(l => l.visitors));
+                const edgeScale = d3.scaleLinear().domain([1, maxEdgeVisitors]).range([1, 6]);
+                
+                const simulation = d3.forceSimulation(nodes)
+                    .force('link', d3.forceLink(links).id(d => d.id).distance(80))
+                    .force('charge', d3.forceManyBody().strength(-100))
+                    .force('center', d3.forceCenter(width / 2, height / 2))
+                    .force('collision', d3.forceCollide().radius(d => nodeScale(d.visitors) + 4))
+                    .force('x', d3.forceX(width / 2).strength(0.03))
+                    .force('y', d3.forceY(height / 2).strength(0.03));
+                
+                const link = g.append('g')
+                    .selectAll('line')
+                    .data(links)
+                    .join('line')
+                    .attr('class', 'link')
+                    .attr('stroke-width', d => edgeScale(d.visitors));
+                
+                const node = g.append('g')
+                    .selectAll('circle')
+                    .data(nodes)
+                    .join('circle')
+                    .attr('r', d => nodeScale(d.visitors))
+                    .attr('class', d => d.type === 'workflow' ? 'node-workflow' : 'node-organism')
+                    .call(d3.drag()
+                        .on('start', dragstarted)
+                        .on('drag', dragged)
+                        .on('end', dragended));
+                
+                const label = g.append('g')
+                    .selectAll('text')
+                    .data(nodes)
+                    .join('text')
+                    .attr('class', 'node-label')
+                    .attr('dy', d => nodeScale(d.visitors) + 10)
+                    .attr('text-anchor', 'middle')
+                    .text(d => d.id.length > 18 ? d.id.slice(0, 18) + '...' : d.id);
+                
+                node.append('title')
+                    .text(d => d.id + '\\n' + d.visitors + ' visitors');
+                
+                simulation.on('tick', () => {{
+                    link
+                        .attr('x1', d => d.source.x)
+                        .attr('y1', d => d.source.y)
+                        .attr('x2', d => d.target.x)
+                        .attr('y2', d => d.target.y);
+                    
+                    node
+                        .attr('cx', d => d.x)
+                        .attr('cy', d => d.y);
+                    
+                    label
+                        .attr('x', d => d.x)
+                        .attr('y', d => d.y);
+                }});
+                
+                simulation.on('end', () => {{
+                    const bounds = g.node().getBBox();
+                    const scale = 0.85 / Math.max(bounds.width / width, bounds.height / height);
+                    const tx = (width - scale * (bounds.x * 2 + bounds.width)) / 2;
+                    const ty = (height - scale * (bounds.y * 2 + bounds.height)) / 2;
+                    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale));
+                }});
+                
+                function dragstarted(event) {{
+                    if (!event.active) simulation.alphaTarget(0.3).restart();
+                    event.subject.fx = event.subject.x;
+                    event.subject.fy = event.subject.y;
+                }}
+                
+                function dragged(event) {{
+                    event.subject.fx = event.x;
+                    event.subject.fy = event.y;
+                }}
+                
+                function dragended(event) {{
+                    if (!event.active) simulation.alphaTarget(0);
+                    event.subject.fx = null;
+                    event.subject.fy = null;
+                }}
+            }}
+        }})();
+    </script>
+        '''
+    
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -671,6 +867,7 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRC Analytics - Monthly Traffic Summary</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         * {{
             box-sizing: border-box;
@@ -742,12 +939,41 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         .notes li {{
             margin-bottom: 8px;
         }}
+        .network-container {{
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            height: 600px;
+            max-width: 1800px;
+            margin: 0 auto 24px auto;
+            position: relative;
+        }}
+        #networkSvg {{ width: 100%; height: 100%; }}
+        .node-workflow {{ fill: #db2777; }}
+        .node-organism {{ fill: #2563eb; }}
+        .node-label {{ font-size: 9px; fill: #1e293b; pointer-events: none; }}
+        .link {{ stroke: #94a3b8; stroke-opacity: 0.6; }}
+        .network-legend {{
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 12px;
+            background: rgba(255,255,255,0.9);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }}
+        .network-legend span {{ display: inline-flex; align-items: center; margin-left: 12px; }}
+        .network-legend .dot {{ width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }}
         @media (max-width: 700px) {{
             .charts-grid {{
                 grid-template-columns: 1fr;
             }}
             .chart-container {{
                 height: 300px;
+            }}
+            .network-container {{
+                height: 400px;
             }}
         }}
     </style>
@@ -789,9 +1015,17 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         {chart_containers[10]}
     </div>
     
-    <h2 class="section-title">Learn / Featured Analyses</h2>
+    <h2 class="section-title">Workflow Pages by Category</h2>
     <div class="charts-grid">
         {chart_containers[11]}
+        {chart_containers[12]}
+    </div>
+    
+    {network_section}
+    
+    <h2 class="section-title">Learn / Featured Analyses</h2>
+    <div class="charts-grid">
+        {chart_containers[13]}
     </div>
     
     <h2 class="section-title">Community Comparison - Page Type Breakdown</h2>
@@ -923,12 +1157,18 @@ def main():
             asm_by_community[community]['pageviews'] += pageviews
         
         wf_by_community = defaultdict(lambda: {'count': 0, 'visitors': 0, 'pageviews': 0})
+        wf_by_category = defaultdict(lambda: {'count': 0, 'visitors': 0, 'pageviews': 0})
         for assembly_id, workflow, visitors, pageviews in stats['workflow_pages']:
             _, name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
             community = classify_community(lineage)
             wf_by_community[community]['count'] += 1
             wf_by_community[community]['visitors'] += visitors
             wf_by_community[community]['pageviews'] += pageviews
+            # Also classify by workflow category
+            category = classify_workflow_category(workflow)
+            wf_by_category[category]['count'] += 1
+            wf_by_category[category]['visitors'] += visitors
+            wf_by_category[category]['pageviews'] += pageviews
         
         monthly_data.append({
             'month': month_label,
@@ -953,6 +1193,7 @@ def main():
                 'pageviews': sum(p for _, _, _, p in stats['workflow_pages']),
             },
             'workflow_by_community': dict(wf_by_community),
+            'workflow_by_category': dict(wf_by_category),
             'priority_pathogens': {
                 'count': len(stats['priority_pathogen_pages']),
                 'visitors': sum(v for _, v, _ in stats['priority_pathogen_pages']),
@@ -990,12 +1231,40 @@ def main():
             all_time_data[community]['assembly_pages'] += 1
             all_time_data[community]['assembly_visitors'] += visitors
         
-        # Process workflow pages
+        # Process workflow pages and build network data (workflow categories <-> organism communities)
+        workflow_nodes = {}
+        community_nodes = {}
+        network_edges = {}  # Use dict for easy aggregation
+        
         for assembly_id, workflow, visitors, pageviews in all_time_stats['workflow_pages']:
-            _, name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
+            _, org_name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
             community = classify_community(lineage)
             all_time_data[community]['workflow_pages'] += 1
             all_time_data[community]['workflow_visitors'] += visitors
+            
+            # Build network data - workflow category to organism community
+            wf_category = classify_workflow_category(workflow)
+            
+            if wf_category not in workflow_nodes:
+                workflow_nodes[wf_category] = {'visitors': 0}
+            workflow_nodes[wf_category]['visitors'] += visitors
+            
+            if community not in community_nodes:
+                community_nodes[community] = {'visitors': 0}
+            community_nodes[community]['visitors'] += visitors
+            
+            # Aggregate edges by workflow category - community pair
+            edge_key = (wf_category, community)
+            if edge_key not in network_edges:
+                network_edges[edge_key] = {'source': wf_category, 'target': community, 'visitors': 0}
+            network_edges[edge_key]['visitors'] += visitors
+        
+        # Store network data
+        all_time_data['_network'] = {
+            'workflows': [{'id': k, 'visitors': v['visitors']} for k, v in workflow_nodes.items()],
+            'communities': [{'id': k, 'visitors': v['visitors']} for k, v in community_nodes.items()],
+            'edges': list(network_edges.values())
+        }
     else:
         print("No all-time data file found, bar charts will use aggregated monthly data", file=sys.stderr)
         print("  (Run: python3 scripts/fetch_monthly_reports.py --include-all-time)", file=sys.stderr)
