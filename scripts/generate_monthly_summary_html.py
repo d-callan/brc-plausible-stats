@@ -860,6 +860,30 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
     </script>
         '''
     
+    # Generate month-to-report URL mapping
+    # Format: {"Oct 2024": {"organism": "fetched/top-pages-2024-10-01-to-2024-10-31-organism-analysis.html", "workflow": "..."}}
+    month_reports = {}
+    for d in monthly_data:
+        month_label = d['month']
+        year = d['year']
+        month_num = d['month_num']
+        # Calculate last day of month
+        if month_num == 12:
+            last_day = 31
+        elif month_num in [4, 6, 9, 11]:
+            last_day = 30
+        elif month_num == 2:
+            last_day = 29 if (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)) else 28
+        else:
+            last_day = 31
+        
+        date_range = f"{year}-{month_num:02d}-01-to-{year}-{month_num:02d}-{last_day:02d}"
+        month_reports[month_label] = {
+            'organism': f"fetched/top-pages-{date_range}-organism-analysis.html",
+            'workflow': f"fetched/top-pages-{date_range}-workflow-analysis.html"
+        }
+    month_reports_json = json.dumps(month_reports)
+    
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1045,11 +1069,50 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
             <li><strong>Unique Pages</strong> = number of distinct URLs visited that month</li>
             <li><strong>Visitors</strong> = unique visitors to those pages</li>
             <li><strong>Pageviews</strong> = total page loads (includes repeat visits)</li>
+            <li><strong>Click on chart data points</strong> to view detailed monthly reports (organism/workflow analysis)</li>
         </ul>
     </div>
     
     <script>
+        // Month label to report URL mapping
+        const monthReports = {month_reports_json};
+        
+        // Add click handlers to charts for navigation to monthly reports
+        function addChartClickHandler(chartId, reportType) {{
+            const chart = Chart.getChart(chartId);
+            if (!chart) return;
+            
+            chart.options.onClick = function(event, elements) {{
+                if (elements.length > 0) {{
+                    const index = elements[0].index;
+                    const monthLabel = chart.data.labels[index];
+                    const report = monthReports[monthLabel];
+                    if (report && report[reportType]) {{
+                        window.location.href = report[reportType];
+                    }}
+                }}
+            }};
+            chart.options.onHover = function(event, elements) {{
+                event.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+            }};
+            chart.update();
+        }}
+        
         {''.join(chart_scripts)}
+        
+        // Add click handlers to organism and workflow charts
+        // Charts 5-6: Organism by community -> organism analysis
+        addChartClickHandler('organism_community_pages', 'organism');
+        addChartClickHandler('organism_community_visitors', 'organism');
+        // Charts 7-8: Assembly by community -> organism analysis (assemblies are in organism report)
+        addChartClickHandler('assembly_community_pages', 'organism');
+        addChartClickHandler('assembly_community_visitors', 'organism');
+        // Charts 9-10: Workflow by community -> workflow analysis
+        addChartClickHandler('workflow_community_pages', 'workflow');
+        addChartClickHandler('workflow_community_visitors', 'workflow');
+        // Charts 11-12: Workflow by category -> workflow analysis
+        addChartClickHandler('workflow_category_pages', 'workflow');
+        addChartClickHandler('workflow_category_visitors', 'workflow');
     </script>
 </body>
 </html>

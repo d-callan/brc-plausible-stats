@@ -119,7 +119,7 @@
 <body>
     <div class="header">
         <h1>BRC Analytics - Monthly Traffic Summary</h1>
-        <div class="subtitle">Generated: 2025-12-06 21:24 | Data range: Oct 2024 - Nov 2025</div>
+        <div class="subtitle">Generated: 2025-12-06 21:31 | Data range: Oct 2024 - Nov 2025</div>
     </div>
     
     <h2 class="section-title">High-Level Pages</h2>
@@ -374,10 +374,35 @@
             <li><strong>Unique Pages</strong> = number of distinct URLs visited that month</li>
             <li><strong>Visitors</strong> = unique visitors to those pages</li>
             <li><strong>Pageviews</strong> = total page loads (includes repeat visits)</li>
+            <li><strong>Click on chart data points</strong> to view detailed monthly reports (organism/workflow analysis)</li>
         </ul>
     </div>
     
     <script>
+        // Month label to report URL mapping
+        const monthReports = {"Oct 2024": {"organism": "fetched/top-pages-2024-10-01-to-2024-10-31-organism-analysis.html", "workflow": "fetched/top-pages-2024-10-01-to-2024-10-31-workflow-analysis.html"}, "Nov 2024": {"organism": "fetched/top-pages-2024-11-01-to-2024-11-30-organism-analysis.html", "workflow": "fetched/top-pages-2024-11-01-to-2024-11-30-workflow-analysis.html"}, "Dec 2024": {"organism": "fetched/top-pages-2024-12-01-to-2024-12-31-organism-analysis.html", "workflow": "fetched/top-pages-2024-12-01-to-2024-12-31-workflow-analysis.html"}, "Jan 2025": {"organism": "fetched/top-pages-2025-01-01-to-2025-01-31-organism-analysis.html", "workflow": "fetched/top-pages-2025-01-01-to-2025-01-31-workflow-analysis.html"}, "Feb 2025": {"organism": "fetched/top-pages-2025-02-01-to-2025-02-28-organism-analysis.html", "workflow": "fetched/top-pages-2025-02-01-to-2025-02-28-workflow-analysis.html"}, "Mar 2025": {"organism": "fetched/top-pages-2025-03-01-to-2025-03-31-organism-analysis.html", "workflow": "fetched/top-pages-2025-03-01-to-2025-03-31-workflow-analysis.html"}, "Apr 2025": {"organism": "fetched/top-pages-2025-04-01-to-2025-04-30-organism-analysis.html", "workflow": "fetched/top-pages-2025-04-01-to-2025-04-30-workflow-analysis.html"}, "May 2025": {"organism": "fetched/top-pages-2025-05-01-to-2025-05-31-organism-analysis.html", "workflow": "fetched/top-pages-2025-05-01-to-2025-05-31-workflow-analysis.html"}, "Jun 2025": {"organism": "fetched/top-pages-2025-06-01-to-2025-06-30-organism-analysis.html", "workflow": "fetched/top-pages-2025-06-01-to-2025-06-30-workflow-analysis.html"}, "Jul 2025": {"organism": "fetched/top-pages-2025-07-01-to-2025-07-31-organism-analysis.html", "workflow": "fetched/top-pages-2025-07-01-to-2025-07-31-workflow-analysis.html"}, "Aug 2025": {"organism": "fetched/top-pages-2025-08-01-to-2025-08-31-organism-analysis.html", "workflow": "fetched/top-pages-2025-08-01-to-2025-08-31-workflow-analysis.html"}, "Sep 2025": {"organism": "fetched/top-pages-2025-09-01-to-2025-09-30-organism-analysis.html", "workflow": "fetched/top-pages-2025-09-01-to-2025-09-30-workflow-analysis.html"}, "Oct 2025": {"organism": "fetched/top-pages-2025-10-01-to-2025-10-31-organism-analysis.html", "workflow": "fetched/top-pages-2025-10-01-to-2025-10-31-workflow-analysis.html"}, "Nov 2025": {"organism": "fetched/top-pages-2025-11-01-to-2025-11-30-organism-analysis.html", "workflow": "fetched/top-pages-2025-11-01-to-2025-11-30-workflow-analysis.html"}};
+        
+        // Add click handlers to charts for navigation to monthly reports
+        function addChartClickHandler(chartId, reportType) {
+            const chart = Chart.getChart(chartId);
+            if (!chart) return;
+            
+            chart.options.onClick = function(event, elements) {
+                if (elements.length > 0) {
+                    const index = elements[0].index;
+                    const monthLabel = chart.data.labels[index];
+                    const report = monthReports[monthLabel];
+                    if (report && report[reportType]) {
+                        window.location.href = report[reportType];
+                    }
+                }
+            };
+            chart.options.onHover = function(event, elements) {
+                event.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+            };
+            chart.update();
+        }
+        
         
         new Chart(document.getElementById('high_level_visitors'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Home", "data": [938, 420, 211, 290, 310, 386, 284, 266, 244, 298, 237, 440, 414, 462], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Organisms Index", "data": [484, 185, 88, 154, 153, 186, 140, 135, 116, 93, 113, 139, 138, 96], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Assemblies Index", "data": [0, 0, 0, 41, 76, 100, 70, 88, 69, 67, 76, 87, 102, 96], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Priority Pathogens Index", "data": [0, 0, 0, 0, 0, 0, 0, 0, 13, 64, 60, 58, 51, 24], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Roadmap", "data": [167, 43, 22, 38, 31, 38, 26, 20, 19, 42, 41, 53, 40, 17], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "About", "data": [132, 48, 14, 43, 37, 49, 23, 38, 24, 30, 32, 53, 36, 26], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Calendar", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 15, 19, 20, 16], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "High-Level Pages - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
@@ -411,6 +436,20 @@
         
         new Chart(document.getElementById('community_visitors_bar'), {"type": "bar", "data": {"labels": ["Viruses", "Bacteria", "Fungi", "Protists", "Vectors", "Hosts", "Helminths", "Other"], "datasets": [{"label": "Organism Pages", "data": [171, 81, 437, 510, 129, 25, 8, 17], "backgroundColor": "#2563eb"}, {"label": "Assembly Pages", "data": [175, 126, 458, 513, 153, 28, 5, 14], "backgroundColor": "#7c3aed"}, {"label": "Workflow Pages", "data": [121, 47, 231, 186, 8, 18, 1, 6], "backgroundColor": "#db2777"}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Page Types by Community - Visitors (from dedicated all-time fetch)", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Community"}}}}});
         
+        
+        // Add click handlers to organism and workflow charts
+        // Charts 5-6: Organism by community -> organism analysis
+        addChartClickHandler('organism_community_pages', 'organism');
+        addChartClickHandler('organism_community_visitors', 'organism');
+        // Charts 7-8: Assembly by community -> organism analysis (assemblies are in organism report)
+        addChartClickHandler('assembly_community_pages', 'organism');
+        addChartClickHandler('assembly_community_visitors', 'organism');
+        // Charts 9-10: Workflow by community -> workflow analysis
+        addChartClickHandler('workflow_community_pages', 'workflow');
+        addChartClickHandler('workflow_community_visitors', 'workflow');
+        // Charts 11-12: Workflow by category -> workflow analysis
+        addChartClickHandler('workflow_category_pages', 'workflow');
+        addChartClickHandler('workflow_category_visitors', 'workflow');
     </script>
 </body>
 </html>
