@@ -254,6 +254,39 @@ Example:
 - Workflow-organism intersections
 - Per-assembly breakdown
 
+## GitHub Pages Deployment
+
+The repository includes a GitHub Actions workflow that automatically builds and deploys reports to GitHub Pages.
+
+### Setup
+
+1. **Enable GitHub Pages** in your repository:
+   - Go to **Settings** → **Pages**
+   - Under "Build and deployment", set **Source** to **GitHub Actions**
+
+2. **Add repository secrets** for the Plausible API:
+   - Go to **Settings** → **Secrets and variables** → **Actions**
+   - Click **New repository secret** and add:
+     - `PLAUSIBLE_API_KEY` - Your Plausible Stats API key
+     - `PLAUSIBLE_SITE_ID` - Your site domain (e.g., `brc-analytics.org`)
+     - `PLAUSIBLE_API_BASE_URL` - API base URL (e.g., `https://plausible.io`)
+
+3. **Trigger the workflow**:
+   - Push to `main` branch, or
+   - Go to **Actions** → **Build and Deploy to GitHub Pages** → **Run workflow**
+
+The workflow runs automatically:
+- On every push to `main`
+- Weekly on Mondays at 6am UTC
+- Manually via workflow dispatch
+
+### What gets deployed
+
+- `index.html` - Main summary report with timeline charts
+- `fetched/*.html` - Per-month organism and workflow analysis reports
+
+Click on data points in the timeline charts to navigate to the corresponding monthly report.
+
 ## Notes
 
 - The scripts make API calls to NCBI to fetch organism names
