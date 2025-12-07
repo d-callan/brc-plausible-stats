@@ -125,16 +125,16 @@
         new Chart(document.getElementById('workflowChart'), {
             type: 'bar',
             data: {
-                labels: ["haploid-variant-calling-wgs-pe", "rnaseq-pe", "fastq-to-matrix-10x-scrna-seq-", "cutandrun", "lncRNAs-annotation", "generic-non-segmented-viral-va", "chipseq-sr", "fastq-to-matrix-10x-scrna-seq-", "amr-gene-detection", "rnaseq-sr"],
+                labels: ["haploid-variant-calling-wgs-pe", "rnaseq-pe", "fastq-to-matrix-10x-scrna-seq-", "cutandrun", "lncRNAs-annotation", "generic-non-segmented-viral-va", "chipseq-sr", "fastq-to-matrix-10x-scrna-seq-", "amr-gene-detection", "rnaseq-sr", "chipseq-pe", "consensus-peaks-consensus-peak", "atacseq"],
                 datasets: [
                     {
                         label: 'Visitors',
-                        data: [39, 26, 14, 7, 7, 5, 2, 2, 1, 1],
+                        data: [39, 26, 14, 7, 7, 5, 2, 2, 1, 1, 1, 1, 1],
                         backgroundColor: '#db2777'
                     },
                     {
                         label: 'Pageviews',
-                        data: [64, 31, 16, 7, 7, 7, 2, 2, 1, 1],
+                        data: [64, 31, 16, 7, 7, 7, 2, 2, 1, 1, 1, 1, 1],
                         backgroundColor: '#7c3aed'
                     }
                 ]
@@ -153,11 +153,11 @@
         new Chart(document.getElementById('assemblyChart'), {
             type: 'bar',
             data: {
-                labels: ["Measles morbilliviru...", "Mycobacterium tuberc...", "Abiotrophia defectiv...", "Rickettsia endosymbi...", "[Emmonsia] crescens", "Alternaria alternata", "Allomyces macrogynus...", "Giardia muris", "Acanthamoeba astrony...", "Toxoplasma gondii ME...", "Asian tiger mosquito", "Glossina fuscipes", "yellow fever mosquit...", "zebra finch", "rifleman", "zebra finch", "common bream", "yellowfin seabream", "black porgy"],
+                labels: ["Measles morbilliviru...", "Mycobacterium tuberc...", "Abiotrophia defectiv...", "Rickettsia endosymbi...", "Bordetella pertussis", "Bacillus anthracis s...", "[Emmonsia] crescens", "Alternaria alternata", "Allomyces macrogynus...", "Amauroascus verrucos...", "Cryptococcus neoform...", "Coccidioides immitis...", "Aspergillus flavus N...", "Apophysomyces variab...", "Candidozyma auris", "Aspergillus niger 1 ...", "Aspergillus aculeatu...", "Amauroascus niger", "Aspergillus fumigatu...", "Giardia muris", "Acanthamoeba astrony...", "Toxoplasma gondii ME...", "Plasmodium falciparu...", "malaria parasite P. ...", "Plasmodium berghei A...", "Cryptosporidium parv...", "Acanthamoeba polypha...", "Toxoplasma gondii CA...", "Acanthamoeba castell...", "Plasmodium falciparu...", "Trichomonas vaginali...", "Plasmodium chabaudi ...", "Theileria annulata", "Acanthamoeba sp. SK_...", "Asian tiger mosquito", "Glossina fuscipes", "yellow fever mosquit...", "zebra finch", "rifleman", "zebra finch", "zebra finch", "common bream", "yellowfin seabream", "black porgy", "Globisporangium ulti...", "grey gurnard"],
                 datasets: [{
                     label: 'Visitors',
-                    data: [6, 2, 2, 2, 11, 3, 3, 9, 9, 7, 1, 1, 1, 4, 2, 2, 2, 1, 1],
-                    backgroundColor: ["#dc2626", "#2563eb", "#2563eb", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#ea580c", "#ea580c", "#ea580c", "#0891b2", "#0891b2", "#0891b2", "#6b7280", "#6b7280", "#6b7280"]
+                    data: [6, 2, 2, 2, 1, 1, 11, 3, 3, 3, 2, 1, 1, 1, 1, 0, 1, 1, 1, 9, 9, 7, 5, 4, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 2, 2, 1, 2, 1, 1, 1, 1],
+                    backgroundColor: ["#dc2626", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#ea580c", "#ea580c", "#ea580c", "#0891b2", "#0891b2", "#0891b2", "#0891b2", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280"]
                 }]
             },
             options: {

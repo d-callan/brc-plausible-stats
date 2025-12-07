@@ -125,16 +125,16 @@
         new Chart(document.getElementById('workflowChart'), {
             type: 'bar',
             data: {
-                labels: ["fastq-to-matrix-10x-scrna-seq-", "generic-non-segmented-viral-va", "cutandrun", "atacseq", "consensus-peaks-consensus-peak", "lncRNAs-annotation", "amr-gene-detection", "rnaseq-sr", "chipseq-sr", "fastq-to-matrix-10x-scrna-seq-"],
+                labels: ["haploid-variant-calling-wgs-pe", "fastq-to-matrix-10x-scrna-seq-", "rnaseq-pe", "generic-non-segmented-viral-va", "cutandrun", "atacseq", "consensus-peaks-consensus-peak", "lncRNAs-annotation", "amr-gene-detection", "rnaseq-sr", "chipseq-sr", "fastq-to-matrix-10x-scrna-seq-"],
                 datasets: [
                     {
                         label: 'Visitors',
-                        data: [24, 9, 5, 3, 3, 3, 2, 2, 2, 1],
+                        data: [69, 24, 14, 9, 5, 3, 3, 3, 2, 2, 2, 1],
                         backgroundColor: '#db2777'
                     },
                     {
                         label: 'Pageviews',
-                        data: [25, 13, 6, 3, 3, 4, 2, 2, 2, 1],
+                        data: [105, 25, 16, 13, 6, 3, 3, 4, 2, 2, 2, 1],
                         backgroundColor: '#7c3aed'
                     }
                 ]
@@ -153,11 +153,11 @@
         new Chart(document.getElementById('assemblyChart'), {
             type: 'bar',
             data: {
-                labels: ["Measles morbilliviru...", "Human papillomavirus...", "Eastern equine encep...", "Abiotrophia defectiv...", "[Haemophilus] ducrey...", "Shigella sonnei", "[Emmonsia] crescens", "Allomyces macrogynus...", "Amauroascus niger", "Toxoplasma gondii ME...", "Acanthamoeba astrony...", "Acanthamoeba castell...", "Anopheles farauti", "Asian tiger mosquito", "zebra finch 2 2", "Phytopythium vexans ..."],
+                labels: ["Measles morbilliviru...", "Human papillomavirus...", "Eastern equine encep...", "human papillomavirus...", "Influenza A virus (A...", "Zaire ebolavirus", "Human coronavirus 22...", "Rotavirus A", "Influenza A virus (A...", "Severe acute respira...", "Human parainfluenza ...", "Abiotrophia defectiv...", "[Haemophilus] ducrey...", "Shigella sonnei", "Enterococcus faecali...", "Escherichia coli str...", "[Emmonsia] crescens", "Allomyces macrogynus...", "Amauroascus niger", "Alternaria alternata", "Candidozyma auris", "Yarrowia lipolytica ...", "Aspergillus carbonar...", "Aspergillus aculeatu...", "Anncaliia algerae PR...", "Aspergillus campestr...", "Aspergillus novofumi...", "Histoplasma capsulat...", "Cryptococcus tetraga...", "Amauroascus verrucos...", "Apiotrichum montevid...", "Ascosphaera apis ARS...", "[Candida] blankii", "Rhizopus delemar RA ...", "Candidozyma auris", "Histoplasma capsulat...", "Toxoplasma gondii ME...", "Acanthamoeba astrony...", "Acanthamoeba castell...", "Acanthamoeba castell...", "malaria parasite P. ...", "Acanthamoeba sp. SK_...", "Acanthamoeba maurita...", "Acanthamoeba culbert...", "Toxoplasma gondii CA...", "Plasmodium malariae", "malaria parasite P. ...", "Acanthamoeba lenticu...", "Acanthamoeba rhysode...", "Acanthamoeba lugdune...", "malaria parasite P. ...", "Acanthamoeba palesti...", "Acanthamoeba castell...", "Anopheles farauti", "Asian tiger mosquito", "zebra finch 2 2", "Phytopythium vexans ..."],
                 datasets: [{
                     label: 'Visitors',
-                    data: [8, 2, 1, 9, 0, 2, 17, 10, 5, 5, 4, 2, 1, 1, 0, 1],
-                    backgroundColor: ["#dc2626", "#dc2626", "#dc2626", "#2563eb", "#2563eb", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#ea580c", "#ea580c", "#0891b2", "#6b7280"]
+                    data: [8, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 9, 0, 2, 1, 1, 17, 10, 5, 5, 4, 0, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 4, 2, 2, 0, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+                    backgroundColor: ["#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#ea580c", "#ea580c", "#0891b2", "#6b7280"]
                 }]
             },
             options: {

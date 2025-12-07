@@ -125,16 +125,16 @@
         new Chart(document.getElementById('workflowChart'), {
             type: 'bar',
             data: {
-                labels: ["fastq-to-matrix-10x-scrna-seq-", "atacseq", "haploid-variant-calling-wgs-pe"],
+                labels: ["fastq-to-matrix-10x-scrna-seq-", "haploid-variant-calling-wgs-pe", "atacseq"],
                 datasets: [
                     {
                         label: 'Visitors',
-                        data: [9, 2, 0],
+                        data: [9, 4, 2],
                         backgroundColor: '#db2777'
                     },
                     {
                         label: 'Pageviews',
-                        data: [16, 2, 0],
+                        data: [16, 5, 2],
                         backgroundColor: '#7c3aed'
                     }
                 ]
@@ -153,11 +153,11 @@
         new Chart(document.getElementById('assemblyChart'), {
             type: 'bar',
             data: {
-                labels: ["Allomyces macrogynus...", "Acanthamoeba astrony...", "Acanthamoeba castell...", "malaria parasite P. ..."],
+                labels: ["Allomyces macrogynus...", "Acanthamoeba astrony...", "Acanthamoeba castell...", "malaria parasite P. ...", "Acanthamoeba castell...", "Acanthamoeba castell...", "Acanthamoeba castell..."],
                 datasets: [{
                     label: 'Visitors',
-                    data: [2, 4, 4, 0],
-                    backgroundColor: ["#65a30d", "#7c3aed", "#7c3aed", "#7c3aed"]
+                    data: [2, 4, 4, 0, 1, 1, 1],
+                    backgroundColor: ["#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed"]
                 }]
             },
             options: {

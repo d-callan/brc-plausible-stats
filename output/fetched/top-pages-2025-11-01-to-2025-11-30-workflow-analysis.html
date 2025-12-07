@@ -125,16 +125,16 @@
         new Chart(document.getElementById('workflowChart'), {
             type: 'bar',
             data: {
-                labels: ["haploid-variant-calling-wgs-pe", "cutandrun 13 13", "fastq-to-matrix-10x-scrna-seq-", "chipseq-sr", "consensus-peaks-consensus-peak", "rnaseq-sr", "atacseq", "chipseq-pe", "lncRNAs-annotation", "generic-non-segmented-viral-va"],
+                labels: ["haploid-variant-calling-wgs-pe", "rnaseq-pe", "fastq-to-matrix-10x-scrna-seq-", "cutandrun", "fastq-to-matrix-10x-scrna-seq-", "chipseq-sr", "consensus-peaks-consensus-peak", "rnaseq-sr", "atacseq", "chipseq-pe", "lncRNAs-annotation", "generic-non-segmented-viral-va"],
                 datasets: [
                     {
                         label: 'Visitors',
-                        data: [26, 12, 10, 9, 8, 7, 7, 7, 3, 2],
+                        data: [40, 21, 15, 13, 10, 9, 8, 7, 7, 7, 3, 2],
                         backgroundColor: '#db2777'
                     },
                     {
                         label: 'Pageviews',
-                        data: [0, 0, 10, 9, 8, 7, 7, 7, 3, 6],
+                        data: [50, 23, 20, 13, 10, 9, 8, 7, 7, 7, 3, 6],
                         backgroundColor: '#7c3aed'
                     }
                 ]
@@ -153,11 +153,11 @@
         new Chart(document.getElementById('assemblyChart'), {
             type: 'bar',
             data: {
-                labels: ["Human papillomavirus...", "Influenza A virus (A...", "Alphapapillomavirus ...", "Abiotrophia defectiv...", "Alcaligenes faecalis", "Salmonella enterica ...", "[Candida] blankii", "[Candida] oleophila", "[Emmonsia] crescens ...", "Acanthamoeba castell...", "Acanthamoeba castell...", "Acanthamoeba comando...", "Asian malaria mosqui...", "dog 2 6 20m 2s", "house mouse", "Caenorhabditis elega..."],
+                labels: ["Human papillomavirus...", "Influenza A virus (A...", "Alphapapillomavirus ...", "Influenza A virus (A...", "Influenza A virus (A...", "human papillomavirus...", "SARS coronavirus Tor...", "Measles morbilliviru...", "Trichodysplasia spin...", "Merkel cell polyomav...", "human respiratory sy...", "Human papillomavirus...", "Abiotrophia defectiv...", "Alcaligenes faecalis", "Salmonella enterica ...", "Gardnerella vaginali...", "[Haemophilus] ducrey...", "Bergeyella zoohelcum", "Actinomyces israelii", "Pseudomonas aerugino...", "Bordetella pertussis", "Grimontia hollisae", "[Candida] blankii", "[Candida] oleophila", "[Emmonsia] crescens ...", "Candidozyma auris", "Candidozyma auris 1 ...", "Amauroascus verrucos...", "Apiotrichum montevid...", "Malassezia restricta", "Histoplasma capsulat...", "Acanthamoeba castell...", "Acanthamoeba castell...", "Acanthamoeba comando...", "Acanthamoeba divione...", "Toxoplasma gondii ME...", "Plasmodium falciparu...", "Leishmania brazilien...", "Eimeria necatrix", "Hepatocystis sp. ex ...", "Cryptosporidium sp. ...", "Acanthamoeba sp. SK_...", "Asian malaria mosqui...", "dog 2 6 20m 2s", "house mouse", "Caenorhabditis elega..."],
                 datasets: [{
                     label: 'Visitors',
-                    data: [11, 10, 10, 4, 2, 1, 12, 8, 0, 5, 3, 3, 1, 0, 1, 2],
-                    backgroundColor: ["#dc2626", "#dc2626", "#dc2626", "#2563eb", "#2563eb", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#ea580c", "#0891b2", "#0891b2", "#db2777"]
+                    data: [11, 10, 10, 10, 8, 8, 2, 2, 2, 2, 1, 1, 4, 2, 1, 1, 1, 1, 1, 1, 1, 1, 12, 8, 0, 2, 0, 1, 1, 1, 1, 5, 3, 3, 3, 2, 2, 0, 1, 1, 1, 1, 1, 0, 1, 2],
+                    backgroundColor: ["#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#ea580c", "#0891b2", "#0891b2", "#db2777"]
                 }]
             },
             options: {

@@ -275,32 +275,22 @@ def parse_workflow_analysis(filepath):
         for line in wf_section.group(1).strip().split('\n'):
             if not line.strip():
                 continue
-            # Format: Workflow, Visitors, Pageviews, Assemblies, Avg Time, Median Time
-            parts = line.split()
-            if len(parts) >= 4:
-                try:
-                    # Work backwards from end to find numeric columns
-                    # Skip N/A values at end
-                    idx = len(parts) - 1
-                    while idx >= 0 and parts[idx] == 'N/A':
-                        idx -= 1
-                    # Now find assemblies, pageviews, visitors
-                    assemblies = int(parts[idx]) if idx >= 0 and parts[idx].isdigit() else 0
-                    idx -= 1
-                    pageviews = int(parts[idx]) if idx >= 0 and parts[idx].isdigit() else 0
-                    idx -= 1
-                    visitors = int(parts[idx]) if idx >= 0 and parts[idx].isdigit() else 0
-                    idx -= 1
-                    workflow = ' '.join(parts[:idx+1])
-                    
-                    data['workflows'].append({
-                        'workflow': workflow,
-                        'visitors': visitors,
-                        'pageviews': pageviews,
-                        'assemblies': assemblies,
-                    })
-                except (ValueError, IndexError):
-                    continue
+            # Format: Workflow (36 chars), Visitors, Pageviews, Assemblies, Avg Time, Median Time
+            # Use regex to extract: workflow name, then 3 numbers (visitors, pageviews, assemblies)
+            # Time values can be like "21s", "2m 53s", "N/A"
+            match = re.match(r'^(\S+(?:\.\.\.)?)[\s]+(\d+)\s+(\d+)\s+(\d+)', line.strip())
+            if match:
+                workflow = match.group(1)
+                visitors = int(match.group(2))
+                pageviews = int(match.group(3))
+                assemblies = int(match.group(4))
+                
+                data['workflows'].append({
+                    'workflow': workflow,
+                    'visitors': visitors,
+                    'pageviews': pageviews,
+                    'assemblies': assemblies,
+                })
     
     # Parse workflow-organism intersections
     # The format uses fixed-width columns, so we need to parse by position
@@ -402,11 +392,10 @@ def generate_organism_html(data, output_path):
     hl_visitors = [p['visitors'] for p in data['high_level_pages']]
     hl_pageviews = [p['pageviews'] for p in data['high_level_pages']]
     
-    # Prepare organism chart data - top organisms grouped by community
-    # Take top 3 from each community that has data
+    # Prepare organism chart data - ALL organisms grouped by community
     org_chart_data = []
     for comm in COMMUNITIES_ORDER:
-        for o in organisms_by_community[comm][:3]:
+        for o in organisms_by_community[comm]:  # No limit - include all
             org_chart_data.append({
                 'label': o['organism'][:25] + ('...' if len(o['organism']) > 25 else ''),
                 'visitors': o['visitors'],
@@ -418,10 +407,10 @@ def generate_organism_html(data, output_path):
     org_visitors = [d['visitors'] for d in org_chart_data]
     org_colors = json.dumps([d['color'] for d in org_chart_data])
     
-    # Prepare assembly chart data - top assemblies grouped by community
+    # Prepare assembly chart data - ALL assemblies grouped by community
     asm_chart_data = []
     for comm in COMMUNITIES_ORDER:
-        for a in assemblies_by_community[comm][:3]:
+        for a in assemblies_by_community[comm]:  # No limit - include all
             asm_chart_data.append({
                 'label': a['organism'][:25] + ('...' if len(a['organism']) > 25 else ''),
                 'visitors': a['visitors'],
@@ -667,12 +656,12 @@ def generate_workflow_html(data, output_path):
     """Generate HTML for workflow analysis with network diagram and community-grouped charts."""
     stats = data['overall_stats']
     
-    # Use per-workflow breakdown for chart
+    # Use per-workflow breakdown for chart - show ALL workflows
     sorted_workflows = sorted(data['workflows'], key=lambda x: x['visitors'], reverse=True)
     
-    chart_labels = json.dumps([wf['workflow'][:30] for wf in sorted_workflows[:10]])
-    chart_visitors = [wf['visitors'] for wf in sorted_workflows[:10]]
-    chart_pageviews = [wf['pageviews'] for wf in sorted_workflows[:10]]
+    chart_labels = json.dumps([wf['workflow'][:30] for wf in sorted_workflows])
+    chart_visitors = [wf['visitors'] for wf in sorted_workflows]
+    chart_pageviews = [wf['pageviews'] for wf in sorted_workflows]
     
     # Build network data for workflow-organism bipartite graph
     # Nodes: workflows (type: 'workflow') and organisms (type: 'organism')
@@ -707,7 +696,7 @@ def generate_workflow_html(data, output_path):
     }
     network_json = json.dumps(network_data)
     
-    # Classify assemblies by community for bar chart
+    # Classify assemblies by community for bar chart - include ALL assemblies
     assemblies_by_community = {c: [] for c in COMMUNITIES_ORDER}
     for a in data['assemblies']:
         assembly_id = a['assembly_id']
@@ -718,10 +707,10 @@ def generate_workflow_html(data, output_path):
             'community': community
         })
     
-    # Prepare assembly chart data - top assemblies grouped by community
+    # Prepare assembly chart data - ALL assemblies grouped by community
     asm_chart_data = []
     for comm in COMMUNITIES_ORDER:
-        for a in assemblies_by_community[comm][:3]:
+        for a in assemblies_by_community[comm]:  # No limit - include all
             asm_chart_data.append({
                 'label': a['organism'][:20] + ('...' if len(a['organism']) > 20 else ''),
                 'visitors': a['visitors'],

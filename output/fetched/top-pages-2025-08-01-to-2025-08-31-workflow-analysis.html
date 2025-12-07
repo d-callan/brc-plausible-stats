@@ -125,16 +125,16 @@
         new Chart(document.getElementById('workflowChart'), {
             type: 'bar',
             data: {
-                labels: ["rnaseq-pe", "generic-non-segmented-viral-va", "atacseq", "chipseq-pe", "cutandrun", "lncRNAs-annotation", "consensus-peaks-consensus-peak", "fastq-to-matrix-10x-scrna-seq-", "haploid-variant-calling-wgs-pe", "fastq-to-matrix-10x-scrna-seq-"],
+                labels: ["haploid-variant-calling-wgs-pe", "fastq-to-matrix-10x-scrna-seq-", "rnaseq-pe", "generic-non-segmented-viral-va", "atacseq", "chipseq-pe", "cutandrun", "lncRNAs-annotation", "consensus-peaks-consensus-peak", "fastq-to-matrix-10x-scrna-seq-"],
                 datasets: [
                     {
                         label: 'Visitors',
-                        data: [14, 7, 7, 2, 2, 1, 1, 1, 0, 0],
+                        data: [81, 23, 14, 7, 7, 2, 2, 1, 1, 1],
                         backgroundColor: '#db2777'
                     },
                     {
                         label: 'Pageviews',
-                        data: [17, 13, 8, 2, 2, 1, 1, 1, 0, 0],
+                        data: [127, 26, 17, 13, 8, 2, 2, 1, 1, 1],
                         backgroundColor: '#7c3aed'
                     }
                 ]
@@ -153,11 +153,11 @@
         new Chart(document.getElementById('assemblyChart'), {
             type: 'bar',
             data: {
-                labels: ["Measles morbilliviru...", "Influenza A virus (A...", "Influenza A virus (A...", "Escherichia coli str...", "[Emmonsia] crescens ...", "Amauroascus niger 10...", "Allomyces macrogynus...", "Acanthamoeba astrony...", "Naegleria fowleri", "Acanthamoeba castell...", "yellow fever mosquit...", "Asian malaria mosqui...", "Saprolegnia parasiti..."],
+                labels: ["Measles morbilliviru...", "Influenza A virus (A...", "Influenza A virus (A...", "Torque teno virus 9", "Human lung-associate...", "Torque teno mini vir...", "Monkeypox virus", "Escherichia coli str...", "[Emmonsia] crescens ...", "Amauroascus niger 10...", "Allomyces macrogynus...", "Aspergillus fumigatu...", "Alternaria alternata", "Candidozyma auris", "Apiotrichum montevid...", "Amauroascus verrucos...", "Arthrobotrys flagran...", "Aspergillus brasilie...", "Apophysomyces variab...", "Aspergillus carbonar...", "Ascosphaera apis ARS...", "Cryptococcus deutero...", "Cryptococcus deneofo...", "Cryptococcus deneofo...", "Candidozyma auris", "Aspergillus niger AT...", "Candidozyma auris", "Hanseniaspora uvarum", "Zymoseptoria tritici...", "Cryptococcus deneofo...", "Acanthamoeba astrony...", "Naegleria fowleri", "Acanthamoeba castell...", "malaria parasite P. ...", "Acanthamoeba castell...", "Plasmodium falciparu...", "Acanthamoeba castell...", "Babesia bigemina", "Acanthamoeba culbert...", "malaria parasite P. ...", "malaria parasite P. ...", "Cryptosporidium parv...", "Leishmania brazilien...", "malaria parasite P. ...", "Eimeria tenella", "yellow fever mosquit...", "Asian malaria mosqui...", "Saprolegnia parasiti..."],
                 datasets: [{
                     label: 'Visitors',
-                    data: [11, 0, 2, 1, 0, 0, 8, 0, 4, 3, 1, 1, 1],
-                    backgroundColor: ["#dc2626", "#dc2626", "#dc2626", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#ea580c", "#ea580c", "#6b7280"]
+                    data: [11, 0, 2, 1, 1, 1, 1, 1, 0, 0, 8, 0, 4, 4, 3, 3, 2, 2, 2, 0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 4, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    backgroundColor: ["#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#dc2626", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#ea580c", "#ea580c", "#6b7280"]
                 }]
             },
             options: {
