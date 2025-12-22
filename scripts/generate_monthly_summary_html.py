@@ -262,6 +262,33 @@ def parse_data_file(filepath):
     return stats
 
 
+def parse_demographics_file(filepath):
+    """Parse a demographics TSV file."""
+    data = {}
+    if not filepath.exists():
+        return data
+        
+    try:
+        with open(filepath, 'r') as f:
+            # Skip header
+            header = next(f, None)
+            if not header:
+                return data
+                
+            for line in f:
+                parts = line.strip().split('\t')
+                if len(parts) >= 2:
+                    key = parts[0]
+                    try:
+                        visitors = int(parts[1])
+                        data[key] = visitors
+                    except ValueError:
+                        continue
+    except Exception:
+        pass
+    return data
+
+
 def get_month_files(data_dir):
     """Get all monthly data files sorted by date."""
     files = []
@@ -629,6 +656,84 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
     ]
     charts.append(('learn_pages', 'Learn / Featured Analyses Pages', datasets, 'Count'))
     
+    # --- Demographics Charts ---
+    
+    # Helper to get top keys across all months
+    def get_top_keys(category, limit=5):
+        totals = defaultdict(int)
+        for d in monthly_data:
+            data = d.get('demographics', {}).get(category, {})
+            for k, v in data.items():
+                totals[k] += v
+        return sorted(totals.keys(), key=lambda k: totals[k], reverse=True)[:limit]
+
+    # 15. Top Countries
+    top_countries = get_top_keys('countries', 8)
+    datasets = []
+    # Palette for demographics (cycling colors)
+    demo_colors = ['#2563eb', '#7c3aed', '#db2777', '#dc2626', '#ea580c', '#65a30d', '#0891b2', '#6366f1', '#4b5563']
+    
+    for i, country in enumerate(top_countries):
+        data = [d.get('demographics', {}).get('countries', {}).get(country, 0) for d in monthly_data]
+        color = demo_colors[i % len(demo_colors)]
+        datasets.append({
+            'label': country,
+            'data': data,
+            'borderColor': color,
+            'backgroundColor': color + '20',
+            'tension': 0.3,
+            'fill': False
+        })
+    charts.append(('demo_countries', 'Top Countries - Visitors', datasets, 'Visitors'))
+
+    # 16. Devices
+    top_devices = get_top_keys('devices', 5)
+    datasets = []
+    for i, device in enumerate(top_devices):
+        data = [d.get('demographics', {}).get('devices', {}).get(device, 0) for d in monthly_data]
+        color = demo_colors[i % len(demo_colors)]
+        datasets.append({
+            'label': device,
+            'data': data,
+            'borderColor': color,
+            'backgroundColor': color + '20',
+            'tension': 0.3,
+            'fill': False
+        })
+    charts.append(('demo_devices', 'Devices - Visitors', datasets, 'Visitors'))
+    
+    # 17. Browsers
+    top_browsers = get_top_keys('browsers', 6)
+    datasets = []
+    for i, browser in enumerate(top_browsers):
+        data = [d.get('demographics', {}).get('browsers', {}).get(browser, 0) for d in monthly_data]
+        color = demo_colors[i % len(demo_colors)]
+        datasets.append({
+            'label': browser,
+            'data': data,
+            'borderColor': color,
+            'backgroundColor': color + '20',
+            'tension': 0.3,
+            'fill': False
+        })
+    charts.append(('demo_browsers', 'Top Browsers - Visitors', datasets, 'Visitors'))
+    
+    # 18. Sources
+    top_sources = get_top_keys('sources', 8)
+    datasets = []
+    for i, source in enumerate(top_sources):
+        data = [d.get('demographics', {}).get('sources', {}).get(source, 0) for d in monthly_data]
+        color = demo_colors[i % len(demo_colors)]
+        datasets.append({
+            'label': source,
+            'data': data,
+            'borderColor': color,
+            'backgroundColor': color + '20',
+            'tension': 0.3,
+            'fill': False
+        })
+    charts.append(('demo_sources', 'Traffic Sources - Visitors', datasets, 'Visitors'))
+    
     # Per-community bar charts showing organism/assembly/workflow relationships
     # Use all_time_data if available (more accurate), otherwise aggregate from monthly
     if all_time_data:
@@ -700,9 +805,24 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
     chart_containers = []
     chart_scripts = []
     
+    clickable_chart_ids = {
+        'organism_community_pages',
+        'organism_community_visitors',
+        'assembly_community_pages',
+        'assembly_community_visitors',
+        'workflow_community_pages',
+        'workflow_community_visitors',
+        'workflow_category_pages',
+        'workflow_category_visitors',
+    }
+
     for chart_id, title, datasets, y_label in charts:
+        is_clickable = chart_id in clickable_chart_ids
+        clickable_class = 'clickable' if is_clickable else ''
+        indicator = '<div class="clickable-indicator">Click for details</div>' if is_clickable else ''
         chart_containers.append(f'''
-        <div class="chart-container">
+        <div class="chart-container {clickable_class}">
+            {indicator}
             <canvas id="{chart_id}"></canvas>
         </div>
         ''')
@@ -932,6 +1052,46 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
             padding: 20px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             height: 400px;
+            position: relative;
+        }}
+        .chart-container.clickable {{
+            cursor: default;
+            transition: none;
+        }}
+        .chart-container.clickable canvas {{
+            cursor: pointer;
+        }}
+        .chart-container.clickable canvas:hover {{
+            outline: 2px solid #bfdbfe;
+            outline-offset: 2px;
+        }}
+        .clickable-indicator {{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.95;
+            pointer-events: none;
+        }}
+        .click-hint {{
+            margin-top: 12px;
+            display: inline-block;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+        }}
+        .click-hint strong {{
+            font-weight: 700;
         }}
         .section-title {{
             font-size: 20px;
@@ -1006,6 +1166,7 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
     <div class="header">
         <h1>BRC Analytics - Monthly Traffic Summary</h1>
         <div class="subtitle">Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')} | Data range: {months[0]} - {months[-1]}</div>
+        <div class="click-hint"><strong>Tip:</strong> charts labeled “Click for details” are interactive and open a drill-down report.</div>
     </div>
     
     <h2 class="section-title">High-Level Pages</h2>
@@ -1019,6 +1180,12 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         {chart_containers[2]}
         {chart_containers[3]}
         {chart_containers[4]}
+    </div>
+    
+    <h2 class="section-title">Community Comparison - Page Type Breakdown</h2>
+    <div class="charts-grid">
+        {bar_chart_containers[0]}
+        {bar_chart_containers[1]}
     </div>
     
     <h2 class="section-title">Organism Pages by Community</h2>
@@ -1052,10 +1219,12 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         {chart_containers[13]}
     </div>
     
-    <h2 class="section-title">Community Comparison - Page Type Breakdown</h2>
+    <h2 class="section-title">Demographics & Technology</h2>
     <div class="charts-grid">
-        {bar_chart_containers[0]}
-        {bar_chart_containers[1]}
+        {chart_containers[14]}
+        {chart_containers[15]}
+        {chart_containers[16]}
+        {chart_containers[17]}
     </div>
     
     <div class="notes">
@@ -1202,6 +1371,16 @@ def main():
         
         stats = parse_data_file(filepath)
         
+        # Load demographics data
+        # Construct filename pattern based on date range in filename
+        # filepath is like top-pages-2024-10-01-to-2024-10-31.tab
+        date_range_part = filepath.name.replace('top-pages-', '').replace('.tab', '')
+        
+        demo_data = {}
+        for demo_type in ['countries', 'devices', 'browsers', 'sources']:
+            demo_file = data_dir / f"demographics-{demo_type}-{date_range_part}.tab"
+            demo_data[demo_type] = parse_demographics_file(demo_file)
+
         # Aggregate by community
         org_by_community = defaultdict(lambda: {'count': 0, 'visitors': 0, 'pageviews': 0})
         for tax_id, visitors, pageviews in stats['organism_pages']:
@@ -1263,6 +1442,7 @@ def main():
                 'pageviews': sum(p for _, _, p in stats['priority_pathogen_pages']),
             },
             'learn': stats['learn_pages'],
+            'demographics': demo_data,
         })
     
     # Check for all-time data file and process it
@@ -1328,6 +1508,25 @@ def main():
             'communities': [{'id': k, 'visitors': v['visitors']} for k, v in community_nodes.items()],
             'edges': list(network_edges.values())
         }
+        
+        # Load all-time demographics
+        # The filename depends on the date range used during fetch, which is dynamic (launch to today).
+        # We need to find the file that starts with demographics-countries- and has "2024-10-01" as start.
+        # Since we might not know the exact end date used in fetch, we'll search for it.
+        all_time_demo = {}
+        for demo_type in ['countries', 'devices', 'browsers', 'sources']:
+            # Find file pattern: demographics-{demo_type}-2024-10-01-to-*.tab
+            found_files = list(data_dir.glob(f"demographics-{demo_type}-2024-10-01-to-*.tab"))
+            if found_files:
+                # Pick the most recent one (modification time) or just the first one
+                # There should ideally be only one if we clean up, but let's take the one with latest end date
+                latest_file = max(found_files, key=lambda f: f.stat().st_mtime)
+                all_time_demo[demo_type] = parse_demographics_file(latest_file)
+            else:
+                all_time_demo[demo_type] = {}
+        
+        all_time_data['demographics'] = all_time_demo
+        
     else:
         print("No all-time data file found, bar charts will use aggregated monthly data", file=sys.stderr)
         print("  (Run: python3 scripts/fetch_monthly_reports.py --include-all-time)", file=sys.stderr)

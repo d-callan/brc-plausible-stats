@@ -86,6 +86,7 @@ def main():
     
     script_dir = Path(__file__).parent
     fetch_script = script_dir / "fetch_top_pages.py"
+    demographics_script = script_dir / "fetch_demographics.py"
     analysis_script = script_dir / "run_analysis.py"
     data_dir = script_dir.parent / "data" / "fetched"
     
@@ -102,48 +103,71 @@ def main():
         
         # Check if file already exists
         expected_file = data_dir / f"top-pages-{first_day}-to-{last_day}.tab"
+        
+        # Check if demographics files exist (we'll check just one as a proxy)
+        demographics_exist = (data_dir / f"demographics-countries-{first_day}-to-{last_day}.tab").exists()
+        
         if expected_file.exists():
             print(f"  Data file already exists: {expected_file.name}")
             fetched_files.append(expected_file)
-            continue
+            
+            if demographics_exist:
+                print("  Demographics files already exist")
+                continue
         
-        # Fetch data
-        print(f"  Fetching {first_day} to {last_day}...")
-        result = subprocess.run(
-            ["python3", str(fetch_script), "--start", first_day, "--end", last_day],
-            capture_output=True,
-            text=True
-        )
+        # Fetch top pages data if needed
+        if not expected_file.exists():
+            print(f"  Fetching pages {first_day} to {last_day}...")
+            result = subprocess.run(
+                ["python3", str(fetch_script), "--start", first_day, "--end", last_day],
+                capture_output=True,
+                text=True
+            )
+            
+            if result.returncode != 0:
+                print("  ERROR: Failed to fetch data")
+                print(f"  {result.stderr}")
+                continue
+            
+            # Extract page count from output
+            for line in result.stdout.split("\n"):
+                if "Retrieved" in line:
+                    print(f"  {line.strip()}")
+                if "Saved to:" in line:
+                    print(f"  {line.strip()}")
+            
+            fetched_files.append(expected_file)
         
-        if result.returncode != 0:
-            print("  ERROR: Failed to fetch data")
-            print(f"  {result.stderr}")
-            continue
-        
-        # Extract page count from output
-        for line in result.stdout.split("\n"):
-            if "Retrieved" in line:
-                print(f"  {line.strip()}")
-            if "Saved to:" in line:
-                print(f"  {line.strip()}")
-        
-        fetched_files.append(expected_file)
+        # Fetch demographics data if needed
+        if not demographics_exist:
+            print(f"  Fetching demographics {first_day} to {last_day}...")
+            result = subprocess.run(
+                ["python3", str(demographics_script), "--start", first_day, "--end", last_day],
+                capture_output=True,
+                text=True
+            )
+            
+            if result.returncode != 0:
+                print("  ERROR: Failed to fetch demographics")
+                print(f"  {result.stderr}")
+            else:
+                print("  Demographics fetched")
     
     # Fetch all-time data if requested
     if args.include_all_time:
         print("\n--- All Time ---")
         all_time_file = data_dir / "top-pages-all-time.tab"
         
+        # Use custom date range from site launch (Oct 2024) to today
+        # v1 API doesn't support "all" period
+        today = datetime.now()
+        all_time_start = "2024-10-01"
+        all_time_end = today.strftime("%Y-%m-%d")
+        
         if all_time_file.exists():
             print(f"  Data file already exists: {all_time_file.name}")
             print("  (Delete the file to re-fetch)")
         else:
-            # Use custom date range from site launch (Oct 2024) to today
-            # v1 API doesn't support "all" period
-            today = datetime.now()
-            all_time_start = "2024-10-01"
-            all_time_end = today.strftime("%Y-%m-%d")
-            
             print(f"  Fetching all-time data ({all_time_start} to {all_time_end})...")
             result = subprocess.run(
                 ["python3", str(fetch_script), 
@@ -160,6 +184,22 @@ def main():
                 for line in result.stdout.split("\n"):
                     if "Retrieved" in line or "Saved to:" in line:
                         print(f"  {line.strip()}")
+                        
+        # Always try to fetch all-time demographics if main data was requested
+        # We don't check for existence because "all time" changes daily
+        print(f"  Fetching all-time demographics...")
+        result = subprocess.run(
+            ["python3", str(demographics_script), 
+             "--start", all_time_start, "--end", all_time_end],
+            capture_output=True,
+            text=True
+        )
+        
+        if result.returncode != 0:
+            print("  ERROR: Failed to fetch all-time demographics")
+            print(f"  {result.stderr}")
+        else:
+            print("  All-time demographics fetched")
     
     if args.skip_analysis:
         print("\n" + "=" * 60)

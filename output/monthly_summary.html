@@ -46,6 +46,46 @@
             padding: 20px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             height: 400px;
+            position: relative;
+        }
+        .chart-container.clickable {
+            cursor: default;
+            transition: none;
+        }
+        .chart-container.clickable canvas {
+            cursor: pointer;
+        }
+        .chart-container.clickable canvas:hover {
+            outline: 2px solid #bfdbfe;
+            outline-offset: 2px;
+        }
+        .clickable-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.95;
+            pointer-events: none;
+        }
+        .click-hint {
+            margin-top: 12px;
+            display: inline-block;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .click-hint strong {
+            font-weight: 700;
         }
         .section-title {
             font-size: 20px;
@@ -119,18 +159,21 @@
 <body>
     <div class="header">
         <h1>BRC Analytics - Monthly Traffic Summary</h1>
-        <div class="subtitle">Generated: 2025-12-06 21:31 | Data range: Oct 2024 - Nov 2025</div>
+        <div class="subtitle">Generated: 2025-12-22 11:01 | Data range: Oct 2024 - Nov 2025</div>
+        <div class="click-hint"><strong>Tip:</strong> charts labeled “Click for details” are interactive and open a drill-down report.</div>
     </div>
     
     <h2 class="section-title">High-Level Pages</h2>
     <div class="charts-grid">
         
-        <div class="chart-container">
+        <div class="chart-container ">
+            
             <canvas id="high_level_visitors"></canvas>
         </div>
         
         
-        <div class="chart-container">
+        <div class="chart-container ">
+            
             <canvas id="high_level_pageviews"></canvas>
         </div>
         
@@ -139,18 +182,35 @@
     <h2 class="section-title">Content Pages (Organism, Assembly, Workflow)</h2>
     <div class="charts-grid">
         
-        <div class="chart-container">
+        <div class="chart-container ">
+            
             <canvas id="content_pages"></canvas>
         </div>
         
         
-        <div class="chart-container">
+        <div class="chart-container ">
+            
             <canvas id="content_visitors"></canvas>
         </div>
         
         
-        <div class="chart-container">
+        <div class="chart-container ">
+            
             <canvas id="content_pageviews"></canvas>
+        </div>
+        
+    </div>
+    
+    <h2 class="section-title">Community Comparison - Page Type Breakdown</h2>
+    <div class="charts-grid">
+        
+        <div class="chart-container">
+            <canvas id="community_pages_bar"></canvas>
+        </div>
+        
+        
+        <div class="chart-container">
+            <canvas id="community_visitors_bar"></canvas>
         </div>
         
     </div>
@@ -158,12 +218,14 @@
     <h2 class="section-title">Organism Pages by Community</h2>
     <div class="charts-grid">
         
-        <div class="chart-container">
+        <div class="chart-container clickable">
+            <div class="clickable-indicator">Click for details</div>
             <canvas id="organism_community_pages"></canvas>
         </div>
         
         
-        <div class="chart-container">
+        <div class="chart-container clickable">
+            <div class="clickable-indicator">Click for details</div>
             <canvas id="organism_community_visitors"></canvas>
         </div>
         
@@ -172,12 +234,14 @@
     <h2 class="section-title">Assembly Pages by Community</h2>
     <div class="charts-grid">
         
-        <div class="chart-container">
+        <div class="chart-container clickable">
+            <div class="clickable-indicator">Click for details</div>
             <canvas id="assembly_community_pages"></canvas>
         </div>
         
         
-        <div class="chart-container">
+        <div class="chart-container clickable">
+            <div class="clickable-indicator">Click for details</div>
             <canvas id="assembly_community_visitors"></canvas>
         </div>
         
@@ -186,12 +250,14 @@
     <h2 class="section-title">Workflow Pages by Community</h2>
     <div class="charts-grid">
         
-        <div class="chart-container">
+        <div class="chart-container clickable">
+            <div class="clickable-indicator">Click for details</div>
             <canvas id="workflow_community_pages"></canvas>
         </div>
         
         
-        <div class="chart-container">
+        <div class="chart-container clickable">
+            <div class="clickable-indicator">Click for details</div>
             <canvas id="workflow_community_visitors"></canvas>
         </div>
         
@@ -200,12 +266,14 @@
     <h2 class="section-title">Workflow Pages by Category</h2>
     <div class="charts-grid">
         
-        <div class="chart-container">
+        <div class="chart-container clickable">
+            <div class="clickable-indicator">Click for details</div>
             <canvas id="workflow_category_pages"></canvas>
         </div>
         
         
-        <div class="chart-container">
+        <div class="chart-container clickable">
+            <div class="clickable-indicator">Click for details</div>
             <canvas id="workflow_category_visitors"></canvas>
         </div>
         
@@ -343,22 +411,37 @@
     <h2 class="section-title">Learn / Featured Analyses</h2>
     <div class="charts-grid">
         
-        <div class="chart-container">
+        <div class="chart-container ">
+            
             <canvas id="learn_pages"></canvas>
         </div>
         
     </div>
     
-    <h2 class="section-title">Community Comparison - Page Type Breakdown</h2>
+    <h2 class="section-title">Demographics & Technology</h2>
     <div class="charts-grid">
         
-        <div class="chart-container">
-            <canvas id="community_pages_bar"></canvas>
+        <div class="chart-container ">
+            
+            <canvas id="demo_countries"></canvas>
         </div>
         
         
-        <div class="chart-container">
-            <canvas id="community_visitors_bar"></canvas>
+        <div class="chart-container ">
+            
+            <canvas id="demo_devices"></canvas>
+        </div>
+        
+        
+        <div class="chart-container ">
+            
+            <canvas id="demo_browsers"></canvas>
+        </div>
+        
+        
+        <div class="chart-container ">
+            
+            <canvas id="demo_sources"></canvas>
         </div>
         
     </div>
@@ -431,6 +514,14 @@
         new Chart(document.getElementById('workflow_category_visitors'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Variant Calling", "data": [0, 0, 0, 0, 0, 0, 4, 12, 14, 25, 88, 44, 77, 42], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Transcription", "data": [0, 0, 0, 0, 0, 0, 0, 3, 4, 10, 15, 34, 19, 31], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Single Cell", "data": [0, 0, 0, 0, 0, 4, 9, 4, 9, 8, 24, 16, 25, 25], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Epigenomics", "data": [0, 0, 0, 0, 0, 1, 2, 0, 2, 0, 12, 12, 13, 44], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "AMR", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Viral", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Workflow Pages by Category - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
         new Chart(document.getElementById('learn_pages'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Visitors", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 69], "borderColor": "#6366f1", "backgroundColor": "#6366f120", "tension": 0.3, "fill": false}, {"label": "Pageviews", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 103], "borderColor": "#a855f7", "backgroundColor": "#a855f720", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Learn / Featured Analyses Pages", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Count"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
+        
+        new Chart(document.getElementById('demo_countries'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "US", "data": [678, 256, 112, 203, 191, 252, 199, 208, 192, 197, 200, 317, 231, 183], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "CN", "data": [17, 19, 26, 20, 16, 26, 20, 19, 14, 26, 25, 45, 208, 405], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "GB", "data": [98, 37, 18, 8, 25, 24, 9, 11, 5, 6, 11, 35, 19, 18], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "DE", "data": [62, 27, 22, 12, 16, 25, 12, 6, 11, 13, 11, 19, 22, 35], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "AU", "data": [17, 14, 3, 12, 25, 16, 13, 20, 5, 53, 15, 22, 36, 19], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "CA", "data": [17, 6, 5, 6, 6, 23, 19, 17, 19, 14, 14, 25, 13, 6], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "FR", "data": [24, 10, 9, 8, 7, 8, 6, 6, 4, 6, 1, 4, 2, 9], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "BE", "data": [12, 4, 0, 2, 5, 11, 2, 4, 6, 19, 9, 6, 3, 4], "borderColor": "#6366f1", "backgroundColor": "#6366f120", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Top Countries - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
+        
+        new Chart(document.getElementById('demo_devices'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Desktop", "data": [578, 252, 131, 213, 244, 259, 197, 223, 181, 172, 185, 237, 241, 288], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Laptop", "data": [446, 237, 95, 116, 92, 148, 126, 92, 75, 130, 104, 273, 361, 452], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Mobile", "data": [133, 29, 16, 36, 24, 44, 42, 40, 49, 78, 31, 53, 54, 56], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Tablet", "data": [17, 4, 9, 6, 5, 7, 5, 4, 7, 19, 18, 27, 12, 10], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Devices - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
+        
+        new Chart(document.getElementById('demo_browsers'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Chrome", "data": [690, 326, 150, 241, 237, 316, 259, 265, 229, 233, 245, 447, 536, 702], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Safari", "data": [185, 60, 22, 44, 48, 56, 26, 33, 45, 68, 31, 47, 43, 34], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Firefox", "data": [142, 63, 42, 39, 29, 38, 31, 26, 14, 25, 22, 43, 30, 27], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Microsoft Edge", "data": [101, 55, 19, 20, 23, 26, 28, 16, 13, 49, 16, 16, 21, 21], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Mobile App", "data": [11, 1, 4, 7, 4, 2, 4, 5, 4, 6, 7, 13, 13, 10], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Opera", "data": [11, 2, 0, 0, 1, 3, 1, 0, 0, 3, 1, 3, 2, 2], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Top Browsers - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
+        
+        new Chart(document.getElementById('demo_sources'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Direct / None", "data": [866, 333, 121, 259, 234, 329, 269, 277, 233, 314, 251, 453, 550, 727], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Google", "data": [109, 95, 48, 27, 43, 56, 32, 42, 43, 38, 37, 64, 61, 26], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "galaxyproject.org", "data": [30, 28, 27, 31, 44, 28, 22, 14, 13, 18, 20, 23, 22, 13], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "niaid.nih.gov", "data": [44, 25, 12, 13, 14, 14, 13, 6, 11, 6, 12, 12, 3, 3], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "baidu.com", "data": [14, 12, 20, 8, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "LinkedIn", "data": [25, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 4, 9], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Bing", "data": [12, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 0, 10], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "DuckDuckGo", "data": [8, 4, 5, 2, 0, 4, 1, 0, 0, 3, 1, 1, 0, 1], "borderColor": "#6366f1", "backgroundColor": "#6366f120", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Traffic Sources - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
         new Chart(document.getElementById('community_pages_bar'), {"type": "bar", "data": {"labels": ["Viruses", "Bacteria", "Fungi", "Protists", "Vectors", "Hosts", "Helminths", "Other"], "datasets": [{"label": "Organism Pages", "data": [60, 39, 89, 67, 26, 13, 8, 11], "backgroundColor": "#2563eb"}, {"label": "Assembly Pages", "data": [58, 45, 71, 76, 18, 12, 5, 10], "backgroundColor": "#7c3aed"}, {"label": "Workflow Pages", "data": [76, 30, 67, 87, 7, 10, 1, 6], "backgroundColor": "#db2777"}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Page Types by Community - Unique Pages (from dedicated all-time fetch)", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Unique Pages"}}, "x": {"title": {"display": true, "text": "Community"}}}}});
         
