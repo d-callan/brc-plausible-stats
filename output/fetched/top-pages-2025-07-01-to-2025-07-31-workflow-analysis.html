@@ -114,7 +114,7 @@
     
     <div class="section">
         <h2 class="section-title">Workflow Page Visitors by Assembly (grouped by community)</h2>
-        <div class="legend" style="margin-bottom:15px;"><span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#dc2626;border-radius:2px;margin-right:4px;"></span>Viruses</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#65a30d;border-radius:2px;margin-right:4px;"></span>Fungi</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#7c3aed;border-radius:2px;margin-right:4px;"></span>Protists</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#0891b2;border-radius:2px;margin-right:4px;"></span>Hosts</span></div>
+        <div class="legend" style="margin-bottom:15px;"><span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#6b7280;border-radius:2px;margin-right:4px;"></span>Other</span></div>
         <div class="chart-container bar">
             <canvas id="assemblyChart"></canvas>
         </div>
@@ -153,11 +153,11 @@
         new Chart(document.getElementById('assemblyChart'), {
             type: 'bar',
             data: {
-                labels: ["Measles morbilliviru...", "SARS coronavirus Tor...", "Henipavirus hendraen...", "Human orthorubulavir...", "[Emmonsia] crescens", "Coccidioides posadas...", "Coccidioides posadas...", "malaria parasite P. ...", "malaria parasite P. ...", "Acanthamoeba castell...", "Acanthamoeba astrony...", "Acanthamoeba castell...", "Plasmodium inui San ...", "human"],
+                labels: ["Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown"],
                 datasets: [{
                     label: 'Visitors',
-                    data: [8, 6, 2, 1, 10, 1, 1, 3, 2, 2, 1, 1, 1, 4],
-                    backgroundColor: ["#dc2626", "#dc2626", "#dc2626", "#dc2626", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#0891b2"]
+                    data: [8, 10, 6, 2, 2, 3, 4, 2, 1, 1, 1, 1, 1, 1],
+                    backgroundColor: ["#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280"]
                 }]
             },
             options: {
@@ -174,7 +174,7 @@
         });
         
         // Network diagram using D3.js
-        const networkData = {"workflows": [{"id": "haploid-variant-calling-w", "visitors": 22}, {"id": "rnaseq-sr", "visitors": 4}, {"id": "fastq-to-matrix-10x-scrna", "visitors": 7}, {"id": "rnaseq-pe", "visitors": 4}, {"id": "sars-cov-2-pe-illumina-wg", "visitors": 1}, {"id": "sars-cov-2-pe-illumina-ar", "visitors": 1}], "organisms": [{"id": "Measles morbillivirus", "visitors": 8}, {"id": "[Emmonsia] crescens", "visitors": 10}, {"id": "SARS coronavirus Tor2", "visitors": 5}, {"id": "malaria parasite P. vivax", "visitors": 5}, {"id": "Acanthamoeba castellanii", "visitors": 3}, {"id": "human", "visitors": 3}, {"id": "Henipavirus hendraense", "visitors": 2}, {"id": "Acanthamoeba astronyxis", "visitors": 1}, {"id": "Human orthorubulavirus 2", "visitors": 1}, {"id": "Coccidioides posadasii RM", "visitors": 1}], "edges": [{"source": "haploid-variant-calling-w", "target": "Measles morbillivirus", "visitors": 8}, {"source": "haploid-variant-calling-w", "target": "[Emmonsia] crescens", "visitors": 7}, {"source": "haploid-variant-calling-w", "target": "SARS coronavirus Tor2", "visitors": 2}, {"source": "haploid-variant-calling-w", "target": "malaria parasite P. vivax", "visitors": 2}, {"source": "rnaseq-sr", "target": "[Emmonsia] crescens", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba castellanii", "visitors": 2}, {"source": "rnaseq-pe", "target": "malaria parasite P. vivax", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "human", "visitors": 2}, {"source": "sars-cov-2-pe-illumina-wg", "target": "SARS coronavirus Tor2", "visitors": 1}, {"source": "rnaseq-sr", "target": "human", "visitors": 1}, {"source": "rnaseq-sr", "target": "Henipavirus hendraense", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "[Emmonsia] crescens", "visitors": 1}, {"source": "sars-cov-2-pe-illumina-ar", "target": "SARS coronavirus Tor2", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "malaria parasite P. vivax", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba astronyxis", "visitors": 1}, {"source": "rnaseq-pe", "target": "Acanthamoeba castellanii", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "SARS coronavirus Tor2", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Human orthorubulavirus 2", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Henipavirus hendraense", "visitors": 1}, {"source": "rnaseq-pe", "target": "Coccidioides posadasii RM", "visitors": 1}]};
+        const networkData = {"workflows": [{"id": "haploid-variant-calling-w", "visitors": 22}, {"id": "rnaseq-sr", "visitors": 4}, {"id": "fastq-to-matrix-10x-scrna", "visitors": 8}, {"id": "rnaseq-pe", "visitors": 6}, {"id": "sars-cov-2-pe-illumina-wg", "visitors": 1}, {"id": "sars-cov-2-pe-illumina-ar", "visitors": 1}, {"id": "sars-cov-2-se-illumina-wg", "visitors": 1}], "organisms": [{"id": "Unknown", "visitors": 43}], "edges": [{"source": "haploid-variant-calling-w", "target": "Unknown", "visitors": 22}, {"source": "rnaseq-sr", "target": "Unknown", "visitors": 4}, {"source": "fastq-to-matrix-10x-scrna", "target": "Unknown", "visitors": 8}, {"source": "rnaseq-pe", "target": "Unknown", "visitors": 6}, {"source": "sars-cov-2-pe-illumina-wg", "target": "Unknown", "visitors": 1}, {"source": "sars-cov-2-pe-illumina-ar", "target": "Unknown", "visitors": 1}, {"source": "sars-cov-2-se-illumina-wg", "target": "Unknown", "visitors": 1}]};
         
         if (networkData.workflows.length > 0 && networkData.organisms.length > 0) {
             const svg = d3.select('#networkSvg');
