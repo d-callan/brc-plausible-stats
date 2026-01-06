@@ -16,29 +16,13 @@ Usage:
 import argparse
 import json
 import re
-import subprocess
 import sys
-import time
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 
-
-# Community classification based on taxonomic lineage
-COMMUNITY_PATTERNS = {
-    'Viruses': ['Viruses', 'viridae', 'virus'],
-    'Bacteria': ['Bacteria', 'Proteobacteria', 'Firmicutes', 'Actinobacteria'],
-    'Fungi': ['Fungi', 'Ascomycota', 'Basidiomycota', 'Mucoromycota', 'Microsporidia'],
-    'Vectors': ['Diptera', 'Culicidae', 'Anopheles', 'Aedes', 'Culex', 'Glossina', 
-                'Ixodida', 'Triatoma', 'Rhodnius', 'Phlebotomus', 'Lutzomyia'],
-    'Hosts': ['Mammalia', 'Aves', 'Homo sapiens', 'Mus musculus', 'Gallus'],
-    'Protists': ['Apicomplexa', 'Plasmodium', 'Trypanosoma', 'Leishmania', 
-                 'Acanthamoeba', 'Giardia', 'Cryptosporidium', 'Toxoplasma',
-                 'Babesia', 'Theileria', 'Entamoeba', 'Trichomonas', 'Naegleria'],
-    'Helminths': ['Nematoda', 'Platyhelminthes', 'Schistosoma', 'Ascaris', 
-                  'Brugia', 'Onchocerca', 'Wuchereria', 'Strongyloides',
-                  'Trichuris', 'Ancylostoma', 'Necator', 'Fasciola', 'Taenia'],
-}
+# Import shared taxonomy module
+from taxonomy_cache import load_cache, get_community
 
 # Workflow category patterns for classification
 WORKFLOW_CATEGORIES = {
@@ -83,103 +67,21 @@ COLORS = {
     'Viral': '#0891b2',
 }
 
+# Load taxonomy cache once at module level
 _taxonomy_cache = {}
-_assembly_taxonomy_cache = {}
+_assembly_cache = {}
 
 
-def get_taxonomy_lineage(tax_id):
-    """Fetch taxonomy lineage string from NCBI."""
-    if tax_id in _taxonomy_cache:
-        return _taxonomy_cache[tax_id]
-    
-    url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id={tax_id}&retmode=xml"
-    
-    try:
-        result = subprocess.run(
-            ['curl', '-s', url],
-            capture_output=True,
-            text=True,
-            timeout=10
-        )
-        
-        if result.returncode != 0 or not result.stdout:
-            _taxonomy_cache[tax_id] = ('Unknown', 'Unknown')
-            return _taxonomy_cache[tax_id]
-        
-        lineage_match = re.search(r'<Lineage>([^<]+)</Lineage>', result.stdout)
-        name_match = re.search(r'<ScientificName>([^<]+)</ScientificName>', result.stdout)
-        
-        lineage = lineage_match.group(1) if lineage_match else ''
-        name = name_match.group(1) if name_match else 'Unknown'
-        
-        _taxonomy_cache[tax_id] = (name, lineage)
-        return _taxonomy_cache[tax_id]
-        
-    except Exception:
-        _taxonomy_cache[tax_id] = ('Unknown', 'Unknown')
-        return _taxonomy_cache[tax_id]
-
-
-def get_assembly_taxonomy(assembly_id):
-    """Get taxonomy info for an assembly ID."""
-    if assembly_id in _assembly_taxonomy_cache:
-        return _assembly_taxonomy_cache[assembly_id]
-    
-    if '_' in assembly_id:
-        parts = assembly_id.split('_')
-        if len(parts) >= 3:
-            accession = f"{parts[0]}_{parts[1]}"
-        else:
-            accession = assembly_id
-    else:
-        accession = assembly_id
-    
-    url = f"https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/{accession}/dataset_report"
-    
-    try:
-        result = subprocess.run(
-            ['curl', '-s', '-H', 'accept: application/json', url],
-            capture_output=True,
-            text=True,
-            timeout=10
-        )
-        
-        if result.returncode != 0 or not result.stdout or len(result.stdout) < 10:
-            _assembly_taxonomy_cache[assembly_id] = (None, 'Unknown', 'Unknown')
-            return _assembly_taxonomy_cache[assembly_id]
-        
-        data = json.loads(result.stdout)
-        
-        if 'reports' in data and len(data['reports']) > 0:
-            report = data['reports'][0]
-            if 'organism' in report:
-                tax_id = report['organism'].get('tax_id')
-                if tax_id:
-                    name, lineage = get_taxonomy_lineage(tax_id)
-                    _assembly_taxonomy_cache[assembly_id] = (tax_id, name, lineage)
-                    return _assembly_taxonomy_cache[assembly_id]
-        
-        _assembly_taxonomy_cache[assembly_id] = (None, 'Unknown', 'Unknown')
-        return _assembly_taxonomy_cache[assembly_id]
-        
-    except Exception:
-        _assembly_taxonomy_cache[assembly_id] = (None, 'Unknown', 'Unknown')
-        return _assembly_taxonomy_cache[assembly_id]
+def load_taxonomy_caches():
+    """Load taxonomy caches if not already loaded."""
+    global _taxonomy_cache, _assembly_cache
+    if not _taxonomy_cache:
+        _taxonomy_cache, _assembly_cache = load_cache()
 
 
 def classify_community(lineage):
     """Classify an organism into a community based on its lineage."""
-    if not lineage or lineage == 'Unknown':
-        return 'Other'
-    
-    lineage_lower = lineage.lower()
-    
-    for community, patterns in COMMUNITY_PATTERNS.items():
-        for pattern in patterns:
-            if pattern.lower() in lineage_lower:
-                return community
-    
-    return 'Other'
+    return get_community(lineage)
 
 
 def classify_workflow_category(workflow_name):
@@ -307,35 +209,6 @@ def get_month_files(data_dir):
 def format_month(year, month):
     """Format year/month as 'Mon YYYY'."""
     return datetime(year, month, 1).strftime('%b %Y')
-
-
-def load_taxonomy_cache(cache_file):
-    """Load taxonomy cache from file."""
-    global _taxonomy_cache, _assembly_taxonomy_cache
-    
-    if cache_file.exists():
-        try:
-            with open(cache_file, 'r') as f:
-                data = json.load(f)
-                _taxonomy_cache = {k: tuple(v) for k, v in data.get('taxonomy', {}).items()}
-                _assembly_taxonomy_cache = {k: tuple(v) for k, v in data.get('assembly', {}).items()}
-                print(f"Loaded {len(_taxonomy_cache)} taxonomy and {len(_assembly_taxonomy_cache)} assembly cache entries", file=sys.stderr)
-        except Exception as e:
-            print(f"Warning: Could not load cache: {e}", file=sys.stderr)
-
-
-def save_taxonomy_cache(cache_file):
-    """Save taxonomy cache to file."""
-    try:
-        data = {
-            'taxonomy': {k: list(v) for k, v in _taxonomy_cache.items()},
-            'assembly': {k: list(v) for k, v in _assembly_taxonomy_cache.items()},
-        }
-        with open(cache_file, 'w') as f:
-            json.dump(data, f)
-        print(f"Saved taxonomy cache ({len(_taxonomy_cache)} + {len(_assembly_taxonomy_cache)} entries)", file=sys.stderr)
-    except Exception as e:
-        print(f"Warning: Could not save cache: {e}", file=sys.stderr)
 
 
 def generate_chart_js(chart_id, title, labels, datasets, y_label):
@@ -779,7 +652,8 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
             'backgroundColor': bar_colors['Workflow Pages'],
         },
     ]
-    bar_charts.append(('community_pages_bar', f'Page Types by Community - Unique Pages {bar_chart_note}', communities, datasets, 'Unique Pages'))
+    community_pages_bar_title = f"Page Types by Community - Unique Pages {bar_chart_note}"
+    bar_charts.append(('community_pages_bar', community_pages_bar_title, communities, datasets, 'Unique Pages'))
     
     # Community comparison - Visitors (all time totals)
     datasets = [
@@ -1300,7 +1174,6 @@ def main():
     
     script_dir = Path(__file__).parent
     data_dir = script_dir.parent / 'data' / 'fetched'
-    cache_file = script_dir.parent / '.taxonomy_cache.json'
     output_path = Path(args.output)
     
     if not output_path.is_absolute():
@@ -1310,9 +1183,11 @@ def main():
         print(f"Error: Data directory not found: {data_dir}", file=sys.stderr)
         sys.exit(1)
     
-    # Load cache
-    if not args.no_cache:
-        load_taxonomy_cache(cache_file)
+    # Load taxonomy cache
+    print("Loading taxonomy cache...", file=sys.stderr)
+    load_taxonomy_caches()
+    print(f"  Loaded {len(_taxonomy_cache)} taxonomy entries", file=sys.stderr)
+    print(f"  Loaded {len(_assembly_cache)} assembly entries", file=sys.stderr)
     
     # Get all monthly files
     month_files = get_month_files(data_dir)
@@ -1321,45 +1196,6 @@ def main():
         sys.exit(1)
     
     print(f"Found {len(month_files)} monthly data files", file=sys.stderr)
-    
-    # Collect all unique IDs
-    all_tax_ids = set()
-    all_assembly_ids = set()
-    
-    print("Scanning files for unique IDs...", file=sys.stderr)
-    for year, month, filepath in month_files:
-        stats = parse_data_file(filepath)
-        for tax_id, _, _ in stats['organism_pages']:
-            all_tax_ids.add(tax_id)
-        for assembly_id, _, _ in stats['assembly_pages']:
-            all_assembly_ids.add(assembly_id)
-        for assembly_id, _, _, _ in stats['workflow_pages']:
-            all_assembly_ids.add(assembly_id)
-    
-    print(f"Found {len(all_tax_ids)} unique tax IDs and {len(all_assembly_ids)} unique assembly IDs", file=sys.stderr)
-    
-    # Pre-fetch taxonomy data
-    uncached_tax_ids = [t for t in all_tax_ids if t not in _taxonomy_cache]
-    if uncached_tax_ids:
-        print(f"Fetching taxonomy for {len(uncached_tax_ids)} tax IDs...", file=sys.stderr)
-        for i, tax_id in enumerate(uncached_tax_ids, 1):
-            if args.verbose:
-                print(f"  [{i}/{len(uncached_tax_ids)}] Tax ID {tax_id}", file=sys.stderr)
-            get_taxonomy_lineage(tax_id)
-            time.sleep(0.35)
-    
-    uncached_assemblies = [a for a in all_assembly_ids if a not in _assembly_taxonomy_cache]
-    if uncached_assemblies:
-        print(f"Fetching taxonomy for {len(uncached_assemblies)} assemblies...", file=sys.stderr)
-        for i, assembly_id in enumerate(uncached_assemblies, 1):
-            if args.verbose:
-                print(f"  [{i}/{len(uncached_assemblies)}] Assembly {assembly_id}", file=sys.stderr)
-            get_assembly_taxonomy(assembly_id)
-            time.sleep(0.35)
-    
-    # Save cache
-    if not args.no_cache:
-        save_taxonomy_cache(cache_file)
     
     # Process each month
     monthly_data = []
@@ -1384,7 +1220,8 @@ def main():
         # Aggregate by community
         org_by_community = defaultdict(lambda: {'count': 0, 'visitors': 0, 'pageviews': 0})
         for tax_id, visitors, pageviews in stats['organism_pages']:
-            name, lineage = _taxonomy_cache.get(tax_id, ('Unknown', 'Unknown'))
+            tax_data = _taxonomy_cache.get(tax_id, {})
+            lineage = tax_data.get('lineage', 'Unknown')
             community = classify_community(lineage)
             org_by_community[community]['count'] += 1
             org_by_community[community]['visitors'] += visitors
@@ -1392,7 +1229,8 @@ def main():
         
         asm_by_community = defaultdict(lambda: {'count': 0, 'visitors': 0, 'pageviews': 0})
         for assembly_id, visitors, pageviews in stats['assembly_pages']:
-            _, name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
+            asm_data = _assembly_cache.get(assembly_id, {})
+            lineage = asm_data.get('lineage', 'Unknown')
             community = classify_community(lineage)
             asm_by_community[community]['count'] += 1
             asm_by_community[community]['visitors'] += visitors
@@ -1401,7 +1239,8 @@ def main():
         wf_by_community = defaultdict(lambda: {'count': 0, 'visitors': 0, 'pageviews': 0})
         wf_by_category = defaultdict(lambda: {'count': 0, 'visitors': 0, 'pageviews': 0})
         for assembly_id, workflow, visitors, pageviews in stats['workflow_pages']:
-            _, name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
+            asm_data = _assembly_cache.get(assembly_id, {})
+            lineage = asm_data.get('lineage', 'Unknown')
             community = classify_community(lineage)
             wf_by_community[community]['count'] += 1
             wf_by_community[community]['visitors'] += visitors
@@ -1462,14 +1301,16 @@ def main():
         
         # Process organism pages
         for tax_id, visitors, pageviews in all_time_stats['organism_pages']:
-            name, lineage = _taxonomy_cache.get(tax_id, ('Unknown', 'Unknown'))
+            tax_data = _taxonomy_cache.get(tax_id, {})
+            lineage = tax_data.get('lineage', 'Unknown')
             community = classify_community(lineage)
             all_time_data[community]['organism_pages'] += 1
             all_time_data[community]['organism_visitors'] += visitors
         
         # Process assembly pages
         for assembly_id, visitors, pageviews in all_time_stats['assembly_pages']:
-            _, name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
+            asm_data = _assembly_cache.get(assembly_id, {})
+            lineage = asm_data.get('lineage', 'Unknown')
             community = classify_community(lineage)
             all_time_data[community]['assembly_pages'] += 1
             all_time_data[community]['assembly_visitors'] += visitors
@@ -1480,7 +1321,8 @@ def main():
         network_edges = {}  # Use dict for easy aggregation
         
         for assembly_id, workflow, visitors, pageviews in all_time_stats['workflow_pages']:
-            _, org_name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
+            asm_data = _assembly_cache.get(assembly_id, {})
+            lineage = asm_data.get('lineage', 'Unknown')
             community = classify_community(lineage)
             all_time_data[community]['workflow_pages'] += 1
             all_time_data[community]['workflow_visitors'] += visitors

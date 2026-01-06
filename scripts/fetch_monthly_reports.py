@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
-Fetch monthly top pages reports from Plausible and run analysis on each.
+Fetch monthly top pages reports from Plausible.
 
-This script fetches top pages data for each month in a specified range,
-saves the data to data/fetched/, and runs organism and workflow analysis
-on each month's data.
+This script fetches top pages data for each month in a specified range
+and saves the data to data/fetched/.
 
 Usage:
     python3 fetch_monthly_reports.py
@@ -45,7 +44,7 @@ def month_iterator(start_year, start_month, end_year, end_month):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Fetch monthly top pages reports and run analysis"
+        description="Fetch monthly top pages reports"
     )
     parser.add_argument(
         "--start-month",
@@ -56,11 +55,6 @@ def main():
         "--end-month",
         default=None,
         help="End month in YYYY-MM format (default: previous month)"
-    )
-    parser.add_argument(
-        "--skip-analysis",
-        action="store_true",
-        help="Only fetch data, don't run analysis"
     )
     parser.add_argument(
         "--include-all-time",
@@ -87,7 +81,6 @@ def main():
     script_dir = Path(__file__).parent
     fetch_script = script_dir / "fetch_top_pages.py"
     demographics_script = script_dir / "fetch_demographics.py"
-    analysis_script = script_dir / "run_analysis.py"
     data_dir = script_dir.parent / "data" / "fetched"
     
     print(f"Fetching monthly reports from {start_year}-{start_month:02d} to {end_year}-{end_month:02d}")
@@ -201,41 +194,10 @@ def main():
         else:
             print("  All-time demographics fetched")
     
-    if args.skip_analysis:
-        print("\n" + "=" * 60)
-        print("Skipping analysis (--skip-analysis flag set)")
-        print(f"Fetched {len(fetched_files)} monthly data files")
-        return
-    
-    print("\n" + "=" * 60)
-    print("Running analysis on fetched data...")
-    print("=" * 60)
-    
-    for data_file in fetched_files:
-        if not data_file.exists():
-            print(f"\nSkipping {data_file.name} (file not found)")
-            continue
-            
-        print(f"\n--- Analyzing {data_file.name} ---")
-        result = subprocess.run(
-            ["python3", str(analysis_script), str(data_file)],
-            capture_output=True,
-            text=True
-        )
-        
-        if result.returncode != 0:
-            print("  ERROR: Analysis failed")
-            print(f"  {result.stderr}")
-        else:
-            # Show summary lines
-            for line in result.stdout.split("\n"):
-                if "Summary:" in line or line.strip().startswith("-"):
-                    print(f"  {line}")
-    
     print("\n" + "=" * 60)
     print("All done!")
+    print(f"Fetched {len(fetched_files)} monthly data files")
     print("  Data files: data/fetched/")
-    print("  Analysis output: output/fetched/")
 
 
 if __name__ == "__main__":

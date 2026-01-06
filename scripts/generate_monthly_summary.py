@@ -16,131 +16,38 @@ Usage:
 import argparse
 import json
 import re
-import subprocess
 import sys
-import time
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 
-
-# Community classification based on taxonomic lineage
-# These are checked in order - first match wins
-COMMUNITY_PATTERNS = {
-    'Viruses': ['Viruses', 'viridae', 'virus'],
-    'Bacteria': ['Bacteria', 'Proteobacteria', 'Firmicutes', 'Actinobacteria'],
-    'Fungi': ['Fungi', 'Ascomycota', 'Basidiomycota', 'Mucoromycota', 'Microsporidia'],
-    'Vectors': ['Diptera', 'Culicidae', 'Anopheles', 'Aedes', 'Culex', 'Glossina', 
-                'Ixodida', 'Triatoma', 'Rhodnius', 'Phlebotomus', 'Lutzomyia'],
-    'Hosts': ['Mammalia', 'Aves', 'Homo sapiens', 'Mus musculus', 'Gallus'],
-    'Protists': ['Apicomplexa', 'Plasmodium', 'Trypanosoma', 'Leishmania', 
-                 'Acanthamoeba', 'Giardia', 'Cryptosporidium', 'Toxoplasma',
-                 'Babesia', 'Theileria', 'Entamoeba', 'Trichomonas', 'Naegleria'],
-    'Helminths': ['Nematoda', 'Platyhelminthes', 'Schistosoma', 'Ascaris', 
-                  'Brugia', 'Onchocerca', 'Wuchereria', 'Strongyloides',
-                  'Trichuris', 'Ancylostoma', 'Necator', 'Fasciola', 'Taenia'],
-}
+# Import shared taxonomy module
+from taxonomy_cache import load_cache, get_community
 
 # Cache for taxonomy lookups
 _taxonomy_cache = {}
-_assembly_taxonomy_cache = {}
+_assembly_cache = {}
 
 
-def get_taxonomy_lineage(tax_id):
-    """Fetch taxonomy lineage string from NCBI."""
-    if tax_id in _taxonomy_cache:
-        return _taxonomy_cache[tax_id]
-    
-    url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id={tax_id}&retmode=xml"
-    
-    try:
-        result = subprocess.run(
-            ['curl', '-s', url],
-            capture_output=True,
-            text=True,
-            timeout=10
-        )
-        
-        if result.returncode != 0 or not result.stdout:
-            _taxonomy_cache[tax_id] = ('Unknown', 'Unknown')
-            return _taxonomy_cache[tax_id]
-        
-        # Parse lineage from XML
-        lineage_match = re.search(r'<Lineage>([^<]+)</Lineage>', result.stdout)
-        name_match = re.search(r'<ScientificName>([^<]+)</ScientificName>', result.stdout)
-        
-        lineage = lineage_match.group(1) if lineage_match else ''
-        name = name_match.group(1) if name_match else 'Unknown'
-        
-        _taxonomy_cache[tax_id] = (name, lineage)
-        return _taxonomy_cache[tax_id]
-        
-    except Exception:
-        _taxonomy_cache[tax_id] = ('Unknown', 'Unknown')
-        return _taxonomy_cache[tax_id]
+def load_taxonomy_caches():
+    """Load taxonomy caches if not already loaded."""
+    global _taxonomy_cache, _assembly_cache
+    if not _taxonomy_cache:
+        _taxonomy_cache, _assembly_cache = load_cache()
 
 
 def get_assembly_taxonomy(assembly_id):
-    """Get taxonomy info for an assembly ID."""
-    if assembly_id in _assembly_taxonomy_cache:
-        return _assembly_taxonomy_cache[assembly_id]
-    
-    # Strip version number
-    if '_' in assembly_id:
-        parts = assembly_id.split('_')
-        if len(parts) >= 3:
-            accession = f"{parts[0]}_{parts[1]}"
-        else:
-            accession = assembly_id
-    else:
-        accession = assembly_id
-    
-    url = f"https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/{accession}/dataset_report"
-    
-    try:
-        result = subprocess.run(
-            ['curl', '-s', '-H', 'accept: application/json', url],
-            capture_output=True,
-            text=True,
-            timeout=10
-        )
-        
-        if result.returncode != 0 or not result.stdout or len(result.stdout) < 10:
-            _assembly_taxonomy_cache[assembly_id] = (None, 'Unknown', 'Unknown')
-            return _assembly_taxonomy_cache[assembly_id]
-        
-        data = json.loads(result.stdout)
-        
-        if 'reports' in data and len(data['reports']) > 0:
-            report = data['reports'][0]
-            if 'organism' in report:
-                tax_id = report['organism'].get('tax_id')
-                if tax_id:
-                    name, lineage = get_taxonomy_lineage(tax_id)
-                    _assembly_taxonomy_cache[assembly_id] = (tax_id, name, lineage)
-                    return _assembly_taxonomy_cache[assembly_id]
-        
-        _assembly_taxonomy_cache[assembly_id] = (None, 'Unknown', 'Unknown')
-        return _assembly_taxonomy_cache[assembly_id]
-        
-    except Exception:
-        _assembly_taxonomy_cache[assembly_id] = (None, 'Unknown', 'Unknown')
-        return _assembly_taxonomy_cache[assembly_id]
+    """Get taxonomy info for an assembly from cache."""
+    asm_data = _assembly_cache.get(assembly_id, {})
+    tax_id = asm_data.get('tax_id')
+    name = asm_data.get('name', 'Unknown')
+    lineage = asm_data.get('lineage', 'Unknown')
+    return (tax_id, name, lineage)
 
 
 def classify_community(lineage):
     """Classify an organism into a community based on its lineage."""
-    if not lineage or lineage == 'Unknown':
-        return 'Other'
-    
-    lineage_lower = lineage.lower()
-    
-    for community, patterns in COMMUNITY_PATTERNS.items():
-        for pattern in patterns:
-            if pattern.lower() in lineage_lower:
-                return community
-    
-    return 'Other'
+    return get_community(lineage)
 
 
 def parse_data_file(filepath):
@@ -335,28 +242,11 @@ def main():
     
     print(f"Found {len(all_tax_ids)} unique tax IDs and {len(all_assembly_ids)} unique assembly IDs", file=sys.stderr)
     
-    # Pre-fetch taxonomy data
-    uncached_tax_ids = [t for t in all_tax_ids if t not in _taxonomy_cache]
-    if uncached_tax_ids:
-        print(f"Fetching taxonomy for {len(uncached_tax_ids)} tax IDs...", file=sys.stderr)
-        for i, tax_id in enumerate(uncached_tax_ids, 1):
-            if args.verbose:
-                print(f"  [{i}/{len(uncached_tax_ids)}] Tax ID {tax_id}", file=sys.stderr)
-            get_taxonomy_lineage(tax_id)
-            time.sleep(0.35)
-    
-    uncached_assemblies = [a for a in all_assembly_ids if a not in _assembly_taxonomy_cache]
-    if uncached_assemblies:
-        print(f"Fetching taxonomy for {len(uncached_assemblies)} assemblies...", file=sys.stderr)
-        for i, assembly_id in enumerate(uncached_assemblies, 1):
-            if args.verbose:
-                print(f"  [{i}/{len(uncached_assemblies)}] Assembly {assembly_id}", file=sys.stderr)
-            get_assembly_taxonomy(assembly_id)
-            time.sleep(0.35)
-    
-    # Save cache
-    if not args.no_cache:
-        save_taxonomy_cache(cache_file)
+    # Load taxonomy cache
+    print("Loading taxonomy cache...", file=sys.stderr)
+    load_taxonomy_caches()
+    print(f"  Loaded {len(_taxonomy_cache)} taxonomy entries", file=sys.stderr)
+    print(f"  Loaded {len(_assembly_cache)} assembly entries", file=sys.stderr)
     
     # Process each month
     monthly_data = []

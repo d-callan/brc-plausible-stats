@@ -13,25 +13,12 @@ Usage:
 import argparse
 import json
 import re
-import subprocess
 import sys
+from collections import defaultdict
 from pathlib import Path
 
-# Community classification patterns (same as monthly summary)
-COMMUNITY_PATTERNS = {
-    'Viruses': ['Viruses', 'Viridae', 'virus', 'Monkeypox', 'Influenza', 'Variola', 'Orthopoxvirus'],
-    'Bacteria': ['Bacteria', 'Proteobacteria', 'Firmicutes', 'Actinobacteria'],
-    'Fungi': ['Fungi', 'Ascomycota', 'Basidiomycota', 'Mucoromycota', 'Microsporidia'],
-    'Vectors': ['Diptera', 'Culicidae', 'Anopheles', 'Aedes', 'Culex', 'Glossina', 
-                'Ixodida', 'Triatoma', 'Rhodnius', 'Phlebotomus', 'Lutzomyia'],
-    'Hosts': ['Mammalia', 'Aves', 'Homo sapiens', 'Mus musculus', 'Gallus'],
-    'Protists': ['Apicomplexa', 'Plasmodium', 'Trypanosoma', 'Leishmania', 
-                 'Acanthamoeba', 'Giardia', 'Cryptosporidium', 'Toxoplasma',
-                 'Babesia', 'Theileria', 'Entamoeba', 'Trichomonas', 'Naegleria'],
-    'Helminths': ['Nematoda', 'Platyhelminthes', 'Schistosoma', 'Ascaris', 
-                  'Brugia', 'Onchocerca', 'Wuchereria', 'Strongyloides',
-                  'Trichuris', 'Ancylostoma', 'Necator', 'Fasciola', 'Taenia'],
-}
+# Import shared taxonomy module
+from taxonomy_cache import load_cache, get_community
 
 COMMUNITY_COLORS = {
     'Viruses': '#dc2626',
@@ -46,102 +33,246 @@ COMMUNITY_COLORS = {
 
 COMMUNITIES_ORDER = ['Viruses', 'Bacteria', 'Fungi', 'Protists', 'Vectors', 'Hosts', 'Helminths', 'Other']
 
+# Load taxonomy cache once at module level
 _taxonomy_cache = {}
-_assembly_taxonomy_cache = {}
+_assembly_cache = {}
 
 
-def load_taxonomy_cache(cache_file):
-    """Load taxonomy cache from file."""
-    global _taxonomy_cache, _assembly_taxonomy_cache
-    if cache_file.exists():
-        with open(cache_file, 'r') as f:
-            data = json.load(f)
-            _taxonomy_cache = {k: tuple(v) for k, v in data.get('taxonomy', {}).items()}
-            _assembly_taxonomy_cache = {k: tuple(v) for k, v in data.get('assembly', {}).items()}
-
-
-def get_taxonomy_lineage(tax_id):
-    """Fetch taxonomy lineage string from NCBI."""
-    if tax_id in _taxonomy_cache:
-        return _taxonomy_cache[tax_id]
-    
-    url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id={tax_id}&retmode=xml"
-    
-    try:
-        result = subprocess.run(
-            ['curl', '-s', url],
-            capture_output=True,
-            text=True,
-            timeout=30
-        )
-        
-        xml_content = result.stdout
-        
-        name_match = re.search(r'<ScientificName>([^<]+)</ScientificName>', xml_content)
-        name = name_match.group(1) if name_match else 'Unknown'
-        
-        lineage_match = re.search(r'<Lineage>([^<]+)</Lineage>', xml_content)
-        lineage = lineage_match.group(1) if lineage_match else 'Unknown'
-        
-        _taxonomy_cache[tax_id] = (name, lineage)
-        return (name, lineage)
-    except Exception:
-        _taxonomy_cache[tax_id] = ('Unknown', 'Unknown')
-        return ('Unknown', 'Unknown')
+def load_taxonomy_caches():
+    """Load taxonomy caches if not already loaded."""
+    global _taxonomy_cache, _assembly_cache
+    if not _taxonomy_cache:
+        _taxonomy_cache, _assembly_cache = load_cache()
 
 
 def get_assembly_taxonomy(assembly_id):
-    """Get taxonomy info for an assembly from NCBI."""
-    if assembly_id in _assembly_taxonomy_cache:
-        return _assembly_taxonomy_cache[assembly_id]
-    
-    clean_id = assembly_id.replace('_', '.')
-    url = f"https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/{clean_id}/dataset_report"
-    
-    try:
-        result = subprocess.run(
-            ['curl', '-s', '-H', 'Accept: application/json', url],
-            capture_output=True,
-            text=True,
-            timeout=30
-        )
-        
-        data = json.loads(result.stdout)
-        reports = data.get('reports', [])
-        if reports:
-            org_info = reports[0].get('organism', {})
-            tax_id = str(org_info.get('tax_id', ''))
-            name = org_info.get('organism_name', 'Unknown')
-            
-            if tax_id and tax_id in _taxonomy_cache:
-                _, lineage = _taxonomy_cache[tax_id]
-            elif tax_id:
-                _, lineage = get_taxonomy_lineage(tax_id)
-            else:
-                lineage = 'Unknown'
-            
-            _assembly_taxonomy_cache[assembly_id] = (tax_id, name, lineage)
-            return (tax_id, name, lineage)
-    except Exception:
-        pass
-    
-    _assembly_taxonomy_cache[assembly_id] = (None, 'Unknown', 'Unknown')
-    return (None, 'Unknown', 'Unknown')
+    """Get taxonomy info for an assembly from cache."""
+    asm_data = _assembly_cache.get(assembly_id, {})
+    tax_id = asm_data.get('tax_id')
+    name = asm_data.get('name', 'Unknown')
+    lineage = asm_data.get('lineage', 'Unknown')
+    return (tax_id, name, lineage)
 
 
 def classify_community(lineage):
     """Classify an organism into a community based on its lineage."""
-    if not lineage or lineage == 'Unknown':
-        return 'Other'
-    
-    lineage_lower = lineage.lower()
-    
-    for community, patterns in COMMUNITY_PATTERNS.items():
-        for pattern in patterns:
-            if pattern.lower() in lineage_lower:
-                return community
-    
-    return 'Other'
+    return get_community(lineage)
+
+
+def parse_time(time_str):
+    if not time_str or time_str == '-':
+        return None
+    seconds = 0
+    m_match = re.search(r'(\d+)m', time_str)
+    if m_match:
+        seconds += int(m_match.group(1)) * 60
+    s_match = re.search(r'(\d+)s', time_str)
+    if s_match:
+        seconds += int(s_match.group(1))
+    return seconds
+
+
+def extract_workflow_name(url):
+    match = re.search(r'/workflow-github-com-iwc-workflows-([^-]+(?:-[^-]+)*?)-(?:main|versions)', url)
+    if match:
+        return match.group(1)
+    return 'unknown'
+
+
+def extract_assembly_id(url):
+    match = re.search(r'/data/assemblies/([^/]+)/workflow-', url)
+    if match:
+        return match.group(1)
+    return None
+
+
+def parse_date_range_from_filename(filename):
+    match = re.search(r'(\d{4}-\d{2}-\d{2})-to-(\d{4}-\d{2}-\d{2})', filename)
+    if match:
+        return f"{match.group(1)} to {match.group(2)}"
+    return ''
+
+
+def parse_tab_file(filepath):
+    stats = {
+        'high_level_pages': [],
+        'organism_pages_all': [],
+        'assembly_pages_all': [],
+        'workflow_pages': [],
+    }
+
+    high_level_urls = {
+        '/': 'Home',
+        '/data/organisms': 'Organisms Index',
+        '/data/assemblies': 'Assemblies Index',
+        '/data/priority-pathogens': 'Priority Pathogens Index',
+        '/roadmap': 'Roadmap',
+        '/about': 'About',
+        '/calendar': 'Calendar',
+    }
+
+    with open(filepath, 'r') as f:
+        next(f, None)
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split('\t')
+            if len(parts) < 3:
+                continue
+
+            url = parts[0]
+            try:
+                visitors = int(parts[1])
+                pageviews = int(parts[2])
+            except ValueError:
+                continue
+
+            bounce_rate = parts[3] if len(parts) > 3 else 'N/A'
+            avg_time = parts[4] if len(parts) > 4 else 'N/A'
+
+            if url in high_level_urls:
+                stats['high_level_pages'].append(
+                    {
+                        'url': url,
+                        'visitors': visitors,
+                        'pageviews': pageviews,
+                        'bounce_rate': bounce_rate,
+                        'avg_time': avg_time,
+                    }
+                )
+            elif re.match(r'^/data/organisms/\d+$', url):
+                tax_id = url.split('/')[-1]
+                tax_data = _taxonomy_cache.get(tax_id, {})
+                stats['organism_pages_all'].append(
+                    {
+                        'tax_id': tax_id,
+                        'organism': tax_data.get('name', 'Unknown'),
+                        'visitors': visitors,
+                        'pageviews': pageviews,
+                    }
+                )
+            elif re.match(r'^/data/assemblies/[^/]+$', url):
+                assembly_id = url.split('/')[-1]
+                asm_data = _assembly_cache.get(assembly_id, {})
+                stats['assembly_pages_all'].append(
+                    {
+                        'assembly_id': assembly_id,
+                        'organism': asm_data.get('name', 'Unknown'),
+                        'visitors': visitors,
+                        'pageviews': pageviews,
+                    }
+                )
+            elif '/workflow-' in url:
+                assembly_id = extract_assembly_id(url)
+                if not assembly_id:
+                    continue
+                workflow_name = extract_workflow_name(url)
+                asm_data = _assembly_cache.get(assembly_id, {})
+                stats['workflow_pages'].append(
+                    {
+                        'assembly_id': assembly_id,
+                        'workflow': workflow_name,
+                        'organism': asm_data.get('name', 'Unknown'),
+                        'visitors': visitors,
+                        'pageviews': pageviews,
+                        'time_on_page': parse_time(avg_time),
+                    }
+                )
+
+    stats['high_level_pages'].sort(key=lambda x: x['visitors'], reverse=True)
+    stats['organism_pages_all'].sort(key=lambda x: x['visitors'], reverse=True)
+    stats['assembly_pages_all'].sort(key=lambda x: x['visitors'], reverse=True)
+    return stats
+
+
+def build_organism_report_data(filepath, tab_stats):
+    return {
+        'title': 'Organism and Pathogen Page Analysis',
+        'date_range': parse_date_range_from_filename(filepath.name),
+        'overall_stats': {},
+        'high_level_pages': tab_stats['high_level_pages'],
+        'priority_pathogens': [],
+        'organism_pages_all': tab_stats['organism_pages_all'],
+        'organism_pages_no_assembly': [],
+        'assembly_pages_all': tab_stats['assembly_pages_all'],
+        'assembly_pages_no_workflow': [],
+    }
+
+
+def build_workflow_report_data(filepath, tab_stats):
+    workflows = defaultdict(lambda: {'visitors': 0, 'pageviews': 0, 'assemblies': set()})
+    assembly_totals = defaultdict(lambda: {'visitors': 0, 'pageviews': 0})
+    workflow_organism_totals = defaultdict(int)
+
+    total_visitors = 0
+    total_pageviews = 0
+
+    for row in tab_stats['workflow_pages']:
+        workflow = row['workflow']
+        assembly_id = row['assembly_id']
+        organism = row['organism']
+        visitors = row['visitors']
+        pageviews = row['pageviews']
+
+        total_visitors += visitors
+        total_pageviews += pageviews
+
+        workflows[workflow]['visitors'] += visitors
+        workflows[workflow]['pageviews'] += pageviews
+        workflows[workflow]['assemblies'].add(assembly_id)
+
+        assembly_totals[assembly_id]['visitors'] += visitors
+        assembly_totals[assembly_id]['pageviews'] += pageviews
+
+        workflow_organism_totals[(workflow, organism)] += visitors
+
+    workflows_list = [
+        {
+            'workflow': wf,
+            'visitors': v['visitors'],
+            'pageviews': v['pageviews'],
+            'assemblies': len(v['assemblies']),
+        }
+        for wf, v in workflows.items()
+    ]
+
+    assemblies_list = []
+    for assembly_id, totals in assembly_totals.items():
+        asm_data = _assembly_cache.get(assembly_id, {})
+        assemblies_list.append(
+            {
+                'assembly_id': assembly_id,
+                'organism': asm_data.get('name', 'Unknown'),
+                'visitors': totals['visitors'],
+                'pageviews': totals['pageviews'],
+            }
+        )
+
+    workflow_organism_list = [
+        {
+            'workflow': wf,
+            'organism': org,
+            'visitors': visitors,
+        }
+        for (wf, org), visitors in workflow_organism_totals.items()
+    ]
+
+    return {
+        'title': 'Workflow Configuration Page Analysis',
+        'date_range': parse_date_range_from_filename(filepath.name),
+        'overall_stats': {
+            'total': {
+                'unique': len(assembly_totals),
+                'workflows': len(workflows),
+                'visitors': total_visitors,
+                'pageviews': total_pageviews,
+            }
+        },
+        'workflows': workflows_list,
+        'workflow_organism': workflow_organism_list,
+        'assemblies': assemblies_list,
+    }
 
 
 def parse_organism_analysis(filepath):
@@ -367,7 +498,8 @@ def generate_organism_html(data, output_path):
     organisms_by_community = {c: [] for c in COMMUNITIES_ORDER}
     for o in data['organism_pages_all']:
         tax_id = o['tax_id']
-        name, lineage = _taxonomy_cache.get(tax_id, ('Unknown', 'Unknown'))
+        tax_data = _taxonomy_cache.get(tax_id, {})
+        lineage = tax_data.get('lineage', 'Unknown')
         community = classify_community(lineage)
         organisms_by_community[community].append({
             **o,
@@ -379,7 +511,7 @@ def generate_organism_html(data, output_path):
     assemblies_by_community = {c: [] for c in COMMUNITIES_ORDER}
     for a in data['assembly_pages_all']:
         assembly_id = a['assembly_id']
-        _, name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
+        _, name, lineage = get_assembly_taxonomy(assembly_id)
         community = classify_community(lineage)
         assemblies_by_community[community].append({
             **a,
@@ -700,7 +832,7 @@ def generate_workflow_html(data, output_path):
     assemblies_by_community = {c: [] for c in COMMUNITIES_ORDER}
     for a in data['assemblies']:
         assembly_id = a['assembly_id']
-        _, name, lineage = _assembly_taxonomy_cache.get(assembly_id, (None, 'Unknown', 'Unknown'))
+        _, name, lineage = get_assembly_taxonomy(assembly_id)
         community = classify_community(lineage)
         assemblies_by_community[community].append({
             **a,
@@ -1052,54 +1184,81 @@ def process_file(filepath):
         print(f"Error: File not found: {filepath}", file=sys.stderr)
         return False
     
-    output_path = filepath.with_suffix('.html')
-    
+    if filepath.name == 'top-pages-all-time.tab':
+        print(f"Skipping all-time file: {filepath.name}")
+        return False
+
+    if filepath.suffix == '.tab' and filepath.name.startswith('top-pages-'):
+        tab_stats = parse_tab_file(filepath)
+
+        project_dir = Path(__file__).parent.parent
+        out_dir = project_dir / 'output' / 'fetched'
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        organism_out = out_dir / f"{filepath.stem}-organism-analysis.html"
+        workflow_out = out_dir / f"{filepath.stem}-workflow-analysis.html"
+
+        print(f"Processing tab file: {filepath.name}")
+
+        organism_data = build_organism_report_data(filepath, tab_stats)
+        generate_organism_html(organism_data, organism_out)
+        print(f"  -> {organism_out.relative_to(project_dir)}")
+
+        if tab_stats.get('workflow_pages'):
+            workflow_data = build_workflow_report_data(filepath, tab_stats)
+            generate_workflow_html(workflow_data, workflow_out)
+            print(f"  -> {workflow_out.relative_to(project_dir)}")
+        return True
+
     if 'organism-analysis' in filepath.name:
         print(f"Processing organism analysis: {filepath.name}")
         data = parse_organism_analysis(filepath)
+        output_path = filepath.with_suffix('.html')
         generate_organism_html(data, output_path)
         print(f"  -> {output_path.name}")
         return True
-    elif 'workflow-analysis' in filepath.name:
+    if 'workflow-analysis' in filepath.name:
         print(f"Processing workflow analysis: {filepath.name}")
         data = parse_workflow_analysis(filepath)
+        output_path = filepath.with_suffix('.html')
         generate_workflow_html(data, output_path)
         print(f"  -> {output_path.name}")
         return True
-    else:
-        print(f"Skipping unknown file type: {filepath.name}", file=sys.stderr)
-        return False
+
+    print(f"Skipping unknown file type: {filepath.name}", file=sys.stderr)
+    return False
 
 
 def main():
     parser = argparse.ArgumentParser(description="Generate HTML reports from analysis text files")
     parser.add_argument('path', help="Path to analysis file or directory containing analysis files")
+    
     args = parser.parse_args()
     
     path = Path(args.path)
     
-    # Load taxonomy cache from project root
-    script_dir = Path(__file__).parent
-    cache_file = script_dir.parent / '.taxonomy_cache.json'
-    if cache_file.exists():
-        load_taxonomy_cache(cache_file)
-        print(f"Loaded taxonomy cache ({len(_taxonomy_cache)} taxa, {len(_assembly_taxonomy_cache)} assemblies)", file=sys.stderr)
-    else:
-        print("Warning: No taxonomy cache found. Run generate_monthly_summary_html.py first to build cache.", file=sys.stderr)
+    # Load taxonomy cache
+    print("Loading taxonomy cache...", file=sys.stderr)
+    load_taxonomy_caches()
+    print(f"  Loaded {len(_taxonomy_cache)} taxonomy entries", file=sys.stderr)
+    print(f"  Loaded {len(_assembly_cache)} assembly entries", file=sys.stderr)
     
     if path.is_file():
         process_file(path)
     elif path.is_dir():
-        # Process all analysis files in directory
-        files = list(path.glob('*-analysis.txt'))
+        tab_files = list(path.glob('top-pages-*.tab'))
+        analysis_files = list(path.glob('*-analysis.txt'))
+        files = sorted(tab_files) + sorted(analysis_files)
         if not files:
-            print(f"No analysis files found in {path}", file=sys.stderr)
+            print(f"No input files found in {path}", file=sys.stderr)
             sys.exit(1)
-        
-        print(f"Found {len(files)} analysis files")
-        for f in sorted(files):
-            process_file(f)
-        print(f"\nGenerated {len(files)} HTML reports")
+
+        processed = 0
+        print(f"Found {len(files)} input files")
+        for f in files:
+            if process_file(f):
+                processed += 1
+        print(f"\nProcessed {processed} files")
     else:
         print(f"Error: Path not found: {path}", file=sys.stderr)
         sys.exit(1)
