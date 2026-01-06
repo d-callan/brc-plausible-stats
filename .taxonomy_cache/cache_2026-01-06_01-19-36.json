@@ -1,0 +1,3292 @@
+{
+  "version": "2026-01-06_01-19-36",
+  "created": "2026-01-06T01:19:36.168091",
+  "source_data_hash": "3caaed75886fea7e",
+  "taxonomy": {
+    "100269": {
+      "name": "Paragonimus kellicotti",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Spiralia; Lophotrochozoa; Platyhelminthes; Trematoda; Digenea; Plagiorchiida; Troglotremata; Troglotrematidae; Paragonimus",
+      "fetched_at": "2025-12-22T16:59:11.358350"
+    },
+    "10090": {
+      "name": "Mus musculus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Boreoeutheria; Euarchontoglires; Glires; Rodentia; Myomorpha; Muroidea; Muridae; Murinae; Mus; Mus",
+      "fetched_at": "2025-12-22T16:59:11.864225"
+    },
+    "101203": {
+      "name": "Saprolegnia parasitica",
+      "lineage": "cellular organisms; Eukaryota; Sar; Stramenopiles; Oomycota; Saprolegniomycetes; Saprolegniales; Saprolegniaceae; Saprolegnia",
+      "fetched_at": "2025-12-22T16:59:12.438585"
+    },
+    "10244": {
+      "name": "Monkeypox virus",
+      "lineage": "Viruses; Varidnaviria; Bamfordvirae; Nucleocytoviricota; Pokkesviricetes; Chitovirales; Poxviridae; Chordopoxvirinae; Orthopoxvirus; Orthopoxvirus monkeypox",
+      "fetched_at": "2025-12-22T16:59:12.920695"
+    },
+    "10255": {
+      "name": "Variola virus",
+      "lineage": "Viruses; Varidnaviria; Bamfordvirae; Nucleocytoviricota; Pokkesviricetes; Chitovirales; Poxviridae; Chordopoxvirinae; Orthopoxvirus; Orthopoxvirus variola",
+      "fetched_at": "2025-12-22T16:59:13.427853"
+    },
+    "1047171": {
+      "name": "Zymoseptoria tritici",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; dothideomyceta; Dothideomycetes; Dothideomycetidae; Mycosphaerellales; Mycosphaerellaceae; Zymoseptoria",
+      "fetched_at": "2025-12-22T16:59:13.899134"
+    },
+    "1068590": {
+      "name": "Rickettsia asembonensis",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; spotted fever group",
+      "fetched_at": "2025-12-22T16:59:14.414737"
+    },
+    "1108849": {
+      "name": "Penicillium rubens",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Penicillium; Penicillium chrysogenum species complex",
+      "fetched_at": "2025-12-22T16:59:14.925631"
+    },
+    "11158": {
+      "name": "Paramyxoviridae",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Haploviricotina; Monjiviricetes; Mononegavirales",
+      "fetched_at": "2025-12-22T16:59:15.427701"
+    },
+    "11320": {
+      "name": "Influenza A virus",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Insthoviricetes; Articulavirales; Orthomyxoviridae; Alphainfluenzavirus; Alphainfluenzavirus influenzae",
+      "fetched_at": "2025-12-22T16:59:15.930946"
+    },
+    "115417": {
+      "name": "Globisporangium iwayamae",
+      "lineage": "cellular organisms; Eukaryota; Sar; Stramenopiles; Oomycota; Peronosporomycetes; Pythiales; Pythiaceae; Globisporangium",
+      "fetched_at": "2025-12-22T16:59:16.445784"
+    },
+    "1185359": {
+      "name": "Bat sapovirus TLC58/HK",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Picornavirales; Caliciviridae; Sapovirus; unclassified Sapovirus",
+      "fetched_at": "2025-12-22T16:59:17.243599"
+    },
+    "11978": {
+      "name": "Feline calicivirus",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Picornavirales; Caliciviridae; Vesivirus; Vesivirus felis",
+      "fetched_at": "2025-12-22T16:59:17.898578"
+    },
+    "121225": {
+      "name": "Pediculus humanus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Paraneoptera; Psocodea; Troctomorpha; Phthiraptera; Anoplura; Pediculidae; Pediculus",
+      "fetched_at": "2025-12-22T16:59:18.387803"
+    },
+    "1220188": {
+      "name": "Aspergillus tanneri",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Circumdati",
+      "fetched_at": "2025-12-22T16:59:18.884074"
+    },
+    "1280935": {
+      "name": "Cryptosporidium sp. chipmunk genotype I",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Conoidasida; Coccidia; Eucoccidiorida; Eimeriorina; Cryptosporidiidae; Cryptosporidium; unclassified Cryptosporidium; Cryptosporidium genotype names",
+      "fetched_at": "2025-12-22T16:59:19.403277"
+    },
+    "1314": {
+      "name": "Streptococcus pyogenes",
+      "lineage": "cellular organisms; Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae; Streptococcus",
+      "fetched_at": "2025-12-22T16:59:20.017447"
+    },
+    "1340029": {
+      "name": "Aspergillus eucalypticola",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Circumdati",
+      "fetched_at": "2025-12-22T16:59:20.662498"
+    },
+    "1351": {
+      "name": "Enterococcus faecalis",
+      "lineage": "cellular organisms; Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Enterococcaceae; Enterococcus",
+      "fetched_at": "2025-12-22T16:59:21.209391"
+    },
+    "138948": {
+      "name": "Enterovirus A",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Picornavirales; Picornaviridae; Ensavirinae; unclassified Ensavirinae; Enterovirus; Enterovirus alphacoxsackie",
+      "fetched_at": "2025-12-22T16:59:21.719613"
+    },
+    "139047": {
+      "name": "Anopheles bellator",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Kerteszia",
+      "fetched_at": "2025-12-22T16:59:22.221342"
+    },
+    "1392": {
+      "name": "Bacillus anthracis",
+      "lineage": "cellular organisms; Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae; Bacillus; Bacillus cereus group",
+      "fetched_at": "2025-12-22T16:59:22.911488"
+    },
+    "1407638": {
+      "name": "Circo-like virus-Brazil",
+      "lineage": "Viruses; unclassified viruses; unclassified DNA viruses; unclassified ssDNA viruses",
+      "fetched_at": "2025-12-22T16:59:23.432870"
+    },
+    "1463230": {
+      "name": "Blechomonas ayalai",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Blechomonas",
+      "fetched_at": "2025-12-22T16:59:24.036910"
+    },
+    "1481663": {
+      "name": "Vibrio metoecus",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio",
+      "fetched_at": "2025-12-22T16:59:24.595586"
+    },
+    "148304": {
+      "name": "Magnaporthiopsis poae",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; sordariomyceta; Sordariomycetes; Sordariomycetidae; Magnaporthales; Magnaporthaceae; Magnaporthiopsis",
+      "fetched_at": "2025-12-22T16:59:25.109682"
+    },
+    "1518534": {
+      "name": "Anopheles coluzzii",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Cellia; Pyretophorus; gambiae species complex",
+      "fetched_at": "2025-12-22T16:59:25.781643"
+    },
+    "157538": {
+      "name": "Leptomonas pyrrhocoris",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Leishmaniinae; Leptomonas",
+      "fetched_at": "2025-12-22T16:59:26.394142"
+    },
+    "162425": {
+      "name": "Aspergillus nidulans",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Nidulantes",
+      "fetched_at": "2025-12-22T16:59:26.874897"
+    },
+    "1639": {
+      "name": "Listeria monocytogenes",
+      "lineage": "cellular organisms; Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Listeriaceae; Listeria",
+      "fetched_at": "2025-12-22T16:59:27.520453"
+    },
+    "1664694": {
+      "name": "Cyphellophora attinorum",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Chaetothyriomycetidae; Chaetothyriales; Cyphellophoraceae; Cyphellophora",
+      "fetched_at": "2025-12-22T16:59:28.339491"
+    },
+    "173": {
+      "name": "Leptospira interrogans",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Leptospirales; Leptospiraceae; Leptospira",
+      "fetched_at": "2025-12-22T16:59:28.953252"
+    },
+    "1773": {
+      "name": "Mycobacterium tuberculosis",
+      "lineage": "cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex",
+      "fetched_at": "2025-12-22T16:59:29.499714"
+    },
+    "1812179": {
+      "name": "Bovine calicivirus strain Kirklareli",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Picornavirales; Caliciviridae; Nebovirus; unclassified Nebovirus",
+      "fetched_at": "2025-12-22T16:59:30.184167"
+    },
+    "1824": {
+      "name": "Nocardia asteroides",
+      "lineage": "cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Nocardiaceae; Nocardia",
+      "fetched_at": "2025-12-22T16:59:31.275022"
+    },
+    "1859096": {
+      "name": "Cryptococcus deuterogattii",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Basidiomycota; Agaricomycotina; Tremellomycetes; Tremellales; Cryptococcaceae; Cryptococcus; Cryptococcus gattii species complex",
+      "fetched_at": "2025-12-22T16:59:32.436104"
+    },
+    "1866961": {
+      "name": "Amphiamblys sp. WSBS2006",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Microsporidia; Microsporidia incertae sedis; Amphiacanthidae; Amphiamblys; unclassified Amphiamblys",
+      "fetched_at": "2025-12-22T16:59:33.051150"
+    },
+    "186751": {
+      "name": "Anopheles moucheti",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Cellia; Myzomyia",
+      "fetched_at": "2025-12-22T16:59:33.830011"
+    },
+    "187106": {
+      "name": "Caloenas nicobarica",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Sauropsida; Sauria; Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda; Coelurosauria; Aves; Neognathae; Neoaves; Columbimorphae; Columbiformes; Columbidae; Caloenas",
+      "fetched_at": "2025-12-22T16:59:34.655106"
+    },
+    "1891728": {
+      "name": "Alphapolyomavirus terdecihominis",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Sepolyvirales; Polyomaviridae; Alphapolyomavirus",
+      "fetched_at": "2025-12-22T16:59:35.300766"
+    },
+    "1955775": {
+      "name": "Emergomyces africanus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Onygenales; Ajellomycetaceae; Emergomyces",
+      "fetched_at": "2025-12-22T16:59:35.795806"
+    },
+    "196912": {
+      "name": "Acanthamoeba mauritaniensis",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T16:59:36.287489"
+    },
+    "199306": {
+      "name": "Coccidioides posadasii",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Onygenales; Onygenaceae; Coccidioides",
+      "fetched_at": "2025-12-22T16:59:36.835756"
+    },
+    "199890": {
+      "name": "Anopheles epiroticus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Cellia; Pyretophorus; sundaicus species complex",
+      "fetched_at": "2025-12-22T16:59:37.589118"
+    },
+    "2023186": {
+      "name": "Leptospira adleri",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Leptospirales; Leptospiraceae; Leptospira",
+      "fetched_at": "2025-12-22T16:59:38.072497"
+    },
+    "202919": {
+      "name": "Acanthamoeba divionensis",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T16:59:38.684211"
+    },
+    "2074759": {
+      "name": "Amauroascus verrucosus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Onygenales; Onygenaceae; Amauroascus",
+      "fetched_at": "2025-12-22T16:59:39.297029"
+    },
+    "208452": {
+      "name": "Plasmodium coatneyi",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium",
+      "fetched_at": "2025-12-22T16:59:39.839362"
+    },
+    "211522": {
+      "name": "Acanthamoeba quina",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T16:59:40.312080"
+    },
+    "2268382": {
+      "name": "Cryptococcus gattii VGV",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Basidiomycota; Agaricomycotina; Tremellomycetes; Tremellales; Cryptococcaceae; Cryptococcus; Cryptococcus gattii species complex; unclassified Cryptococcus gattii species complex",
+      "fetched_at": "2025-12-22T16:59:40.823881"
+    },
+    "2592485": {
+      "name": "Blastocrithidia nonstop",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Blastocrithidia",
+      "fetched_at": "2025-12-22T16:59:41.651596"
+    },
+    "2600580": {
+      "name": "Hepatocystis sp. ex Piliocolobus tephrosceles",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Hepatocystis; unclassified Hepatocystis",
+      "fetched_at": "2025-12-22T16:59:42.144701"
+    },
+    "2697049": {
+      "name": "Severe acute respiratory syndrome coronavirus 2",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus; Betacoronavirus pandemicum",
+      "fetched_at": "2025-12-22T16:59:42.691175"
+    },
+    "273372": {
+      "name": "Candida metapsilosis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Pichiomycetes; Serinales; Debaryomycetaceae; Candida/Lodderomyces clade; Candida",
+      "fetched_at": "2025-12-22T16:59:43.203296"
+    },
+    "2761623": {
+      "name": "Rickettsia tillamookensis",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; spotted fever group",
+      "fetched_at": "2025-12-22T16:59:43.735339"
+    },
+    "2761625": {
+      "name": "Allodiplogaster sudhausi",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Nematoda; Chromadorea; Rhabditida; Rhabditina; Diplogasteromorpha; Diplogasteroidea; Diplogasteridae; Allodiplogaster",
+      "fetched_at": "2025-12-22T16:59:44.290135"
+    },
+    "278021": {
+      "name": "Antonospora locustae",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Microsporidia; Microsporidia incertae sedis; Antonospora",
+      "fetched_at": "2025-12-22T16:59:44.777604"
+    },
+    "28015": {
+      "name": "Acanthamoeba palestinensis",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T16:59:45.282155"
+    },
+    "2802991": {
+      "name": "Leishmania sp. Namibia",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Leishmaniinae; Leishmania; Mundinia; unclassified Mundinia",
+      "fetched_at": "2025-12-22T16:59:45.812921"
+    },
+    "2810036": {
+      "name": "Leptospira abararensis",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Leptospirales; Leptospiraceae; Leptospira",
+      "fetched_at": "2025-12-22T16:59:46.293458"
+    },
+    "28583": {
+      "name": "Allomyces macrogynus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Blastocladiomycota; Blastocladiomycetes; Blastocladiales; Blastocladiaceae; Allomyces",
+      "fetched_at": "2025-12-22T16:59:46.802400"
+    },
+    "287": {
+      "name": "Pseudomonas aeruginosa",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; Pseudomonas aeruginosa group",
+      "fetched_at": "2025-12-22T16:59:47.486829"
+    },
+    "28901": {
+      "name": "Salmonella enterica",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Salmonella",
+      "fetched_at": "2025-12-22T16:59:48.038877"
+    },
+    "290746": {
+      "name": "Acrobeloides nanus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Nematoda; Chromadorea; Rhabditida; Tylenchina; Cephalobomorpha; Cephaloboidea; Cephalobidae; Acrobeloides",
+      "fetched_at": "2025-12-22T16:59:48.570803"
+    },
+    "29196": {
+      "name": "Acanthamoeba lenticulata",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T16:59:49.064971"
+    },
+    "2919603": {
+      "name": "Acanthamoeba sp. SK_2022c",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba; unclassified Acanthamoeba",
+      "fetched_at": "2025-12-22T16:59:49.739641"
+    },
+    "2919604": {
+      "name": "Acanthamoeba sp. SK_2022b",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba; unclassified Acanthamoeba",
+      "fetched_at": "2025-12-22T16:59:50.458175"
+    },
+    "2919605": {
+      "name": "Acanthamoeba sp. SK_2022a",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba; unclassified Acanthamoeba",
+      "fetched_at": "2025-12-22T16:59:50.991412"
+    },
+    "293227": {
+      "name": "Cyphellophora europaea",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Chaetothyriomycetidae; Chaetothyriales; Cyphellophoraceae; Cyphellophora",
+      "fetched_at": "2025-12-22T16:59:51.488336"
+    },
+    "2950023": {
+      "name": "Leptospira limi",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Leptospirales; Leptospiraceae; Leptospira",
+      "fetched_at": "2025-12-22T16:59:52.015059"
+    },
+    "29507": {
+      "name": "Leptospira kirschneri",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Leptospirales; Leptospiraceae; Leptospira",
+      "fetched_at": "2025-12-22T16:59:52.498364"
+    },
+    "2955291": {
+      "name": "Alphainfluenzavirus influenzae",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Insthoviricetes; Articulavirales; Orthomyxoviridae; Alphainfluenzavirus",
+      "fetched_at": "2025-12-22T16:59:53.122998"
+    },
+    "29833": {
+      "name": "Hanseniaspora uvarum",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Saccharomycetes; Saccharomycodales; Saccharomycodaceae; Hanseniaspora",
+      "fetched_at": "2025-12-22T16:59:53.623442"
+    },
+    "30066": {
+      "name": "Anopheles merus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Cellia; Pyretophorus; gambiae species complex",
+      "fetched_at": "2025-12-22T16:59:54.174246"
+    },
+    "30069": {
+      "name": "Anopheles stephensi",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Cellia; Neocellia",
+      "fetched_at": "2025-12-22T16:59:55.273185"
+    },
+    "3048170": {
+      "name": "Orthoflavivirus kyasanurense",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Kitrinoviricota; Flasuviricetes; Amarillovirales; Flaviviridae; Orthoflavivirus",
+      "fetched_at": "2025-12-22T16:59:55.988381"
+    },
+    "3048448": {
+      "name": "Orthoflavivirus nilense",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Kitrinoviricota; Flasuviricetes; Amarillovirales; Flaviviridae; Orthoflavivirus",
+      "fetched_at": "2025-12-22T16:59:56.538599"
+    },
+    "3049954": {
+      "name": "Orthopneumovirus hominis",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Haploviricotina; Monjiviricetes; Mononegavirales; Pneumoviridae; Orthopneumovirus",
+      "fetched_at": "2025-12-22T16:59:57.075516"
+    },
+    "3050305": {
+      "name": "Simplexvirus macacinealpha1",
+      "lineage": "Viruses; Duplodnaviria; Heunggongvirae; Peploviricota; Herviviricetes; Herpesvirales; Orthoherpesviridae; Alphaherpesvirinae; Simplexvirus",
+      "fetched_at": "2025-12-22T16:59:57.598888"
+    },
+    "3052225": {
+      "name": "Henipavirus nipahense",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Haploviricotina; Monjiviricetes; Mononegavirales; Paramyxoviridae; Orthoparamyxovirinae; Henipavirus",
+      "fetched_at": "2025-12-22T16:59:58.151756"
+    },
+    "3052303": {
+      "name": "Mammarenavirus choriomeningitidis",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Bunyaviricetes; Hareavirales; Arenaviridae; Mammarenavirus",
+      "fetched_at": "2025-12-22T16:59:58.677494"
+    },
+    "3052345": {
+      "name": "Morbillivirus hominis",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Haploviricotina; Monjiviricetes; Mononegavirales; Paramyxoviridae; Orthoparamyxovirinae; Morbillivirus",
+      "fetched_at": "2025-12-22T16:59:59.185083"
+    },
+    "3052462": {
+      "name": "Orthoebolavirus zairense",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Haploviricotina; Monjiviricetes; Mononegavirales; unclassified Mononegavirales; Filoviridae; Orthoebolavirus",
+      "fetched_at": "2025-12-22T16:59:59.737892"
+    },
+    "3052556": {
+      "name": "Orthorubulavirus hominis",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Haploviricotina; Monjiviricetes; Mononegavirales; Paramyxoviridae; Rubulavirinae; Orthorubulavirus",
+      "fetched_at": "2025-12-22T17:00:00.255669"
+    },
+    "3052557": {
+      "name": "Orthorubulavirus laryngotracheitidis",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Haploviricotina; Monjiviricetes; Mononegavirales; Paramyxoviridae; Rubulavirinae; Orthorubulavirus",
+      "fetched_at": "2025-12-22T17:00:01.417835"
+    },
+    "3052608": {
+      "name": "Pegivirus hominis",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Kitrinoviricota; Flasuviricetes; Amarillovirales; Flaviviridae; Pegivirus",
+      "fetched_at": "2025-12-22T17:00:02.024975"
+    },
+    "3066251": {
+      "name": "Rickettsia endosymbiont of Polydrusus tereticollis",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; unclassified Rickettsia",
+      "fetched_at": "2025-12-22T17:00:02.640400"
+    },
+    "3066252": {
+      "name": "Rickettsia endosymbiont of Rhinocyllus conicus",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; unclassified Rickettsia",
+      "fetched_at": "2025-12-22T17:00:03.155377"
+    },
+    "319629": {
+      "name": "Aspergillus brasiliensis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Circumdati",
+      "fetched_at": "2025-12-22T17:00:03.651979"
+    },
+    "323732": {
+      "name": "Babesia duncani",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Piroplasmida; Babesiidae; Babesia",
+      "fetched_at": "2025-12-22T17:00:04.141502"
+    },
+    "32595": {
+      "name": "Babesia divergens",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Piroplasmida; Babesiidae; Babesia",
+      "fetched_at": "2025-12-22T17:00:04.640928"
+    },
+    "32599": {
+      "name": "Acanthamoeba rhysodes",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:00:05.514669"
+    },
+    "32600": {
+      "name": "Acanthamoeba royreba",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:00:06.033782"
+    },
+    "330879": {
+      "name": "Aspergillus fumigatus Af293",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Fumigati; Aspergillus fumigatus",
+      "fetched_at": "2025-12-22T17:00:06.533579"
+    },
+    "333754": {
+      "name": "Alphapapillomavirus 10",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:07.072084"
+    },
+    "333766": {
+      "name": "Alphapapillomavirus 13",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:07.559938"
+    },
+    "333767": {
+      "name": "Alphapapillomavirus 3",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:08.684986"
+    },
+    "337039": {
+      "name": "Alphapapillomavirus 2",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:09.203043"
+    },
+    "337041": {
+      "name": "Alphapapillomavirus 9",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:09.770568"
+    },
+    "337042": {
+      "name": "Alphapapillomavirus 7",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:10.260238"
+    },
+    "337043": {
+      "name": "Alphapapillomavirus 4",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:10.748924"
+    },
+    "337044": {
+      "name": "Alphapapillomavirus 5",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:11.859575"
+    },
+    "337048": {
+      "name": "Alphapapillomavirus 1",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:12.371773"
+    },
+    "337049": {
+      "name": "Alphapapillomavirus 11",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:12.891056"
+    },
+    "337050": {
+      "name": "Alphapapillomavirus 6",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:00:13.360134"
+    },
+    "340412": {
+      "name": "Aspergillus novofumigatus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Fumigati",
+      "fetched_at": "2025-12-22T17:00:13.873172"
+    },
+    "3418604": {
+      "name": "Betacoronavirus pandemicum",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus",
+      "fetched_at": "2025-12-22T17:00:14.397916"
+    },
+    "3418650": {
+      "name": "Lentivirus humimdef1",
+      "lineage": "Viruses; Riboviria; Pararnavirae; Artverviricota; Revtraviricetes; Ortervirales; Retroviridae; Orthoretrovirinae; unclassified Orthoretrovirinae; Lentivirus",
+      "fetched_at": "2025-12-22T17:00:14.906671"
+    },
+    "3426314": {
+      "name": "Alphavirus rossriver",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Kitrinoviricota; Alsuviricetes; Martellivirales; Togaviridae; Alphavirus",
+      "fetched_at": "2025-12-22T17:00:15.486515"
+    },
+    "3428500": {
+      "name": "Enterovirus alphacoxsackie",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Picornavirales; Picornaviridae; Ensavirinae; unclassified Ensavirinae; Enterovirus",
+      "fetched_at": "2025-12-22T17:00:15.980386"
+    },
+    "3431196": {
+      "name": "Norovirus norwalkense",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Picornavirales; Caliciviridae; Norovirus",
+      "fetched_at": "2025-12-22T17:00:16.498554"
+    },
+    "3431483": {
+      "name": "Orthopoxvirus monkeypox",
+      "lineage": "Viruses; Varidnaviria; Bamfordvirae; Nucleocytoviricota; Pokkesviricetes; Chitovirales; Poxviridae; Chordopoxvirinae; Orthopoxvirus",
+      "fetched_at": "2025-12-22T17:00:17.025156"
+    },
+    "3431487": {
+      "name": "Orthopoxvirus variola",
+      "lineage": "Viruses; Varidnaviria; Bamfordvirae; Nucleocytoviricota; Pokkesviricetes; Chitovirales; Poxviridae; Chordopoxvirinae; Orthopoxvirus",
+      "fetched_at": "2025-12-22T17:00:17.545895"
+    },
+    "3432193": {
+      "name": "Rotavirus alphagastroenteritidis",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Duplornaviricota; Resentoviricetes; unclassified Resentoviricetes; Reovirales; Sedoreoviridae; Rotavirus",
+      "fetched_at": "2025-12-22T17:00:18.620766"
+    },
+    "3432910": {
+      "name": "Torbevirus brisa",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cressdnaviricota; Arfiviricetes; Recrevirales; Redondoviridae; Torbevirus",
+      "fetched_at": "2025-12-22T17:00:19.228571"
+    },
+    "3433809": {
+      "name": "Alphacoronavirus amsterdamense",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Alphacoronavirus; Setracovirus",
+      "fetched_at": "2025-12-22T17:00:19.731827"
+    },
+    "35231": {
+      "name": "Vairimorpha apis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Microsporidia; Apansporoblastina; Nosematidae; Vairimorpha",
+      "fetched_at": "2025-12-22T17:00:20.255769"
+    },
+    "36330": {
+      "name": "Plasmodium ovale",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Plasmodium)",
+      "fetched_at": "2025-12-22T17:00:21.076989"
+    },
+    "36651": {
+      "name": "Penicillium digitatum",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Penicillium",
+      "fetched_at": "2025-12-22T17:00:21.579466"
+    },
+    "36911": {
+      "name": "Clavispora lusitaniae",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Pichiomycetes; Serinales; Metschnikowiaceae; Clavispora",
+      "fetched_at": "2025-12-22T17:00:22.716256"
+    },
+    "37727": {
+      "name": "Talaromyces marneffei",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Trichocomaceae; Talaromyces; Talaromyces sect. Talaromyces",
+      "fetched_at": "2025-12-22T17:00:23.212001"
+    },
+    "37769": {
+      "name": "Cryptococcus gattii",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Basidiomycota; Agaricomycotina; Tremellomycetes; Tremellales; Cryptococcaceae; Cryptococcus; Cryptococcus gattii species complex",
+      "fetched_at": "2025-12-22T17:00:23.693946"
+    },
+    "38527": {
+      "name": "Abramis brama",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Actinopterygii; Actinopteri; Neopterygii; Teleostei; Osteoglossocephalai; Clupeocephala; Otomorpha; Ostariophysi; Otophysi; Cypriniphysae; Cypriniformes; Cyprinoidei; Leuciscidae; Leuciscinae; Abramis",
+      "fetched_at": "2025-12-22T17:00:24.183157"
+    },
+    "40410": {
+      "name": "Cryptococcus deneoformans",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Basidiomycota; Agaricomycotina; Tremellomycetes; Tremellales; Cryptococcaceae; Cryptococcus; Cryptococcus neoformans species complex",
+      "fetched_at": "2025-12-22T17:00:24.696310"
+    },
+    "40993": {
+      "name": "Aspergillus carbonarius",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Circumdati",
+      "fetched_at": "2025-12-22T17:00:25.235199"
+    },
+    "41047": {
+      "name": "Aspergillus thermomutatus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Fumigati",
+      "fetched_at": "2025-12-22T17:00:25.738040"
+    },
+    "41068": {
+      "name": "Aspergillus campestris",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Circumdati",
+      "fetched_at": "2025-12-22T17:00:26.240859"
+    },
+    "42374": {
+      "name": "Candida dubliniensis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Pichiomycetes; Serinales; Debaryomycetaceae; Candida/Lodderomyces clade; Candida",
+      "fetched_at": "2025-12-22T17:00:26.783055"
+    },
+    "42434": {
+      "name": "Culex pipiens pallens",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Culicinae; Culicini; Culex; Culex; Culex pipiens complex; Culex pipiens",
+      "fetched_at": "2025-12-22T17:00:27.263343"
+    },
+    "42458": {
+      "name": "Lichtheimia corymbifera",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Mucoromycota; Mucoromycotina; Mucoromycetes; Mucorales; Lichtheimiaceae; Lichtheimia",
+      "fetched_at": "2025-12-22T17:00:28.091053"
+    },
+    "426098": {
+      "name": "Eutrigla gurnardus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Actinopterygii; Actinopteri; Neopterygii; Teleostei; Osteoglossocephalai; Clupeocephala; Euteleosteomorpha; Neoteleostei; Eurypterygia; Ctenosquamata; Acanthomorphata; Euacanthomorphacea; Percomorphaceae; Eupercaria; Perciformes; Triglioidei; Triglidae; Eutrigla",
+      "fetched_at": "2025-12-22T17:00:28.591931"
+    },
+    "42839": {
+      "name": "Anopheles aquasalis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Nyssorhynchus; albimanus section; oswaldoi series; oswaldoi group; oswaldoi subgroup",
+      "fetched_at": "2025-12-22T17:00:29.158844"
+    },
+    "43142": {
+      "name": "Acanthamoeba culbertsoni",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:00:29.879781"
+    },
+    "43151": {
+      "name": "Anopheles darlingi",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Nyssorhynchus; argyritarsis section; argyritarsis series; darlingi group",
+      "fetched_at": "2025-12-22T17:00:30.829777"
+    },
+    "44386": {
+      "name": "Haemaphysalis longicornis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Chelicerata; Arachnida; Acari; Parasitiformes; Ixodida; Ixodoidea; Ixodidae; Haemaphysalinae; Haemaphysalis",
+      "fetched_at": "2025-12-22T17:00:31.339185"
+    },
+    "45524": {
+      "name": "[Candida] blankii",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Dipodascomycetes; Dipodascales; Trichomonascaceae; Trichomonascaceae incertae sedis; Candida/Trichomonascaceae clade",
+      "fetched_at": "2025-12-22T17:00:31.891463"
+    },
+    "45573": {
+      "name": "[Candida] oleophila",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Pichiomycetes; Serinales; Debaryomycetaceae; Kurtzmaniella",
+      "fetched_at": "2025-12-22T17:00:32.397518"
+    },
+    "46125": {
+      "name": "Abiotrophia defectiva",
+      "lineage": "cellular organisms; Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Aerococcaceae; Abiotrophia",
+      "fetched_at": "2025-12-22T17:00:32.921900"
+    },
+    "470": {
+      "name": "Acinetobacter baumannii",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter; Acinetobacter calcoaceticus/baumannii complex",
+      "fetched_at": "2025-12-22T17:00:33.424544"
+    },
+    "48703": {
+      "name": "Podospora comata",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; sordariomyceta; Sordariomycetes; Sordariomycetidae; Sordariales; Podosporaceae; Podospora",
+      "fetched_at": "2025-12-22T17:00:33.962496"
+    },
+    "4952": {
+      "name": "Yarrowia lipolytica",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Dipodascomycetes; Dipodascales; Dipodascales incertae sedis; Yarrowia",
+      "fetched_at": "2025-12-22T17:00:34.471405"
+    },
+    "498019": {
+      "name": "Candidozyma auris",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Pichiomycetes; Serinales; Metschnikowiaceae; Candidozyma",
+      "fetched_at": "2025-12-22T17:00:34.952628"
+    },
+    "5037": {
+      "name": "Histoplasma capsulatum",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Onygenales; Ajellomycetaceae; Histoplasma",
+      "fetched_at": "2025-12-22T17:00:35.616915"
+    },
+    "5052": {
+      "name": "Aspergillus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae",
+      "fetched_at": "2025-12-22T17:00:36.109065"
+    },
+    "5053": {
+      "name": "Aspergillus aculeatus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Circumdati",
+      "fetched_at": "2025-12-22T17:00:36.613667"
+    },
+    "5059": {
+      "name": "Aspergillus flavus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Circumdati",
+      "fetched_at": "2025-12-22T17:00:37.160797"
+    },
+    "5105": {
+      "name": "Ascosphaera apis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Onygenales; Ascosphaeraceae; Ascosphaera",
+      "fetched_at": "2025-12-22T17:00:37.970836"
+    },
+    "511": {
+      "name": "Alcaligenes faecalis",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Alcaligenes",
+      "fetched_at": "2025-12-22T17:00:38.481856"
+    },
+    "520": {
+      "name": "Bordetella pertussis",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Bordetella",
+      "fetched_at": "2025-12-22T17:00:39.026713"
+    },
+    "5201": {
+      "name": "Cladonia chlorophaea",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Lecanoromycetes; OSLEUM clade; Lecanoromycetidae; Lecanorales; Lecanorineae; Cladoniaceae; Cladonia",
+      "fetched_at": "2025-12-22T17:00:39.529516"
+    },
+    "5207": {
+      "name": "Cryptococcus neoformans",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Basidiomycota; Agaricomycotina; Tremellomycetes; Tremellales; Cryptococcaceae; Cryptococcus; Cryptococcus neoformans species complex",
+      "fetched_at": "2025-12-22T17:00:40.039368"
+    },
+    "52288": {
+      "name": "Plasmodium inui",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Plasmodium)",
+      "fetched_at": "2025-12-22T17:00:40.511453"
+    },
+    "5297": {
+      "name": "Puccinia graminis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Basidiomycota; Pucciniomycotina; Pucciniomycetes; Pucciniales; Pucciniaceae; Puccinia",
+      "fetched_at": "2025-12-22T17:00:40.995878"
+    },
+    "5476": {
+      "name": "Candida albicans",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Pichiomycetes; Serinales; Debaryomycetaceae; Candida/Lodderomyces clade; Candida",
+      "fetched_at": "2025-12-22T17:00:41.670486"
+    },
+    "5478": {
+      "name": "Nakaseomyces glabratus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Saccharomycetes; Saccharomycetales; Saccharomycetaceae; Nakaseomyces",
+      "fetched_at": "2025-12-22T17:00:42.162809"
+    },
+    "5480": {
+      "name": "Candida parapsilosis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Saccharomycotina; Pichiomycetes; Serinales; Debaryomycetaceae; Candida/Lodderomyces clade; Candida",
+      "fetched_at": "2025-12-22T17:00:42.691295"
+    },
+    "5501": {
+      "name": "Coccidioides immitis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Onygenales; Onygenaceae; Coccidioides",
+      "fetched_at": "2025-12-22T17:00:43.291609"
+    },
+    "5506": {
+      "name": "Fusarium",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; sordariomyceta; Sordariomycetes; Hypocreomycetidae; Hypocreales; Nectriaceae",
+      "fetched_at": "2025-12-22T17:00:44.011082"
+    },
+    "5507": {
+      "name": "Fusarium oxysporum",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; sordariomyceta; Sordariomycetes; Hypocreomycetidae; Hypocreales; Nectriaceae; Fusarium; Fusarium oxysporum species complex",
+      "fetched_at": "2025-12-22T17:00:44.492703"
+    },
+    "5551": {
+      "name": "Trichophyton rubrum",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Onygenales; Arthrodermataceae; Trichophyton",
+      "fetched_at": "2025-12-22T17:00:44.995133"
+    },
+    "5599": {
+      "name": "Alternaria alternata",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; dothideomyceta; Dothideomycetes; Pleosporomycetidae; Pleosporales; Pleosporineae; Pleosporaceae; Alternaria; Alternaria sect. Alternaria; Alternaria alternata complex",
+      "fetched_at": "2025-12-22T17:00:45.502149"
+    },
+    "562": {
+      "name": "Escherichia coli",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia",
+      "fetched_at": "2025-12-22T17:00:46.034267"
+    },
+    "5660": {
+      "name": "Leishmania braziliensis",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Leishmaniinae; Leishmania; Viannia; Leishmania braziliensis species complex",
+      "fetched_at": "2025-12-22T17:00:46.552340"
+    },
+    "5661": {
+      "name": "Leishmania donovani",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Leishmaniinae; Leishmania; Leishmania; Leishmania donovani species complex",
+      "fetched_at": "2025-12-22T17:00:47.050560"
+    },
+    "5665": {
+      "name": "Leishmania mexicana",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Leishmaniinae; Leishmania; Leishmania; Leishmania mexicana species complex",
+      "fetched_at": "2025-12-22T17:00:48.559576"
+    },
+    "5671": {
+      "name": "Leishmania infantum",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Leishmaniinae; Leishmania; Leishmania; Leishmania donovani species complex",
+      "fetched_at": "2025-12-22T17:00:49.292089"
+    },
+    "5691": {
+      "name": "Trypanosoma brucei",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Trypanosoma; Trypanozoon",
+      "fetched_at": "2025-12-22T17:00:49.811328"
+    },
+    "5693": {
+      "name": "Trypanosoma cruzi",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Trypanosoma; Schizotrypanum",
+      "fetched_at": "2025-12-22T17:00:50.664644"
+    },
+    "57068": {
+      "name": "Acanthisitta chloris",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Sauropsida; Sauria; Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda; Coelurosauria; Aves; Neognathae; Neoaves; Telluraves; Australaves; Passeriformes; Acanthisittidae; Acanthisitta",
+      "fetched_at": "2025-12-22T17:00:51.152034"
+    },
+    "5722": {
+      "name": "Trichomonas vaginalis",
+      "lineage": "cellular organisms; Eukaryota; Metamonada; Parabasalia; Trichomonadida; Trichomonadidae; Trichomonas",
+      "fetched_at": "2025-12-22T17:00:51.796747"
+    },
+    "5741": {
+      "name": "Giardia duodenalis",
+      "lineage": "cellular organisms; Eukaryota; Metamonada; Fornicata; Diplomonadida; Hexamitidae; Giardiinae; Giardia",
+      "fetched_at": "2025-12-22T17:00:52.332945"
+    },
+    "5742": {
+      "name": "Giardia muris",
+      "lineage": "cellular organisms; Eukaryota; Metamonada; Fornicata; Diplomonadida; Hexamitidae; Giardiinae; Giardia",
+      "fetched_at": "2025-12-22T17:00:52.832385"
+    },
+    "5755": {
+      "name": "Acanthamoeba castellanii",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:00:53.565312"
+    },
+    "5757": {
+      "name": "Acanthamoeba polyphaga",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:00:54.248893"
+    },
+    "5763": {
+      "name": "Naegleria fowleri",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Heterolobosea; Tetramitia; Eutetramitia; Vahlkampfiidae; Naegleria",
+      "fetched_at": "2025-12-22T17:00:54.793209"
+    },
+    "5807": {
+      "name": "Cryptosporidium parvum",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Conoidasida; Coccidia; Eucoccidiorida; Eimeriorina; Cryptosporidiidae; Cryptosporidium",
+      "fetched_at": "2025-12-22T17:00:55.294179"
+    },
+    "5811": {
+      "name": "Toxoplasma gondii",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Conoidasida; Coccidia; Eucoccidiorida; Eimeriorina; Sarcocystidae; Toxoplasma",
+      "fetched_at": "2025-12-22T17:00:56.195911"
+    },
+    "5820": {
+      "name": "Plasmodium",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae",
+      "fetched_at": "2025-12-22T17:00:56.968317"
+    },
+    "5821": {
+      "name": "Plasmodium berghei",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Vinckeia)",
+      "fetched_at": "2025-12-22T17:00:57.467991"
+    },
+    "5824": {
+      "name": "Plasmodium brasilianum",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Plasmodium)",
+      "fetched_at": "2025-12-22T17:00:57.953067"
+    },
+    "5827": {
+      "name": "Plasmodium cynomolgi",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Plasmodium)",
+      "fetched_at": "2025-12-22T17:00:58.463880"
+    },
+    "58291": {
+      "name": "Rhizopus microsporus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Mucoromycota; Mucoromycotina; Mucoromycetes; Mucorales; Mucorineae; Rhizopodaceae; Rhizopus",
+      "fetched_at": "2025-12-22T17:00:58.946931"
+    },
+    "5833": {
+      "name": "Plasmodium falciparum",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Laverania)",
+      "fetched_at": "2025-12-22T17:01:00.292391"
+    },
+    "5850": {
+      "name": "Plasmodium knowlesi",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Plasmodium)",
+      "fetched_at": "2025-12-22T17:01:00.783335"
+    },
+    "5855": {
+      "name": "Plasmodium vivax",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Plasmodium)",
+      "fetched_at": "2025-12-22T17:01:01.828236"
+    },
+    "5858": {
+      "name": "Plasmodium malariae",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Plasmodium)",
+      "fetched_at": "2025-12-22T17:01:02.365291"
+    },
+    "5860": {
+      "name": "Plasmodium vinckei",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Vinckeia)",
+      "fetched_at": "2025-12-22T17:01:02.880445"
+    },
+    "5861": {
+      "name": "Plasmodium yoelii",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Vinckeia)",
+      "fetched_at": "2025-12-22T17:01:03.667509"
+    },
+    "5866": {
+      "name": "Babesia bigemina",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Piroplasmida; Babesiidae; Babesia",
+      "fetched_at": "2025-12-22T17:01:04.204106"
+    },
+    "5868": {
+      "name": "Babesia microti",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Piroplasmida; Babesiidae; Babesia",
+      "fetched_at": "2025-12-22T17:01:04.696078"
+    },
+    "59479": {
+      "name": "Rhinolophus ferrumequinum",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Boreoeutheria; Laurasiatheria; Chiroptera; Yinpterochiroptera; Rhinolophoidea; Rhinolophidae; Rhinolophinae; Rhinolophus",
+      "fetched_at": "2025-12-22T17:01:05.183214"
+    },
+    "59729": {
+      "name": "Taeniopygia guttata",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Sauropsida; Sauria; Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda; Coelurosauria; Aves; Neognathae; Neoaves; Telluraves; Australaves; Passeriformes; Passeroidea; Estrildidae; Estrildinae; Taeniopygia",
+      "fetched_at": "2025-12-22T17:01:05.699463"
+    },
+    "59799": {
+      "name": "Angomonas deanei",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Strigomonadinae; Angomonas",
+      "fetched_at": "2025-12-22T17:01:06.245961"
+    },
+    "60746": {
+      "name": "Acomys russatus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Boreoeutheria; Euarchontoglires; Glires; Rodentia; Myomorpha; Muroidea; Muridae; Deomyinae; Acomys",
+      "fetched_at": "2025-12-22T17:01:06.744160"
+    },
+    "61605": {
+      "name": "Acanthamoeba lugdunensis",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:01:07.361327"
+    },
+    "623": {
+      "name": "Shigella flexneri",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Shigella",
+      "fetched_at": "2025-12-22T17:01:07.970076"
+    },
+    "624": {
+      "name": "Shigella sonnei",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Shigella",
+      "fetched_at": "2025-12-22T17:01:08.459053"
+    },
+    "6277": {
+      "name": "Acanthocheilonema viteae",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Nematoda; Chromadorea; Rhabditida; Spirurina; Spiruromorpha; Filarioidea; Onchocercidae; Acanthocheilonema",
+      "fetched_at": "2025-12-22T17:01:09.090213"
+    },
+    "6313": {
+      "name": "Angiostrongylus cantonensis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Nematoda; Chromadorea; Rhabditida; Rhabditina; Rhabditomorpha; Strongyloidea; Metastrongylidae; Angiostrongylus",
+      "fetched_at": "2025-12-22T17:01:09.742281"
+    },
+    "644": {
+      "name": "Aeromonas hydrophila",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Aeromonadales; Aeromonadaceae; Aeromonas",
+      "fetched_at": "2025-12-22T17:01:10.441887"
+    },
+    "646526": {
+      "name": "Ecytonucleospora hepatopenaei",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Microsporidia; Apansporoblastina; Enterocytozoonidae; Ecytonucleospora",
+      "fetched_at": "2025-12-22T17:01:10.918166"
+    },
+    "6526": {
+      "name": "Biomphalaria glabrata",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Spiralia; Lophotrochozoa; Mollusca; Gastropoda; Heterobranchia; Euthyneura; Panpulmonata; Hygrophila; Lymnaeoidea; Planorbidae; Biomphalaria",
+      "fetched_at": "2025-12-22T17:01:11.447498"
+    },
+    "65658": {
+      "name": "Acanthamoeba astronyxis",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:01:11.945740"
+    },
+    "65659": {
+      "name": "Acanthamoeba comandoni",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:01:12.794597"
+    },
+    "65661": {
+      "name": "Acanthamoeba healyi",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:01:13.442093"
+    },
+    "65662": {
+      "name": "Acanthamoeba pearcei",
+      "lineage": "cellular organisms; Eukaryota; Amoebozoa; Discosea; Longamoebia; Centramoebida; Acanthamoebidae; Acanthamoeba",
+      "fetched_at": "2025-12-22T17:01:14.130807"
+    },
+    "659015": {
+      "name": "Brucella daejeonensis",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Hyphomicrobiales; Brucellaceae; Brucella/Ochrobactrum group; Brucella",
+      "fetched_at": "2025-12-22T17:01:14.666961"
+    },
+    "66851": {
+      "name": "Methanobrevibacter oralis",
+      "lineage": "cellular organisms; Archaea; Methanobacteriati; Methanobacteriota; Methanomada group; Methanobacteria; Methanobacteriales; Methanobacteriaceae; Methanobrevibacter",
+      "fetched_at": "2025-12-22T17:01:15.182414"
+    },
+    "669": {
+      "name": "Vibrio harveyi",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio; Vibrio harveyi group",
+      "fetched_at": "2025-12-22T17:01:15.766926"
+    },
+    "670": {
+      "name": "Vibrio parahaemolyticus",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio; Vibrio harveyi group",
+      "fetched_at": "2025-12-22T17:01:16.363888"
+    },
+    "67003": {
+      "name": "Trypanosoma theileri",
+      "lineage": "cellular organisms; Eukaryota; Discoba; Euglenozoa; Kinetoplastea; Metakinetoplastina; Trypanosomatida; Trypanosomatidae; Trypanosoma; Trypanosoma incertae sedis",
+      "fetched_at": "2025-12-22T17:01:16.867553"
+    },
+    "674": {
+      "name": "Vibrio mimicus",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio",
+      "fetched_at": "2025-12-22T17:01:17.374596"
+    },
+    "67680": {
+      "name": "Anncaliia algerae",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Microsporidia; Tubulinosematoidea; Tubulinosematidae; Anncaliia",
+      "fetched_at": "2025-12-22T17:01:17.874767"
+    },
+    "688394": {
+      "name": "Lichtheimia ramosa",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Mucoromycota; Mucoromycotina; Mucoromycetes; Mucorales; Lichtheimiaceae; Lichtheimia",
+      "fetched_at": "2025-12-22T17:01:18.621435"
+    },
+    "68878": {
+      "name": "Anopheles cruzii",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Kerteszia",
+      "fetched_at": "2025-12-22T17:01:19.115663"
+    },
+    "69004": {
+      "name": "Anopheles farauti",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Cellia; Neomyzomyia; punctulatus species complex",
+      "fetched_at": "2025-12-22T17:01:19.610587"
+    },
+    "694009": {
+      "name": "Severe acute respiratory syndrome-related coronavirus",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Pisuviricota; Pisoniviricetes; Nidovirales; Cornidovirineae; Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus; Betacoronavirus pandemicum",
+      "fetched_at": "2025-12-22T17:01:20.364693"
+    },
+    "7159": {
+      "name": "Aedes aegypti",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Culicinae; Aedini; Aedes; Stegomyia",
+      "fetched_at": "2025-12-22T17:01:20.918708"
+    },
+    "7160": {
+      "name": "Aedes albopictus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Culicinae; Aedini; Aedes; Stegomyia",
+      "fetched_at": "2025-12-22T17:01:21.429755"
+    },
+    "7165": {
+      "name": "Anopheles gambiae",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Cellia; Pyretophorus; gambiae species complex",
+      "fetched_at": "2025-12-22T17:01:21.905242"
+    },
+    "7167": {
+      "name": "Anopheles albimanus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Nyssorhynchus; albimanus section; albimanus series",
+      "fetched_at": "2025-12-22T17:01:22.411151"
+    },
+    "7173": {
+      "name": "Anopheles arabiensis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Anophelinae; Anopheles; Cellia; Pyretophorus; gambiae species complex",
+      "fetched_at": "2025-12-22T17:01:22.915747"
+    },
+    "7175": {
+      "name": "Culex pipiens",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Culicinae; Culicini; Culex; Culex; Culex pipiens complex",
+      "fetched_at": "2025-12-22T17:01:23.409479"
+    },
+    "7176": {
+      "name": "Culex quinquefasciatus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Diptera; Nematocera; Culicomorpha; Culicoidea; Culicidae; Culicinae; Culicini; Culex; Culex; Culex pipiens complex",
+      "fetched_at": "2025-12-22T17:01:23.903718"
+    },
+    "72011": {
+      "name": "Acanthopagrus schlegelii",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Actinopterygii; Actinopteri; Neopterygii; Teleostei; Osteoglossocephalai; Clupeocephala; Euteleosteomorpha; Neoteleostei; Eurypterygia; Ctenosquamata; Acanthomorphata; Euacanthomorphacea; Percomorphaceae; Eupercaria; Spariformes; Sparidae; Acanthopagrus",
+      "fetched_at": "2025-12-22T17:01:24.390527"
+    },
+    "720590": {
+      "name": "Plasmodium sp. DRC-Itaito",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Laverania)",
+      "fetched_at": "2025-12-22T17:01:24.899095"
+    },
+    "723287": {
+      "name": "Anncaliia algerae",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Microsporidia; Tubulinosematoidea; Tubulinosematidae; Anncaliia",
+      "fetched_at": "2025-12-22T17:01:25.403692"
+    },
+    "730": {
+      "name": "[Haemophilus] ducreyi",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Pasteurellales; Pasteurellaceae; Haemophilus",
+      "fetched_at": "2025-12-22T17:01:25.944681"
+    },
+    "73230": {
+      "name": "[Emmonsia] crescens",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Onygenales; Ajellomycetaceae; Emergomyces",
+      "fetched_at": "2025-12-22T17:01:26.451116"
+    },
+    "746128": {
+      "name": "Aspergillus fumigatus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Fumigati",
+      "fetched_at": "2025-12-22T17:01:26.961351"
+    },
+    "760013": {
+      "name": "Apophysomyces variabilis",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Mucoromycota; Mucoromycotina; Mucoromycetes; Mucorales; Mucorineae; Mucoraceae; Apophysomyces",
+      "fetched_at": "2025-12-22T17:01:27.453929"
+    },
+    "783": {
+      "name": "Rickettsia rickettsii",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; spotted fever group",
+      "fetched_at": "2025-12-22T17:01:27.976898"
+    },
+    "79782": {
+      "name": "Cimex lectularius",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Paraneoptera; Hemiptera; Prosorrhyncha; Heteroptera; Euheteroptera; Neoheteroptera; Panheteroptera; Cimicomorpha; Cimicoidea; Cimicidae; Cimex",
+      "fetched_at": "2025-12-22T17:01:28.651877"
+    },
+    "82521": {
+      "name": "Apiotrichum montevideense",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Basidiomycota; Agaricomycotina; Tremellomycetes; Trichosporonales; Trichosporonaceae; Apiotrichum",
+      "fetched_at": "2025-12-22T17:01:29.157895"
+    },
+    "85698": {
+      "name": "Achromobacter xylosoxidans",
+      "lineage": "cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter",
+      "fetched_at": "2025-12-22T17:01:29.683126"
+    },
+    "880534": {
+      "name": "Plasmodium praefalciparum (nom. ined.)",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida; Plasmodiidae; Plasmodium; Plasmodium (Laverania)",
+      "fetched_at": "2025-12-22T17:01:30.283792"
+    },
+    "89421": {
+      "name": "Amauroascus niger",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Onygenales; Onygenaceae; Amauroascus",
+      "fetched_at": "2025-12-22T17:01:30.763797"
+    },
+    "9031": {
+      "name": "Gallus gallus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Sauropsida; Sauria; Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda; Coelurosauria; Aves; Neognathae; Galloanserae; Galliformes; Phasianidae; Phasianinae; Gallus",
+      "fetched_at": "2025-12-22T17:01:31.287913"
+    },
+    "931244": {
+      "name": "Alphapapillomavirus 14",
+      "lineage": "Viruses; Monodnaviria; Shotokuvirae; Cossaviricota; Papovaviricetes; Zurhausenvirales; unclassified Zurhausenvirales; Papillomaviridae; Firstpapillomavirinae; Alphapapillomavirus",
+      "fetched_at": "2025-12-22T17:01:31.827470"
+    },
+    "936053": {
+      "name": "Rhizopus delemar",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Fungi incertae sedis; Mucoromycota; Mucoromycotina; Mucoromycetes; Mucorales; Mucorineae; Rhizopodaceae; Rhizopus",
+      "fetched_at": "2025-12-22T17:01:32.338038"
+    },
+    "93830": {
+      "name": "Hantavirus Z10",
+      "lineage": "Viruses; Riboviria; Orthornavirae; Negarnaviricota; Polyploviricotina; Bunyaviricetes; Elliovirales; Hantaviridae; Mammantavirinae; Orthohantavirus; unclassified Orthohantavirus; unclassified Hantavirus",
+      "fetched_at": "2025-12-22T17:01:32.886115"
+    },
+    "9606": {
+      "name": "Homo sapiens",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Boreoeutheria; Euarchontoglires; Primates; Haplorrhini; Simiiformes; Catarrhini; Hominoidea; Hominidae; Homininae; Homo",
+      "fetched_at": "2025-12-22T17:01:33.405788"
+    },
+    "9612": {
+      "name": "Canis lupus",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Boreoeutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis",
+      "fetched_at": "2025-12-22T17:01:33.885639"
+    },
+    "97331": {
+      "name": "Arthrobotrys flagrans",
+      "lineage": "cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; Orbiliomycetes; Orbiliales; Orbiliaceae; Arthrobotrys",
+      "fetched_at": "2025-12-22T17:01:34.384848"
+    },
+    "1169539": {
+      "name": "Vitrella brassicaformis",
+      "lineage": "cellular organisms; Eukaryota; Sar; Alveolata; Colpodellida; Vitrellaceae; Vitrella",
+      "fetched_at": "2026-01-06T01:19:29.229647"
+    }
+  },
+  "assembly": {
+    "746128": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:34.886104"
+    },
+    "GCA_000002825_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:35.439555"
+    },
+    "GCA_000002985_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:35.925115"
+    },
+    "GCA_000003225_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:36.469633"
+    },
+    "GCA_000006275_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:36.964214"
+    },
+    "GCA_000143045_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:37.463175"
+    },
+    "GCA_000149245_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:37.937858"
+    },
+    "GCA_000149445_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:38.459868"
+    },
+    "GCA_000149815_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:39.096973"
+    },
+    "GCA_000150015_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:39.600119"
+    },
+    "GCA_000150055_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:40.088216"
+    },
+    "GCA_000150145_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:40.582962"
+    },
+    "GCA_000151295_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:41.059726"
+    },
+    "GCA_000151295_1&workflow=true": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:41.760038"
+    },
+    "GCA_000170175_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:42.253358"
+    },
+    "GCA_000193105_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:42.725240"
+    },
+    "GCA_000193285_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:43.370325"
+    },
+    "GCA_000224805_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:43.904197"
+    },
+    "GCA_000224845_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:44.386980"
+    },
+    "GCA_000224905_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:44.882152"
+    },
+    "GCA_000230395_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:45.368794"
+    },
+    "GCA_000256705_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:45.845460"
+    },
+    "GCA_000300775_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:46.344055"
+    },
+    "GCA_000313135_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:46.828380"
+    },
+    "GCA_000313815_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:47.303962"
+    },
+    "GCA_000340355_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:47.772148"
+    },
+    "GCA_000349045_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:48.259703"
+    },
+    "GCA_000349105_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:48.769842"
+    },
+    "GCA_000385855_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:49.254182"
+    },
+    "GCA_000385875_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:49.747674"
+    },
+    "GCA_000387545_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:50.224876"
+    },
+    "GCA_000447185_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:50.698616"
+    },
+    "GCA_000473445_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:51.164563"
+    },
+    "GCA_000633045_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:51.636216"
+    },
+    "GCA_000723445_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:52.102526"
+    },
+    "GCA_000826245_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:52.585613"
+    },
+    "GCA_000826265_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:53.071511"
+    },
+    "GCA_000826285_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:53.554307"
+    },
+    "GCA_000826305_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:54.042791"
+    },
+    "GCA_000826325_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:54.521673"
+    },
+    "GCA_000826345_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:55.018309"
+    },
+    "GCA_000826365_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:55.519190"
+    },
+    "GCA_000826385_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:55.996092"
+    },
+    "GCA_000826405_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:56.472614"
+    },
+    "GCA_000826425_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:56.951262"
+    },
+    "GCA_000826445_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:57.434020"
+    },
+    "GCA_000826465_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:58.142332"
+    },
+    "GCA_000826485_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:58.640467"
+    },
+    "GCA_000826505_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:59.415482"
+    },
+    "GCA_001008285_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:01:59.900508"
+    },
+    "GCA_001077455_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:00.419749"
+    },
+    "GCA_001430925_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:00.887483"
+    },
+    "GCA_001430935_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:01.453179"
+    },
+    "GCA_001430945_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:01.976039"
+    },
+    "GCA_001444175_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:02.438868"
+    },
+    "GCA_001598995_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:02.963099"
+    },
+    "GCA_001636715_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:03.439705"
+    },
+    "GCA_001650055_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:03.927501"
+    },
+    "GCA_001650135_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:04.397102"
+    },
+    "GCA_001660665_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:04.855494"
+    },
+    "GCA_001747055_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:05.337546"
+    },
+    "GCA_001875675_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:05.917366"
+    },
+    "GCA_001990825_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:06.844887"
+    },
+    "GCA_002025285_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:07.310406"
+    },
+    "GCA_002105255_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:07.818667"
+    },
+    "GCA_002110485_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:08.483023"
+    },
+    "GCA_002216205_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:09.052835"
+    },
+    "GCA_002749535_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:09.539136"
+    },
+    "GCA_002759435_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:10.045041"
+    },
+    "GCA_002911725_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:10.535694"
+    },
+    "GCA_002915635_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:11.037443"
+    },
+    "GCA_003011985_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:11.511030"
+    },
+    "GCA_003014415_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:11.991106"
+    },
+    "GCA_003402215_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:12.469792"
+    },
+    "GCA_003957565_4": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:13.126042"
+    },
+    "GCA_004786635_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:13.620504"
+    },
+    "GCA_004798825_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:14.132875"
+    },
+    "GCA_006247105_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:14.673637"
+    },
+    "GCA_007674295_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:15.158479"
+    },
+    "GCA_008275145_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:15.855997"
+    },
+    "GCA_008822115_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:16.419202"
+    },
+    "GCA_009735665_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:16.890425"
+    },
+    "GCA_009761425_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:17.356679"
+    },
+    "GCA_009761515_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:17.884447"
+    },
+    "GCA_014607475_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:18.355146"
+    },
+    "GCA_014843625_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:18.869987"
+    },
+    "GCA_014883685_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:19.363449"
+    },
+    "GCA_015245375_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:19.935508"
+    },
+    "GCA_016904835_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:20.407533"
+    },
+    "GCA_017310585_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:20.872791"
+    },
+    "GCA_017607465_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:22.481886"
+    },
+    "GCA_019096175_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:22.955926"
+    },
+    "GCA_020844765_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:23.424874"
+    },
+    "GCA_021020595_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:23.908119"
+    },
+    "GCA_021020605_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:24.385696"
+    },
+    "GCA_021653915_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:24.894417"
+    },
+    "GCA_027943245_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:25.361600"
+    },
+    "GCA_027943295_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:25.899499"
+    },
+    "GCA_027944975_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:26.387364"
+    },
+    "GCA_028554745_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:26.994275"
+    },
+    "GCA_030563865_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:27.462892"
+    },
+    "GCA_030573285_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:27.955963"
+    },
+    "GCA_031580275_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:28.961471"
+    },
+    "GCA_041753875_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:29.439998"
+    },
+    "GCA_048771995_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:29.912063"
+    },
+    "GCA_900093555_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:30.380455"
+    },
+    "GCA_900095595_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:31.450415"
+    },
+    "GCA_900162085_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:31.934999"
+    },
+    "GCA_900180395_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:32.436236"
+    },
+    "GCA_900184105_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:32.930227"
+    },
+    "GCA_900231805_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:33.421240"
+    },
+    "GCA_900248155_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:34.084062"
+    },
+    "GCA_900257145_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:34.577148"
+    },
+    "GCA_900406225_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:35.505162"
+    },
+    "GCA_900497135_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:35.990761"
+    },
+    "GCA_900500625_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:36.504628"
+    },
+    "GCA_900537255_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:37.191683"
+    },
+    "GCA_900631975_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:37.701816"
+    },
+    "GCA_900632005_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:38.380991"
+    },
+    "GCA_900632015_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:38.856563"
+    },
+    "GCA_900632025_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:39.331235"
+    },
+    "GCA_900632055_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:39.812849"
+    },
+    "GCA_900632095_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:40.281579"
+    },
+    "GCA_902459845_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:40.759302"
+    },
+    "GCA_903995115_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:41.758258"
+    },
+    "GCA_905310635_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:42.237682"
+    },
+    "GCA_914969965_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:42.704839"
+    },
+    "GCA_945643635_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:43.192852"
+    },
+    "GCA_949316315_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:43.651787"
+    },
+    "GCA_963514095_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:44.167111"
+    },
+    "GCA_963993115_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:44.645269"
+    },
+    "GCF_000001215_4": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:45.343764"
+    },
+    "GCF_000001405_40": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:45.811472"
+    },
+    "GCF_000001635_27": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:46.283440"
+    },
+    "GCF_000002415_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:46.764826"
+    },
+    "GCF_000002445_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:47.235895"
+    },
+    "GCF_000002655_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:47.769414"
+    },
+    "GCF_000002765_5": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:48.244039"
+    },
+    "GCF_000002765_6": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:48.791226"
+    },
+    "GCF_000002845_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:49.267814"
+    },
+    "GCF_000002945_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:49.728084"
+    },
+    "GCF_000004695_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:50.202981"
+    },
+    "GCF_000005575_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:50.664077"
+    },
+    "GCF_000005845_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:51.135279"
+    },
+    "GCF_000006565_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:51.612602"
+    },
+    "GCF_000006925_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:52.093995"
+    },
+    "GCF_000006945_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:52.586026"
+    },
+    "GCF_000008445_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:53.071707"
+    },
+    "GCF_000008865_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:53.736643"
+    },
+    "GCF_000009085_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:54.253902"
+    },
+    "GCF_000011765_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:54.759672"
+    },
+    "GCF_000014805_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:55.299821"
+    },
+    "GCF_000017685_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:55.815820"
+    },
+    "GCF_000018225_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:56.286464"
+    },
+    "GCF_000091045_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:56.804574"
+    },
+    "GCF_000146045_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:57.629775"
+    },
+    "GCF_000149245_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:58.098273"
+    },
+    "GCF_000149305_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:58.555461"
+    },
+    "GCF_000149335_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:59.076914"
+    },
+    "GCF_000149385_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:02:59.555026"
+    },
+    "GCF_000149925_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:00.084299"
+    },
+    "GCF_000151355_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:00.571922"
+    },
+    "GCF_000151545_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:01.114464"
+    },
+    "GCF_000165345_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:01.606803"
+    },
+    "GCF_000167675_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:02.338293"
+    },
+    "GCF_000182765_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:02.809348"
+    },
+    "GCF_000182965_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:03.329122"
+    },
+    "GCF_000195815_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:03.817287"
+    },
+    "GCF_000195955_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:04.370237"
+    },
+    "GCF_000209065_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:04.861647"
+    },
+    "GCF_000219625_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:05.358990"
+    },
+    "GCF_000226545_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:05.852822"
+    },
+    "GCF_000271645_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:06.386644"
+    },
+    "GCF_000277735_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:06.965005"
+    },
+    "GCF_000306255_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:07.465389"
+    },
+    "GCF_000313135_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:07.968323"
+    },
+    "GCF_000315645_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:08.459505"
+    },
+    "GCF_000369945_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:09.004363"
+    },
+    "GCF_000393015_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:09.469342"
+    },
+    "GCF_000499385_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:10.223052"
+    },
+    "GCF_000524495_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:10.689915"
+    },
+    "GCF_000648675_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:11.155275"
+    },
+    "GCF_000828125_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:11.634144"
+    },
+    "GCF_000835755_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:12.106849"
+    },
+    "GCF_000836865_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:12.993833"
+    },
+    "GCF_000837005_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:13.467770"
+    },
+    "GCF_000848505_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:13.963107"
+    },
+    "GCF_000851145_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:14.832261"
+    },
+    "GCF_000852685_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:15.307212"
+    },
+    "GCF_000853505_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:15.776819"
+    },
+    "GCF_000853865_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:16.291855"
+    },
+    "GCF_000854805_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:16.782255"
+    },
+    "GCF_000854845_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:17.595118"
+    },
+    "GCF_000855545_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:18.063359"
+    },
+    "GCF_000855745_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:18.588952"
+    },
+    "GCF_000856545_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:19.336908"
+    },
+    "GCF_000857045_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:19.816564"
+    },
+    "GCF_000859525_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:20.275492"
+    },
+    "GCF_000859885_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:20.886718"
+    },
+    "GCF_000861085_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:21.378375"
+    },
+    "GCF_000861285_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:21.845992"
+    },
+    "GCF_000861925_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:22.406087"
+    },
+    "GCF_000861945_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:22.899845"
+    },
+    "GCF_000862685_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:23.370635"
+    },
+    "GCF_000862705_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:23.835124"
+    },
+    "GCF_000862805_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:24.337859"
+    },
+    "GCF_000863525_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:24.804441"
+    },
+    "GCF_000863945_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:25.288049"
+    },
+    "GCF_000863965_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:25.789275"
+    },
+    "GCF_000864105_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:26.266704"
+    },
+    "GCF_000864725_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:26.728476"
+    },
+    "GCF_000864885_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:27.205501"
+    },
+    "GCF_000864905_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:28.039379"
+    },
+    "GCF_000864925_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:28.547413"
+    },
+    "GCF_000864945_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:29.023358"
+    },
+    "GCF_000865085_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:29.560625"
+    },
+    "GCF_000865665_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:30.392757"
+    },
+    "GCF_000865685_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:30.855974"
+    },
+    "GCF_000865725_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:32.071449"
+    },
+    "GCF_000866485_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:32.532311"
+    },
+    "GCF_000866645_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:32.993512"
+    },
+    "GCF_000874865_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:33.874499"
+    },
+    "GCF_000880735_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:34.368429"
+    },
+    "GCF_000887495_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:34.876480"
+    },
+    "GCF_000891615_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:35.343120"
+    },
+    "GCF_000896995_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:36.024530"
+    },
+    "GCF_000910675_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:36.524974"
+    },
+    "GCF_000922675_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:36.992354"
+    },
+    "GCF_000928555_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:37.452364"
+    },
+    "GCF_000956335_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:37.922566"
+    },
+    "GCF_000964685_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:38.378178"
+    },
+    "GCF_000967305_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:38.929685"
+    },
+    "GCF_001042655_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:39.402646"
+    },
+    "GCF_001189475_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:39.866702"
+    },
+    "GCF_001299255_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:40.634750"
+    },
+    "GCF_001343785_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:41.096956"
+    },
+    "GCF_001502175_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:41.568216"
+    },
+    "GCF_001543175_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:42.048429"
+    },
+    "GCF_001558255_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:42.517566"
+    },
+    "GCF_001642055_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:43.020708"
+    },
+    "GCF_001647695_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:43.497258"
+    },
+    "GCF_001680005_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:44.081000"
+    },
+    "GCF_001755385_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:44.688379"
+    },
+    "GCF_001761485_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:45.164302"
+    },
+    "GCF_001876365_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:45.677531"
+    },
+    "GCF_001889945_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:46.139361"
+    },
+    "GCF_001890805_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:46.638279"
+    },
+    "GCF_001890905_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:47.121966"
+    },
+    "GCF_001895205_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:47.597622"
+    },
+    "GCF_001963095_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:48.071787"
+    },
+    "GCF_002073495_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:48.557290"
+    },
+    "GCF_002080215_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:49.040494"
+    },
+    "GCF_002087225_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:49.505513"
+    },
+    "GCF_002204515_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:49.986749"
+    },
+    "GCF_002224265_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:50.487589"
+    },
+    "GCF_002237265_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:50.969142"
+    },
+    "GCF_002252445_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:51.442562"
+    },
+    "GCF_002252535_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:51.921452"
+    },
+    "GCF_002263795_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:52.400790"
+    },
+    "GCF_002816435_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:52.874892"
+    },
+    "GCF_002818245_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:53.567797"
+    },
+    "GCF_002826825_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:54.032856"
+    },
+    "GCF_002847465_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:54.843541"
+    },
+    "GCF_002847485_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:55.579778"
+    },
+    "GCF_002849105_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:56.074578"
+    },
+    "GCF_002889255_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:56.556105"
+    },
+    "GCF_002926055_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:57.026053"
+    },
+    "GCF_002926085_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:57.491569"
+    },
+    "GCF_002950395_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:57.955984"
+    },
+    "GCF_002954075_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:58.440878"
+    },
+    "GCF_002987345_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:59.369627"
+    },
+    "GCF_003013715_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:03:59.848536"
+    },
+    "GCF_003184535_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:00.319830"
+    },
+    "GCF_003290485_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:00.802904"
+    },
+    "GCF_003727435_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:01.297989"
+    },
+    "GCF_004000055_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:01.834898"
+    },
+    "GCF_004008975_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:02.542280"
+    },
+    "GCF_004769405_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:03.043981"
+    },
+    "GCF_004769555_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:03.874728"
+    },
+    "GCF_004769665_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:04.401416"
+    },
+    "GCF_004770055_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:04.879640"
+    },
+    "GCF_004770145_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:05.348689"
+    },
+    "GCF_004770765_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:05.822231"
+    },
+    "GCF_004789995_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:06.345298"
+    },
+    "GCF_004936735_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:06.827725"
+    },
+    "GCF_006496715_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:07.325660"
+    },
+    "GCF_009035845_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:07.824178"
+    },
+    "GCF_009858895_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:08.327496"
+    },
+    "GCF_013267415_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:08.852564"
+    },
+    "GCF_013758885_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:09.365387"
+    },
+    "GCF_014199265_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:09.889498"
+    },
+    "GCF_014441545_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:10.393959"
+    },
+    "GCF_014621545_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:10.911582"
+    },
+    "GCF_014805625_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:11.378978"
+    },
+    "GCF_015732765_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:11.862084"
+    },
+    "GCF_016699485_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:12.348252"
+    },
+    "GCF_016728825_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:13.011242"
+    },
+    "GCF_016801865_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:13.522060"
+    },
+    "GCF_016918735_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:14.257837"
+    },
+    "GCF_017562075_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:14.739136"
+    },
+    "GCF_017918225_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:15.205623"
+    },
+    "GCF_018416015_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:15.767840"
+    },
+    "GCF_018416015_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:16.267280"
+    },
+    "GCF_018691715_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:16.747842"
+    },
+    "GCF_022354085_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:17.293574"
+    },
+    "GCF_023973825_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:17.776511"
+    },
+    "GCF_026262505_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:18.261720"
+    },
+    "GCF_030253495_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:18.738910"
+    },
+    "GCF_030297255_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:19.218343"
+    },
+    "GCF_036013445_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:19.716025"
+    },
+    "GCF_041930145_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:20.198637"
+    },
+    "GCF_045689255_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:20.680832"
+    },
+    "GCF_045865205_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:21.190657"
+    },
+    "GCF_900002335_3": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:21.653949"
+    },
+    "GCF_900002375_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:22.138081"
+    },
+    "GCF_900090045_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:22.613177"
+    },
+    "GCF_900097015_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:23.102895"
+    },
+    "GCF_900445655_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:23.589311"
+    },
+    "GCF_903995435_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:24.060990"
+    },
+    "GCF_904848185_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:24.535738"
+    },
+    "GCF_943734635_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:25.079997"
+    },
+    "GCF_943734665_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:25.574112"
+    },
+    "GCF_943734685_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:26.055012"
+    },
+    "GCF_943734735_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:26.569043"
+    },
+    "GCF_943734745_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:27.042854"
+    },
+    "GCF_943735745_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:27.561638"
+    },
+    "GCF_963525475_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:28.042123"
+    },
+    "GCF_964026385_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:28.534182"
+    },
+    "GCF_964026465_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2025-12-22T17:04:28.996038"
+    },
+    "GCA_000002655_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:29.727891"
+    },
+    "GCA_000256725_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:30.188091"
+    },
+    "GCA_000387465_2": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:30.646484"
+    },
+    "GCA_001179505_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:31.108437"
+    },
+    "GCA_009761555_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:31.577497"
+    },
+    "GCA_013177555_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:32.048505"
+    },
+    "GCA_018804105_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:32.514110"
+    },
+    "GCA_020501185_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:32.975547"
+    },
+    "GCA_021655885_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:33.455250"
+    },
+    "GCA_023620365_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:33.917769"
+    },
+    "GCA_024516155_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:34.420323"
+    },
+    "GCF_000182565_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:34.882949"
+    },
+    "GCF_003339765_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:35.343732"
+    },
+    "GCF_900637185_1": {
+      "tax_id": null,
+      "name": "Unknown",
+      "lineage": "Unknown",
+      "fetched_at": "2026-01-06T01:19:35.817857"
+    }
+  }
+}
