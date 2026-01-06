@@ -114,7 +114,7 @@
     
     <div class="section">
         <h2 class="section-title">Workflow Page Visitors by Assembly (grouped by community)</h2>
-        <div class="legend" style="margin-bottom:15px;"><span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#6b7280;border-radius:2px;margin-right:4px;"></span>Other</span></div>
+        <div class="legend" style="margin-bottom:15px;"><span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#65a30d;border-radius:2px;margin-right:4px;"></span>Fungi</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#7c3aed;border-radius:2px;margin-right:4px;"></span>Protists</span></div>
         <div class="chart-container bar">
             <canvas id="assemblyChart"></canvas>
         </div>
@@ -153,11 +153,11 @@
         new Chart(document.getElementById('assemblyChart'), {
             type: 'bar',
             data: {
-                labels: ["Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown"],
+                labels: ["Allomyces macrogynus...", "Acanthamoeba astrony...", "Acanthamoeba castell...", "Plasmodium vivax", "Acanthamoeba castell...", "Acanthamoeba castell...", "Acanthamoeba castell..."],
                 datasets: [{
                     label: 'Visitors',
-                    data: [4, 4, 2, 2, 1, 1, 1],
-                    backgroundColor: ["#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280"]
+                    data: [2, 4, 4, 2, 1, 1, 1],
+                    backgroundColor: ["#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed"]
                 }]
             },
             options: {
@@ -174,7 +174,7 @@
         });
         
         // Network diagram using D3.js
-        const networkData = {"workflows": [{"id": "fastq-to-matrix-10x-scrna", "visitors": 9}, {"id": "haploid-variant-calling-w", "visitors": 4}, {"id": "atacseq", "visitors": 2}], "organisms": [{"id": "Unknown", "visitors": 15}], "edges": [{"source": "fastq-to-matrix-10x-scrna", "target": "Unknown", "visitors": 9}, {"source": "haploid-variant-calling-w", "target": "Unknown", "visitors": 4}, {"source": "atacseq", "target": "Unknown", "visitors": 2}]};
+        const networkData = {"workflows": [{"id": "fastq-to-matrix-10x-scrna", "visitors": 9}, {"id": "haploid-variant-calling-w", "visitors": 4}, {"id": "atacseq", "visitors": 2}], "organisms": [{"id": "Acanthamoeba astronyxis", "visitors": 4}, {"id": "Acanthamoeba castellanii", "visitors": 6}, {"id": "Plasmodium vivax", "visitors": 2}, {"id": "Allomyces macrogynus ATCC", "visitors": 2}, {"id": "Acanthamoeba castellanii ", "visitors": 1}], "edges": [{"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba astronyxis", "visitors": 4}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba castellanii", "visitors": 4}, {"source": "haploid-variant-calling-w", "target": "Plasmodium vivax", "visitors": 2}, {"source": "haploid-variant-calling-w", "target": "Allomyces macrogynus ATCC", "visitors": 2}, {"source": "atacseq", "target": "Acanthamoeba castellanii", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba castellanii ", "visitors": 1}]};
         
         if (networkData.workflows.length > 0 && networkData.organisms.length > 0) {
             const svg = d3.select('#networkSvg');

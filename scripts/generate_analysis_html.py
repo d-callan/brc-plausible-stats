@@ -579,9 +579,16 @@ def generate_organism_html(data, output_path):
     # Top assemblies table
     top_assemblies = sorted(data['assembly_pages_all'], key=lambda x: x['visitors'], reverse=True)[:20]
     assemblies_lookup = {asm['assembly_id']: asm['community'] for comm in COMMUNITIES_ORDER for asm in assemblies_by_community[comm]}
+    def assembly_id_to_ncbi_accession(assembly_id):
+        if assembly_id.startswith(('GCA_', 'GCF_')) and '_' in assembly_id:
+            base, version = assembly_id.rsplit('_', 1)
+            if version.isdigit():
+                return f"{base}.{version}"
+        return assembly_id
+
     assembly_rows = '\n'.join([
         f'''<tr>
-            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/{a['assembly_id'].replace('_', '.')}" target="_blank">{a['assembly_id']}</a></td>
+            <td><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/{assembly_id_to_ncbi_accession(a['assembly_id'])}" target="_blank">{a['assembly_id']}</a></td>
             <td>{a['organism']}</td>
             <td><span style="color:{COMMUNITY_COLORS.get(assemblies_lookup.get(a['assembly_id'], 'Other'), '#6b7280')}">{assemblies_lookup.get(a['assembly_id'], 'Other')}</span></td>
             <td class="num">{a['visitors']}</td>

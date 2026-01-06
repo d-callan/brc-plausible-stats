@@ -114,7 +114,7 @@
     
     <div class="section">
         <h2 class="section-title">Workflow Page Visitors by Assembly (grouped by community)</h2>
-        <div class="legend" style="margin-bottom:15px;"><span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#6b7280;border-radius:2px;margin-right:4px;"></span>Other</span></div>
+        <div class="legend" style="margin-bottom:15px;"><span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#2563eb;border-radius:2px;margin-right:4px;"></span>Bacteria</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#65a30d;border-radius:2px;margin-right:4px;"></span>Fungi</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#7c3aed;border-radius:2px;margin-right:4px;"></span>Protists</span></div>
         <div class="chart-container bar">
             <canvas id="assemblyChart"></canvas>
         </div>
@@ -153,11 +153,11 @@
         new Chart(document.getElementById('assemblyChart'), {
             type: 'bar',
             data: {
-                labels: ["Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown"],
+                labels: ["Anaplasma phagocytop...", "Rickettsia asembonen...", "Bordetella pertussis", "Allomyces macrogynus...", "Plasmodium vivax", "Cryptosporidium parv...", "Plasmodium vivax", "Plasmodium falciparu...", "Plasmodium falciparu...", "Trypanosoma brucei b...", "Acanthamoeba castell...", "Acanthamoeba castell...", "Leishmania brazilien...", "Acanthamoeba astrony...", "Trypanosoma brucei b..."],
                 datasets: [{
                     label: 'Visitors',
-                    data: [4, 3, 2, 2, 3, 2, 3, 2, 1, 1, 1, 2, 1, 1, 1],
-                    backgroundColor: ["#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280"]
+                    data: [3, 1, 1, 2, 4, 3, 2, 3, 2, 2, 1, 2, 1, 1, 1],
+                    backgroundColor: ["#2563eb", "#2563eb", "#2563eb", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed", "#7c3aed"]
                 }]
             },
             options: {
@@ -174,7 +174,7 @@
         });
         
         // Network diagram using D3.js
-        const networkData = {"workflows": [{"id": "haploid-variant-calling-w", "visitors": 14}, {"id": "rnaseq-sr", "visitors": 2}, {"id": "fastq-to-matrix-10x-scrna", "visitors": 9}, {"id": "rnaseq-pe", "visitors": 2}, {"id": "atacseq", "visitors": 1}, {"id": "chipseq-sr", "visitors": 1}], "organisms": [{"id": "Unknown", "visitors": 29}], "edges": [{"source": "haploid-variant-calling-w", "target": "Unknown", "visitors": 14}, {"source": "rnaseq-sr", "target": "Unknown", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Unknown", "visitors": 7}, {"source": "rnaseq-pe", "target": "Unknown", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Unknown", "visitors": 2}, {"source": "atacseq", "target": "Unknown", "visitors": 1}, {"source": "chipseq-sr", "target": "Unknown", "visitors": 1}]};
+        const networkData = {"workflows": [{"id": "haploid-variant-calling-w", "visitors": 14}, {"id": "rnaseq-sr", "visitors": 2}, {"id": "fastq-to-matrix-10x-scrna", "visitors": 9}, {"id": "rnaseq-pe", "visitors": 2}, {"id": "atacseq", "visitors": 1}, {"id": "chipseq-sr", "visitors": 1}], "organisms": [{"id": "Plasmodium vivax", "visitors": 6}, {"id": "Cryptosporidium parvum Io", "visitors": 3}, {"id": "Allomyces macrogynus ATCC", "visitors": 2}, {"id": "Plasmodium falciparum", "visitors": 3}, {"id": "Plasmodium falciparum 3D7", "visitors": 2}, {"id": "Anaplasma phagocytophilum", "visitors": 3}, {"id": "Trypanosoma brucei brucei", "visitors": 3}, {"id": "Rickettsia asembonensis", "visitors": 1}, {"id": "Bordetella pertussis", "visitors": 1}, {"id": "Acanthamoeba castellanii", "visitors": 3}, {"id": "Leishmania braziliensis M", "visitors": 1}, {"id": "Acanthamoeba astronyxis", "visitors": 1}], "edges": [{"source": "haploid-variant-calling-w", "target": "Plasmodium vivax", "visitors": 6}, {"source": "rnaseq-sr", "target": "Cryptosporidium parvum Io", "visitors": 2}, {"source": "haploid-variant-calling-w", "target": "Allomyces macrogynus ATCC", "visitors": 2}, {"source": "haploid-variant-calling-w", "target": "Plasmodium falciparum", "visitors": 2}, {"source": "haploid-variant-calling-w", "target": "Plasmodium falciparum 3D7", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Anaplasma phagocytophilum", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Anaplasma phagocytophilum", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "Trypanosoma brucei brucei", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "Plasmodium falciparum", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "Rickettsia asembonensis", "visitors": 1}, {"source": "rnaseq-pe", "target": "Cryptosporidium parvum Io", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Bordetella pertussis", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba castellanii", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Trypanosoma brucei brucei", "visitors": 1}, {"source": "atacseq", "target": "Acanthamoeba castellanii", "visitors": 1}, {"source": "rnaseq-pe", "target": "Leishmania braziliensis M", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba astronyxis", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "Trypanosoma brucei brucei", "visitors": 1}, {"source": "chipseq-sr", "target": "Anaplasma phagocytophilum", "visitors": 1}]};
         
         if (networkData.workflows.length > 0 && networkData.organisms.length > 0) {
             const svg = d3.select('#networkSvg');

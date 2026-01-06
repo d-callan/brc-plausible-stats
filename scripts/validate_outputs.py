@@ -18,10 +18,130 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
+from taxonomy_cache import get_community, load_cache
+
 
 class ValidationError(Exception):
     """Raised when validation fails."""
     pass
+
+
+def _safe_float(value, default=0.0):
+    try:
+        return float(value)
+    except Exception:
+        return default
+
+
+def _extract_assembly_id_from_url(url):
+    match = re.match(r'^/data/assemblies/([^/]+)', url)
+    if not match:
+        return None
+    assembly_id = match.group(1)
+    # Guard against query/flags that sometimes end up glued to the assembly id.
+    assembly_id = assembly_id.split('?', 1)[0]
+    assembly_id = assembly_id.split('&', 1)[0]
+    return assembly_id
+
+
+def _is_workflow_page(url):
+    # Support both historical patterns.
+    return ('workflow' in url) or ('/workflows' in url)
+
+
+def _parse_tab_rows(tab_path):
+    with open(tab_path, 'r') as f:
+        header = f.readline().strip().split('\t')
+        header_map = {col.strip().lower(): i for i, col in enumerate(header)}
+
+        url_idx = header_map.get('page')
+        if url_idx is None:
+            url_idx = header_map.get('url', 0)
+
+        visitors_idx = header_map.get('visitors')
+        pageviews_idx = header_map.get('pageviews')
+
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split('\t')
+            if url_idx >= len(parts):
+                continue
+            url = parts[url_idx]
+            visitors = _safe_float(parts[visitors_idx], 0.0) if visitors_idx is not None and visitors_idx < len(parts) else 0.0
+            pageviews = _safe_float(parts[pageviews_idx], 0.0) if pageviews_idx is not None and pageviews_idx < len(parts) else 0.0
+            yield url, visitors, pageviews
+
+
+def validate_other_share(data_dir, cache_path, max_other_pct=0.05):
+    """Validate that the share of 'Other' community pages stays below a threshold.
+
+    We compute share using visitor counts (fallback to pageviews if visitors are missing).
+    """
+    cache_path = Path(cache_path)
+    taxonomy = {}
+    assembly = {}
+
+    # taxonomy_cache.load_cache() expects a cache *directory* (or None), not a json file path.
+    # Our CLI uses a json file path by default, so handle that explicitly.
+    if cache_path.exists() and cache_path.is_file() and cache_path.suffix.lower() == '.json':
+        with open(cache_path, 'r') as f:
+            cache_data = json.load(f)
+        taxonomy = cache_data.get('taxonomy', {})
+        assembly = cache_data.get('assembly', {})
+    else:
+        cache = load_cache(str(cache_path))
+        if isinstance(cache, tuple) and len(cache) == 2:
+            taxonomy, assembly = cache
+        else:
+            taxonomy = getattr(cache, 'get', lambda _k, _d=None: _d)('taxonomy', {})
+            assembly = getattr(cache, 'get', lambda _k, _d=None: _d)('assembly', {})
+
+    totals = {
+        'assemblies': {'total': 0.0, 'other': 0.0},
+        'workflows': {'total': 0.0, 'other': 0.0},
+    }
+
+    data_path = Path(data_dir)
+    for tab_path in sorted(data_path.glob('top-pages-*.tab')):
+        if 'all-time' in tab_path.name:
+            continue
+
+        for url, visitors, pageviews in _parse_tab_rows(tab_path):
+            assembly_id = _extract_assembly_id_from_url(url)
+            if not assembly_id:
+                continue
+
+            weight = visitors if visitors > 0 else pageviews
+            if weight <= 0:
+                continue
+
+            asm = assembly.get(assembly_id, {})
+            tax_id = asm.get('tax_id')
+            lineage = asm.get('lineage')
+            if (not lineage) or lineage == 'Unknown':
+                if tax_id and str(tax_id) in taxonomy:
+                    lineage = taxonomy[str(tax_id)].get('lineage')
+
+            community = get_community(lineage)
+            key = 'workflows' if _is_workflow_page(url) else 'assemblies'
+
+            totals[key]['total'] += weight
+            if community == 'Other':
+                totals[key]['other'] += weight
+
+    errors = []
+    for key, values in totals.items():
+        total = values['total']
+        other = values['other']
+        if total <= 0:
+            continue
+        pct = other / total
+        if pct > max_other_pct:
+            errors.append(f"{key}: Other share {pct:.1%} exceeds threshold {max_other_pct:.1%} (other={other:.1f}, total={total:.1f})")
+
+    return errors
 
 
 def validate_html_structure(html_path, expected_sections):
@@ -267,7 +387,7 @@ def load_baseline(baseline_dir):
         return json.load(f)
 
 
-def run_validation(output_dir, baseline_dir, verbose=False):
+def run_validation(output_dir, baseline_dir, verbose=False, data_dir=None, cache_path=None, max_other_pct=0.05):
     """Run validation on all outputs."""
     files = scan_output_directory(output_dir)
     baseline = load_baseline(baseline_dir)
@@ -312,7 +432,7 @@ def run_validation(output_dir, baseline_dir, verbose=False):
             all_errors.extend(result['errors'])
         else:
             print(f"  ✓ {html_path.name} ({result['chart_count']} charts)")
-    
+
     # Validate workflow analysis
     print(f"\n⚙️  Workflow Analysis Reports ({len(files['workflow_analysis'])} files)")
     for html_path in sorted(files['workflow_analysis']):
@@ -325,6 +445,18 @@ def run_validation(output_dir, baseline_dir, verbose=False):
             all_errors.extend(result['errors'])
         else:
             print(f"  ✓ {html_path.name} ({result['chart_count']} charts)")
+
+    # Heuristic: 'Other' community share should be low
+    if data_dir and cache_path:
+        print(f"\n🏷️  Community Heuristic (Other ≤ {max_other_pct:.1%})")
+        other_errors = validate_other_share(data_dir, cache_path, max_other_pct=max_other_pct)
+        if other_errors:
+            print(f"  ❌ {len(other_errors)} issues found:")
+            for error in other_errors:
+                print(f"     - {error}")
+            all_errors.extend(other_errors)
+        else:
+            print("  ✓ Valid")
     
     # Summary
     print("\n" + "=" * 60)
@@ -358,6 +490,23 @@ def main():
         action='store_true',
         help="Show detailed output"
     )
+
+    parser.add_argument(
+        '--data-dir',
+        default='data/fetched',
+        help="Data directory containing top-pages-*.tab files (default: data/fetched)"
+    )
+    parser.add_argument(
+        '--taxonomy-cache',
+        default='.taxonomy_cache/latest.json',
+        help="Path to taxonomy cache JSON (default: .taxonomy_cache/latest.json)"
+    )
+    parser.add_argument(
+        '--max-other-pct',
+        type=float,
+        default=0.05,
+        help="Fail validation if 'Other' share exceeds this threshold (default: 0.05)"
+    )
     
     args = parser.parse_args()
     
@@ -370,7 +519,16 @@ def main():
         create_baseline(output_dir, baseline_dir)
         return 0
     
-    success = run_validation(output_dir, baseline_dir, args.verbose)
+    data_dir = project_dir / args.data_dir
+    cache_path = project_dir / args.taxonomy_cache
+    success = run_validation(
+        output_dir,
+        baseline_dir,
+        verbose=args.verbose,
+        data_dir=data_dir,
+        cache_path=cache_path,
+        max_other_pct=args.max_other_pct,
+    )
     return 0 if success else 1
 
 

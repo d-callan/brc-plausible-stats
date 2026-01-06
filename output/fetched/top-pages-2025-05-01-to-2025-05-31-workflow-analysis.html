@@ -114,7 +114,7 @@
     
     <div class="section">
         <h2 class="section-title">Workflow Page Visitors by Assembly (grouped by community)</h2>
-        <div class="legend" style="margin-bottom:15px;"><span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#6b7280;border-radius:2px;margin-right:4px;"></span>Other</span></div>
+        <div class="legend" style="margin-bottom:15px;"><span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#dc2626;border-radius:2px;margin-right:4px;"></span>Viruses</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#2563eb;border-radius:2px;margin-right:4px;"></span>Bacteria</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#65a30d;border-radius:2px;margin-right:4px;"></span>Fungi</span> <span style="display:inline-flex;align-items:center;margin-right:16px;"><span style="width:12px;height:12px;background:#7c3aed;border-radius:2px;margin-right:4px;"></span>Protists</span></div>
         <div class="chart-container bar">
             <canvas id="assemblyChart"></canvas>
         </div>
@@ -153,11 +153,11 @@
         new Chart(document.getElementById('assemblyChart'), {
             type: 'bar',
             data: {
-                labels: ["Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown"],
+                labels: ["Severe acute respira...", "Brucella thiophenivo...", "Allomyces macrogynus...", "Coccidioides immitis...", "Candidozyma auris", "Alternaria alternata", "Coccidioides immitis...", "Acanthamoeba astrony...", "Plasmodium falciparu...", "Plasmodium vivax"],
                 datasets: [{
                     label: 'Visitors',
-                    data: [4, 5, 2, 2, 1, 1, 1, 1, 1, 1],
-                    backgroundColor: ["#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280", "#6b7280"]
+                    data: [1, 1, 4, 2, 1, 1, 1, 5, 2, 1],
+                    backgroundColor: ["#dc2626", "#2563eb", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#65a30d", "#7c3aed", "#7c3aed", "#7c3aed"]
                 }]
             },
             options: {
@@ -174,7 +174,7 @@
         });
         
         // Network diagram using D3.js
-        const networkData = {"workflows": [{"id": "haploid-variant-calling-w", "visitors": 12}, {"id": "rnaseq-pe", "visitors": 2}, {"id": "fastq-to-matrix-10x-scrna", "visitors": 4}, {"id": "rnaseq-sr", "visitors": 1}], "organisms": [{"id": "Unknown", "visitors": 19}], "edges": [{"source": "haploid-variant-calling-w", "target": "Unknown", "visitors": 12}, {"source": "rnaseq-pe", "target": "Unknown", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Unknown", "visitors": 3}, {"source": "fastq-to-matrix-10x-scrna", "target": "Unknown", "visitors": 1}, {"source": "rnaseq-sr", "target": "Unknown", "visitors": 1}]};
+        const networkData = {"workflows": [{"id": "haploid-variant-calling-w", "visitors": 12}, {"id": "rnaseq-pe", "visitors": 2}, {"id": "fastq-to-matrix-10x-scrna", "visitors": 4}, {"id": "rnaseq-sr", "visitors": 1}], "organisms": [{"id": "Allomyces macrogynus ATCC", "visitors": 4}, {"id": "Acanthamoeba astronyxis", "visitors": 5}, {"id": "Plasmodium falciparum 3D7", "visitors": 2}, {"id": "Coccidioides immitis H538", "visitors": 2}, {"id": "Candidozyma auris", "visitors": 1}, {"id": "Brucella thiophenivorans", "visitors": 1}, {"id": "Severe acute respiratory ", "visitors": 1}, {"id": "Alternaria alternata", "visitors": 1}, {"id": "Coccidioides immitis RS", "visitors": 1}, {"id": "Plasmodium vivax", "visitors": 1}], "edges": [{"source": "haploid-variant-calling-w", "target": "Allomyces macrogynus ATCC", "visitors": 4}, {"source": "rnaseq-pe", "target": "Acanthamoeba astronyxis", "visitors": 2}, {"source": "haploid-variant-calling-w", "target": "Plasmodium falciparum 3D7", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Acanthamoeba astronyxis", "visitors": 2}, {"source": "fastq-to-matrix-10x-scrna", "target": "Coccidioides immitis H538", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Candidozyma auris", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Brucella thiophenivorans", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Severe acute respiratory ", "visitors": 1}, {"source": "fastq-to-matrix-10x-scrna", "target": "Coccidioides immitis H538", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Alternaria alternata", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Coccidioides immitis RS", "visitors": 1}, {"source": "haploid-variant-calling-w", "target": "Plasmodium vivax", "visitors": 1}, {"source": "rnaseq-sr", "target": "Acanthamoeba astronyxis", "visitors": 1}]};
         
         if (networkData.workflows.length > 0 && networkData.organisms.length > 0) {
             const svg = d3.select('#networkSvg');

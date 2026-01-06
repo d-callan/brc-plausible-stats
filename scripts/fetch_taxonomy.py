@@ -153,7 +153,12 @@ def fetch_taxonomy_lineage(tax_id, verbose=False):
 
 def fetch_assembly_taxonomy(assembly_id, verbose=False):
     """Fetch taxonomy info for an assembly from NCBI Datasets API."""
-    clean_id = assembly_id.replace('_', '.')
+    clean_id = assembly_id
+    # Convert internal assembly ID format (e.g., GCA_000002825_3) to NCBI accession (GCA_000002825.3)
+    if assembly_id.startswith(('GCA_', 'GCF_')) and '_' in assembly_id:
+        base, version = assembly_id.rsplit('_', 1)
+        if version.isdigit():
+            clean_id = f"{base}.{version}"
     url = f"https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/{clean_id}/dataset_report"
     
     try:
@@ -302,9 +307,26 @@ def main():
         print(f"  Cached taxonomy entries: {len(cache_data['taxonomy'])}")
         print(f"  Cached assembly entries: {len(cache_data['assembly'])}")
     
-    # Identify missing entries
-    missing_tax_ids = [tid for tid in tax_ids if tid not in cache_data['taxonomy']]
-    missing_assembly_ids = [aid for aid in assembly_ids if aid not in cache_data['assembly']]
+    # Identify missing or incomplete entries
+    # We treat cache entries with Unknown lineage (or missing tax_id for assemblies) as incomplete,
+    # so a snapshot can be repaired after bug fixes or transient fetch failures.
+    missing_tax_ids = []
+    for tid in tax_ids:
+        tax_entry = cache_data['taxonomy'].get(tid)
+        if not tax_entry or tax_entry.get('lineage') in (None, '', 'Unknown'):
+            missing_tax_ids.append(tid)
+
+    missing_assembly_ids = []
+    for aid in assembly_ids:
+        asm_entry = cache_data['assembly'].get(aid)
+        if not asm_entry:
+            missing_assembly_ids.append(aid)
+            continue
+        if asm_entry.get('tax_id') in (None, '', 'None'):
+            missing_assembly_ids.append(aid)
+            continue
+        if asm_entry.get('lineage') in (None, '', 'Unknown'):
+            missing_assembly_ids.append(aid)
     
     print(f"\n🔍 Analysis:")
     print(f"  Tax IDs needed: {len(tax_ids)}")
@@ -354,6 +376,23 @@ def main():
                 print(f"  [{i}/{len(missing_assembly_ids)}] Assembly {assembly_id}...")
             
             cache_data['assembly'][assembly_id] = fetch_assembly_taxonomy(assembly_id, args.verbose)
+            time.sleep(0.35)  # Rate limiting
+
+    # Ensure we have taxonomy entries for any tax_ids discovered via assemblies.
+    # Otherwise assembly lineage filling cannot succeed.
+    discovered_tax_ids = set()
+    for asm_data in cache_data['assembly'].values():
+        tax_id = asm_data.get('tax_id')
+        if tax_id and tax_id not in ('None', 'null'):
+            discovered_tax_ids.add(str(tax_id))
+
+    missing_discovered_tax_ids = [tid for tid in sorted(discovered_tax_ids) if tid not in cache_data['taxonomy']]
+    if missing_discovered_tax_ids:
+        print(f"\n🧬 Fetching taxonomy data for {len(missing_discovered_tax_ids)} tax IDs discovered from assemblies...")
+        for i, tax_id in enumerate(missing_discovered_tax_ids, 1):
+            if args.verbose or i % 10 == 0 or i == len(missing_discovered_tax_ids):
+                print(f"  [{i}/{len(missing_discovered_tax_ids)}] Tax ID {tax_id}...")
+            cache_data['taxonomy'][tax_id] = fetch_taxonomy_lineage(tax_id, args.verbose)
             time.sleep(0.35)  # Rate limiting
     
     # Fill in lineages for assemblies from their tax_id lookups

@@ -159,7 +159,7 @@
 <body>
     <div class="header">
         <h1>BRC Analytics - Monthly Traffic Summary</h1>
-        <div class="subtitle">Generated: 2026-01-05 15:03 | Data range: Oct 2024 - Nov 2025</div>
+        <div class="subtitle">Generated: 2026-01-05 21:28 | Data range: Oct 2024 - Nov 2025</div>
         <div class="click-hint"><strong>Tip:</strong> charts labeled “Click for details” are interactive and open a drill-down report.</div>
     </div>
     
@@ -280,133 +280,6 @@
     </div>
     
     
-    <h2 class="section-title">Workflow Categories by Organism Community (All-Time)</h2>
-    <div class="network-container">
-        <div class="network-legend">
-            <span><span class="dot" style="background:#db2777;"></span>Workflow Category</span>
-            <span><span class="dot" style="background:#2563eb;"></span>Organism Community</span>
-            <span style="margin-left:20px;color:#64748b;font-style:italic;">Node size = visitors | Edge width = visitor connections</span>
-        </div>
-        <svg id="networkSvg"></svg>
-    </div>
-    <script>
-        (function() {
-            const networkData = {"workflows": [{"id": "Variant Calling", "visitors": 301}, {"id": "Single Cell", "visitors": 118}, {"id": "Transcription", "visitors": 114}, {"id": "Epigenomics", "visitors": 82}, {"id": "AMR", "visitors": 3}], "communities": [{"id": "Other", "visitors": 618}], "edges": [{"source": "Variant Calling", "target": "Other", "visitors": 301}, {"source": "Single Cell", "target": "Other", "visitors": 118}, {"source": "Transcription", "target": "Other", "visitors": 114}, {"source": "Epigenomics", "target": "Other", "visitors": 82}, {"source": "AMR", "target": "Other", "visitors": 3}]};
-            
-            if (networkData.workflows.length > 0 && networkData.communities.length > 0) {
-                const svg = d3.select('#networkSvg');
-                const container = document.querySelector('.network-container');
-                const width = container.clientWidth - 40;
-                const height = container.clientHeight - 60;
-                
-                svg.attr('width', width).attr('height', height);
-                
-                const g = svg.append('g');
-                
-                const zoom = d3.zoom()
-                    .scaleExtent([0.2, 3])
-                    .on('zoom', (event) => g.attr('transform', event.transform));
-                svg.call(zoom);
-                
-                const nodes = [
-                    ...networkData.workflows.map(w => ({ id: w.id, type: 'workflow', visitors: w.visitors })),
-                    ...networkData.communities.map(c => ({ id: c.id, type: 'community', visitors: c.visitors }))
-                ];
-                
-                const links = networkData.edges.map(e => ({
-                    source: e.source,
-                    target: e.target,
-                    visitors: e.visitors
-                }));
-                
-                const maxVisitors = Math.max(...nodes.map(n => n.visitors));
-                const nodeScale = d3.scaleSqrt().domain([1, maxVisitors]).range([6, 20]);
-                
-                const maxEdgeVisitors = Math.max(...links.map(l => l.visitors));
-                const edgeScale = d3.scaleLinear().domain([1, maxEdgeVisitors]).range([1, 6]);
-                
-                const simulation = d3.forceSimulation(nodes)
-                    .force('link', d3.forceLink(links).id(d => d.id).distance(80))
-                    .force('charge', d3.forceManyBody().strength(-100))
-                    .force('center', d3.forceCenter(width / 2, height / 2))
-                    .force('collision', d3.forceCollide().radius(d => nodeScale(d.visitors) + 4))
-                    .force('x', d3.forceX(width / 2).strength(0.03))
-                    .force('y', d3.forceY(height / 2).strength(0.03));
-                
-                const link = g.append('g')
-                    .selectAll('line')
-                    .data(links)
-                    .join('line')
-                    .attr('class', 'link')
-                    .attr('stroke-width', d => edgeScale(d.visitors));
-                
-                const node = g.append('g')
-                    .selectAll('circle')
-                    .data(nodes)
-                    .join('circle')
-                    .attr('r', d => nodeScale(d.visitors))
-                    .attr('class', d => d.type === 'workflow' ? 'node-workflow' : 'node-organism')
-                    .call(d3.drag()
-                        .on('start', dragstarted)
-                        .on('drag', dragged)
-                        .on('end', dragended));
-                
-                const label = g.append('g')
-                    .selectAll('text')
-                    .data(nodes)
-                    .join('text')
-                    .attr('class', 'node-label')
-                    .attr('dy', d => nodeScale(d.visitors) + 10)
-                    .attr('text-anchor', 'middle')
-                    .text(d => d.id.length > 18 ? d.id.slice(0, 18) + '...' : d.id);
-                
-                node.append('title')
-                    .text(d => d.id + '\n' + d.visitors + ' visitors');
-                
-                simulation.on('tick', () => {
-                    link
-                        .attr('x1', d => d.source.x)
-                        .attr('y1', d => d.source.y)
-                        .attr('x2', d => d.target.x)
-                        .attr('y2', d => d.target.y);
-                    
-                    node
-                        .attr('cx', d => d.x)
-                        .attr('cy', d => d.y);
-                    
-                    label
-                        .attr('x', d => d.x)
-                        .attr('y', d => d.y);
-                });
-                
-                simulation.on('end', () => {
-                    const bounds = g.node().getBBox();
-                    const scale = 0.85 / Math.max(bounds.width / width, bounds.height / height);
-                    const tx = (width - scale * (bounds.x * 2 + bounds.width)) / 2;
-                    const ty = (height - scale * (bounds.y * 2 + bounds.height)) / 2;
-                    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale));
-                });
-                
-                function dragstarted(event) {
-                    if (!event.active) simulation.alphaTarget(0.3).restart();
-                    event.subject.fx = event.subject.x;
-                    event.subject.fy = event.subject.y;
-                }
-                
-                function dragged(event) {
-                    event.subject.fx = event.x;
-                    event.subject.fy = event.y;
-                }
-                
-                function dragended(event) {
-                    if (!event.active) simulation.alphaTarget(0);
-                    event.subject.fx = null;
-                    event.subject.fy = null;
-                }
-            }
-        })();
-    </script>
-        
     
     <h2 class="section-title">Learn / Featured Analyses</h2>
     <div class="charts-grid">
@@ -501,13 +374,13 @@
         
         new Chart(document.getElementById('organism_community_visitors'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Viruses", "data": [0, 0, 0, 7, 14, 10, 7, 6, 7, 22, 27, 10, 26, 21], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Bacteria", "data": [0, 0, 0, 2, 2, 0, 2, 0, 13, 5, 5, 12, 21, 11], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Fungi", "data": [0, 0, 0, 32, 47, 32, 23, 32, 22, 11, 88, 48, 51, 22], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Protists", "data": [0, 0, 0, 7, 27, 88, 63, 68, 57, 30, 47, 48, 43, 22], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Vectors", "data": [0, 0, 0, 26, 59, 7, 4, 8, 2, 2, 3, 3, 4, 4], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Hosts", "data": [0, 0, 0, 0, 0, 0, 1, 0, 1, 2, 1, 22, 0, 1], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Helminths", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 3, 0, 1, 0], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Organism Pages by Community - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
-        new Chart(document.getElementById('assembly_community_pages'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Viruses", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Bacteria", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Fungi", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Protists", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Vectors", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Hosts", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Helminths", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 18, 18, 45, 31, 41, 51, 47, 76, 75, 101, 80], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Assembly Pages by Community - Unique Pages", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Unique Pages"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
+        new Chart(document.getElementById('assembly_community_pages'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Viruses", "data": [0, 0, 0, 2, 2, 2, 2, 5, 4, 11, 12, 4, 22, 34], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Bacteria", "data": [0, 0, 0, 1, 1, 1, 1, 3, 11, 7, 7, 8, 18, 13], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Fungi", "data": [0, 0, 0, 5, 6, 13, 5, 10, 9, 13, 31, 18, 25, 11], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Protists", "data": [0, 0, 0, 6, 4, 23, 17, 17, 23, 12, 21, 24, 28, 15], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Vectors", "data": [0, 0, 0, 3, 4, 5, 5, 1, 1, 1, 3, 5, 6, 3], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Hosts", "data": [0, 0, 0, 0, 0, 0, 1, 2, 1, 1, 0, 14, 0, 1], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Helminths", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 1, 1, 1, 0, 3, 2, 2, 2, 2, 0, 0], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Assembly Pages by Community - Unique Pages", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Unique Pages"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
-        new Chart(document.getElementById('assembly_community_visitors'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Viruses", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Bacteria", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Fungi", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Protists", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Vectors", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Hosts", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Helminths", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 71, 165, 149, 82, 93, 114, 101, 170, 159, 210, 169], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Assembly Pages by Community - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
+        new Chart(document.getElementById('assembly_community_visitors'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Viruses", "data": [0, 0, 0, 3, 14, 9, 2, 5, 6, 20, 24, 10, 34, 50], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Bacteria", "data": [0, 0, 0, 1, 3, 1, 1, 3, 13, 16, 8, 12, 36, 34], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Fungi", "data": [0, 0, 0, 22, 54, 39, 11, 17, 15, 27, 86, 53, 73, 51], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Protists", "data": [0, 0, 0, 7, 16, 91, 59, 58, 76, 29, 47, 52, 58, 24], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Vectors", "data": [0, 0, 0, 33, 77, 8, 6, 1, 1, 2, 3, 6, 7, 6], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Hosts", "data": [0, 0, 0, 0, 0, 0, 3, 3, 1, 5, 0, 24, 0, 1], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Helminths", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 5, 1, 1, 0, 6, 2, 2, 2, 2, 0, 0], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Assembly Pages by Community - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
-        new Chart(document.getElementById('workflow_community_pages'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Viruses", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Bacteria", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Fungi", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Protists", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Vectors", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Hosts", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Helminths", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 0, 0, 5, 8, 13, 21, 24, 69, 62, 76, 117], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Workflow Pages by Community - Unique Pages", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Unique Pages"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
+        new Chart(document.getElementById('workflow_community_pages'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Viruses", "data": [0, 0, 0, 0, 0, 0, 0, 1, 0, 9, 9, 2, 11, 63], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Bacteria", "data": [0, 0, 0, 0, 0, 0, 0, 1, 5, 0, 1, 6, 10, 13], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Fungi", "data": [0, 0, 0, 0, 0, 0, 1, 6, 1, 4, 30, 15, 28, 16], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Protists", "data": [0, 0, 0, 0, 0, 5, 7, 5, 15, 7, 26, 24, 23, 20], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Vectors", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 2, 1], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Hosts", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 10, 1, 2], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Helminths", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 1, 0], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Workflow Pages by Community - Unique Pages", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Unique Pages"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
-        new Chart(document.getElementById('workflow_community_visitors'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Viruses", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Bacteria", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Fungi", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Protists", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Vectors", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Hosts", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Helminths", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 0, 0, 5, 15, 19, 29, 43, 139, 107, 136, 142], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Workflow Pages by Community - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
+        new Chart(document.getElementById('workflow_community_visitors'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Viruses", "data": [0, 0, 0, 0, 0, 0, 0, 1, 0, 17, 20, 6, 19, 67], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Bacteria", "data": [0, 0, 0, 0, 0, 0, 0, 1, 5, 0, 1, 8, 20, 14], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Fungi", "data": [0, 0, 0, 0, 0, 0, 2, 9, 2, 11, 77, 30, 62, 31], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Protists", "data": [0, 0, 0, 0, 0, 5, 13, 8, 22, 10, 38, 44, 30, 24], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Vectors", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 2, 1], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Hosts", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 14, 2, 3], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Helminths", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 1, 0], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Workflow Pages by Community - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
         new Chart(document.getElementById('workflow_category_pages'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Variant Calling", "data": [0, 0, 0, 0, 0, 0, 2, 8, 7, 10, 33, 18, 31, 27], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "Transcription", "data": [0, 0, 0, 0, 0, 0, 0, 2, 3, 8, 11, 25, 14, 27], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Single Cell", "data": [0, 0, 0, 0, 0, 4, 5, 3, 9, 6, 14, 12, 18, 21], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "Epigenomics", "data": [0, 0, 0, 0, 0, 1, 1, 0, 2, 0, 11, 6, 11, 42], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "AMR", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "Viral", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "Other", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#6b7280", "backgroundColor": "#6b728020", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Workflow Pages by Category - Unique Pages", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Unique Pages"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
@@ -523,9 +396,9 @@
         
         new Chart(document.getElementById('demo_sources'), {"type": "line", "data": {"labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025"], "datasets": [{"label": "Direct / None", "data": [866, 333, 121, 259, 234, 329, 269, 277, 233, 314, 251, 453, 550, 727], "borderColor": "#2563eb", "backgroundColor": "#2563eb20", "tension": 0.3, "fill": false}, {"label": "Google", "data": [109, 95, 48, 27, 43, 56, 32, 42, 43, 38, 37, 64, 61, 26], "borderColor": "#7c3aed", "backgroundColor": "#7c3aed20", "tension": 0.3, "fill": false}, {"label": "galaxyproject.org", "data": [30, 28, 27, 31, 44, 28, 22, 14, 13, 18, 20, 23, 22, 13], "borderColor": "#db2777", "backgroundColor": "#db277720", "tension": 0.3, "fill": false}, {"label": "niaid.nih.gov", "data": [44, 25, 12, 13, 14, 14, 13, 6, 11, 6, 12, 12, 3, 3], "borderColor": "#dc2626", "backgroundColor": "#dc262620", "tension": 0.3, "fill": false}, {"label": "baidu.com", "data": [14, 12, 20, 8, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#ea580c", "backgroundColor": "#ea580c20", "tension": 0.3, "fill": false}, {"label": "LinkedIn", "data": [25, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 4, 9], "borderColor": "#65a30d", "backgroundColor": "#65a30d20", "tension": 0.3, "fill": false}, {"label": "Bing", "data": [12, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 0, 10], "borderColor": "#0891b2", "backgroundColor": "#0891b220", "tension": 0.3, "fill": false}, {"label": "DuckDuckGo", "data": [8, 4, 5, 2, 0, 4, 1, 0, 0, 3, 1, 1, 0, 1], "borderColor": "#6366f1", "backgroundColor": "#6366f120", "tension": 0.3, "fill": false}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Traffic Sources - Visitors", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Month"}}}, "interaction": {"intersect": false, "mode": "index"}}});
         
-        new Chart(document.getElementById('community_pages_bar'), {"type": "bar", "data": {"labels": ["Viruses", "Bacteria", "Fungi", "Protists", "Vectors", "Hosts", "Helminths", "Other"], "datasets": [{"label": "Organism Pages", "data": [60, 41, 89, 67, 26, 16, 8, 6], "backgroundColor": "#2563eb"}, {"label": "Assembly Pages", "data": [0, 0, 0, 0, 0, 0, 0, 295], "backgroundColor": "#7c3aed"}, {"label": "Workflow Pages", "data": [0, 0, 0, 0, 0, 0, 0, 284], "backgroundColor": "#db2777"}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Page Types by Community - Unique Pages (from dedicated all-time fetch)", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Unique Pages"}}, "x": {"title": {"display": true, "text": "Community"}}}}});
+        new Chart(document.getElementById('community_pages_bar'), {"type": "bar", "data": {"labels": ["Viruses", "Bacteria", "Fungi", "Protists", "Vectors", "Hosts", "Helminths", "Other"], "datasets": [{"label": "Organism Pages", "data": [69, 52, 147, 160, 36, 16, 5, 6], "backgroundColor": "#2563eb"}, {"label": "Assembly Pages", "data": [100, 71, 146, 190, 37, 20, 5, 14], "backgroundColor": "#7c3aed"}, {"label": "Workflow Pages", "data": [95, 36, 101, 132, 8, 16, 2, 5], "backgroundColor": "#db2777"}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Page Types by Community - Unique Pages (aggregated from monthly - may overcount)", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Unique Pages"}}, "x": {"title": {"display": true, "text": "Community"}}}}});
         
-        new Chart(document.getElementById('community_visitors_bar'), {"type": "bar", "data": {"labels": ["Viruses", "Bacteria", "Fungi", "Protists", "Vectors", "Hosts", "Helminths", "Other"], "datasets": [{"label": "Organism Pages", "data": [171, 83, 437, 510, 129, 32, 8, 8], "backgroundColor": "#2563eb"}, {"label": "Assembly Pages", "data": [0, 0, 0, 0, 0, 0, 0, 1472], "backgroundColor": "#7c3aed"}, {"label": "Workflow Pages", "data": [0, 0, 0, 0, 0, 0, 0, 618], "backgroundColor": "#db2777"}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Page Types by Community - Visitors (from dedicated all-time fetch)", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Community"}}}}});
+        new Chart(document.getElementById('community_visitors_bar'), {"type": "bar", "data": {"labels": ["Viruses", "Bacteria", "Fungi", "Protists", "Vectors", "Hosts", "Helminths", "Other"], "datasets": [{"label": "Organism Pages", "data": [157, 73, 408, 500, 122, 28, 5, 7], "backgroundColor": "#2563eb"}, {"label": "Assembly Pages", "data": [177, 128, 448, 517, 150, 37, 5, 21], "backgroundColor": "#7c3aed"}, {"label": "Workflow Pages", "data": [130, 49, 224, 194, 8, 23, 2, 5], "backgroundColor": "#db2777"}]}, "options": {"responsive": true, "maintainAspectRatio": false, "plugins": {"title": {"display": true, "text": "Page Types by Community - Visitors (aggregated from monthly - may overcount)", "font": {"size": 16, "weight": "bold"}}, "legend": {"position": "bottom"}}, "scales": {"y": {"beginAtZero": true, "title": {"display": true, "text": "Visitors"}}, "x": {"title": {"display": true, "text": "Community"}}}}});
         
         
         // Add click handlers to organism and workflow charts
