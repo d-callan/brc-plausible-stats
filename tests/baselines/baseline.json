@@ -1,0 +1,205 @@
+{
+  "created_at": "2025-12-22T11:48:36.282057",
+  "monthly_summary": {
+    "chart_count": 1,
+    "charts": [
+      "total_charts"
+    ]
+  },
+  "organism_analysis": [
+    {
+      "filename": "top-pages-2025-10-01-to-2025-10-31-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-04-01-to-2025-04-30-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-06-01-to-2025-06-30-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2024-12-01-to-2024-12-31-organism-analysis.html",
+      "chart_count": 1,
+      "charts": [
+        "hlChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-05-01-to-2025-05-31-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-11-01-to-2025-11-30-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-02-01-to-2025-02-28-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2024-11-01-to-2024-11-30-organism-analysis.html",
+      "chart_count": 1,
+      "charts": [
+        "hlChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-07-01-to-2025-07-31-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-09-01-to-2025-09-30-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-03-01-to-2025-03-31-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-08-01-to-2025-08-31-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2024-10-01-to-2024-10-31-organism-analysis.html",
+      "chart_count": 1,
+      "charts": [
+        "hlChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-01-01-to-2025-01-31-organism-analysis.html",
+      "chart_count": 3,
+      "charts": [
+        "hlChart",
+        "orgChart",
+        "asmChart"
+      ]
+    }
+  ],
+  "workflow_analysis": [
+    {
+      "filename": "top-pages-2025-04-01-to-2025-04-30-workflow-analysis.html",
+      "chart_count": 2,
+      "charts": [
+        "workflowChart",
+        "assemblyChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-07-01-to-2025-07-31-workflow-analysis.html",
+      "chart_count": 2,
+      "charts": [
+        "workflowChart",
+        "assemblyChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-10-01-to-2025-10-31-workflow-analysis.html",
+      "chart_count": 2,
+      "charts": [
+        "workflowChart",
+        "assemblyChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-08-01-to-2025-08-31-workflow-analysis.html",
+      "chart_count": 2,
+      "charts": [
+        "workflowChart",
+        "assemblyChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-05-01-to-2025-05-31-workflow-analysis.html",
+      "chart_count": 2,
+      "charts": [
+        "workflowChart",
+        "assemblyChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-11-01-to-2025-11-30-workflow-analysis.html",
+      "chart_count": 2,
+      "charts": [
+        "workflowChart",
+        "assemblyChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-06-01-to-2025-06-30-workflow-analysis.html",
+      "chart_count": 2,
+      "charts": [
+        "workflowChart",
+        "assemblyChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-03-01-to-2025-03-31-workflow-analysis.html",
+      "chart_count": 2,
+      "charts": [
+        "workflowChart",
+        "assemblyChart"
+      ]
+    },
+    {
+      "filename": "top-pages-2025-09-01-to-2025-09-30-workflow-analysis.html",
+      "chart_count": 2,
+      "charts": [
+        "workflowChart",
+        "assemblyChart"
+      ]
+    }
+  ]
+}
