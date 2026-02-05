@@ -16,6 +16,7 @@ Usage:
 import argparse
 import json
 import re
+import subprocess
 import sys
 from collections import defaultdict
 from datetime import datetime
@@ -142,7 +143,7 @@ def parse_data_file(filepath):
                 name = high_level_urls[url]
                 stats['high_level'][name]['visitors'] += visitors
                 stats['high_level'][name]['pageviews'] += pageviews
-            elif re.match(r'^/data/organisms/\d+$', url):
+            elif re.match(r'^/data/organisms/(?!GCA[0-9]|GCF[0-9])[A-Za-z0-9_.-]+$', url):
                 tax_id = url.split('/')[-1]
                 stats['organism_pages'].append((tax_id, visitors, pageviews))
             elif re.match(r'^/data/assemblies/[^/]+$', url):
@@ -1182,7 +1183,28 @@ def main():
     if not data_dir.exists():
         print(f"Error: Data directory not found: {data_dir}", file=sys.stderr)
         sys.exit(1)
+
+    fetch_script = script_dir / 'fetch_monthly_reports.py'
+
+    def ensure_all_time_data():
+        """Ensure all-time data is refreshed before analysis."""
+        print("Ensuring all-time dataset is up to date...", file=sys.stderr)
+        result = subprocess.run(
+            ["python3", str(fetch_script), "--include-all-time"],
+            capture_output=True,
+            text=True
+        )
+
+        if result.returncode != 0:
+            print("Warning: Failed to refresh all-time data automatically.", file=sys.stderr)
+            print(result.stderr.strip(), file=sys.stderr)
+        else:
+            print(result.stdout.strip(), file=sys.stderr)
+            print("All-time dataset refreshed.", file=sys.stderr)
     
+    # Always refresh all-time dataset before proceeding
+    ensure_all_time_data()
+
     # Load taxonomy cache
     print("Loading taxonomy cache...", file=sys.stderr)
     load_taxonomy_caches()

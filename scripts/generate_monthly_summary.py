@@ -96,7 +96,7 @@ def parse_data_file(filepath):
                 stats['high_level'][name]['pageviews'] += pageviews
             
             # Organism pages: /data/organisms/{tax_id}
-            elif re.match(r'^/data/organisms/\d+$', url):
+            elif re.match(r'^/data/organisms/(?!GCA[0-9]|GCF[0-9])[A-Za-z0-9_.-]+$', url):
                 tax_id = url.split('/')[-1]
                 stats['organism_pages'].append((tax_id, visitors, pageviews))
             
