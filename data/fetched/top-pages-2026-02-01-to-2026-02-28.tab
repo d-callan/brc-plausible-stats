@@ -1,0 +1,123 @@
+Page url	Visitors	Pageviews	Bounce rate	Time on Page
+/	223	284	71%	1m 18s
+/data/organisms	37	51	12%	25s
+/data/assemblies	31	45	0%	14m 19s
+/about	22	25	100%	-
+/learn/featured-analyses/standardizing-rnaseq-candidozyma-auris	20	22	50%	3m 58s
+/data/priority-pathogens	14	23	0%	-
+/learn/featured-analyses/evolutionary-dynamics-of-coding-overlaps-in-measles	12	12	43%	-
+/roadmap	11	16	50%	1s
+/learn	9	12	-	-
+/data/assemblies/GCA_013177555_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	8	10	100%	-
+/api/v1/assemblies/links/GCA_030573285.100000	7	7	100%	-
+/data/assemblies/GCA_013177555_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	7	10	56%	2m 59s
+/data/assemblies/GCA_030573285_1	7	11	75%	27s
+/),	5	5	0%	-
+/data/assemblies/GCA_030573285_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-3	5	5	100%	-
+/api/v1/assemblies/links/GCA_000002545.2	4	12	33%	6m 43s
+/calendar	4	5	100%	-
+/api/v0/assemblies/links/GCF_000002765.6	3	5	67%	3s
+/api/v1/assemblies/links/GCA_030573285.10	3	5	0%	1m 58s
+/data/assemblies/GCF_045689255_1	3	3	-	-
+/data/organisms/45524	3	3	-	-
+/data/organisms/45573	3	3	-	-
+/data/organisms/5833	3	3	-	-
+/data/organisms/632	3	3	100%	-
+/data/organisms/746128	3	4	-	-
+/learn/getting-started	3	4	-	-
+/)	2	2	0%	-
+/).	2	2	-	-
+/api	2	2	-	-
+/api/	2	3	0%	4m 28s
+/data/assemblies/GCA_001008285_1	2	3	-	-
+/data/assemblies/GCA_013177555_1	2	2	100%	-
+/data/assemblies/GCA_030563865_1	2	2	-	-
+/data/assemblies/GCA_030573285_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	2	-	-
+/data/assemblies/GCF_000002655_1	2	4	0%	1s
+/data/assemblies/GCF_000002765_6	2	2	-	-
+/data/assemblies/GCF_000281045_1	2	2	0%	32s
+/data/assemblies/GCF_000281045_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	2	2	100%	-
+/data/assemblies/GCF_002204515_2	2	3	0%	3m 01s
+/data/assemblies/GCF_045689255_1/custom-workflow	2	2	-	-
+/data/assemblies/GCF_045689255_1/differential-expression-analysis	2	2	-	-
+/data/organisms/4909	2	2	100%	-
+/data/organisms/562	2	2	100%	-
+/data/organisms/73230	2	3	-	-
+/data/priority-pathogens/avian-influenza	2	3	-	-
+/data/priority-pathogens/filoviridae	2	2	-	-
+/learn/getting-started/first-analysis	2	2	-	-
+//data/assemblies/GCA_000002545_2	1	2	-	-
+/__;!!G_uCfscf7eWS!YVgQyK10AZZN7qlV8CGE4AZ5GSIEgaUTlhRVkxPC1y9xKaliQgfsS-9x3TC01WFTGKOOZEdHj_g6_WAjT_tpnyRFbBA$	1	1	100%	-
+/__;!!G_uCfscf7eWS!ZuzrfJwso8nKnOAGJRVdGd6hLd5QhPsAEc2FUety4ZU7qB6ZZCT7Qpro9YWDT4NUhhIe1nJYzbRQmQX6aFudB3mON8g$	1	1	100%	-
+/api/v1	1	1	-	-
+/api/v1/	1	1	-	-
+/api/v1/assemblies/links	1	3	-	-
+/api/v1/assemblies/links/GCA_000001405.29	1	1	100%	-
+/api/v1/assemblies/links/GCA_030573285.199	1	1	-	-
+/api/v1/assemblies/links/GCF_030573285.10	1	1	-	-
+/api/v1/assemblies/links/foobar	1	1	0%	1m 22s
+/api/v1/assemblies/links/zebra	1	2	-	-
+/api/v1/docs	1	1	0%	53s
+/chat	1	1	-	-
+/data/assemblies/GCA_000002545_2	1	1	-	-
+/data/assemblies/GCA_000002655_1	1	2	-	-
+/data/assemblies/GCA_000002655_1/custom-workflow	1	1	100%	-
+/data/assemblies/GCA_000002655_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	-
+/data/assemblies/GCA_000349045_1	1	1	100%	-
+/data/assemblies/GCA_000697685_1	1	1	-	-
+/data/assemblies/GCA_000826365_1	1	1	-	-
+/data/assemblies/GCA_001008285_1/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-2	1	1	-	-
+/data/assemblies/GCA_001747055_1	1	1	100%	-
+/data/assemblies/GCA_002307695_1	1	1	-	-
+/data/assemblies/GCA_002307695_1/custom-workflow	1	1	-	-
+/data/assemblies/GCA_002759435_3	1	1	-	-
+/data/assemblies/GCA_002759435_3/workflow-github-com-iwc-workflows-rnaseq-sr-main-versions-v1-2	1	1	-	-
+/data/assemblies/GCA_004786575_1	1	1	-	-
+/data/assemblies/GCA_004786575_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCA_020509355_1	1	1	100%	-
+/data/assemblies/GCA_030563865_1/custom-workflow	1	1	-	-
+/data/assemblies/GCA_030563865_1/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-3	1	1	-	-
+/data/assemblies/GCA_030573285_1/custom-workflow	1	1	-	-
+/data/assemblies/GCA_030573285_1/workflow-github-com-iwc-workflows-cutandrun-main-versions-v0-14	1	1	-	-
+/data/assemblies/GCA_900252365_1	1	1	100%	-
+/data/assemblies/GCA_900500625_2	1	1	100%	-
+/data/assemblies/GCA_949152365_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCF_000002415_2	1	1	-	-
+/data/assemblies/GCF_000002655_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	3	-	-
+/data/assemblies/GCF_000002655_1/workflow-github-com-iwc-workflows-rnaseq-sr-main-versions-v1-2	1	1	-	-
+/data/assemblies/GCF_000002765_6/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	-
+/data/assemblies/GCF_000364345_1	1	1	100%	-
+/data/assemblies/GCF_000851145_1	1	1	-	-
+/data/assemblies/GCF_000851145_1/custom-workflow	1	1	-	-
+/data/assemblies/GCF_000852685_1	1	1	100%	-
+/data/assemblies/GCF_000864105_1	1	2	-	-
+/data/assemblies/GCF_000864105_1/custom-workflow	1	1	-	-
+/data/assemblies/GCF_000864105_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	2	-	-
+/data/assemblies/GCF_000865085_1	1	1	100%	-
+/data/assemblies/GCF_001343785_1	1	3	-	-
+/data/assemblies/GCF_001343785_1/custom-workflow	1	2	-	-
+/data/assemblies/GCF_001647695_1	1	1	100%	-
+/data/assemblies/GCF_002204515_2/custom-workflow	1	1	-	-
+/data/assemblies/GCF_006364355_1	1	1	-	-
+/data/assemblies/GCF_006364355_1/workflow-github-com-iwc-workflows-amr-gene-detection-main-versions-v1-1-7	1	1	-	-
+/data/assemblies/GCF_019668505_1	1	1	100%	-
+/data/assemblies/GCF_025998455_1	1	1	-	-
+/data/assemblies/GCF_030297255_1/workflow-github-com-iwc-workflows-amr-gene-detection-main-versions-v1-1-6	1	1	100%	-
+/data/organisms/1496	1	1	-	-
+/data/organisms/29494	1	1	-	-
+/data/organisms/2955291	1	3	-	-
+/data/organisms/32600	1	3	-	-
+/data/organisms/337048	1	1	-	-
+/data/organisms/34611	1	1	-	-
+/data/organisms/498019	1	1	-	-
+/data/organisms/5207	1	1	0%	1s
+/data/organisms/7159	1	1	-	-
+/data/organisms/7175	1	1	-	-
+/data/priority-pathogens/aspergillus	1	1	-	-
+/data/priority-pathogens/candidozyma-candida-auris	1	1	-	-
+/data/priority-pathogens/flaviviridae	1	1	-	-
+/data/priority-pathogens/sars-cov-2	1	1	-	-
+/learn/featured-analyses	1	3	0%	3m 36s
+/learn/getting-started/overview	1	1	-	-
+/lunch	1	1	-	-
+/search	1	1	-	-
