@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "source": "grafana",
+    "origin": "https://brc-analytics.org/",
+    "start_date": "2026-01-01",
+    "end_date": "2026-01-31",
+    "fetched_at": "2026-03-19T22:16:51.195357",
+    "data_points_count": 0
+  },
+  "summary": {
+    "total_landings": 0,
+    "unique_workflows": 0,
+    "unique_dbkeys": 0
+  },
+  "by_workflow": {},
+  "by_category": {},
+  "by_community": {},
+  "by_dbkey": {}
+}

@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "source": "grafana",
+    "origin": "https://brc-analytics.org/",
+    "start_date": "2026-02-01",
+    "end_date": "2026-02-28",
+    "fetched_at": "2026-03-19T22:19:33.213460",
+    "data_points_count": 1
+  },
+  "summary": {
+    "total_landings": 1,
+    "unique_workflows": 1,
+    "unique_dbkeys": 1
+  },
+  "by_workflow": {
+    "haploid-variant-calling-wgs-pe": 1
+  },
+  "by_category": {
+    "Variant Calling": 1
+  },
+  "by_community": {
+    "Other": 1
+  },
+  "by_dbkey": {
+    "GCF_000864105.1": 1
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "source": "grafana",
+    "origin": "https://brc-analytics.org/",
+    "start_date": "2026-03-01",
+    "end_date": "2026-03-31",
+    "fetched_at": "2026-03-19T22:20:32.956242",
+    "data_points_count": 12
+  },
+  "summary": {
+    "total_landings": 14,
+    "unique_workflows": 6,
+    "unique_dbkeys": 11
+  },
+  "by_workflow": {
+    "scrna-seq-fastq-to-matrix-10x-cellplex": 3,
+    "haploid-variant-calling-wgs-pe": 5,
+    "lncRNAs-annotation": 3,
+    "rnaseq-pe": 1,
+    "amr_gene_detection": 1,
+    "atacseq": 1
+  },
+  "by_category": {
+    "Single Cell": 3,
+    "Variant Calling": 5,
+    "Transcription": 4,
+    "Other": 1,
+    "Epigenomics": 1
+  },
+  "by_community": {
+    "Protists": 6,
+    "Fungi": 3,
+    "Other": 2,
+    "Bacteria": 3
+  },
+  "by_dbkey": {
+    "GCA_000193105.1": 1,
+    "GCA_000826245.1": 1,
+    "GCA_001008285.1": 1,
+    "GCA_001650135.1": 1,
+    "GCF_000002655.1": 2,
+    "GCF_000002765.6": 1,
+    "GCF_000006565.2": 2,
+    "GCF_000924015.1": 1,
+    "GCF_001647695.1": 2,
+    "GCF_013267415.1": 1,
+    "unknown": 1
+  }
+}
