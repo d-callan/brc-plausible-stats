@@ -7,6 +7,8 @@ with line charts showing trends over time for:
 - High-level pages (home, roadmap, about, etc.)
 - Content pages (organism, assembly, workflow)
 - Community breakdowns (viruses, bacteria, fungi, etc.)
+- Galaxy workflow landings (from Grafana/InfluxDB)
+- Comparison of BRC workflow configurations vs Galaxy landings
 
 Usage:
     python3 generate_monthly_summary_html.py
@@ -26,6 +28,7 @@ from pathlib import Path
 from taxonomy_cache import load_cache, get_community
 
 # Workflow category patterns for classification
+# (also used in fetch_grafana_landings.py - keep in sync)
 WORKFLOW_CATEGORIES = {
     'Variant Calling': ['variant-calling', 'haploid-variant'],
     'Transcription': ['rnaseq', 'lncRNAs', 'transcriptome'],
@@ -207,6 +210,72 @@ def get_month_files(data_dir):
     return files
 
 
+def get_grafana_files(data_dir):
+    """Get all Grafana landing data files sorted by date."""
+    files = []
+    pattern = re.compile(r'grafana-landings-(\d{4})-(\d{2})-\d{2}-to-(\d{4})-(\d{2})-\d{2}\.json')
+    
+    for f in data_dir.glob('grafana-landings-*.json'):
+        match = pattern.match(f.name)
+        if match:
+            year, month = int(match.group(1)), int(match.group(2))
+            files.append((year, month, f))
+    
+    files.sort(key=lambda x: (x[0], x[1]))
+    return files
+
+
+def load_grafana_monthly_data(data_dir):
+    """Load all Grafana monthly landing data files.
+    
+    Returns:
+        Tuple of (monthly_data dict keyed by 'Mon YYYY', date_range tuple or None)
+    """
+    grafana_files = get_grafana_files(data_dir)
+    
+    if not grafana_files:
+        return {}, None
+    
+    monthly_data = {}
+    min_date = None
+    max_date = None
+    
+    for year, month, filepath in grafana_files:
+        month_label = format_month(year, month)
+        
+        try:
+            with open(filepath, 'r') as f:
+                data = json.load(f)
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"  Warning: Could not load {filepath.name}: {e}", file=sys.stderr)
+            continue
+        
+        # Track date range
+        metadata = data.get('metadata', {})
+        start_date = metadata.get('start_date')
+        end_date = metadata.get('end_date')
+        
+        if start_date:
+            if min_date is None or start_date < min_date:
+                min_date = start_date
+        if end_date:
+            if max_date is None or end_date > max_date:
+                max_date = end_date
+        
+        # Only include months with actual data
+        if data.get('summary', {}).get('total_landings', 0) > 0:
+            monthly_data[month_label] = {
+                'total_landings': data.get('summary', {}).get('total_landings', 0),
+                'by_community': data.get('by_community', {}),
+                'by_category': data.get('by_category', {}),
+                'by_workflow': data.get('by_workflow', {}),
+                'by_dbkey': data.get('by_dbkey', {}),
+            }
+    
+    date_range = (min_date, max_date) if min_date and max_date else None
+    return monthly_data, date_range
+
+
 def format_month(year, month):
     """Format year/month as 'Mon YYYY'."""
     return datetime(year, month, 1).strftime('%b %Y')
@@ -298,17 +367,23 @@ def generate_bar_chart_js(chart_id, title, labels, datasets, y_label):
     return json.dumps(chart_data)
 
 
-def generate_html_report(monthly_data, output_path, all_time_data=None):
+def generate_html_report(monthly_data, output_path, all_time_data=None, grafana_data=None, grafana_date_range=None):
     """Generate the HTML report with charts.
     
     Args:
-        monthly_data: List of monthly data dicts
+        monthly_data: List of monthly data dicts (Plausible)
         output_path: Path to write HTML file
         all_time_data: Optional dict with all-time community stats (from dedicated fetch)
+        grafana_data: Optional dict of Grafana landing data keyed by month label
+        grafana_date_range: Optional tuple (start_date, end_date) for Grafana data
     """
     
     months = [d['month'] for d in monthly_data]
     communities = ['Viruses', 'Bacteria', 'Fungi', 'Protists', 'Vectors', 'Hosts', 'Helminths', 'Other']
+    
+    # Determine which months have Grafana data
+    grafana_months = list(grafana_data.keys()) if grafana_data else []
+    has_grafana_data = len(grafana_months) > 0
     
     # Prepare chart data
     charts = []
@@ -509,6 +584,105 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         })
     charts.append(('workflow_category_visitors', 'Workflow Pages by Category - Visitors', datasets, 'Visitors'))
     
+    # --- Grafana Galaxy Workflow Landings Charts ---
+    grafana_charts = []
+    
+    if has_grafana_data:
+        # Helper to get Grafana data for a month label
+        def get_grafana_for_month(month_label):
+            """Look up Grafana data by month label (e.g., 'Feb 2026')."""
+            return grafana_data.get(month_label, {})
+        
+        # G1. Total Galaxy landings over time
+        landing_data = [get_grafana_for_month(m).get('total_landings', 0) for m in months]
+        datasets = [{
+            'label': 'Galaxy Workflow Landings',
+            'data': landing_data,
+            'borderColor': '#10b981',
+            'backgroundColor': '#10b98120',
+            'tension': 0.3,
+            'fill': False
+        }]
+        grafana_charts.append(('grafana_landings_total', 'Galaxy Workflow Landings (from BRC)', datasets, 'Landings'))
+        
+        # G2. Galaxy landings by community
+        datasets = []
+        for comm in communities:
+            data = [get_grafana_for_month(m).get('by_community', {}).get(comm, 0) for m in months]
+            datasets.append({
+                'label': comm,
+                'data': data,
+                'borderColor': COLORS.get(comm, '#6b7280'),
+                'backgroundColor': COLORS.get(comm, '#6b7280') + '20',
+                'tension': 0.3,
+                'fill': False
+            })
+        grafana_charts.append(('grafana_landings_community', 'Galaxy Landings by Community', datasets, 'Landings'))
+        
+        # G3. Galaxy landings by workflow category
+        datasets = []
+        for cat in WORKFLOW_CATEGORIES_ORDER:
+            data = [get_grafana_for_month(m).get('by_category', {}).get(cat, 0) for m in months]
+            datasets.append({
+                'label': cat,
+                'data': data,
+                'borderColor': COLORS.get(cat, '#6b7280'),
+                'backgroundColor': COLORS.get(cat, '#6b7280') + '20',
+                'tension': 0.3,
+                'fill': False
+            })
+        grafana_charts.append(('grafana_landings_category', 'Galaxy Landings by Workflow Category', datasets, 'Landings'))
+        
+        # G4. Comparison: BRC Workflow Configs (pageviews) vs Galaxy Landings - by community
+        datasets = []
+        for comm in communities:
+            # BRC workflow pageviews
+            brc_data = [d['workflow_by_community'].get(comm, {}).get('pageviews', 0) for d in monthly_data]
+            datasets.append({
+                'label': f'{comm} (BRC Configs)',
+                'data': brc_data,
+                'borderColor': COLORS.get(comm, '#6b7280'),
+                'backgroundColor': COLORS.get(comm, '#6b7280') + '20',
+                'tension': 0.3,
+                'fill': False,
+                'borderDash': [5, 5]  # Dashed line for BRC
+            })
+            # Galaxy landings
+            galaxy_data = [get_grafana_for_month(m).get('by_community', {}).get(comm, 0) for m in months]
+            datasets.append({
+                'label': f'{comm} (Galaxy Landings)',
+                'data': galaxy_data,
+                'borderColor': COLORS.get(comm, '#6b7280'),
+                'backgroundColor': COLORS.get(comm, '#6b7280') + '20',
+                'tension': 0.3,
+                'fill': False
+            })
+        grafana_charts.append(('comparison_community', 'BRC Configs vs Galaxy Landings by Community', datasets, 'Count'))
+        
+        # G5. Comparison: BRC Workflow Configs vs Galaxy Landings - totals
+        brc_total = [d['workflow_total']['pageviews'] for d in monthly_data]
+        galaxy_total = [get_grafana_for_month(m).get('total_landings', 0) for m in months]
+        datasets = [
+            {
+                'label': 'BRC Workflow Configurations (Pageviews)',
+                'data': brc_total,
+                'borderColor': '#2563eb',
+                'backgroundColor': '#2563eb20',
+                'tension': 0.3,
+                'fill': False,
+                'borderDash': [5, 5]
+            },
+            {
+                'label': 'Galaxy Workflow Landings',
+                'data': galaxy_total,
+                'borderColor': '#10b981',
+                'backgroundColor': '#10b98120',
+                'tension': 0.3,
+                'fill': False
+            }
+        ]
+        grafana_charts.append(('comparison_total', 'BRC Workflow Configs vs Galaxy Landings (Total)', datasets, 'Count'))
+    
     # 14. Learn pages
     datasets = [
         {
@@ -689,6 +863,11 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         'workflow_community_visitors',
         'workflow_category_pages',
         'workflow_category_visitors',
+        'grafana_landings_total',
+        'grafana_landings_community',
+        'grafana_landings_category',
+        'comparison_community',
+        'comparison_total',
     }
 
     for chart_id, title, datasets, y_label in charts:
@@ -720,6 +899,47 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         chart_scripts.append(f'''
         new Chart(document.getElementById('{chart_id}'), {chart_config});
         ''')
+    
+    # Generate Grafana chart containers and scripts
+    grafana_chart_containers = []
+    for chart_id, title, datasets, y_label in grafana_charts:
+        is_clickable = chart_id in clickable_chart_ids
+        clickable_class = 'clickable' if is_clickable else ''
+        indicator = '<div class="clickable-indicator">Click for details</div>' if is_clickable else ''
+        grafana_chart_containers.append(f'''
+        <div class="chart-container {clickable_class}">
+            {indicator}
+            <canvas id="{chart_id}"></canvas>
+        </div>
+        ''')
+        
+        chart_config = generate_chart_js(chart_id, title, months, datasets, y_label)
+        chart_scripts.append(f'''
+        new Chart(document.getElementById('{chart_id}'), {chart_config});
+        ''')
+    
+    # Generate Grafana section if we have Grafana data
+    grafana_section = ''
+    if has_grafana_data and grafana_chart_containers:
+        # Build date range info string
+        grafana_range_str = ''
+        if grafana_date_range:
+            grafana_range_str = f' (Data: {grafana_date_range[0]} to {grafana_date_range[1]})'
+        
+        grafana_section = f'''
+    <h2 class="section-title">Galaxy Workflow Landings (from BRC Analytics){grafana_range_str}</h2>
+    <div class="charts-grid">
+        {grafana_chart_containers[0] if len(grafana_chart_containers) > 0 else ''}
+        {grafana_chart_containers[1] if len(grafana_chart_containers) > 1 else ''}
+        {grafana_chart_containers[2] if len(grafana_chart_containers) > 2 else ''}
+    </div>
+    
+    <h2 class="section-title">BRC Workflow Configurations vs Galaxy Landings</h2>
+    <div class="charts-grid">
+        {grafana_chart_containers[4] if len(grafana_chart_containers) > 4 else ''}
+        {grafana_chart_containers[3] if len(grafana_chart_containers) > 3 else ''}
+    </div>
+        '''
     
     # Generate network section if all_time_data has network info
     network_section = ''
@@ -856,7 +1076,7 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         '''
     
     # Generate month-to-report URL mapping
-    # Format: {"Oct 2024": {"organism": "fetched/top-pages-2024-10-01-to-2024-10-31-organism-analysis.html", "workflow": "..."}}
+    # Format: {"Oct 2024": {"organism": "...", "workflow": "...", "grafana": "..."}}
     month_reports = {}
     for d in monthly_data:
         month_label = d['month']
@@ -875,7 +1095,8 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         date_range = f"{year}-{month_num:02d}-01-to-{year}-{month_num:02d}-{last_day:02d}"
         month_reports[month_label] = {
             'organism': f"fetched/top-pages-{date_range}-organism-analysis.html",
-            'workflow': f"fetched/top-pages-{date_range}-workflow-analysis.html"
+            'workflow': f"fetched/top-pages-{date_range}-workflow-analysis.html",
+            'grafana': f"fetched/grafana-landings-{year}-{month_num:02d}.html"
         }
     month_reports_json = json.dumps(month_reports)
     
@@ -942,17 +1163,19 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         }}
         .clickable-indicator {{
             position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #eff6ff;
-            color: #1d4ed8;
-            border: 1px solid #bfdbfe;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 500;
-            opacity: 0.95;
+            top: 12px;
+            right: 12px;
+            background: #dbeafe;
+            color: #1e40af;
+            border: 1.5px solid #3b82f6;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 1;
             pointer-events: none;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }}
         .click-hint {{
             margin-top: 12px;
@@ -1087,6 +1310,8 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         {chart_containers[12]}
     </div>
     
+    {grafana_section}
+    
     {network_section}
     
     <h2 class="section-title">Learn / Featured Analyses</h2>
@@ -1113,6 +1338,8 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
             <li><strong>Unique Pages</strong> = number of distinct URLs visited that month</li>
             <li><strong>Visitors</strong> = unique visitors to those pages</li>
             <li><strong>Pageviews</strong> = total page loads (includes repeat visits)</li>
+            <li><strong>Galaxy Workflow Landings</strong> = workflow landing requests received by Galaxy from BRC Analytics (tracked via Grafana/InfluxDB)</li>
+            <li><strong>BRC Configs vs Galaxy Landings</strong> = comparison of workflow configuration pageviews in BRC vs actual workflow landings in Galaxy. Dashed lines = BRC, solid lines = Galaxy.</li>
             <li><strong>Click on chart data points</strong> to view detailed monthly reports (organism/workflow analysis)</li>
         </ul>
     </div>
@@ -1132,12 +1359,66 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
                     const monthLabel = chart.data.labels[index];
                     const report = monthReports[monthLabel];
                     if (report && report[reportType]) {{
+                        // For Grafana reports, check if there's data for that month
+                        if (reportType === 'grafana') {{
+                            // For comparison charts, only check the Galaxy Landings dataset (last one)
+                            // For other Grafana charts, check any dataset with data
+                            const datasets = chart.data.datasets;
+                            let hasData = false;
+                            
+                            if (chartId.includes('comparison')) {{
+                                // For comparison charts, only check the last dataset (Galaxy Landings)
+                                const lastDataset = datasets[datasets.length - 1];
+                                if (lastDataset && lastDataset.data[index] > 0) {{
+                                    hasData = true;
+                                }}
+                            }} else {{
+                                // For other Grafana charts, check any dataset
+                                for (let dataset of datasets) {{
+                                    if (dataset.data[index] > 0) {{
+                                        hasData = true;
+                                        break;
+                                    }}
+                                }}
+                            }}
+                            
+                            if (!hasData) {{
+                                // Don't navigate if no data
+                                return;
+                            }}
+                        }}
                         window.location.href = report[reportType];
                     }}
                 }}
             }};
             chart.options.onHover = function(event, elements) {{
-                event.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+                // For Grafana charts, only show pointer if data exists
+                if (reportType === 'grafana' && elements.length > 0) {{
+                    const chart = Chart.getChart(chartId);
+                    const index = elements[0].index;
+                    const datasets = chart.data.datasets;
+                    let hasData = false;
+                    
+                    if (chartId.includes('comparison')) {{
+                        // For comparison charts, only check the last dataset (Galaxy Landings)
+                        const lastDataset = datasets[datasets.length - 1];
+                        if (lastDataset && lastDataset.data[index] > 0) {{
+                            hasData = true;
+                        }}
+                    }} else {{
+                        // For other Grafana charts, check any dataset
+                        for (let dataset of datasets) {{
+                            if (dataset.data[index] > 0) {{
+                                hasData = true;
+                                break;
+                            }}
+                        }}
+                    }}
+                    
+                    event.native.target.style.cursor = hasData ? 'pointer' : 'default';
+                }} else {{
+                    event.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+                }}
             }};
             chart.update();
         }}
@@ -1157,6 +1438,12 @@ def generate_html_report(monthly_data, output_path, all_time_data=None):
         // Charts 11-12: Workflow by category -> workflow analysis
         addChartClickHandler('workflow_category_pages', 'workflow');
         addChartClickHandler('workflow_category_visitors', 'workflow');
+        // Grafana charts -> Grafana landing analysis
+        addChartClickHandler('grafana_landings_total', 'grafana');
+        addChartClickHandler('grafana_landings_community', 'grafana');
+        addChartClickHandler('grafana_landings_category', 'grafana');
+        addChartClickHandler('comparison_community', 'grafana');
+        addChartClickHandler('comparison_total', 'grafana');
     </script>
 </body>
 </html>
@@ -1395,9 +1682,20 @@ def main():
         print("No all-time data file found, bar charts will use aggregated monthly data", file=sys.stderr)
         print("  (Run: python3 scripts/fetch_monthly_reports.py --include-all-time)", file=sys.stderr)
     
+    # Load Grafana landing data
+    print("Loading Grafana landing data...", file=sys.stderr)
+    grafana_data, grafana_date_range = load_grafana_monthly_data(data_dir)
+    if grafana_data:
+        print(f"  Loaded {len(grafana_data)} months of Grafana data", file=sys.stderr)
+        if grafana_date_range:
+            print(f"  Date range: {grafana_date_range[0]} to {grafana_date_range[1]}", file=sys.stderr)
+    else:
+        print("  No Grafana landing data found", file=sys.stderr)
+        print("  (Run: python3 scripts/fetch_grafana_landings.py to fetch)", file=sys.stderr)
+    
     # Generate HTML report
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    generate_html_report(monthly_data, output_path, all_time_data)
+    generate_html_report(monthly_data, output_path, all_time_data, grafana_data, grafana_date_range)
     
     print(f"\nHTML report saved to: {output_path}", file=sys.stderr)
 
