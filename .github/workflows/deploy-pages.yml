@@ -43,23 +43,31 @@ jobs:
           PLAUSIBLE_API_KEY: ${{ secrets.PLAUSIBLE_API_KEY }}
           PLAUSIBLE_SITE_ID: ${{ secrets.PLAUSIBLE_SITE_ID }}
           PLAUSIBLE_API_BASE_URL: ${{ secrets.PLAUSIBLE_API_BASE_URL }}
+          GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
+          GRAFANA_API_URL: ${{ secrets.GRAFANA_API_URL }}
         run: |
           # TODO: Revisit "all-time" data handling. Currently the all-time tab is not committed
           # and is re-fetched during CI runs to avoid daily churn in git history.
           # Fetch all monthly data including all-time
           python scripts/fetch_monthly_reports.py --include-all-time
           
+          # Fetch Grafana workflow landing data
+          python scripts/fetch_grafana_landings.py
+          
           # Update taxonomy cache with any new organisms/assemblies from fetched data
           # This will use the committed cache as a base and only fetch new entries
           python scripts/fetch_taxonomy.py --verbose
           
-          # Generate the all-time summary HTML
+          # Generate the all-time summary HTML (includes Grafana data if available)
           python scripts/generate_monthly_summary_html.py
           
           # Generate per-month analysis HTML reports
           python scripts/generate_analysis_html.py data/fetched/
+          
+          # Generate per-month Grafana landing HTML reports
+          python scripts/generate_grafana_monthly_html.py
 
-      - name: Commit updated taxonomy cache
+      - name: Commit updated data cache
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -67,6 +75,7 @@ jobs:
           # Avoid committing all-time files since they change frequently
           git reset --quiet data/fetched/top-pages-all-time.tab 2>/dev/null || true
           git reset --quiet data/fetched/demographics-*-all-time.tab 2>/dev/null || true
+          # Grafana monthly data is cached (completed months only)
           # Only commit if there are changes
           git diff --staged --quiet || git commit -m "Update cached data and taxonomy [skip ci]"
           git push || echo "No cache updates to push"
