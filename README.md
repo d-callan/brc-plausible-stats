@@ -1,6 +1,6 @@
 # brc-plausible-stats
 
-Python scripts for analyzing web usage data exported from Plausible Analytics. These scripts help summarize visitor patterns for organism pages, priority pathogen pages, assembly pages, and workflow configurations.
+Python scripts for analyzing web usage data from Plausible Analytics and Galaxy workflow landing data from Grafana/InfluxDB. These scripts help summarize visitor patterns for organism pages, priority pathogen pages, assembly pages, workflow configurations, and track how many workflow configurations in BRC Analytics result in actual workflow landings in Galaxy.
 
 ## Directory Structure
 
@@ -9,9 +9,11 @@ brc-plausible-stats/
 ├── scripts/
 │   ├── fetch_top_pages.py         # Fetch top pages from Plausible API
 │   ├── fetch_monthly_reports.py   # Fetch & analyze monthly reports in batch
+│   ├── fetch_grafana_landings.py  # Fetch workflow landing data from Grafana
 │   ├── generate_monthly_summary.py      # Generate text summary by community
 │   ├── generate_monthly_summary_html.py # Generate HTML report with charts
 │   ├── generate_analysis_html.py        # Generate HTML from analysis text files
+│   ├── generate_grafana_monthly_html.py # Generate per-month Grafana reports
 │   ├── analyze_organisms.py       # Analyze organism/pathogen/assembly pages
 │   ├── analyze_workflows.py       # Analyze workflow configuration pages
 │   └── run_analysis.py            # Run both analyses at once
@@ -33,6 +35,7 @@ brc-plausible-stats/
 - `curl` command-line tool (for NCBI API calls)
 - Standard library only (no pip dependencies)
 - Plausible Analytics Stats API key (for automatic data fetching)
+- Grafana API key (for Galaxy workflow landing data)
 
 ## Setup
 
@@ -55,6 +58,8 @@ cp .env.example .env
 ```
 PLAUSIBLE_API_KEY=your-actual-api-key
 PLAUSIBLE_SITE_ID=your-site-domain.com
+GRAFANA_API_KEY=your-grafana-api-key
+GRAFANA_API_URL=https://stats.galaxyproject.org
 ```
 
 ## Usage
@@ -127,6 +132,8 @@ This produces an HTML file with Chart.js visualizations showing trends over time
 - Line charts for visitors and pageviews
 - Separate charts for high-level pages, content pages, and community breakdowns
 - Bar charts for community comparison (uses all-time data if available)
+- Galaxy workflow landing charts (if Grafana data is available)
+- Comparison charts: BRC workflow configurations vs Galaxy landings
 - Interactive tooltips and legends
 
 For accurate all-time bar charts, first fetch all-time data:
@@ -150,6 +157,37 @@ This generates HTML reports with:
 - Summary statistics cards
 - Bar charts comparing page types
 - Sortable tables with links to NCBI
+
+### Galaxy Workflow Landing Data (Grafana)
+
+Fetch workflow landing request data from Galaxy's Grafana/InfluxDB:
+
+```bash
+# Fetch all available months
+python3 scripts/fetch_grafana_landings.py
+
+# Specify date range
+python3 scripts/fetch_grafana_landings.py --start-month 2024-10 --end-month 2025-12
+
+# Force re-fetch even if cached
+python3 scripts/fetch_grafana_landings.py --force
+```
+
+This fetches data about workflow landing requests that originated from BRC Analytics (`origin = 'https://brc-analytics.org/'`). The data includes:
+- Workflow name
+- Assembly ID (dbkey)
+- Request counts by month
+
+Generate per-month Grafana landing reports:
+
+```bash
+python3 scripts/generate_grafana_monthly_html.py
+```
+
+This creates HTML reports in `output/fetched/grafana-landings-YYYY-MM.html` showing:
+- Total landings for the month
+- Breakdown by community and workflow category
+- Top workflows and assemblies
 
 ### Quick Start (Manual Export)
 
@@ -264,12 +302,14 @@ The repository includes a GitHub Actions workflow that automatically builds and 
    - Go to **Settings** → **Pages**
    - Under "Build and deployment", set **Source** to **GitHub Actions**
 
-2. **Add repository secrets** for the Plausible API:
+2. **Add repository secrets** for the APIs:
    - Go to **Settings** → **Secrets and variables** → **Actions**
    - Click **New repository secret** and add:
      - `PLAUSIBLE_API_KEY` - Your Plausible Stats API key
      - `PLAUSIBLE_SITE_ID` - Your site domain (e.g., `brc-analytics.org`)
      - `PLAUSIBLE_API_BASE_URL` - API base URL (e.g., `https://plausible.io`)
+     - `GRAFANA_API_KEY` - Your Grafana API key (for Galaxy workflow landing data)
+     - `GRAFANA_API_URL` - Grafana URL (e.g., `https://stats.galaxyproject.org`)
 
 3. **Trigger the workflow**:
    - Push to `main` branch, or
@@ -282,8 +322,8 @@ The workflow runs automatically:
 
 ### What gets deployed
 
-- `index.html` - Main summary report with timeline charts
-- `fetched/*.html` - Per-month organism and workflow analysis reports
+- `index.html` - Main summary report with timeline charts (includes Grafana data if available)
+- `fetched/*.html` - Per-month organism, workflow, and Grafana landing analysis reports
 
 Click on data points in the timeline charts to navigate to the corresponding monthly report.
 
