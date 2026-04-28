@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "source": "grafana",
+    "origin": "https://brc-analytics.org/",
+    "start_date": "2026-04-01",
+    "end_date": "2026-04-30",
+    "fetched_at": "2026-04-28T10:58:32.963429",
+    "data_points_count": 18
+  },
+  "summary": {
+    "total_landings": 46,
+    "unique_workflows": 12,
+    "unique_dbkeys": 15
+  },
+  "by_workflow": {
+    "Genome annotation with Braker3": 1,
+    "scrna-seq-fastq-to-matrix-10x-cellplex": 3,
+    "lncRNAs-annotation": 1,
+    "annotation-braker3": 2,
+    "haploid-variant-calling-wgs-pe": 11,
+    "ploidy-aware-genotype-calling": 2,
+    "Bacterial Genome Annotation": 1,
+    "rnaseq-sr": 3,
+    "COVID-19-PE-ARTIC-ILLUMINA": 2,
+    "End to End Differential Expression RNA-seq": 18,
+    "chipseq-sr": 1,
+    "consensus-peaks-atac-cutandrun": 1
+  },
+  "by_category": {
+    "Other": 24,
+    "Single Cell": 3,
+    "Transcription": 4,
+    "Variant Calling": 11,
+    "Viral": 2,
+    "Epigenomics": 2
+  },
+  "by_community": {
+    "Other": 22,
+    "Protists": 7,
+    "Fungi": 8,
+    "Bacteria": 4,
+    "Viruses": 5
+  },
+  "by_dbkey": {
+    "GCA_016618375.1": 1,
+    "GCA_021020605.1": 2,
+    "GCA_030563865.1": 1,
+    "GCA_030573285.1": 1,
+    "GCA_900631995.1": 1,
+    "GCF_000002655.1": 6,
+    "GCF_000002765.6": 1,
+    "GCF_000006945.2": 1,
+    "GCF_000009645.1": 2,
+    "GCF_000165345.1": 3,
+    "GCF_000243815.2": 1,
+    "GCF_000863585.1": 1,
+    "GCF_000864005.1": 3,
+    "GCF_000864885.1": 2,
+    "unknown": 20
+  }
+}
