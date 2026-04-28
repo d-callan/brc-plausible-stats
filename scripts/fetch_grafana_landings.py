@@ -85,6 +85,29 @@ def classify_workflow_category(workflow_name):
     return 'Other'
 
 
+def get_datasource_uid(api_url, api_key, db_name):
+    """
+    Look up a Grafana datasource UID by database name.
+    
+    The UID-based proxy endpoint (/api/datasources/proxy/uid/:uid/) is required
+    in Grafana 9+ after the numeric-ID proxy endpoint was removed.
+    """
+    url = f"{api_url}/api/datasources"
+    headers = {"Authorization": f"Bearer {api_key}"}
+    request = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(request, timeout=10) as response:
+            datasources = json.loads(response.read().decode("utf-8"))
+            for ds in datasources:
+                if ds.get("database") == db_name or ds.get("name") == db_name:
+                    return ds["uid"]
+    except urllib.error.HTTPError as e:
+        print(f"Error: Could not list Grafana datasources (status {e.code})", file=sys.stderr)
+    except urllib.error.URLError as e:
+        print(f"Error: Could not connect to Grafana API: {e.reason}", file=sys.stderr)
+    return None
+
+
 def fetch_landing_data(api_url, api_key):
     """
     Fetch workflow landing request data from Grafana/InfluxDB.
@@ -114,7 +137,11 @@ def fetch_landing_data(api_url, api_key):
         "q": query
     }
     
-    url = f"{api_url}/api/datasources/proxy/3/query"
+    uid = get_datasource_uid(api_url, api_key, "main_sql")
+    if uid is None:
+        print("Error: Could not find datasource UID for 'main_sql'", file=sys.stderr)
+        return None
+    url = f"{api_url}/api/datasources/proxy/uid/{uid}/query"
     
     headers = {
         "Authorization": f"Bearer {api_key}",
