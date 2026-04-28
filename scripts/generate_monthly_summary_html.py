@@ -49,7 +49,9 @@ COLORS = {
     'Roadmap': '#ea580c',
     'About': '#65a30d',
     'Calendar': '#0891b2',
+    'Workflows Index': '#f59e0b',
     'Learn': '#6366f1',
+    'Assembly': '#db2777',
     'Organism Pages': '#2563eb',
     'Assembly Pages': '#7c3aed',
     'Workflow Pages': '#db2777',
@@ -110,6 +112,7 @@ def parse_data_file(filepath):
         'organism_pages': [],
         'assembly_pages': [],
         'workflow_pages': [],
+        'workflow_index_pages': [],
         'priority_pathogen_pages': [],
         'learn_pages': {'visitors': 0, 'pageviews': 0},
     }
@@ -118,6 +121,7 @@ def parse_data_file(filepath):
         '/': 'Home',
         '/data/organisms': 'Organisms Index',
         '/data/assemblies': 'Assemblies Index',
+        '/data/workflows': 'Workflows Index',
         '/data/priority-pathogens': 'Priority Pathogens Index',
         '/roadmap': 'Roadmap',
         '/about': 'About',
@@ -158,6 +162,9 @@ def parse_data_file(filepath):
                     assembly_id = match.group(1)
                     workflow_name = match.group(2)
                     stats['workflow_pages'].append((assembly_id, workflow_name, visitors, pageviews))
+            elif re.match(r'^/data/workflows/[^/]+$', url):
+                workflow_slug = url.split('/')[-1]
+                stats['workflow_index_pages'].append((workflow_slug, visitors, pageviews))
             elif re.match(r'^/data/priority-pathogens/[^/]+$', url):
                 pathogen = url.split('/')[-1]
                 stats['priority_pathogen_pages'].append((pathogen, visitors, pageviews))
@@ -389,7 +396,7 @@ def generate_html_report(monthly_data, output_path, all_time_data=None, grafana_
     charts = []
     
     # 1. High-level pages - Visitors
-    high_level_pages = ['Home', 'Organisms Index', 'Assemblies Index', 'Priority Pathogens Index', 'Roadmap', 'About', 'Calendar']
+    high_level_pages = ['Home', 'Organisms Index', 'Assemblies Index', 'Workflows Index', 'Priority Pathogens Index', 'Roadmap', 'About', 'Calendar']
     datasets = []
     for page in high_level_pages:
         data = [d['high_level'].get(page, {}).get('visitors', 0) for d in monthly_data]
@@ -583,6 +590,34 @@ def generate_html_report(monthly_data, output_path, all_time_data=None, grafana_
             'fill': False
         })
     charts.append(('workflow_category_visitors', 'Workflow Pages by Category - Visitors', datasets, 'Visitors'))
+    
+    # 14. Workflow pages by route - Unique pages
+    datasets = []
+    for route in ['Assembly', 'Workflows Index']:
+        data = [d['workflow_by_route'].get(route, {}).get('count', 0) for d in monthly_data]
+        datasets.append({
+            'label': route,
+            'data': data,
+            'borderColor': COLORS.get(route, '#6b7280'),
+            'backgroundColor': COLORS.get(route, '#6b7280') + '20',
+            'tension': 0.3,
+            'fill': False
+        })
+    charts.append(('workflow_route_pages', 'Workflow Pages by Route - Unique Pages', datasets, 'Unique Pages'))
+    
+    # 15. Workflow pages by route - Visitors
+    datasets = []
+    for route in ['Assembly', 'Workflows Index']:
+        data = [d['workflow_by_route'].get(route, {}).get('visitors', 0) for d in monthly_data]
+        datasets.append({
+            'label': route,
+            'data': data,
+            'borderColor': COLORS.get(route, '#6b7280'),
+            'backgroundColor': COLORS.get(route, '#6b7280') + '20',
+            'tension': 0.3,
+            'fill': False
+        })
+    charts.append(('workflow_route_visitors', 'Workflow Pages by Route - Visitors', datasets, 'Visitors'))
     
     # --- Grafana Galaxy Workflow Landings Charts ---
     grafana_charts = []
@@ -1201,6 +1236,16 @@ def generate_html_report(monthly_data, output_path, all_time_data=None, grafana_
             margin-left: auto;
             margin-right: auto;
         }}
+        .section-note {{
+            max-width: 1800px;
+            margin: -10px auto 16px auto;
+            padding: 10px 16px;
+            background: #fef9c3;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 6px 6px 0;
+            font-size: 13px;
+            color: #92400e;
+        }}
         .notes {{
             max-width: 1800px;
             margin: 40px auto;
@@ -1299,6 +1344,7 @@ def generate_html_report(monthly_data, output_path, all_time_data=None, grafana_
     </div>
     
     <h2 class="section-title">Workflow Pages by Community</h2>
+    <p class="section-note">Workflow configuration pages reached via the Workflows Index (/data/workflows/&lt;slug&gt;) are not included here — those URLs do not carry assembly information needed for community classification. See &#8220;Workflow Pages by Route&#8221; below for a complete comparison.</p>
     <div class="charts-grid">
         {chart_containers[9]}
         {chart_containers[10]}
@@ -1310,21 +1356,27 @@ def generate_html_report(monthly_data, output_path, all_time_data=None, grafana_
         {chart_containers[12]}
     </div>
     
+    <h2 class="section-title">Workflow Pages by Route</h2>
+    <div class="charts-grid">
+        {chart_containers[13]}
+        {chart_containers[14]}
+    </div>
+    
     {grafana_section}
     
     {network_section}
     
     <h2 class="section-title">Learn / Featured Analyses</h2>
     <div class="charts-grid">
-        {chart_containers[13]}
+        {chart_containers[15]}
     </div>
     
     <h2 class="section-title">Demographics & Technology</h2>
     <div class="charts-grid">
-        {chart_containers[14]}
-        {chart_containers[15]}
         {chart_containers[16]}
         {chart_containers[17]}
+        {chart_containers[18]}
+        {chart_containers[19]}
     </div>
     
     <div class="notes">
@@ -1332,8 +1384,9 @@ def generate_html_report(monthly_data, output_path, all_time_data=None, grafana_
         <ul>
             <li><strong>Organism Pages</strong> = /data/organisms/{{tax_id}} (individual organism detail pages)</li>
             <li><strong>Assembly Pages</strong> = /data/assemblies/{{assembly_id}} (individual assembly detail pages)</li>
-            <li><strong>Workflow Pages</strong> = /data/assemblies/{{id}}/workflow-{{...}} (workflow configuration pages)</li>
-            <li><strong>Index pages</strong> (Organisms Index, etc.) are navigation/listing pages, not detail pages</li>
+            <li><strong>Workflow Pages</strong> = /data/assemblies/{{id}}/workflow-{{...}} (assembly route) and /data/workflows/{{slug}} (Workflows Index route) — both are counted together in content page plots, category plots, and configuration vs. landings comparisons</li>
+            <li><strong>Workflows Index</strong> = /data/workflows (listing page for all available workflow configurations)</li>
+            <li><strong>Index pages</strong> (Organisms Index, Workflows Index, etc.) are navigation/listing pages, not detail pages</li>
             <li><strong>Community classification</strong> is based on NCBI taxonomy lineage</li>
             <li><strong>Unique Pages</strong> = number of distinct URLs visited that month</li>
             <li><strong>Visitors</strong> = unique visitors to those pages</li>
@@ -1559,6 +1612,11 @@ def main():
             wf_by_category[category]['count'] += 1
             wf_by_category[category]['visitors'] += visitors
             wf_by_category[category]['pageviews'] += pageviews
+        for workflow_slug, visitors, pageviews in stats['workflow_index_pages']:
+            category = classify_workflow_category(workflow_slug)
+            wf_by_category[category]['count'] += 1
+            wf_by_category[category]['visitors'] += visitors
+            wf_by_category[category]['pageviews'] += pageviews
         
         monthly_data.append({
             'month': month_label,
@@ -1578,12 +1636,24 @@ def main():
             },
             'assembly_by_community': dict(asm_by_community),
             'workflow_total': {
-                'count': len(stats['workflow_pages']),
-                'visitors': sum(v for _, _, v, _ in stats['workflow_pages']),
-                'pageviews': sum(p for _, _, _, p in stats['workflow_pages']),
+                'count': len(stats['workflow_pages']) + len(stats['workflow_index_pages']),
+                'visitors': sum(v for _, _, v, _ in stats['workflow_pages']) + sum(v for _, v, _ in stats['workflow_index_pages']),
+                'pageviews': sum(p for _, _, _, p in stats['workflow_pages']) + sum(p for _, _, p in stats['workflow_index_pages']),
             },
             'workflow_by_community': dict(wf_by_community),
             'workflow_by_category': dict(wf_by_category),
+            'workflow_by_route': {
+                'Assembly': {
+                    'count': len(stats['workflow_pages']),
+                    'visitors': sum(v for _, _, v, _ in stats['workflow_pages']),
+                    'pageviews': sum(p for _, _, _, p in stats['workflow_pages']),
+                },
+                'Workflows Index': {
+                    'count': len(stats['workflow_index_pages']),
+                    'visitors': sum(v for _, v, _ in stats['workflow_index_pages']),
+                    'pageviews': sum(p for _, _, p in stats['workflow_index_pages']),
+                },
+            },
             'priority_pathogens': {
                 'count': len(stats['priority_pathogen_pages']),
                 'visitors': sum(v for _, v, _ in stats['priority_pathogen_pages']),
