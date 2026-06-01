@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "source": "grafana",
+    "origin": "https://brc-analytics.org/",
+    "start_date": "2026-05-01",
+    "end_date": "2026-05-31",
+    "fetched_at": "2026-06-01T11:23:12.988389",
+    "data_points_count": 11
+  },
+  "summary": {
+    "total_landings": 26,
+    "unique_workflows": 10,
+    "unique_dbkeys": 7
+  },
+  "by_workflow": {
+    "Genome annotation with Braker3": 1,
+    "ploidy-aware-genotype-calling": 3,
+    "annotation-braker3": 2,
+    "Bacterial Genome Annotation": 1,
+    "bacterial_genome_annotation": 5,
+    "haploid-variant-calling-wgs-pe": 2,
+    "End to End Differential Expression RNA-seq": 8,
+    "atacseq": 1,
+    "chipseq-pe": 2,
+    "hic-fastq-to-cool-hicup-cooler": 1
+  },
+  "by_category": {
+    "Other": 21,
+    "Variant Calling": 2,
+    "Epigenomics": 3
+  },
+  "by_community": {
+    "Helminths": 1,
+    "Protists": 2,
+    "Other": 14,
+    "Bacteria": 6,
+    "Viruses": 2,
+    "Fungi": 1
+  },
+  "by_dbkey": {
+    "GCA_000688135.1": 1,
+    "GCA_021020595.1": 2,
+    "GCA_965286795.1": 2,
+    "GCF_000007045.1": 6,
+    "GCF_000896415.1": 2,
+    "GCF_003013715.1": 1,
+    "unknown": 12
+  }
+}
