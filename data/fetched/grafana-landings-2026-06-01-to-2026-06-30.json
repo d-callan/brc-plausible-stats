@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "source": "grafana",
+    "origin": "https://brc-analytics.org/",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-30",
+    "fetched_at": "2026-07-06T10:08:17.886829",
+    "data_points_count": 15
+  },
+  "summary": {
+    "total_landings": 25,
+    "unique_workflows": 7,
+    "unique_dbkeys": 13
+  },
+  "by_workflow": {
+    "annotation-braker3": 6,
+    "RNA-Seq Analysis: Paired-End Read Processing and Quantification": 1,
+    "rnaseq-pe": 8,
+    "rnaseq-sr": 2,
+    "haploid-variant-calling-wgs-pe": 4,
+    "amr_gene_detection": 3,
+    "ploidy-aware-genotype-calling": 1
+  },
+  "by_category": {
+    "Other": 11,
+    "Transcription": 10,
+    "Variant Calling": 4
+  },
+  "by_community": {
+    "Fungi": 10,
+    "Protists": 9,
+    "Bacteria": 6
+  },
+  "by_dbkey": {
+    "GCA_014805555.1": 1,
+    "GCA_030573285.1": 2,
+    "GCA_051170875.1": 1,
+    "GCF_000002655.1": 3,
+    "GCF_000002765.6": 1,
+    "GCF_000005845.2": 2,
+    "GCF_000008445.1": 1,
+    "GCF_000182925.2": 4,
+    "GCF_000195955.2": 1,
+    "GCF_000313135.1": 4,
+    "GCF_001647695.1": 1,
+    "GCF_013267415.1": 1,
+    "GCF_900002375.2": 3
+  }
+}
