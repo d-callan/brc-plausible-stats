@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "source": "grafana",
+    "origin": "https://brc-analytics.org/",
+    "start_date": "2026-07-01",
+    "end_date": "2026-07-31",
+    "fetched_at": "2026-08-03T09:34:30.448659",
+    "data_points_count": 10
+  },
+  "summary": {
+    "total_landings": 13,
+    "unique_workflows": 7,
+    "unique_dbkeys": 7
+  },
+  "by_workflow": {
+    "haploid-variant-calling-wgs-pe": 3,
+    "rnaseq-pe": 1,
+    "annotation-braker3": 3,
+    "ploidy-aware-genotype-calling": 2,
+    "scrna-seq-fastq-to-matrix-10x-cellplex": 1,
+    "atacseq": 1,
+    "influenza-isolates-consensus-and-subtyping": 2
+  },
+  "by_category": {
+    "Variant Calling": 3,
+    "Transcription": 1,
+    "Other": 7,
+    "Single Cell": 1,
+    "Epigenomics": 1
+  },
+  "by_community": {
+    "Fungi": 2,
+    "Other": 5,
+    "Protists": 3,
+    "Viruses": 2,
+    "Bacteria": 1
+  },
+  "by_dbkey": {
+    "GCA_001008285.1": 1,
+    "GCA_002759435.3": 1,
+    "GCA_902221485.1": 2,
+    "GCF_000769155.1": 3,
+    "GCF_000864105.1": 2,
+    "GCF_013267415.1": 1,
+    "unknown": 3
+  }
+}
