@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "source": "grafana",
+    "origin": "https://brc-analytics.org/",
+    "start_date": "2026-08-01",
+    "end_date": "2026-08-31",
+    "fetched_at": "2026-09-07T11:24:36.237478",
+    "data_points_count": 7
+  },
+  "summary": {
+    "total_landings": 11,
+    "unique_workflows": 5,
+    "unique_dbkeys": 7
+  },
+  "by_workflow": {
+    "annotation-braker3": 3,
+    "rnaseq-pe": 3,
+    "lncRNAs-annotation": 1,
+    "ploidy-aware-genotype-calling": 1,
+    "amr_gene_detection": 3
+  },
+  "by_category": {
+    "Other": 7,
+    "Transcription": 4
+  },
+  "by_community": {
+    "Fungi": 7,
+    "Protists": 2,
+    "Bacteria": 1,
+    "Vectors": 1
+  },
+  "by_dbkey": {
+    "GCA_001008285.1": 2,
+    "GCA_002759435.3": 2,
+    "GCF_000002765.6": 1,
+    "GCF_000195955.2": 1,
+    "GCF_000208615.1": 1,
+    "GCF_000313135.1": 1,
+    "GCF_002775015.1": 3
+  }
+}
