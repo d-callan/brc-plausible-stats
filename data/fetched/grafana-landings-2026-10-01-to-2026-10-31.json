@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "source": "grafana",
+    "origin": "https://brc-analytics.org/",
+    "start_date": "2026-10-01",
+    "end_date": "2026-10-31",
+    "fetched_at": "2026-11-02T14:36:24.012052",
+    "data_points_count": 6
+  },
+  "summary": {
+    "total_landings": 6,
+    "unique_workflows": 5,
+    "unique_dbkeys": 5
+  },
+  "by_workflow": {
+    "haploid-variant-calling-wgs-pe": 1,
+    "Genome annotation with Braker3": 1,
+    "annotation-braker3": 1,
+    "COVID-19-PE-ARTIC-ILLUMINA": 1,
+    "rnaseq-pe": 2
+  },
+  "by_category": {
+    "Variant Calling": 1,
+    "Other": 2,
+    "Viral": 1,
+    "Transcription": 2
+  },
+  "by_community": {
+    "Fungi": 2,
+    "Other": 3,
+    "Viruses": 1
+  },
+  "by_dbkey": {
+    "GCA_001008285.1": 1,
+    "GCA_029582065.1": 2,
+    "GCF_000864885.1": 1,
+    "GCF_003013715.1": 1,
+    "GCF_963970025.1": 1
+  }
+}

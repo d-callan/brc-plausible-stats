@@ -1,0 +1,1330 @@
+Page url	Visitors	Pageviews	Bounce rate	Time on Page
+/	412	474	77%	59s
+/data/assemblies	51	65	73%	37s
+/data/organisms	51	70	75%	16s
+/data/workflows	36	50	100%	-
+/data/priority-pathogens	35	39	86%	1m 31s
+/assistant	33	38	100%	-
+/about	32	44	50%	16s
+/learn	28	35	100%	-
+/data/assemblies/GCF_003013715_1/analyze/workflows	20	20	100%	-
+/data/assemblies/GCA_000826485_1/analyze/workflows	19	19	94%	1m 12s
+/data/assemblies/GCA_052815935_1/analyze/workflows	18	18	100%	-
+/data/assemblies/GCF_002775015_1/analyze/workflows	18	18	100%	-
+/learn/blog/genotyping-cyclospora-assessing-current-practices	18	20	88%	37s
+/data/assemblies/GCF_001189475_1/analyze/workflows	17	17	100%	-
+/data/assemblies/GCA_002025285_2/analyze/workflows	16	16	100%	-
+/data/assemblies/GCA_034211315_2/analyze/workflows	16	16	100%	-
+/learn/featured-analyses/standardizing-rnaseq-candidozyma-auris	16	16	100%	-
+/data/assemblies/GCA_052575845_1/analyze/workflows	15	16	100%	-
+/data/assemblies/GCF_000004015_4/analyze/workflows	15	15	100%	-
+/data/assemblies/GCA_000151295_1/analyze/workflows	14	14	100%	-
+/data/assemblies/GCA_021653915_1/analyze/workflows	14	14	100%	-
+/data/assemblies/GCA_964656915_1/analyze/workflows	14	14	100%	-
+/data/assemblies/GCA_009613055_1/analyze/workflows	13	13	100%	-
+/data/assemblies/GCA_964656895_1/analyze/workflows	13	13	100%	-
+/data/assemblies/GCF_000313135_1/analyze/workflows	13	13	100%	-
+/data/assemblies/GCF_001647695_1/analyze/workflows	13	13	100%	-
+/data/assemblies/GCF_030253495_1/analyze/workflows	13	13	100%	-
+/learn/getting-started/galaxy-data-import-methods	13	14	92%	2s
+/data/assemblies/GCA_000826325_1/analyze/workflows	12	12	100%	-
+/data/assemblies/GCA_000826365_1/analyze/workflows	12	12	100%	-
+/data/assemblies/GCA_000826405_1/analyze/workflows	12	12	100%	-
+/data/assemblies/GCA_000826445_1/analyze/workflows	12	12	100%	-
+/data/assemblies/GCA_000826265_1/analyze/workflows	11	11	100%	-
+/data/assemblies/GCA_001014885_1/analyze/workflows	11	11	100%	-
+/data/assemblies/GCA_027943295_1/analyze/workflows	11	11	100%	-
+/data/assemblies/GCA_900406225_1/analyze/workflows	11	11	100%	-
+/data/assemblies/GCA_945643635_2/analyze/workflows	11	11	100%	-
+/data/assemblies/GCF_000014805_1/analyze/workflows	11	11	100%	-
+/data/assemblies/GCF_000853505_1/analyze/workflows	11	13	92%	1m 08s
+/data/assemblies/GCF_009035845_1/analyze/workflows	11	12	83%	3m 14s
+/data/assemblies/GCF_013267415_1/analyze/workflows	11	11	90%	26s
+/data/assemblies/GCF_016728825_1/analyze/workflows	11	12	100%	-
+/about/roadmap	10	12	100%	-
+/data/assemblies/GCA_000826425_1/analyze/workflows	10	10	100%	-
+/data/organisms/88456	10	10	100%	-
+/data/assemblies/GCA_021020595_1/analyze/workflows	9	9	100%	-
+/data/assemblies/GCA_021020605_1/analyze/workflows	9	9	100%	-
+/data/assemblies/GCA_027943245_1/analyze/workflows	9	9	100%	-
+/data/assemblies/GCA_900537255_1/analyze/workflows	9	9	100%	-
+/data/assemblies/GCF_000853865_1/analyze/workflows	9	9	100%	-
+/learn/featured-analyses/evolutionary-dynamics-of-coding-overlaps-in-measles	9	10	75%	46s
+/learn/primaeon	9	9	100%	-
+/learn/using-galaxy	9	10	83%	21s
+/calendar	8	8	100%	-
+/data/assemblies/GCF_002204515_2/analyze/workflows	8	8	100%	-
+/learn/assistant	8	8	100%	-
+/roadmap	8	9	33%	10s
+/about/vision	7	10	100%	-
+/data/assemblies/GCF_002811925_1/analyze/workflows	7	7	100%	-
+/data/organisms/5478	7	8	100%	-
+/learn/mcp	7	7	100%	-
+/data/assemblies/GCA_001857725_1/analyze/workflows	6	8	62%	10m 19s
+/data/assemblies/GCA_003833335_1/analyze/workflows	6	9	71%	4m 01s
+/data/assemblies/GCF_000005845_2	6	8	75%	15s
+/learn/getting-started/introduction	6	11	86%	5m 40s
+/data/assemblies/GCA_011320185_1/analyze/workflows	5	5	100%	-
+/data/assemblies/GCA_022180325_1/analyze/workflows	5	5	50%	28m 46s
+/data/assemblies/GCA_905067625_1/analyze/workflows	5	7	50%	9m 57s
+/data/assemblies/GCF_000149955_1/analyze/workflows	5	6	75%	6m 40s
+/data/organisms/46125	5	8	100%	-
+/data/organisms/73230	5	5	100%	-
+/learn/blog	5	5	100%	-
+/data/assemblies/GCA_000385855_2/analyze/workflows	4	5	50%	37m 12s
+/data/assemblies/GCA_000447575_1/analyze/workflows	4	5	67%	6m 45s
+/data/assemblies/GCA_000826245_1	4	5	67%	10m 00s
+/data/assemblies/GCA_000826325_1	4	5	100%	-
+/data/assemblies/GCA_000826485_1	4	4	100%	-
+/data/assemblies/GCA_000826505_1	4	4	100%	-
+/data/assemblies/GCA_002247145_1/analyze/workflows	4	6	50%	4m 59s
+/data/assemblies/GCA_003689305_1/analyze/workflows	4	4	75%	3m 30s
+/data/assemblies/GCA_014849395_1/analyze/workflows	4	5	100%	-
+/data/assemblies/GCA_014849675_1/analyze/workflows	4	4	100%	-
+/data/assemblies/GCA_014850205_1/analyze/workflows	4	4	100%	-
+/data/assemblies/GCA_020617715_1/analyze/workflows	4	4	75%	6m 15s
+/data/assemblies/GCA_023134515_1/analyze/workflows	4	4	100%	-
+/data/assemblies/GCA_023620155_1/analyze/workflows	4	5	75%	12m 57s
+/data/assemblies/GCA_030345115_2/analyze/workflows	4	5	67%	5m 00s
+/data/assemblies/GCA_047716495_1/analyze/workflows	4	5	100%	-
+/data/assemblies/GCA_051942535_1/analyze/workflows	4	4	100%	-
+/data/assemblies/GCF_000001215_4/analyze/workflows	4	6	80%	4m 59s
+/data/assemblies/GCF_000002825_2/analyze/workflows	4	4	100%	-
+/data/assemblies/GCF_003013715_1	4	4	67%	15s
+/data/assemblies/GCF_009035845_1	4	4	50%	101m 22s
+/data/organisms/5855	4	4	100%	-
+/data/workflows/workflow-github-com-iwc-workflows-amr-gene-detection-main-versions-v1-1-7	4	6	50%	14m 50s
+/learn/getting-started	4	4	100%	-
+/data/assemblies/GCA_000151525_2/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_000320685_2	3	4	100%	-
+/data/assemblies/GCA_000320685_2/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_000340355_2/analyze/workflows	3	4	100%	-
+/data/assemblies/GCA_000688135_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_000725905_1/analyze/workflows	3	5	67%	16m 13s
+/data/assemblies/GCA_000773725_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_000826285_1	3	3	100%	-
+/data/assemblies/GCA_000826405_1	3	3	100%	-
+/data/assemblies/GCA_000826465_1	3	3	100%	-
+/data/assemblies/GCA_001008285_1	3	6	-	-
+/data/assemblies/GCA_001008285_1/analyze/workflows	3	6	-	-
+/data/assemblies/GCA_001430935_1/analyze/workflows	3	4	67%	6m 21s
+/data/assemblies/GCA_002019465_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_003689185_1/analyze/workflows	3	5	100%	-
+/data/assemblies/GCA_003953695_1/analyze/workflows	3	3	0%	25m 12s
+/data/assemblies/GCA_006912115_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_008728235_1/analyze/workflows	3	3	67%	25s
+/data/assemblies/GCA_009726465_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_011033665_1/analyze/workflows	3	4	67%	14m 22s
+/data/assemblies/GCA_011034455_1/analyze/workflows	3	4	67%	3m 29s
+/data/assemblies/GCA_011034845_1/analyze/workflows	3	6	67%	-
+/data/assemblies/GCA_011035235_1/analyze/workflows	3	4	100%	-
+/data/assemblies/GCA_011420435_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_012184535_1/analyze/workflows	3	3	33%	13m 43s
+/data/assemblies/GCA_012897275_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_014324455_1/analyze/workflows	3	4	75%	1m 40s
+/data/assemblies/GCA_014324465_1/analyze/workflows	3	4	75%	10m 42s
+/data/assemblies/GCA_014899045_1/analyze/workflows	3	3	50%	4m 20s
+/data/assemblies/GCA_015732745_1/analyze/workflows	3	4	100%	-
+/data/assemblies/GCA_017301755_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_018345725_1/analyze/workflows	3	5	33%	19m 05s
+/data/assemblies/GCA_020027085_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_020499415_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_020976715_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_022814385_1/analyze/workflows	3	4	100%	-
+/data/assemblies/GCA_023065905_1/analyze/workflows	3	5	100%	-
+/data/assemblies/GCA_023629455_1/analyze/workflows	3	3	50%	2m 59s
+/data/assemblies/GCA_023629515_1/analyze/workflows	3	5	50%	24m 59s
+/data/assemblies/GCA_023629855_1/analyze/workflows	3	4	100%	-
+/data/assemblies/GCA_024676915_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_025769395_1/analyze/workflows	3	3	50%	6m 02s
+/data/assemblies/GCA_027945505_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_030450075_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_031304185_1/analyze/workflows	3	4	67%	12m 37s
+/data/assemblies/GCA_037041095_1/analyze/workflows	3	3	67%	9m 39s
+/data/assemblies/GCA_039267505_1/analyze/workflows	3	3	50%	40s
+/data/assemblies/GCA_040112765_1/analyze/workflows	3	4	67%	29m 49s
+/data/assemblies/GCA_040113015_1/analyze/workflows	3	4	100%	-
+/data/assemblies/GCA_042608745_1/analyze/workflows	3	3	33%	17m 51s
+/data/assemblies/GCA_042609025_1/analyze/workflows	3	3	67%	9m 38s
+/data/assemblies/GCA_049634765_1	3	3	0%	26m 40s
+/data/assemblies/GCA_051312775_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCA_900406225_1	3	3	100%	-
+/data/assemblies/GCA_963378725_2/analyze/workflows	3	4	33%	32m 06s
+/data/assemblies/GCA_964656915_1	3	3	100%	-
+/data/assemblies/GCF_000002875_2/analyze/workflows	3	3	100%	-
+/data/assemblies/GCF_000003515_1/analyze/workflows	3	3	67%	17m 41s
+/data/assemblies/GCF_000011765_3/analyze/workflows	3	3	0%	9m 33s
+/data/assemblies/GCF_000012705_1/analyze/workflows	3	4	100%	-
+/data/assemblies/GCF_000182925_2/analyze/workflows	3	3	50%	14m 42s
+/data/assemblies/GCF_000313135_1	3	4	50%	10m 56s
+/data/assemblies/GCF_000369945_1/analyze/workflows	3	3	67%	5m 46s
+/data/assemblies/GCF_000841585_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCF_000845685_2/analyze/workflows	3	4	50%	34m 37s
+/data/assemblies/GCF_000846365_1/analyze/workflows	3	3	67%	9m 53s
+/data/assemblies/GCF_000852685_1/analyze/workflows	3	4	67%	19m 20s
+/data/assemblies/GCF_001278385_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCF_001647695_1	3	3	100%	-
+/data/assemblies/GCF_001720195_1/analyze/workflows	3	3	50%	4m 18s
+/data/assemblies/GCF_001729805_1/analyze/workflows	3	3	50%	8m 53s
+/data/assemblies/GCF_004131585_1/analyze/workflows	3	3	100%	-
+/data/assemblies/GCF_006739385_1/analyze/workflows	3	5	67%	9m 16s
+/data/organisms/29196	3	3	100%	-
+/data/organisms/2919605	3	3	33%	25m 01s
+/data/organisms/5755	3	3	100%	-
+/data/organisms/6277	3	4	100%	-
+/data/organisms/65659	3	3	100%	-
+/learn/featured-analyses	3	3	100%	-
+/learn/getting-started/tips-and-troubleshooting	3	3	100%	-
+/logan-search	3	3	67%	4m 50s
+/organisms	3	3	100%	-
+/time	3	3	50%	27s
+/about/partner-resources	2	2	100%	-
+/data/assemblies/GCA_000143925_2/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_000149445_2	2	3	-	-
+/data/assemblies/GCA_000149445_2/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_000150185_1	2	2	100%	-
+/data/assemblies/GCA_000320625_2	2	2	100%	-
+/data/assemblies/GCA_000320645_2	2	2	0%	12m 34s
+/data/assemblies/GCA_000320665_2	2	2	100%	-
+/data/assemblies/GCA_000738595_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_000775505_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_000784695_1/analyze/workflows	2	3	0%	45m 26s
+/data/assemblies/GCA_000826245_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_000826265_1	2	2	0%	38m 18s
+/data/assemblies/GCA_000826365_1	2	2	100%	-
+/data/assemblies/GCA_000826385_1	2	2	-	-
+/data/assemblies/GCA_000826445_1	2	2	100%	-
+/data/assemblies/GCA_000826445_1/analyze/workflows/workflow-github-com-iwc-workflows-consensus-peaks-consensus-peaks-atac-cutandrun-versions-v1-5	2	2	100%	-
+/data/assemblies/GCA_000973045_2/analyze/workflows	2	4	100%	-
+/data/assemblies/GCA_001008285_1/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	2	2	-	-
+/data/assemblies/GCA_001262475_1	2	2	50%	12m 28s
+/data/assemblies/GCA_001262475_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_001445615_2/analyze/workflows	2	2	0%	29m 26s
+/data/assemblies/GCA_001460545_1/analyze/workflows	2	2	50%	10m 42s
+/data/assemblies/GCA_001460835_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_001650105_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_001702695_2/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_001931975_2/analyze/workflows	2	2	50%	11m 39s
+/data/assemblies/GCA_002006685_2	2	2	50%	14m 22s
+/data/assemblies/GCA_002025285_2	2	3	100%	-
+/data/assemblies/GCA_002083745_1/analyze/workflows	2	5	100%	-
+/data/assemblies/GCA_002215855_1/analyze/workflows/workflow-github-com-iwc-workflows-chipseq-pe-main-versions-v1-1	2	2	100%	-
+/data/assemblies/GCA_002259885_1/analyze/workflows	2	2	0%	23m 02s
+/data/assemblies/GCA_002572885_1/analyze/workflows	2	2	50%	8m 29s
+/data/assemblies/GCA_002749425_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_002754635_1	2	2	50%	14m 24s
+/data/assemblies/GCA_003594685_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_003689395_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_003690475_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_003691185_1/analyze/workflows	2	4	100%	-
+/data/assemblies/GCA_003693225_1/analyze/custom	2	2	-	-
+/data/assemblies/GCA_003711305_1/analyze/workflows	2	3	50%	7m 11s
+/data/assemblies/GCA_003711345_1/analyze/workflows	2	4	100%	-
+/data/assemblies/GCA_003719575_1/analyze/workflows	2	4	100%	-
+/data/assemblies/GCA_003944955_1/analyze/workflows	2	4	0%	20m 26s
+/data/assemblies/GCA_003953525_1/analyze/workflows	2	3	50%	66m 36s
+/data/assemblies/GCA_003953685_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_003953735_1/analyze/workflows	2	3	67%	4m 32s
+/data/assemblies/GCA_003953825_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_003971505_1	2	2	100%	-
+/data/assemblies/GCA_003971505_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_004000155_1/analyze/workflows	2	4	67%	5m 02s
+/data/assemblies/GCA_004798825_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_004802725_1/analyze/workflows	2	4	33%	23m 40s
+/data/assemblies/GCA_006247105_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_006368765_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_006518225_1/analyze/workflows	2	2	50%	9m 39s
+/data/assemblies/GCA_009176455_1/analyze/workflows	2	3	0%	29m 42s
+/data/assemblies/GCA_009299175_1/analyze/workflows	2	2	50%	20m 48s
+/data/assemblies/GCA_009685035_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_009686525_1/analyze/workflows	2	2	50%	11m 44s
+/data/assemblies/GCA_009686545_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_009686605_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_009687345_1/analyze/workflows	2	4	100%	-
+/data/assemblies/GCA_009726635_1/analyze/workflows	2	4	0%	67m 00s
+/data/assemblies/GCA_009769425_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_009805765_1	2	2	100%	-
+/data/assemblies/GCA_009856665_1/analyze/workflows	2	4	0%	-
+/data/assemblies/GCA_011033625_1/analyze/workflows	2	2	50%	1m 04s
+/data/assemblies/GCA_011033745_1/analyze/workflows	2	3	0%	24m 27s
+/data/assemblies/GCA_011033885_1/analyze/custom	2	2	100%	-
+/data/assemblies/GCA_011033885_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_011033925_1	2	2	100%	-
+/data/assemblies/GCA_011033925_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_011034615_1	2	2	100%	-
+/data/assemblies/GCA_011034615_1/analyze/custom	2	2	50%	15m 09s
+/data/assemblies/GCA_011034615_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_011034935_1	2	2	100%	-
+/data/assemblies/GCA_011034935_1/analyze/workflows	2	3	50%	25m 07s
+/data/assemblies/GCA_011035065_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_011036115_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_011036725_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_011058885_1/analyze/workflows	2	2	0%	17m 34s
+/data/assemblies/GCA_011420415_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_011421325_1	2	2	100%	-
+/data/assemblies/GCA_011421325_1/analyze/workflows	2	2	50%	7m 41s
+/data/assemblies/GCA_012896555_1/analyze/workflows	2	2	0%	6m 11s
+/data/assemblies/GCA_013184365_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_013363185_1	2	2	0%	1m 42s
+/data/assemblies/GCA_014324585_1/analyze/workflows	2	2	0%	2m 54s
+/data/assemblies/GCA_014324715_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_014324765_1/analyze/custom	2	2	100%	-
+/data/assemblies/GCA_014607475_1/analyze/custom	2	2	-	-
+/data/assemblies/GCA_014822065_1	2	2	50%	98m 16s
+/data/assemblies/GCA_014849715_1/analyze/workflows	2	2	50%	11m 30s
+/data/assemblies/GCA_014849715_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-chic-fastq-to-cool-hicup-cooler-versions-v0-3	2	2	100%	-
+/data/assemblies/GCA_014850075_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_014850165_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_014850605_1/analyze/workflows	2	3	50%	14m 06s
+/data/assemblies/GCA_014851035_1/analyze/workflows	2	2	0%	28m 00s
+/data/assemblies/GCA_014851275_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_015266375_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_016906495_1	2	2	100%	-
+/data/assemblies/GCA_017657135_1	2	2	0%	17m 36s
+/data/assemblies/GCA_017657135_1/analyze/custom	2	2	100%	-
+/data/assemblies/GCA_017911135_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_019055045_1/analyze/workflows	2	4	0%	21m 01s
+/data/assemblies/GCA_019843505_1/analyze/workflows	2	3	0%	30m 02s
+/data/assemblies/GCA_020091605_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_020137435_1/analyze/workflows	2	3	50%	6m 14s
+/data/assemblies/GCA_020617725_1	2	2	50%	11m 06s
+/data/assemblies/GCA_020617735_1	2	2	-	-
+/data/assemblies/GCA_020975485_1/analyze/workflows/workflow-github-com-iwc-workflows-atacseq-main-versions-v2-0	2	2	100%	-
+/data/assemblies/GCA_020975985_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-chic-fastq-to-cool-hicup-cooler-versions-v0-3	2	2	100%	-
+/data/assemblies/GCA_021020595_1	2	2	-	-
+/data/assemblies/GCA_021020605_1	2	2	0%	1m 18s
+/data/assemblies/GCA_021655985_1/analyze/workflows	2	2	0%	71m 50s
+/data/assemblies/GCA_022414705_1	2	2	100%	-
+/data/assemblies/GCA_023137835_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_023620335_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_023623415_1/analyze/workflows	2	4	67%	2m 16s
+/data/assemblies/GCA_023628975_1/analyze/workflows	2	2	50%	12m 50s
+/data/assemblies/GCA_023629015_1/analyze/workflows	2	2	0%	10m 33s
+/data/assemblies/GCA_023629575_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_023630475_1/analyze/workflows	2	5	75%	3m 14s
+/data/assemblies/GCA_023845515_1/analyze/workflows	2	4	0%	40s
+/data/assemblies/GCA_024112715_1	2	2	100%	-
+/data/assemblies/GCA_024243835_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_024322255_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_024667855_1/analyze/workflows	2	3	50%	9m 24s
+/data/assemblies/GCA_024678295_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_024678425_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_024678565_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_024678765_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_025331925_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_025769695_1/analyze/custom	2	2	100%	-
+/data/assemblies/GCA_025769805_1/analyze/workflows	2	3	-	-
+/data/assemblies/GCA_026119675_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_026743815_1/analyze/workflows	2	2	50%	12m 30s
+/data/assemblies/GCA_026802285_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_027923725_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_029290645_1/analyze/workflows	2	2	50%	8m 01s
+/data/assemblies/GCA_029633885_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_030575055_1/analyze/workflows	2	2	50%	22m 08s
+/data/assemblies/GCA_030719145_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_030770195_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_031304975_1/analyze/workflows	2	2	50%	11m 38s
+/data/assemblies/GCA_031305075_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_031471915_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_034621665_1/analyze/workflows	2	3	0%	15m 03s
+/data/assemblies/GCA_035658335_1	2	2	100%	-
+/data/assemblies/GCA_035658335_1/analyze/workflows	2	2	50%	8m 46s
+/data/assemblies/GCA_037042295_1	2	2	100%	-
+/data/assemblies/GCA_039267155_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_040112765_1	2	2	100%	-
+/data/assemblies/GCA_040285575_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_040333235_1/analyze/workflows	2	5	33%	15m 24s
+/data/assemblies/GCA_040801935_1	2	2	100%	-
+/data/assemblies/GCA_041682195_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_042257085_1/analyze/workflows	2	3	50%	22m 30s
+/data/assemblies/GCA_044508915_1	2	2	100%	-
+/data/assemblies/GCA_045786945_1/analyze/workflows	2	4	50%	12m 30s
+/data/assemblies/GCA_046127705_1	2	2	100%	-
+/data/assemblies/GCA_046127705_1/analyze/workflows	2	2	0%	42m 51s
+/data/assemblies/GCA_047368035_1/analyze/workflows	2	3	50%	12m 42s
+/data/assemblies/GCA_047715555_1/analyze/workflows	2	4	50%	31m 54s
+/data/assemblies/GCA_049634785_1	2	2	100%	-
+/data/assemblies/GCA_049634785_1/analyze/custom	2	2	100%	-
+/data/assemblies/GCA_049634785_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCA_049862575_1	2	4	100%	-
+/data/assemblies/GCA_050230985_1	2	2	100%	-
+/data/assemblies/GCA_050389755_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_050613755_1/analyze/workflows	2	3	67%	9m 38s
+/data/assemblies/GCA_051144965_1	2	2	100%	-
+/data/assemblies/GCA_051144965_1/analyze/workflows	2	2	50%	18m 04s
+/data/assemblies/GCA_051170875_1/analyze/workflows	2	3	0%	27m 03s
+/data/assemblies/GCA_051397075_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_051397125_1/analyze/custom	2	2	100%	-
+/data/assemblies/GCA_051397615_1/analyze/workflows	2	4	0%	46m 12s
+/data/assemblies/GCA_051944375_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_052575885_1	2	2	100%	-
+/data/assemblies/GCA_052575885_1/analyze/workflows	2	2	50%	8m 34s
+/data/assemblies/GCA_900093535_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_900093555_2	2	2	100%	-
+/data/assemblies/GCA_900097035_1/analyze/workflows	2	2	0%	75m 05s
+/data/assemblies/GCA_900162065_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_900178095_1	2	2	-	-
+/data/assemblies/GCA_900178095_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_900180395_1	2	2	0%	19m 17s
+/data/assemblies/GCA_900180395_1/analyze/workflows	2	4	50%	25m 08s
+/data/assemblies/GCA_900537255_1	2	2	100%	-
+/data/assemblies/GCA_900617785_1	2	2	100%	-
+/data/assemblies/GCA_900617815_1	2	2	-	-
+/data/assemblies/GCA_900617815_1/analyze/workflows	2	3	0%	27m 54s
+/data/assemblies/GCA_900617865_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_903994225_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCA_903994235_1	2	2	-	-
+/data/assemblies/GCA_903994265_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCA_914969965_1	2	2	-	-
+/data/assemblies/GCA_963921135_1/analyze/workflows	2	2	50%	6m 09s
+/data/assemblies/GCA_965194785_1/analyze/workflows	2	2	0%	7m 07s
+/data/assemblies/GCF_000001215_4	2	2	100%	-
+/data/assemblies/GCF_000001985_1/analyze/workflows	2	2	50%	19s
+/data/assemblies/GCF_000002415_2	2	3	-	-
+/data/assemblies/GCF_000002415_2/analyze/workflows	2	2	-	-
+/data/assemblies/GCF_000002545_3/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_000002715_2	2	2	100%	-
+/data/assemblies/GCF_000002855_4	2	2	100%	-
+/data/assemblies/GCF_000004015_4/analyze/custom	2	2	100%	-
+/data/assemblies/GCF_000009645_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_000013425_1	2	2	100%	-
+/data/assemblies/GCF_000195955_2/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_000307795_1/analyze/workflows	2	2	0%	45m 13s
+/data/assemblies/GCF_000315875_1	2	2	100%	-
+/data/assemblies/GCF_000321355_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_000507465_2/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_000691945_2/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_000709005_1/analyze/workflows	2	3	-	-
+/data/assemblies/GCF_000709125_1/analyze/workflows/workflow-github-com-iwc-workflows-chipseq-sr-main-versions-v1-0	2	2	100%	-
+/data/assemblies/GCF_000715545_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_000838645_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCF_000847505_1/analyze/workflows	2	2	50%	15m 00s
+/data/assemblies/GCF_000849945_1	2	2	100%	-
+/data/assemblies/GCF_000853825_1	2	2	-	-
+/data/assemblies/GCF_000855765_1	2	2	100%	-
+/data/assemblies/GCF_000859885_1	2	2	100%	-
+/data/assemblies/GCF_000859885_1/analyze/workflows	2	2	50%	4m 02s
+/data/assemblies/GCF_000859985_2	2	2	100%	-
+/data/assemblies/GCF_000860285_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_000862245_1/analyze/custom	2	2	50%	3m 24s
+/data/assemblies/GCF_000862245_1/analyze/workflows	2	2	50%	13m 14s
+/data/assemblies/GCF_000865085_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_000922675_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_001595695_1/analyze/workflows	2	2	-	-
+/data/assemblies/GCF_001680005_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_002290485_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_002811875_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_002847045_1/analyze/workflows	2	3	100%	-
+/data/assemblies/GCF_004131525_1	2	2	100%	-
+/data/assemblies/GCF_004131605_1	2	2	50%	10m 50s
+/data/assemblies/GCF_004131645_1	2	2	100%	-
+/data/assemblies/GCF_004131665_1	2	2	100%	-
+/data/assemblies/GCF_004286755_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_004789975_1/analyze/custom	2	2	100%	-
+/data/assemblies/GCF_006535985_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_010111755_1	2	2	100%	-
+/data/assemblies/GCF_016918785_1	2	2	50%	5m 18s
+/data/assemblies/GCF_020736045_1/analyze/workflows	2	3	0%	114m 50s
+/data/assemblies/GCF_021901695_1/analyze/workflows	2	2	50%	4m 58s
+/data/assemblies/GCF_023155475_1	2	2	100%	-
+/data/assemblies/GCF_027925085_1	2	2	100%	-
+/data/assemblies/GCF_040397295_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_040404485_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_045689255_1/analyze/workflows	2	2	100%	-
+/data/assemblies/GCF_900097015_1/analyze/workflows	2	2	50%	2m 14s
+/data/assemblies/GCF_943734655_1/analyze/workflows	2	2	0%	15m 54s
+/data/assemblies/GCF_943734745_1	2	2	100%	-
+/data/assemblies/GCF_965196655_1/analyze/workflows	2	2	100%	-
+/data/organisms/1325723	2	2	0%	41m 41s
+/data/organisms/1357716	2	2	50%	81m 42s
+/data/organisms/172	2	2	100%	-
+/data/organisms/1747	2	2	100%	-
+/data/organisms/1912989	2	2	-	-
+/data/organisms/196912	2	3	100%	-
+/data/organisms/209941	2	2	100%	-
+/data/organisms/2699242	2	2	100%	-
+/data/organisms/28015	2	3	100%	-
+/data/organisms/28184	2	2	50%	4m 43s
+/data/organisms/282272	2	2	100%	-
+/data/organisms/2919603	2	2	100%	-
+/data/organisms/293939	2	3	67%	7m 08s
+/data/organisms/3052223	2	2	-	-
+/data/organisms/3052345/analyze/workflows	2	2	100%	-
+/data/organisms/3052460/analyze/workflows	2	2	50%	25m 00s
+/data/organisms/3052484	2	2	50%	3m 50s
+/data/organisms/3066268	2	2	0%	1m 52s
+/data/organisms/3092744	2	2	50%	7m 28s
+/data/organisms/3428501	2	2	100%	-
+/data/organisms/409998	2	2	100%	-
+/data/organisms/470	2	2	100%	-
+/data/organisms/470485	2	2	100%	-
+/data/organisms/47466	2	2	100%	-
+/data/organisms/484	2	2	100%	-
+/data/organisms/526923	2	2	100%	-
+/data/organisms/5481	2	2	0%	21m 51s
+/data/organisms/5518	2	2	100%	-
+/data/organisms/56406	2	2	100%	-
+/data/organisms/5757	2	2	100%	-
+/data/organisms/5854	2	2	100%	-
+/data/organisms/61605	2	2	-	-
+/data/organisms/655981	2	2	0%	8m 19s
+/data/organisms/65658	2	3	100%	-
+/data/organisms/65662	2	3	100%	-
+/data/organisms/672	2	2	50%	1m 36s
+/data/organisms/7159	2	2	100%	-
+/data/organisms/94626	2	2	-	-
+/data/workflows/differential-expression-analysis	2	4	-	-
+/learn/faq	2	2	-	-
+/learn/getting-started/common-workflows	2	2	100%	-
+/learn/youtube-channels	2	2	100%	-
+/data/[entityListType]	1	1	100%	-
+/data/assemblies/GCA_000006275_3/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_000149895_1	1	1	100%	-
+/data/assemblies/GCA_000150145_1	1	1	100%	-
+/data/assemblies/GCA_000151175_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000170175_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000225285_2	1	1	100%	-
+/data/assemblies/GCA_000239835_2	1	1	100%	-
+/data/assemblies/GCA_000256705_2	1	1	-	-
+/data/assemblies/GCA_000256705_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000260175_2	1	1	100%	-
+/data/assemblies/GCA_000260175_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_000260175_2/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_000262775_1	1	1	100%	-
+/data/assemblies/GCA_000302655_1	1	1	100%	-
+/data/assemblies/GCA_000320625_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_000320625_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000320685_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_000327425_1	1	1	-	-
+/data/assemblies/GCA_000331325_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000331345_1	1	1	-	-
+/data/assemblies/GCA_000331345_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_000331345_1/analyze/workflows	1	2	0%	45m 42s
+/data/assemblies/GCA_000344635_1/analyze/workflows	1	1	0%	51m 58s
+/data/assemblies/GCA_000385855_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_000400815_2/analyze/workflows	1	2	0%	24m 26s
+/data/assemblies/GCA_000401635_1	1	1	100%	-
+/data/assemblies/GCA_000401635_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_000401635_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_000441895_2	1	1	100%	-
+/data/assemblies/GCA_000447495_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_000469805_3	1	1	100%	-
+/data/assemblies/GCA_000473525_2	1	1	0%	333m 36s
+/data/assemblies/GCA_000473525_2/analyze/custom	1	1	-	-
+/data/assemblies/GCA_000473525_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000524515_1	1	2	-	-
+/data/assemblies/GCA_000524515_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_000524515_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_000616785_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000633855_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_000725905_1	1	2	-	-
+/data/assemblies/GCA_000725905_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_000769295_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000784615_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_000812075_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_000814975_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_000826245_1/analyze/custom	1	1	0%	18m 55s
+/data/assemblies/GCA_000826285_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_000826285_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000826305_1	1	1	-	-
+/data/assemblies/GCA_000826345_1	1	1	100%	-
+/data/assemblies/GCA_000826385_1/analyze/workflows/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-v3-versions-v0-6-5	1	1	100%	-
+/data/assemblies/GCA_000826405_1/analyze/workflows/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCA_000826425_1	1	1	-	-
+/data/assemblies/GCA_000826425_1/workflow-github-com-iwc-workflows-lncRNAs-annotation-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCA_000826445_1/analyze/workflows/workflow-github-com-iwc-workflows-rnaseq-sr-main-versions-v1-3	1	1	100%	-
+/data/assemblies/GCA_000826465_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000826485_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_000826505_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_000826505_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_000826505_1/analyze/workflows/workflow-github-com-iwc-workflows-rnaseq-sr-main-versions-v1-3	1	1	100%	-
+/data/assemblies/GCA_000875815_1	1	1	0%	11m 22s
+/data/assemblies/GCA_001008285_1/analyze/workflows/workflow-github-com-iwc-workflows-chipseq-sr-main-versions-v1-1	1	1	100%	-
+/data/assemblies/GCA_001008285_1/analyze/workflows/workflow-github-com-iwc-workflows-ploidy-aware-genotype-calling-main-versions-v0-1-1	1	1	100%	-
+/data/assemblies/GCA_001014885_1	1	1	100%	-
+/data/assemblies/GCA_001014885_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_001262475_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_001263375_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_001305415_1	1	1	100%	-
+/data/assemblies/GCA_001445615_2	1	1	-	-
+/data/assemblies/GCA_001445615_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_001460545_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_001460835_1	1	1	100%	-
+/data/assemblies/GCA_001460835_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_001466685_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_001466685_1/analyze/workflows	1	2	0%	15m 06s
+/data/assemblies/GCA_001574975_1	1	1	100%	-
+/data/assemblies/GCA_001630395_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_001650065_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_001650065_1/analyze/workflows	1	1	0%	29m 54s
+/data/assemblies/GCA_001650105_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_001650145_1	1	1	100%	-
+/data/assemblies/GCA_001684195_1	1	1	100%	-
+/data/assemblies/GCA_001702695_2	1	1	100%	-
+/data/assemblies/GCA_001702695_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_001702745_1	1	1	100%	-
+/data/assemblies/GCA_001702795_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_001702905_1	1	1	0%	6m 55s
+/data/assemblies/GCA_001715585_1	1	2	-	-
+/data/assemblies/GCA_001715585_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_001715585_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_001757345_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-hic-fastq-to-cool-hicup-cooler-versions-v0-3	1	1	100%	-
+/data/assemblies/GCA_001857865_1	1	1	100%	-
+/data/assemblies/GCA_001883805_1/analyze/workflows/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-3	1	1	100%	-
+/data/assemblies/GCA_001931975_2	1	1	100%	-
+/data/assemblies/GCA_001931975_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_002025285_2/analyze/custom	1	1	-	-
+/data/assemblies/GCA_002148305_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_002157015_1	1	2	0%	50m 01s
+/data/assemblies/GCA_002157015_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_002157015_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_002219105_2/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_002222025_1	1	1	100%	-
+/data/assemblies/GCA_002233855_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_002234115_1/analyze/custom	1	1	0%	24m 16s
+/data/assemblies/GCA_002234115_1/analyze/workflows	1	1	0%	18m 01s
+/data/assemblies/GCA_002234235_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_002234235_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_002443195_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_002443195_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_002443215_2/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_002759435_3	1	1	100%	-
+/data/assemblies/GCA_002759435_3/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_002893375_1/analyze/workflows/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-5	1	1	100%	-
+/data/assemblies/GCA_003012285_1	1	1	100%	-
+/data/assemblies/GCA_003014415_1	1	1	100%	-
+/data/assemblies/GCA_003014415_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_003086255_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_003184635_1	1	1	100%	-
+/data/assemblies/GCA_003316835_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_003594445_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_003594645_1	1	1	100%	-
+/data/assemblies/GCA_003594685_1	1	1	100%	-
+/data/assemblies/GCA_003604175_2	1	1	100%	-
+/data/assemblies/GCA_003615095_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_003670145_1	1	1	100%	-
+/data/assemblies/GCA_003670145_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_003670145_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_003689075_1	1	1	100%	-
+/data/assemblies/GCA_003689415_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_003690385_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_003690435_1/analyze/workflows	1	1	0%	18m 46s
+/data/assemblies/GCA_003690925_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_003691035_1/analyze/workflows/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCA_003691305_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_003691305_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_003693125_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_003693225_1/analyze/workflows	1	2	50%	5m 21s
+/data/assemblies/GCA_003709025_1/analyze/custom	1	1	0%	62m 29s
+/data/assemblies/GCA_003709025_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_003711305_1	1	1	100%	-
+/data/assemblies/GCA_003719455_1	1	1	100%	-
+/data/assemblies/GCA_003814445_1	1	1	100%	-
+/data/assemblies/GCA_003953515_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_003953515_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-hic-fastq-to-pairs-hicup-versions-v0-3	1	1	100%	-
+/data/assemblies/GCA_003953525_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_003953865_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_003967695_1	1	1	100%	-
+/data/assemblies/GCA_003967715_1	1	1	100%	-
+/data/assemblies/GCA_003971505_1/analyze/custom	1	1	0%	6m 38s
+/data/assemblies/GCA_004329145_1/analyze/workflows	1	2	0%	25m 02s
+/data/assemblies/GCA_004329255_1	1	1	100%	-
+/data/assemblies/GCA_004367125_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_004526295_1	1	1	100%	-
+/data/assemblies/GCA_004798825_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_004802565_1/analyze/workflows/workflow-github-com-iwc-workflows-atacseq-main-versions-v2-0	1	1	100%	-
+/data/assemblies/GCA_006518225_1	1	1	-	-
+/data/assemblies/GCA_006912115_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_008275145_1	1	1	100%	-
+/data/assemblies/GCA_008275145_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_008728235_1/analyze/workflows/workflow-github-com-iwc-workflows-chipseq-pe-main-versions-v1-0	1	1	100%	-
+/data/assemblies/GCA_009193685_1	1	1	100%	-
+/data/assemblies/GCA_009193685_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_009193685_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_009298825_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_009613055_1	1	1	100%	-
+/data/assemblies/GCA_009613065_1	1	1	100%	-
+/data/assemblies/GCA_009617505_1	1	1	100%	-
+/data/assemblies/GCA_009684895_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_009686605_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_009686805_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_009686825_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_009686845_1/analyze/custom	1	1	0%	7m 44s
+/data/assemblies/GCA_009687025_1/analyze/workflows	1	1	0%	47m 48s
+/data/assemblies/GCA_009687045_1	1	1	100%	-
+/data/assemblies/GCA_009687265_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_009687385_1/analyze/workflows/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCA_009687525_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_009726335_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_009726335_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_009726425_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_009726425_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_009726845_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_009731335_1	1	1	100%	-
+/data/assemblies/GCA_009731335_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_009731335_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_009761385_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_011033385_1	1	1	100%	-
+/data/assemblies/GCA_011033505_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_011033535_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-chic-fastq-to-cool-hicup-cooler-versions-v0-3	1	1	100%	-
+/data/assemblies/GCA_011033625_1	1	1	100%	-
+/data/assemblies/GCA_011033625_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_011033745_1	1	1	-	-
+/data/assemblies/GCA_011033745_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_011033895_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_011033925_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_011033945_1	1	1	100%	-
+/data/assemblies/GCA_011033945_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_011034025_1	1	1	100%	-
+/data/assemblies/GCA_011034025_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_011034025_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_011034455_1	1	1	-	-
+/data/assemblies/GCA_011034455_1/analyze/custom	1	1	0%	6m 17s
+/data/assemblies/GCA_011034515_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_011034625_1	1	1	0%	4m 45s
+/data/assemblies/GCA_011034625_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_011034625_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_011034825_1	1	1	0%	35m 14s
+/data/assemblies/GCA_011034825_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_011034825_1/analyze/workflows	1	2	50%	5m 30s
+/data/assemblies/GCA_011034845_1	1	1	100%	-
+/data/assemblies/GCA_011034845_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_011034935_1/analyze/custom	1	1	0%	19m 46s
+/data/assemblies/GCA_011035015_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_011035015_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_011035245_1	1	1	-	-
+/data/assemblies/GCA_011035245_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_011035245_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_011035275_1	1	1	100%	-
+/data/assemblies/GCA_011035355_1/analyze/workflows	1	4	75%	4m 00s
+/data/assemblies/GCA_011036065_1/analyze/workflows/workflow-github-com-iwc-workflows-ploidy-aware-genotype-calling-main-versions-v0-1-1	1	1	100%	-
+/data/assemblies/GCA_011036115_1/analyze/custom	1	2	100%	-
+/data/assemblies/GCA_011036215_1	1	1	-	-
+/data/assemblies/GCA_011036425_1	1	1	-	-
+/data/assemblies/GCA_011036445_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_011036475_1	1	1	0%	9m 15s
+/data/assemblies/GCA_011036515_1	1	1	100%	-
+/data/assemblies/GCA_011036725_1	1	1	100%	-
+/data/assemblies/GCA_011036725_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_011036745_1	1	1	100%	-
+/data/assemblies/GCA_011036965_1	1	1	-	-
+/data/assemblies/GCA_011036965_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_011036965_1/analyze/workflows	1	1	0%	17m 45s
+/data/assemblies/GCA_011421285_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_011421285_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_011421325_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_011421375_1	1	1	-	-
+/data/assemblies/GCA_011421375_1/analyze/workflows	1	1	0%	14m 04s
+/data/assemblies/GCA_011763875_1/analyze/workflows	1	1	0%	27m 31s
+/data/assemblies/GCA_011950945_2/analyze/workflows	1	2	50%	10m 38s
+/data/assemblies/GCA_011950945_2/analyze/workflows/differential-expression-analysis	1	1	100%	-
+/data/assemblies/GCA_011950945_2/analyze/workflows/workflow-github-com-iwc-workflows-annotation-braker3-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCA_011950945_2/analyze/workflows/workflow-github-com-iwc-workflows-cutandrun-main-versions-v0-18	1	1	-	-
+/data/assemblies/GCA_011951295_2/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_012896275_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_012897115_1	1	1	100%	-
+/data/assemblies/GCA_013146035_1/analyze/workflows	1	3	0%	37m 37s
+/data/assemblies/GCA_013186425_2/analyze/custom	1	1	0%	54m 17s
+/data/assemblies/GCA_013186425_2/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_013339765_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_013347595_1/analyze/custom	1	2	100%	-
+/data/assemblies/GCA_013347595_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_013623845_1/analyze/workflows	1	2	50%	33m 40s
+/data/assemblies/GCA_014324455_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_014324575_1	1	1	-	-
+/data/assemblies/GCA_014324575_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_014324575_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_014324585_1	1	1	-	-
+/data/assemblies/GCA_014324585_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_014324595_1	1	1	-	-
+/data/assemblies/GCA_014324595_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_014324715_1	1	1	100%	-
+/data/assemblies/GCA_014324715_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_014324795_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_014324805_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_014324975_1	1	1	100%	-
+/data/assemblies/GCA_014324975_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_014607475_1	1	1	100%	-
+/data/assemblies/GCA_014607475_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_014706235_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_014784225_2/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_014805415_1	1	1	100%	-
+/data/assemblies/GCA_014822065_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_014822065_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_014825765_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_014849345_1/analyze/workflows/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-3	1	1	100%	-
+/data/assemblies/GCA_014849665_1/analyze/workflows	1	3	-	-
+/data/assemblies/GCA_014849935_1/analyze/workflows	1	1	0%	5m 10s
+/data/assemblies/GCA_014850365_1/analyze/workflows/workflow-github-com-iwc-workflows-ploidy-aware-genotype-calling-main-versions-v0-1-1	1	1	100%	-
+/data/assemblies/GCA_014850505_1/analyze/workflows/workflow-github-com-iwc-workflows-chipseq-pe-main-versions-v1-1	1	1	100%	-
+/data/assemblies/GCA_014850675_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_014850695_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_014851255_1/analyze/workflows	1	1	0%	1m 42s
+/data/assemblies/GCA_014851355_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_016163995_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_016166245_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_016906495_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_017657105_1	1	1	-	-
+/data/assemblies/GCA_017657105_1/analyze/custom	1	1	0%	37m 14s
+/data/assemblies/GCA_017657105_1/analyze/workflows	1	1	0%	50m 02s
+/data/assemblies/GCA_017657115_1	1	1	100%	-
+/data/assemblies/GCA_017657115_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_017657115_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_017657135_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_018140865_1/analyze/workflows/workflow-github-com-iwc-workflows-consensus-peaks-consensus-peaks-atac-cutandrun-versions-v1-5	1	1	100%	-
+/data/assemblies/GCA_018154835_1/analyze/custom	1	2	-	-
+/data/assemblies/GCA_018219615_1	1	1	-	-
+/data/assemblies/GCA_018219645_1	1	1	100%	-
+/data/assemblies/GCA_018345885_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_018345885_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_018346245_1/analyze/workflows/workflow-github-com-iwc-workflows-consensus-peaks-consensus-peaks-atac-cutandrun-versions-v1-4	1	1	100%	-
+/data/assemblies/GCA_018346585_1/analyze/workflows/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-3	1	1	100%	-
+/data/assemblies/GCA_018346815_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_019054925_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_019055145_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_019189685_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_019189765_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_019343145_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-chic-fastq-to-cool-hicup-cooler-versions-v0-3	1	1	100%	-
+/data/assemblies/GCA_019721145_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_019721145_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_020085065_1/analyze/custom	1	1	0%	10m 12s
+/data/assemblies/GCA_020085065_1/analyze/workflows	1	1	0%	15m 12s
+/data/assemblies/GCA_020137885_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_020284045_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_020617195_1	1	1	-	-
+/data/assemblies/GCA_020617195_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_020617195_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_020617735_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_020617735_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_020716745_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_020716745_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_020975675_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_020976485_1/analyze/workflows/workflow-github-com-iwc-workflows-chipseq-sr-main-versions-v1-1	1	1	100%	-
+/data/assemblies/GCA_021461655_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_021498375_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_021498375_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_021498435_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_021498435_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_021655985_1/analyze/custom	1	1	0%	13m 34s
+/data/assemblies/GCA_022160335_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_022385695_1	1	1	-	-
+/data/assemblies/GCA_022385695_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_022560135_1	1	1	100%	-
+/data/assemblies/GCA_022627015_2/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_022684705_1/analyze/workflows	1	2	0%	25m 01s
+/data/assemblies/GCA_022814525_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_022818035_1	1	1	100%	-
+/data/assemblies/GCA_022832995_1	1	1	100%	-
+/data/assemblies/GCA_023065815_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_023065815_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_023078545_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_023137675_1	1	1	-	-
+/data/assemblies/GCA_023212835_1/analyze/custom	1	2	-	-
+/data/assemblies/GCA_023242275_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_023620165_1	1	1	100%	-
+/data/assemblies/GCA_023620335_1/analyze/custom	1	1	0%	59m 57s
+/data/assemblies/GCA_023623695_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_023628175_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_023628975_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_023629435_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_023629435_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_023629595_1	1	1	100%	-
+/data/assemblies/GCA_023629855_1/analyze/workflows/workflow-github-com-iwc-workflows-chipseq-sr-main-versions-v1-1	1	1	-	-
+/data/assemblies/GCA_023629855_1/analyze/workflows/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-v3-versions-v0-6-5	1	1	100%	-
+/data/assemblies/GCA_023629915_1	1	1	100%	-
+/data/assemblies/GCA_023845545_1	1	1	100%	-
+/data/assemblies/GCA_023845545_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_024047395_1	1	1	100%	-
+/data/assemblies/GCA_024243835_1	1	1	-	-
+/data/assemblies/GCA_024243835_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_024322255_1	1	1	100%	-
+/data/assemblies/GCA_024322255_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_024665715_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_024665715_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_024665985_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_024665985_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_024667295_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_024667605_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_024668885_1	1	1	100%	-
+/data/assemblies/GCA_024668885_1/analyze/workflows	1	2	0%	16m 39s
+/data/assemblies/GCA_024671105_1/analyze/custom	1	1	0%	80m 46s
+/data/assemblies/GCA_024671105_1/analyze/workflows	1	2	0%	29m 18s
+/data/assemblies/GCA_024676255_1/analyze/workflows	1	2	50%	2m 36s
+/data/assemblies/GCA_024676745_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_024676945_1	1	1	100%	-
+/data/assemblies/GCA_024677005_1/analyze/workflows	1	2	0%	39m 27s
+/data/assemblies/GCA_024677145_1	1	1	100%	-
+/data/assemblies/GCA_024678425_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_024678525_1	1	1	100%	-
+/data/assemblies/GCA_024678625_1/analyze/workflows/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCA_024678765_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_025094155_1/analyze/workflows	1	3	0%	20m 55s
+/data/assemblies/GCA_025169535_1	1	1	100%	-
+/data/assemblies/GCA_025215515_1	1	1	100%	-
+/data/assemblies/GCA_025407655_1	1	1	100%	-
+/data/assemblies/GCA_025433535_2	1	2	-	-
+/data/assemblies/GCA_025433535_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_025433535_2/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_025767605_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_025767665_1/analyze/workflows/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-3	1	1	100%	-
+/data/assemblies/GCA_025767715_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_025767985_1	1	1	100%	-
+/data/assemblies/GCA_025769265_1	1	1	100%	-
+/data/assemblies/GCA_025769305_1/analyze/workflows/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-v3-versions-v0-6-4	1	1	100%	-
+/data/assemblies/GCA_025769605_1/analyze/workflows	1	2	0%	62m 07s
+/data/assemblies/GCA_025769725_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-hic-fastq-to-pairs-hicup-versions-v0-3	1	1	100%	-
+/data/assemblies/GCA_025769745_1/analyze/workflows	1	3	-	-
+/data/assemblies/GCA_025769785_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_025769785_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_026119675_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_026743835_1/analyze/workflows/differential-expression-analysis	1	1	100%	-
+/data/assemblies/GCA_027248545_1	1	1	100%	-
+/data/assemblies/GCA_027571585_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_027596135_1	1	1	100%	-
+/data/assemblies/GCA_027596135_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_027923985_1	1	1	100%	-
+/data/assemblies/GCA_027943245_1	1	1	100%	-
+/data/assemblies/GCA_027943295_1	1	1	100%	-
+/data/assemblies/GCA_027944975_1	1	2	-	-
+/data/assemblies/GCA_027945255_1	1	1	100%	-
+/data/assemblies/GCA_028455865_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_029582065_1	1	3	0%	28m 13s
+/data/assemblies/GCA_029582065_1/analyze/workflows	1	4	-	-
+/data/assemblies/GCA_029618625_1	1	2	0%	7m 52s
+/data/assemblies/GCA_029891365_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_029891365_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_030015405_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_030279005_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_030279005_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_030279015_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_030279015_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_030279045_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_030568755_1	1	1	100%	-
+/data/assemblies/GCA_030574655_1	1	1	100%	-
+/data/assemblies/GCA_030719115_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_030770195_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_031304975_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_031305075_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_031305155_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_031471915_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_031834405_1	1	1	100%	-
+/data/assemblies/GCA_032191455_1	1	2	-	-
+/data/assemblies/GCA_032191455_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_032191455_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_032356465_1	1	1	100%	-
+/data/assemblies/GCA_032356805_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_034211315_2	1	1	100%	-
+/data/assemblies/GCA_034211315_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_034621645_1	1	1	100%	-
+/data/assemblies/GCA_035078385_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_035658335_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_037042295_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_037042295_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_037055365_1	1	1	100%	-
+/data/assemblies/GCA_038994775_1	1	1	-	-
+/data/assemblies/GCA_039267105_1/analyze/workflows/workflow-github-com-iwc-workflows-rnaseq-sr-main-versions-v1-3	1	1	100%	-
+/data/assemblies/GCA_039267165_1/analyze/workflows/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-3	1	1	100%	-
+/data/assemblies/GCA_039267915_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_039623295_1	1	1	-	-
+/data/assemblies/GCA_039623295_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_039623295_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_040113345_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_040113555_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_040113765_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_040113895_1/analyze/workflows/workflow-github-com-iwc-workflows-chipseq-pe-main-versions-v1-0	1	1	100%	-
+/data/assemblies/GCA_040142855_1	1	1	100%	-
+/data/assemblies/GCA_040142865_1	1	1	100%	-
+/data/assemblies/GCA_040801935_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_040805705_1	1	1	100%	-
+/data/assemblies/GCA_040938365_1/analyze/workflows/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-cellplex-versions-v0-6-5	1	1	100%	-
+/data/assemblies/GCA_041682195_1/analyze/custom	1	1	0%	11m 27s
+/data/assemblies/GCA_042608485_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_042608605_1	1	1	100%	-
+/data/assemblies/GCA_042608605_1/analyze/workflows	1	2	0%	100m 19s
+/data/assemblies/GCA_042608725_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_042608725_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_042608785_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_042608825_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_042608895_1	1	1	-	-
+/data/assemblies/GCA_042608985_1/analyze/workflows	1	1	0%	4m 57s
+/data/assemblies/GCA_042609025_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_042609175_1/analyze/workflows	1	2	0%	24m 59s
+/data/assemblies/GCA_042609265_1	1	1	100%	-
+/data/assemblies/GCA_042931535_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_042931795_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_044509545_1	1	1	100%	-
+/data/assemblies/GCA_044647375_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_044706195_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_044706195_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_046127705_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_046563165_1	1	1	100%	-
+/data/assemblies/GCA_047368035_1	1	1	100%	-
+/data/assemblies/GCA_047368035_1/analyze/custom	1	1	0%	28m 12s
+/data/assemblies/GCA_047651775_1/analyze/workflows/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	100%	-
+/data/assemblies/GCA_048164905_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_048593475_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_049307805_1	1	1	100%	-
+/data/assemblies/GCA_049634765_1/analyze/custom	1	2	-	-
+/data/assemblies/GCA_049634765_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_049863895_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_049903775_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_050230985_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_050329265_1	1	1	100%	-
+/data/assemblies/GCA_050495805_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_050655605_1	1	1	100%	-
+/data/assemblies/GCA_050655605_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_051144935_1	1	1	0%	11m 45s
+/data/assemblies/GCA_051144935_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_051144965_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_051312775_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_051397315_1/analyze/workflows	1	1	0%	24m 27s
+/data/assemblies/GCA_051529985_1	1	1	100%	-
+/data/assemblies/GCA_051943445_1/analyze/workflows	1	1	0%	25m 59s
+/data/assemblies/GCA_051943535_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_051943695_1/analyze/custom	1	1	0%	69m 35s
+/data/assemblies/GCA_051943795_1/analyze/workflows/workflow-github-com-iwc-workflows-fastq-to-matrix-10x-scrna-seq-fastq-to-matrix-10x-v3-versions-v0-6-5	1	1	100%	-
+/data/assemblies/GCA_051996105_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_052402725_1	1	1	100%	-
+/data/assemblies/GCA_052575845_1	1	1	100%	-
+/data/assemblies/GCA_052815935_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_053525095_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_054130785_1	1	1	100%	-
+/data/assemblies/GCA_054130785_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_054130785_1/analyze/workflows	1	2	0%	28m 43s
+/data/assemblies/GCA_900000135_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_900093535_1	1	2	0%	17m 52s
+/data/assemblies/GCA_900093535_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_900093545_1	1	1	100%	-
+/data/assemblies/GCA_900093545_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_900096555_1	1	1	100%	-
+/data/assemblies/GCA_900097035_1	1	2	0%	69m 18s
+/data/assemblies/GCA_900178095_1/analyze/custom	1	1	0%	3m 53s
+/data/assemblies/GCA_900180395_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_900184105_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_900406225_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_900537205_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_900576705_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_900617785_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_900617785_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_900617805_1	1	1	-	-
+/data/assemblies/GCA_900617805_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_900617805_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_900617815_1/analyze/custom	1	2	-	-
+/data/assemblies/GCA_900617865_1	1	1	100%	-
+/data/assemblies/GCA_900617865_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_900632055_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_903994205_1	1	1	-	-
+/data/assemblies/GCA_903994205_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_903994205_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCA_903994225_1	1	1	-	-
+/data/assemblies/GCA_903994235_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCA_903994265_1	1	1	-	-
+/data/assemblies/GCA_903994265_1/analyze/custom	1	1	-	-
+/data/assemblies/GCA_910591785_1	1	1	100%	-
+/data/assemblies/GCA_910591845_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCA_917563935_1	1	1	100%	-
+/data/assemblies/GCA_943734665_2	1	1	100%	-
+/data/assemblies/GCA_949152365_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_949152365_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCA_963378725_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_963921095_1/analyze/custom	1	1	0%	15m 06s
+/data/assemblies/GCA_963921095_1/analyze/workflows	1	2	0%	2m 00s
+/data/assemblies/GCA_963921135_1/analyze/custom	1	1	0%	20m 44s
+/data/assemblies/GCA_963921145_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-hic-fastq-to-cool-hicup-cooler-versions-v0-3	1	1	100%	-
+/data/assemblies/GCA_964036135_1	1	1	0%	2m 47s
+/data/assemblies/GCA_964036135_1/analyze/workflows	1	1	0%	11m 37s
+/data/assemblies/GCA_964417195_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCA_964417485_1	1	1	100%	-
+/data/assemblies/GCA_964656895_1	1	1	100%	-
+/data/assemblies/GCF_000001635_27	1	1	100%	-
+/data/assemblies/GCF_000002445_2/analyze/workflows	1	3	-	-
+/data/assemblies/GCF_000002655_1	1	1	100%	-
+/data/assemblies/GCF_000002765_6	1	2	-	-
+/data/assemblies/GCF_000002765_6/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000002825_2	1	1	100%	-
+/data/assemblies/GCF_000002825_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_000003085_2	1	1	100%	-
+/data/assemblies/GCF_000003085_2/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_000004015_4	1	1	100%	-
+/data/assemblies/GCF_000004555_2/analyze/workflows/workflow-github-com-iwc-workflows-consensus-peaks-consensus-peaks-atac-cutandrun-versions-v1-5	1	1	100%	-
+/data/assemblies/GCF_000005845_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000006425_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCF_000006945_2	1	1	100%	-
+/data/assemblies/GCF_000009085_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_000009465_1	1	1	100%	-
+/data/assemblies/GCF_000011425_1/analyze/workflows	1	2	50%	2s
+/data/assemblies/GCF_000011765_3/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_000014805_1	1	1	100%	-
+/data/assemblies/GCF_000014805_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_000017685_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_000018225_1	1	1	100%	-
+/data/assemblies/GCF_000022745_1	1	1	100%	-
+/data/assemblies/GCF_000025985_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000027105_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_000149035_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-hic-fastq-to-pairs-hicup-versions-v0-3	1	1	100%	-
+/data/assemblies/GCF_000149755_1/analyze/workflows	1	1	0%	2m 14s
+/data/assemblies/GCF_000149955_1/analyze/custom	1	1	-	-
+/data/assemblies/GCF_000151355_1	1	1	100%	-
+/data/assemblies/GCF_000151355_1/analyze/workflows	1	1	0%	37m 29s
+/data/assemblies/GCF_000151545_1/analyze/custom	1	2	-	-
+/data/assemblies/GCF_000151545_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-hic-fastq-to-pairs-hicup-versions-v0-3	1	1	100%	-
+/data/assemblies/GCF_000157355_2	1	2	100%	-
+/data/assemblies/GCF_000167675_1	1	1	100%	-
+/data/assemblies/GCF_000184105_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_000184105_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_000203795_2/analyze/workflows	1	2	-	-
+/data/assemblies/GCF_000204055_1	1	1	100%	-
+/data/assemblies/GCF_000213555_1/analyze/workflows	1	2	0%	21m 02s
+/data/assemblies/GCF_000219625_1	1	1	100%	-
+/data/assemblies/GCF_000230375_1/analyze/custom	1	1	-	-
+/data/assemblies/GCF_000230375_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000277165_1	1	1	100%	-
+/data/assemblies/GCF_000313135_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_000321355_1/analyze/workflows/workflow-github-com-iwc-workflows-hic-hicup-cooler-hic-fastq-to-pairs-hicup-versions-v0-3	1	5	0%	51s
+/data/assemblies/GCF_000382425_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_000393015_1	1	1	100%	-
+/data/assemblies/GCF_000507465_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_000632845_1	1	1	100%	-
+/data/assemblies/GCF_000691945_2/analyze/custom	1	1	-	-
+/data/assemblies/GCF_000709005_1	1	1	-	-
+/data/assemblies/GCF_000715545_1	1	1	-	-
+/data/assemblies/GCF_000841585_1	1	1	100%	-
+/data/assemblies/GCF_000844845_1	1	2	100%	-
+/data/assemblies/GCF_000845685_2/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_000846365_1	1	1	100%	-
+/data/assemblies/GCF_000847345_1	1	1	100%	-
+/data/assemblies/GCF_000848125_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000853505_1	1	1	100%	-
+/data/assemblies/GCF_000853865_1	1	1	100%	-
+/data/assemblies/GCF_000854045_1	1	1	-	-
+/data/assemblies/GCF_000855765_1/analyze/custom	1	1	0%	3s
+/data/assemblies/GCF_000855765_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000857045_1/analyze/workflows	1	1	0%	48m 10s
+/data/assemblies/GCF_000857085_1	1	1	-	-
+/data/assemblies/GCF_000858485_1/analyze/workflows/workflow-github-com-iwc-workflows-atacseq-main-versions-v2-0	1	1	100%	-
+/data/assemblies/GCF_000859885_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_000859985_2/analyze/workflows	1	2	0%	5s
+/data/assemblies/GCF_000862125_1	1	2	-	-
+/data/assemblies/GCF_000862125_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000862245_1	1	2	0%	6s
+/data/assemblies/GCF_000863065_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCF_000863125_1	1	1	100%	-
+/data/assemblies/GCF_000863965_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_000866625_1	1	1	100%	-
+/data/assemblies/GCF_000867805_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_000867805_1/analyze/workflows	1	1	0%	21m 26s
+/data/assemblies/GCF_000881775_1	1	1	100%	-
+/data/assemblies/GCF_000888475_1	1	1	100%	-
+/data/assemblies/GCF_000906815_1	1	1	100%	-
+/data/assemblies/GCF_000906815_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000928555_1	1	2	-	-
+/data/assemblies/GCF_000928555_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000981445_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_000982695_1	1	1	100%	-
+/data/assemblies/GCF_001042655_1	1	1	100%	-
+/data/assemblies/GCF_001189475_1	1	1	100%	-
+/data/assemblies/GCF_001189475_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_001299255_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_001417885_1	1	1	100%	-
+/data/assemblies/GCF_001447935_2	1	1	100%	-
+/data/assemblies/GCF_001447935_2/analyze/custom	1	1	0%	27m 08s
+/data/assemblies/GCF_001447935_2/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_001457455_1	1	1	100%	-
+/data/assemblies/GCF_001477535_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_001543175_1	1	1	100%	-
+/data/assemblies/GCF_001558255_2	1	1	-	-
+/data/assemblies/GCF_001558255_2/analyze/custom	1	1	0%	29m 04s
+/data/assemblies/GCF_001558255_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_001595695_1/analyze/custom	1	1	-	-
+/data/assemblies/GCF_001642055_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_001680005_1	1	1	0%	18m 33s
+/data/assemblies/GCF_001680005_1/analyze/custom	1	1	-	-
+/data/assemblies/GCF_001692895_1/analyze/custom	1	1	-	-
+/data/assemblies/GCF_001692895_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_001761485_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_001890705_1	1	1	100%	-
+/data/assemblies/GCF_001890805_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_001895205_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_002204515_2	1	1	100%	-
+/data/assemblies/GCF_002224265_1	1	1	100%	-
+/data/assemblies/GCF_002224265_1/analyze/custom	1	1	-	-
+/data/assemblies/GCF_002224265_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_002263795_3	1	1	100%	-
+/data/assemblies/GCF_002563875_1	1	1	100%	-
+/data/assemblies/GCF_002775015_1	1	1	100%	-
+/data/assemblies/GCF_002775015_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_002815995_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCF_002816655_1	1	1	100%	-
+/data/assemblies/GCF_002816835_1	1	1	100%	-
+/data/assemblies/GCF_002820625_1/analyze/custom	1	1	0%	12m 37s
+/data/assemblies/GCF_002820625_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_002847485_1	1	1	0%	32m 32s
+/data/assemblies/GCF_002847485_1/analyze/custom	1	1	-	-
+/data/assemblies/GCF_002847485_1/analyze/workflows	1	2	-	-
+/data/assemblies/GCF_002889255_1	1	1	0%	20m 45s
+/data/assemblies/GCF_002926085_2	1	1	-	-
+/data/assemblies/GCF_003013715_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_003013735_1	1	1	100%	-
+/data/assemblies/GCF_003013735_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_003047675_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_003047715_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_003112675_1	1	1	100%	-
+/data/assemblies/GCF_003184545_1	1	1	100%	-
+/data/assemblies/GCF_003339765_1	1	1	100%	-
+/data/assemblies/GCF_003339765_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_003813185_1/analyze/workflows/workflow-github-com-iwc-workflows-rnaseq-sr-main-versions-v1-3	1	1	100%	-
+/data/assemblies/GCF_004117175_1	1	1	0%	13s
+/data/assemblies/GCF_004131545_1	1	1	-	-
+/data/assemblies/GCF_004131565_1	1	1	-	-
+/data/assemblies/GCF_004131585_1	1	1	100%	-
+/data/assemblies/GCF_004131585_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_004131605_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_004131625_1	1	1	-	-
+/data/assemblies/GCF_004131685_1	1	1	100%	-
+/data/assemblies/GCF_004286455_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_004331385_1/analyze/workflows	1	1	0%	17m 20s
+/data/assemblies/GCF_004770105_1	1	1	0%	51m 29s
+/data/assemblies/GCF_004770625_1	1	1	100%	-
+/data/assemblies/GCF_004770625_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_004770625_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_004789975_1	1	1	100%	-
+/data/assemblies/GCF_004789975_1/analyze/workflows	1	2	50%	32m 20s
+/data/assemblies/GCF_005221285_1	1	1	0%	5m 01s
+/data/assemblies/GCF_005221285_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_005221285_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_006739385_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_008792745_1	1	1	100%	-
+/data/assemblies/GCF_009734005_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_013267415_1	1	4	-	-
+/data/assemblies/GCF_013267415_1/analyze/custom	1	2	-	-
+/data/assemblies/GCF_016920785_2/analyze/workflows	1	2	100%	-
+/data/assemblies/GCF_017654245_1	1	1	100%	-
+/data/assemblies/GCF_020736045_1	1	1	100%	-
+/data/assemblies/GCF_023023125_1	1	1	100%	-
+/data/assemblies/GCF_023023125_1/analyze/workflows	1	1	0%	13m 50s
+/data/assemblies/GCF_023155475_1/analyze/custom	1	1	0%	18m 35s
+/data/assemblies/GCF_023155475_1/analyze/workflows	1	1	0%	25m 03s
+/data/assemblies/GCF_025547055_2	1	1	100%	-
+/data/assemblies/GCF_026344075_1	1	1	100%	-
+/data/assemblies/GCF_030253495_1	1	1	100%	-
+/data/assemblies/GCF_030406165_1	1	1	100%	-
+/data/assemblies/GCF_030406165_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_040371445_1/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_040374935_1/analyze/workflows	1	2	100%	-
+/data/assemblies/GCF_040404335_1	1	1	100%	-
+/data/assemblies/GCF_900002385_2/analyze/workflows	1	1	100%	-
+/data/assemblies/GCF_900097015_1	1	1	0%	18m 28s
+/data/assemblies/GCF_900097015_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_900476045_1	1	1	100%	-
+/data/assemblies/GCF_900681995_1	1	1	-	-
+/data/assemblies/GCF_900681995_1/analyze/custom	1	1	0%	8m 18s
+/data/assemblies/GCF_900681995_1/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_905331265_2	1	1	100%	-
+/data/assemblies/GCF_905331265_2/analyze/workflows	1	1	-	-
+/data/assemblies/GCF_936269705_1	1	1	100%	-
+/data/assemblies/GCF_943734735_2	1	1	-	-
+/data/assemblies/GCF_943734745_1/analyze/custom	1	1	100%	-
+/data/assemblies/GCF_963970025_1	1	1	-	-
+/data/assemblies/GCF_963970025_1/analyze/workflows	1	1	-	-
+/data/assemblies/[entityId]/analyze/custom	1	1	100%	-
+/data/organisms/1137606	1	1	-	-
+/data/organisms/114810	1	1	-	-
+/data/organisms/115425	1	1	100%	-
+/data/organisms/117187	1	1	100%	-
+/data/organisms/135651	1	1	-	-
+/data/organisms/1376	1	1	100%	-
+/data/organisms/140438	1	1	100%	-
+/data/organisms/1481663	1	1	-	-
+/data/organisms/1639	1	1	100%	-
+/data/organisms/1659	1	1	100%	-
+/data/organisms/188700	1	1	100%	-
+/data/organisms/197	1	1	100%	-
+/data/organisms/1972497	1	1	100%	-
+/data/organisms/203535	1	1	100%	-
+/data/organisms/2049444	1	1	0%	25m 49s
+/data/organisms/208452	1	1	0%	48m 35s
+/data/organisms/211522	1	1	100%	-
+/data/organisms/2283686	1	1	100%	-
+/data/organisms/2484985	1	2	100%	-
+/data/organisms/2587412	1	1	100%	-
+/data/organisms/2715920	1	2	-	-
+/data/organisms/27349	1	1	100%	-
+/data/organisms/2747968	1	2	100%	-
+/data/organisms/28182	1	1	100%	-
+/data/organisms/28583	1	1	100%	-
+/data/organisms/28985	1	2	100%	-
+/data/organisms/2919604	1	2	-	-
+/data/organisms/29461	1	1	100%	-
+/data/organisms/29511	1	1	-	-
+/data/organisms/2955291	1	2	-	-
+/data/organisms/2956516	1	2	-	-
+/data/organisms/2956525	1	1	-	-
+/data/organisms/303317	1	2	100%	-
+/data/organisms/3050292	1	1	-	-
+/data/organisms/3052439	1	1	0%	51m 40s
+/data/organisms/3052464	1	2	-	-
+/data/organisms/3241406	1	1	-	-
+/data/organisms/32599	1	1	100%	-
+/data/organisms/3426298	1	1	-	-
+/data/organisms/3433809	1	1	100%	-
+/data/organisms/34690	1	1	-	-
+/data/organisms/37769	1	1	-	-
+/data/organisms/40410	1	1	100%	-
+/data/organisms/41068	1	3	-	-
+/data/organisms/43151	1	1	-	-
+/data/organisms/46125/analyze/workflows	1	1	-	-
+/data/organisms/498019	1	1	100%	-
+/data/organisms/5062	1	1	100%	-
+/data/organisms/508665	1	1	100%	-
+/data/organisms/511	1	1	100%	-
+/data/organisms/5180	1	1	100%	-
+/data/organisms/5208	1	1	100%	-
+/data/organisms/543639	1	1	100%	-
+/data/organisms/5507	1	1	100%	-
+/data/organisms/5570	1	1	-	-
+/data/organisms/562	1	1	-	-
+/data/organisms/5689	1	1	100%	-
+/data/organisms/5698	1	1	-	-
+/data/organisms/573	1	1	100%	-
+/data/organisms/5833	1	2	-	-
+/data/organisms/5833/analyze/workflows	1	1	-	-
+/data/organisms/5860	1	1	-	-
+/data/organisms/5861	1	1	0%	34m 28s
+/data/organisms/58627	1	1	100%	-
+/data/organisms/5869	1	1	0%	1m 29s
+/data/organisms/588596	1	1	0%	24m 56s
+/data/organisms/621	1	1	-	-
+/data/organisms/622	1	1	100%	-
+/data/organisms/62714	1	1	-	-
+/data/organisms/639000	1	1	-	-
+/data/organisms/644	1	1	100%	-
+/data/organisms/646294	1	2	100%	-
+/data/organisms/65661	1	1	-	-
+/data/organisms/673	1	1	-	-
+/data/organisms/67593	1	1	100%	-
+/data/organisms/688394	1	1	-	-
+/data/organisms/6941	1	2	100%	-
+/data/organisms/7160	1	1	100%	-
+/data/organisms/7165	1	2	-	-
+/data/organisms/730	1	1	100%	-
+/data/organisms/746128	1	1	-	-
+/data/organisms/880535	1	1	100%	-
+/data/organisms/880536	1	1	0%	10m 44s
+/data/priority-pathogens/filoviridae	1	1	-	-
+/data/priority-pathogens/leishmania-donovani	1	2	-	-
+/data/workflows/rnaseq-pe-main/GCF_000146045.2	1	1	-	-
+/data/workflows/workflow-github-com-iwc-workflows-annotation-braker3-main-versions-v0-1	1	2	-	-
+/data/workflows/workflow-github-com-iwc-workflows-assembly-with-flye-main-versions-v0-4	1	1	-	-
+/data/workflows/workflow-github-com-iwc-workflows-bacterial-genome-annotation-main-versions-v1-2-0	1	1	-	-
+/data/workflows/workflow-github-com-iwc-workflows-haploid-variant-calling-wgs-pe-main-versions-v0-1	1	1	-	-
+/data/workflows/workflow-github-com-iwc-workflows-influenza-isolates-consensus-and-subtyping-main-versions-v0-3	1	1	-	-
+/data/workflows/workflow-github-com-iwc-workflows-pox-virus-amplicon-main-versions-v0-4	1	1	-	-
+/data/workflows/workflow-github-com-iwc-workflows-rnaseq-pe-main-versions-v1-4	1	1	-	-
+/data/workflows/workflow-github-com-iwc-workflows-sars-cov-2-pe-illumina-artic-variant-calling-COVID-19-PE-ARTIC-ILLUMINA-versions-v0-5-5	1	1	-	-
+/learn/blog/genotyping-cyclospora-assessing-current-practices/haplotype-sites.tsv	1	1	0%	4s
+/learn/blog/primaeon-selection-analysis-in-your-browser	1	1	-	-
+/learn/getting-started/first-analysis	1	1	100%	-
+/learn/getting-started/getting-help	1	1	100%	-
+/learn/getting-started/what-are-assemblies	1	1	100%	-
+/learn/getting-started/what-are-organisms	1	1	100%	-
+/workflows/rnaseq-pe-main/GCF_000146045.2	1	2	0%	17s
